@@ -1,4 +1,4 @@
-# AssemblyClient.Model.StudentLanguages
+# assembly-client-dotnet.Model.StudentLanguages
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# AssemblyClient.Api.TeachingGroupsApi
+# assembly-client-dotnet.Api.TeachingGroupsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
@@ -21,9 +21,9 @@ Returns a list of teaching groups that match the given set of filters. If a date
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -94,9 +94,9 @@ Returns a single teaching group whose ID matches the provided group_id. Addition
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -161,9 +161,9 @@ Returns a list of all the students that are present in the teaching group identi
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {

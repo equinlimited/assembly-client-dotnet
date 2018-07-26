@@ -1,4 +1,4 @@
-# AssemblyClient - the C# library for the assembly.education
+# assembly-client-dotnet - the C# library for the assembly.education
 
 Developer API for assembly.education.
 
@@ -37,9 +37,9 @@ Run the following command to generate the DLL
 
 Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
 ```csharp
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 ```
 <a name="packaging"></a>
 ## Packaging
@@ -49,7 +49,7 @@ A `.nuspec` is included with the project. You can follow the Nuget quickstart to
 This `.nuspec` uses placeholders from the `.csproj`, so build the `.csproj` directly:
 
 ```
-nuget pack -Build -OutputDirectory out AssemblyClient.csproj
+nuget pack -Build -OutputDirectory out assembly-client-dotnet.csproj
 ```
 
 Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds) or [other host](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview) and consume the new package via Nuget as usual.
@@ -60,9 +60,9 @@ Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-p
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {

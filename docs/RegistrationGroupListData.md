@@ -1,4 +1,4 @@
-# AssemblyClient.Model.RegistrationGroupListData
+# assembly-client-dotnet.Model.RegistrationGroupListData
 ## Properties
 
 Name | Type | Description | Notes

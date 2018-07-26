@@ -1,4 +1,4 @@
-# AssemblyClient.Model.SubjectMisSubjects
+# assembly-client-dotnet.Model.SubjectMisSubjects
 ## Properties
 
 Name | Type | Description | Notes

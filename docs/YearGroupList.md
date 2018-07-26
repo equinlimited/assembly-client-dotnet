@@ -1,4 +1,4 @@
-# AssemblyClient.Model.YearGroupList
+# assembly-client-dotnet.Model.YearGroupList
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# AssemblyClient.Model.UpdateMultipleResultResponseListData
+# assembly-client-dotnet.Model.UpdateMultipleResultResponseListData
 ## Properties
 
 Name | Type | Description | Notes

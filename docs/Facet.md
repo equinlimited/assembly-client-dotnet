@@ -1,4 +1,4 @@
-# AssemblyClient.Model.Facet
+# assembly-client-dotnet.Model.Facet
 ## Properties
 
 Name | Type | Description | Notes

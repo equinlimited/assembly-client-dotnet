@@ -1,4 +1,4 @@
-# AssemblyClient.Model.CreateResultResponse
+# assembly-client-dotnet.Model.CreateResultResponse
 ## Properties
 
 Name | Type | Description | Notes

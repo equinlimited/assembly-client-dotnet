@@ -1,4 +1,4 @@
-# AssemblyClient.Model.Student
+# assembly-client-dotnet.Model.Student
 ## Properties
 
 Name | Type | Description | Notes

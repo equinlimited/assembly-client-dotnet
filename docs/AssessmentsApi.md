@@ -1,4 +1,4 @@
-# AssemblyClient.Api.AssessmentsApi
+# assembly-client-dotnet.Api.AssessmentsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
@@ -29,9 +29,9 @@ Returns a list of assessment points. An assessment_point object represents a poi
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -98,9 +98,9 @@ Returns a single assessment point for the given rank.
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -161,9 +161,9 @@ Returns a list of results for the given assessment_point_rank and students.
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -230,9 +230,9 @@ Returns a list of assessment objects.
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -297,9 +297,9 @@ Returns a single assessment for the given ID.
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -360,9 +360,9 @@ Returns a gradeset (an acceptable list of values) for the assessment identified 
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -423,9 +423,9 @@ Returns a list of results for the given assessment_id and students. For a full l
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -488,9 +488,9 @@ Returns a single facet for the given ID.
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -551,9 +551,9 @@ Returns a list of facets. The facet is used to reflect a different type of grade
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -616,9 +616,9 @@ Multiple results can be updated simultaneously by providing the relevant result_
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -679,9 +679,9 @@ Once a result has been created, it can be updated on the Platform by passing the
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {

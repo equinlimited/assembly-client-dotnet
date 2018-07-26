@@ -1,4 +1,4 @@
-# AssemblyClient.Model.GradesetGrades
+# assembly-client-dotnet.Model.GradesetGrades
 ## Properties
 
 Name | Type | Description | Notes

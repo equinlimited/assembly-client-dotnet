@@ -1,4 +1,4 @@
-# AssemblyClient.Model.AssessmentPointListData
+# assembly-client-dotnet.Model.AssessmentPointListData
 ## Properties
 
 Name | Type | Description | Notes

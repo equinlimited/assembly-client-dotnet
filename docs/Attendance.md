@@ -1,4 +1,4 @@
-# AssemblyClient.Model.Attendance
+# assembly-client-dotnet.Model.Attendance
 ## Properties
 
 Name | Type | Description | Notes

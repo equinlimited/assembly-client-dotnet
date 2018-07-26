@@ -1,4 +1,4 @@
-# AssemblyClient.Model.StudentDemographicsSenNeeds
+# assembly-client-dotnet.Model.StudentDemographicsSenNeeds
 ## Properties
 
 Name | Type | Description | Notes

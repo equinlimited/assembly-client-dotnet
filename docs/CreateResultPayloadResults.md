@@ -1,4 +1,4 @@
-# AssemblyClient.Model.CreateResultPayloadResults
+# assembly-client-dotnet.Model.CreateResultPayloadResults
 ## Properties
 
 Name | Type | Description | Notes

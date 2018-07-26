@@ -1,4 +1,4 @@
-# AssemblyClient.Api.YearGroupsApi
+# assembly-client-dotnet.Api.YearGroupsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
@@ -21,9 +21,9 @@ Returns a list of year groups that match the given set of filters. The default b
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -94,9 +94,9 @@ Returns a single year group whose code matches the provided year_code. Additiona
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -161,9 +161,9 @@ Returns a list of all the students that are present in the year group identified
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {

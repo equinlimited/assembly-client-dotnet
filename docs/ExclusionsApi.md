@@ -1,4 +1,4 @@
-# AssemblyClient.Api.ExclusionsApi
+# assembly-client-dotnet.Api.ExclusionsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
@@ -20,9 +20,9 @@ Returns a list of exclusions. By default, exclusions are returned that occurred 
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -89,9 +89,9 @@ Returns a list of exclusions for a given student. By default, exclusions are ret
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {

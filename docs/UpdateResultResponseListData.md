@@ -1,4 +1,4 @@
-# AssemblyClient.Model.UpdateResultResponseListData
+# assembly-client-dotnet.Model.UpdateResultResponseListData
 ## Properties
 
 Name | Type | Description | Notes

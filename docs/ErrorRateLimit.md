@@ -1,4 +1,4 @@
-# AssemblyClient.Model.ErrorRateLimit
+# assembly-client-dotnet.Model.ErrorRateLimit
 ## Properties
 
 Name | Type | Description | Notes

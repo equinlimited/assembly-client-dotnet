@@ -1,4 +1,4 @@
-# AssemblyClient.Model.StaffAbsence
+# assembly-client-dotnet.Model.StaffAbsence
 ## Properties
 
 Name | Type | Description | Notes

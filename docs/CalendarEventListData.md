@@ -1,4 +1,4 @@
-# AssemblyClient.Model.CalendarEventListData
+# assembly-client-dotnet.Model.CalendarEventListData
 ## Properties
 
 Name | Type | Description | Notes

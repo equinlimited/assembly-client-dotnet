@@ -1,4 +1,4 @@
-# AssemblyClient.Api.AttendanceApi
+# assembly-client-dotnet.Api.AttendanceApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
@@ -19,9 +19,9 @@ Returns a list of attendances, filtered by date, student, or registration group.
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {

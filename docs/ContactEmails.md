@@ -1,4 +1,4 @@
-# AssemblyClient.Model.ContactEmails
+# assembly-client-dotnet.Model.ContactEmails
 ## Properties
 
 Name | Type | Description | Notes

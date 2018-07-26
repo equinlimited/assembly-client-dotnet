@@ -1,4 +1,4 @@
-# AssemblyClient.Model.ContactList
+# assembly-client-dotnet.Model.ContactList
 ## Properties
 
 Name | Type | Description | Notes

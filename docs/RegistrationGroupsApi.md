@@ -1,4 +1,4 @@
-# AssemblyClient.Api.RegistrationGroupsApi
+# assembly-client-dotnet.Api.RegistrationGroupsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
@@ -21,9 +21,9 @@ Returns a list of registration groups that match the given set of filters.
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -94,9 +94,9 @@ Returns a single registration group whose code matches the provided group_id. Ad
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
@@ -163,9 +163,9 @@ Returns a list of all the students that are present in the registration group id
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {

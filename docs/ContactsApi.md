@@ -1,4 +1,4 @@
-# AssemblyClient.Api.ContactsApi
+# assembly-client-dotnet.Api.ContactsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
@@ -19,9 +19,9 @@ Returns a list of contacts that match the given set of filters.
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {

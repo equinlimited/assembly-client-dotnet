@@ -1,4 +1,4 @@
-# AssemblyClient.Model.StaffMemberDemographics
+# assembly-client-dotnet.Model.StaffMemberDemographics
 ## Properties
 
 Name | Type | Description | Notes

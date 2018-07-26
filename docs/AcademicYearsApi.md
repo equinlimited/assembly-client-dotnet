@@ -1,4 +1,4 @@
-# AssemblyClient.Api.AcademicYearsApi
+# assembly-client-dotnet.Api.AcademicYearsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
@@ -19,9 +19,9 @@ Returns a list of academic years for the school associated with the provided acc
 ```csharp
 using System;
 using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
+using assembly-client-dotnet.Api;
+using assembly-client-dotnet.Client;
+using assembly-client-dotnet.Model;
 
 namespace Example
 {
