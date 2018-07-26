@@ -67,92 +67,92 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'first_name'
+        /// Test the property 'FirstName'
         /// </summary>
         [Test]
-        public void first_nameTest()
+        public void FirstNameTest()
         {
-            // TODO unit test for the property 'first_name'
+            // TODO unit test for the property 'FirstName'
         }
         /// <summary>
-        /// Test the property 'middle_name'
+        /// Test the property 'MiddleName'
         /// </summary>
         [Test]
-        public void middle_nameTest()
+        public void MiddleNameTest()
         {
-            // TODO unit test for the property 'middle_name'
+            // TODO unit test for the property 'MiddleName'
         }
         /// <summary>
-        /// Test the property 'last_name'
+        /// Test the property 'LastName'
         /// </summary>
         [Test]
-        public void last_nameTest()
+        public void LastNameTest()
         {
-            // TODO unit test for the property 'last_name'
+            // TODO unit test for the property 'LastName'
         }
         /// <summary>
-        /// Test the property 'gender'
+        /// Test the property 'Gender'
         /// </summary>
         [Test]
-        public void genderTest()
+        public void GenderTest()
         {
-            // TODO unit test for the property 'gender'
+            // TODO unit test for the property 'Gender'
         }
         /// <summary>
-        /// Test the property 'title'
+        /// Test the property 'Title'
         /// </summary>
         [Test]
-        public void titleTest()
+        public void TitleTest()
         {
-            // TODO unit test for the property 'title'
+            // TODO unit test for the property 'Title'
         }
         /// <summary>
-        /// Test the property 'salutation'
+        /// Test the property 'Salutation'
         /// </summary>
         [Test]
-        public void salutationTest()
+        public void SalutationTest()
         {
-            // TODO unit test for the property 'salutation'
+            // TODO unit test for the property 'Salutation'
         }
         /// <summary>
-        /// Test the property 'emails'
+        /// Test the property 'Emails'
         /// </summary>
         [Test]
-        public void emailsTest()
+        public void EmailsTest()
         {
-            // TODO unit test for the property 'emails'
+            // TODO unit test for the property 'Emails'
         }
         /// <summary>
-        /// Test the property 'telephone_numbers'
+        /// Test the property 'TelephoneNumbers'
         /// </summary>
         [Test]
-        public void telephone_numbersTest()
+        public void TelephoneNumbersTest()
         {
-            // TODO unit test for the property 'telephone_numbers'
+            // TODO unit test for the property 'TelephoneNumbers'
         }
         /// <summary>
-        /// Test the property 'students'
+        /// Test the property 'Students'
         /// </summary>
         [Test]
-        public void studentsTest()
+        public void StudentsTest()
         {
-            // TODO unit test for the property 'students'
+            // TODO unit test for the property 'Students'
         }
 
     }

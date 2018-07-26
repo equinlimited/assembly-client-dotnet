@@ -67,92 +67,92 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'student_id'
+        /// Test the property 'StudentId'
         /// </summary>
         [Test]
-        public void student_idTest()
+        public void StudentIdTest()
         {
-            // TODO unit test for the property 'student_id'
+            // TODO unit test for the property 'StudentId'
         }
         /// <summary>
-        /// Test the property 'subject_id'
+        /// Test the property 'SubjectId'
         /// </summary>
         [Test]
-        public void subject_idTest()
+        public void SubjectIdTest()
         {
-            // TODO unit test for the property 'subject_id'
+            // TODO unit test for the property 'SubjectId'
         }
         /// <summary>
-        /// Test the property 'assessment_id'
+        /// Test the property 'AssessmentId'
         /// </summary>
         [Test]
-        public void assessment_idTest()
+        public void AssessmentIdTest()
         {
-            // TODO unit test for the property 'assessment_id'
+            // TODO unit test for the property 'AssessmentId'
         }
         /// <summary>
-        /// Test the property 'assessment_point_rank'
+        /// Test the property 'AssessmentPointRank'
         /// </summary>
         [Test]
-        public void assessment_point_rankTest()
+        public void AssessmentPointRankTest()
         {
-            // TODO unit test for the property 'assessment_point_rank'
+            // TODO unit test for the property 'AssessmentPointRank'
         }
         /// <summary>
-        /// Test the property 'aspect_id'
+        /// Test the property 'AspectId'
         /// </summary>
         [Test]
-        public void aspect_idTest()
+        public void AspectIdTest()
         {
-            // TODO unit test for the property 'aspect_id'
+            // TODO unit test for the property 'AspectId'
         }
         /// <summary>
-        /// Test the property 'grade_id'
+        /// Test the property 'GradeId'
         /// </summary>
         [Test]
-        public void grade_idTest()
+        public void GradeIdTest()
         {
-            // TODO unit test for the property 'grade_id'
+            // TODO unit test for the property 'GradeId'
         }
         /// <summary>
-        /// Test the property 'result_date'
+        /// Test the property 'ResultDate'
         /// </summary>
         [Test]
-        public void result_dateTest()
+        public void ResultDateTest()
         {
-            // TODO unit test for the property 'result_date'
+            // TODO unit test for the property 'ResultDate'
         }
         /// <summary>
-        /// Test the property 'created_at'
+        /// Test the property 'CreatedAt'
         /// </summary>
         [Test]
-        public void created_atTest()
+        public void CreatedAtTest()
         {
-            // TODO unit test for the property 'created_at'
+            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
-        /// Test the property 'updated_at'
+        /// Test the property 'UpdatedAt'
         /// </summary>
         [Test]
-        public void updated_atTest()
+        public void UpdatedAtTest()
         {
-            // TODO unit test for the property 'updated_at'
+            // TODO unit test for the property 'UpdatedAt'
         }
 
     }

@@ -38,9 +38,9 @@ namespace AssemblyClient.Model
         /// <param name="description">Description of the event type in the MIS.</param>
         public CalendarEventMisType(string _object = default(string), string name = default(string), string description = default(string))
         {
-            this._object = _object;
-            this.name = name;
-            this.description = description;
+            this.Object = _object;
+            this.Name = name;
+            this.Description = description;
         }
         
         /// <summary>
@@ -48,21 +48,21 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Name of the event type in the MIS
         /// </summary>
         /// <value>Name of the event type in the MIS</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Description of the event type in the MIS
         /// </summary>
         /// <value>Description of the event type in the MIS</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
-        public string description { get; set; }
+        public string Description { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -72,9 +72,9 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CalendarEventMisType {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  description: ").Append(description).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,19 +110,19 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.description == input.description ||
-                    (this.description != null &&
-                    this.description.Equals(input.description))
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
                 );
         }
 
@@ -135,12 +135,12 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
-                if (this.description != null)
-                    hashCode = hashCode * 59 + this.description.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
                 return hashCode;
             }
         }

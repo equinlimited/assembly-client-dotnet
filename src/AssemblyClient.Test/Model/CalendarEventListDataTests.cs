@@ -67,76 +67,76 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'name'
+        /// Test the property 'Name'
         /// </summary>
         [Test]
-        public void nameTest()
+        public void NameTest()
         {
-            // TODO unit test for the property 'name'
+            // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'description'
+        /// Test the property 'Description'
         /// </summary>
         [Test]
-        public void descriptionTest()
+        public void DescriptionTest()
         {
-            // TODO unit test for the property 'description'
+            // TODO unit test for the property 'Description'
         }
         /// <summary>
-        /// Test the property 'start_date'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void start_dateTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'start_date'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
-        /// Test the property 'end_date'
+        /// Test the property 'EndDate'
         /// </summary>
         [Test]
-        public void end_dateTest()
+        public void EndDateTest()
         {
-            // TODO unit test for the property 'end_date'
+            // TODO unit test for the property 'EndDate'
         }
         /// <summary>
-        /// Test the property 'is_active'
+        /// Test the property 'IsActive'
         /// </summary>
         [Test]
-        public void is_activeTest()
+        public void IsActiveTest()
         {
-            // TODO unit test for the property 'is_active'
+            // TODO unit test for the property 'IsActive'
         }
         /// <summary>
-        /// Test the property 'is_recurrent'
+        /// Test the property 'IsRecurrent'
         /// </summary>
         [Test]
-        public void is_recurrentTest()
+        public void IsRecurrentTest()
         {
-            // TODO unit test for the property 'is_recurrent'
+            // TODO unit test for the property 'IsRecurrent'
         }
         /// <summary>
-        /// Test the property 'mis_type'
+        /// Test the property 'MisType'
         /// </summary>
         [Test]
-        public void mis_typeTest()
+        public void MisTypeTest()
         {
-            // TODO unit test for the property 'mis_type'
+            // TODO unit test for the property 'MisType'
         }
 
     }

@@ -67,44 +67,44 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'rank'
+        /// Test the property 'Rank'
         /// </summary>
         [Test]
-        public void rankTest()
+        public void RankTest()
         {
-            // TODO unit test for the property 'rank'
+            // TODO unit test for the property 'Rank'
         }
         /// <summary>
-        /// Test the property 'name'
+        /// Test the property 'Name'
         /// </summary>
         [Test]
-        public void nameTest()
+        public void NameTest()
         {
-            // TODO unit test for the property 'name'
+            // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'type'
+        /// Test the property 'Type'
         /// </summary>
         [Test]
-        public void typeTest()
+        public void TypeTest()
         {
-            // TODO unit test for the property 'type'
+            // TODO unit test for the property 'Type'
         }
         /// <summary>
-        /// Test the property 'year_code'
+        /// Test the property 'YearCode'
         /// </summary>
         [Test]
-        public void year_codeTest()
+        public void YearCodeTest()
         {
-            // TODO unit test for the property 'year_code'
+            // TODO unit test for the property 'YearCode'
         }
 
     }

@@ -67,172 +67,172 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'first_name'
+        /// Test the property 'FirstName'
         /// </summary>
         [Test]
-        public void first_nameTest()
+        public void FirstNameTest()
         {
-            // TODO unit test for the property 'first_name'
+            // TODO unit test for the property 'FirstName'
         }
         /// <summary>
-        /// Test the property 'legal_first_name'
+        /// Test the property 'LegalFirstName'
         /// </summary>
         [Test]
-        public void legal_first_nameTest()
+        public void LegalFirstNameTest()
         {
-            // TODO unit test for the property 'legal_first_name'
+            // TODO unit test for the property 'LegalFirstName'
         }
         /// <summary>
-        /// Test the property 'middle_name'
+        /// Test the property 'MiddleName'
         /// </summary>
         [Test]
-        public void middle_nameTest()
+        public void MiddleNameTest()
         {
-            // TODO unit test for the property 'middle_name'
+            // TODO unit test for the property 'MiddleName'
         }
         /// <summary>
-        /// Test the property 'last_name'
+        /// Test the property 'LastName'
         /// </summary>
         [Test]
-        public void last_nameTest()
+        public void LastNameTest()
         {
-            // TODO unit test for the property 'last_name'
+            // TODO unit test for the property 'LastName'
         }
         /// <summary>
-        /// Test the property 'legal_last_name'
+        /// Test the property 'LegalLastName'
         /// </summary>
         [Test]
-        public void legal_last_nameTest()
+        public void LegalLastNameTest()
         {
-            // TODO unit test for the property 'legal_last_name'
+            // TODO unit test for the property 'LegalLastName'
         }
         /// <summary>
-        /// Test the property 'former_last_name'
+        /// Test the property 'FormerLastName'
         /// </summary>
         [Test]
-        public void former_last_nameTest()
+        public void FormerLastNameTest()
         {
-            // TODO unit test for the property 'former_last_name'
+            // TODO unit test for the property 'FormerLastName'
         }
         /// <summary>
-        /// Test the property 'dob'
+        /// Test the property 'Dob'
         /// </summary>
         [Test]
-        public void dobTest()
+        public void DobTest()
         {
-            // TODO unit test for the property 'dob'
+            // TODO unit test for the property 'Dob'
         }
         /// <summary>
-        /// Test the property 'year_code'
+        /// Test the property 'YearCode'
         /// </summary>
         [Test]
-        public void year_codeTest()
+        public void YearCodeTest()
         {
-            // TODO unit test for the property 'year_code'
+            // TODO unit test for the property 'YearCode'
         }
         /// <summary>
-        /// Test the property 'upn'
+        /// Test the property 'Upn'
         /// </summary>
         [Test]
-        public void upnTest()
+        public void UpnTest()
         {
-            // TODO unit test for the property 'upn'
+            // TODO unit test for the property 'Upn'
         }
         /// <summary>
-        /// Test the property 'former_upn'
+        /// Test the property 'FormerUpn'
         /// </summary>
         [Test]
-        public void former_upnTest()
+        public void FormerUpnTest()
         {
-            // TODO unit test for the property 'former_upn'
+            // TODO unit test for the property 'FormerUpn'
         }
         /// <summary>
-        /// Test the property 'mis_id'
+        /// Test the property 'MisId'
         /// </summary>
         [Test]
-        public void mis_idTest()
+        public void MisIdTest()
         {
-            // TODO unit test for the property 'mis_id'
+            // TODO unit test for the property 'MisId'
         }
         /// <summary>
-        /// Test the property 'pan'
+        /// Test the property 'Pan'
         /// </summary>
         [Test]
-        public void panTest()
+        public void PanTest()
         {
-            // TODO unit test for the property 'pan'
+            // TODO unit test for the property 'Pan'
         }
         /// <summary>
-        /// Test the property 'start_date'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void start_dateTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'start_date'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
-        /// Test the property 'end_date'
+        /// Test the property 'EndDate'
         /// </summary>
         [Test]
-        public void end_dateTest()
+        public void EndDateTest()
         {
-            // TODO unit test for the property 'end_date'
+            // TODO unit test for the property 'EndDate'
         }
         /// <summary>
-        /// Test the property 'enrolment_status'
+        /// Test the property 'EnrolmentStatus'
         /// </summary>
         [Test]
-        public void enrolment_statusTest()
+        public void EnrolmentStatusTest()
         {
-            // TODO unit test for the property 'enrolment_status'
+            // TODO unit test for the property 'EnrolmentStatus'
         }
         /// <summary>
-        /// Test the property 'demographics'
+        /// Test the property 'Demographics'
         /// </summary>
         [Test]
-        public void demographicsTest()
+        public void DemographicsTest()
         {
-            // TODO unit test for the property 'demographics'
+            // TODO unit test for the property 'Demographics'
         }
         /// <summary>
-        /// Test the property 'contact'
+        /// Test the property 'Contact'
         /// </summary>
         [Test]
-        public void contactTest()
+        public void ContactTest()
         {
-            // TODO unit test for the property 'contact'
+            // TODO unit test for the property 'Contact'
         }
         /// <summary>
-        /// Test the property 'addresses'
+        /// Test the property 'Addresses'
         /// </summary>
         [Test]
-        public void addressesTest()
+        public void AddressesTest()
         {
-            // TODO unit test for the property 'addresses'
+            // TODO unit test for the property 'Addresses'
         }
         /// <summary>
-        /// Test the property 'languages'
+        /// Test the property 'Languages'
         /// </summary>
         [Test]
-        public void languagesTest()
+        public void LanguagesTest()
         {
-            // TODO unit test for the property 'languages'
+            // TODO unit test for the property 'Languages'
         }
 
     }

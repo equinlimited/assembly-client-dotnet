@@ -67,60 +67,60 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'address_line_1'
+        /// Test the property 'AddressLine1'
         /// </summary>
         [Test]
-        public void address_line_1Test()
+        public void AddressLine1Test()
         {
-            // TODO unit test for the property 'address_line_1'
+            // TODO unit test for the property 'AddressLine1'
         }
         /// <summary>
-        /// Test the property 'address_line_2'
+        /// Test the property 'AddressLine2'
         /// </summary>
         [Test]
-        public void address_line_2Test()
+        public void AddressLine2Test()
         {
-            // TODO unit test for the property 'address_line_2'
+            // TODO unit test for the property 'AddressLine2'
         }
         /// <summary>
-        /// Test the property 'town_city'
+        /// Test the property 'TownCity'
         /// </summary>
         [Test]
-        public void town_cityTest()
+        public void TownCityTest()
         {
-            // TODO unit test for the property 'town_city'
+            // TODO unit test for the property 'TownCity'
         }
         /// <summary>
-        /// Test the property 'county'
+        /// Test the property 'County'
         /// </summary>
         [Test]
-        public void countyTest()
+        public void CountyTest()
         {
-            // TODO unit test for the property 'county'
+            // TODO unit test for the property 'County'
         }
         /// <summary>
-        /// Test the property 'country'
+        /// Test the property 'Country'
         /// </summary>
         [Test]
-        public void countryTest()
+        public void CountryTest()
         {
-            // TODO unit test for the property 'country'
+            // TODO unit test for the property 'Country'
         }
         /// <summary>
-        /// Test the property 'postcode'
+        /// Test the property 'Postcode'
         /// </summary>
         [Test]
-        public void postcodeTest()
+        public void PostcodeTest()
         {
-            // TODO unit test for the property 'postcode'
+            // TODO unit test for the property 'Postcode'
         }
 
     }

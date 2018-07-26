@@ -67,68 +67,68 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'start_date'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void start_dateTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'start_date'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
-        /// Test the property 'sen_need_code'
+        /// Test the property 'SenNeedCode'
         /// </summary>
         [Test]
-        public void sen_need_codeTest()
+        public void SenNeedCodeTest()
         {
-            // TODO unit test for the property 'sen_need_code'
+            // TODO unit test for the property 'SenNeedCode'
         }
         /// <summary>
-        /// Test the property 'sen_need_name'
+        /// Test the property 'SenNeedName'
         /// </summary>
         [Test]
-        public void sen_need_nameTest()
+        public void SenNeedNameTest()
         {
-            // TODO unit test for the property 'sen_need_name'
+            // TODO unit test for the property 'SenNeedName'
         }
         /// <summary>
-        /// Test the property 'sen_broad_need_type_code'
+        /// Test the property 'SenBroadNeedTypeCode'
         /// </summary>
         [Test]
-        public void sen_broad_need_type_codeTest()
+        public void SenBroadNeedTypeCodeTest()
         {
-            // TODO unit test for the property 'sen_broad_need_type_code'
+            // TODO unit test for the property 'SenBroadNeedTypeCode'
         }
         /// <summary>
-        /// Test the property 'sen_broad_need_type_name'
+        /// Test the property 'SenBroadNeedTypeName'
         /// </summary>
         [Test]
-        public void sen_broad_need_type_nameTest()
+        public void SenBroadNeedTypeNameTest()
         {
-            // TODO unit test for the property 'sen_broad_need_type_name'
+            // TODO unit test for the property 'SenBroadNeedTypeName'
         }
         /// <summary>
-        /// Test the property 'priority'
+        /// Test the property 'Priority'
         /// </summary>
         [Test]
-        public void priorityTest()
+        public void PriorityTest()
         {
-            // TODO unit test for the property 'priority'
+            // TODO unit test for the property 'Priority'
         }
 
     }

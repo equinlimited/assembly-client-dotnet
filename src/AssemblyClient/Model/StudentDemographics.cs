@@ -56,7 +56,7 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>The gender of the student *Values*  |Value|Description| |- --|- --| |&#x60;M&#x60;|Male| |&#x60;F&#x60;|Female| </value>
         [DataMember(Name="gender", EmitDefaultValue=false)]
-        public GenderEnum? gender { get; set; }
+        public GenderEnum? Gender { get; set; }
         /// <summary>
         /// Special Education Need (SEN) - indicates a student has learning difficulties and requires special education provision. *Values*  |Value|Description| |- --|- --| |&#x60;null&#x60;|Not eligable| |&#x60;N&#x60;|None| |&#x60;S&#x60;|Statement| |&#x60;E&#x60;|Education, Health and Care Plan| |&#x60;K&#x60;|SEN Support| |&#x60;A&#x60;|School Action (no longer valid)| |&#x60;P&#x60;|School Action Plus (no longer valid)| 
         /// </summary>
@@ -113,7 +113,7 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Special Education Need (SEN) - indicates a student has learning difficulties and requires special education provision. *Values*  |Value|Description| |- --|- --| |&#x60;null&#x60;|Not eligable| |&#x60;N&#x60;|None| |&#x60;S&#x60;|Statement| |&#x60;E&#x60;|Education, Health and Care Plan| |&#x60;K&#x60;|SEN Support| |&#x60;A&#x60;|School Action (no longer valid)| |&#x60;P&#x60;|School Action Plus (no longer valid)| </value>
         [DataMember(Name="sen_category", EmitDefaultValue=false)]
-        public SenCategoryEnum? sen_category { get; set; }
+        public SenCategoryEnum? SenCategory { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="StudentDemographics" /> class.
         /// </summary>
@@ -132,19 +132,19 @@ namespace AssemblyClient.Model
         /// <param name="nationalities">The nationality or nationalities of the student.</param>
         public StudentDemographics(string _object = default(string), string ethnicityCode = default(string), string ethnicityGroup = default(string), GenderEnum? gender = default(GenderEnum?), bool? inCare = default(bool?), bool? isEal = default(bool?), bool? isFsm = default(bool?), DateTime? fsmReviewDate = default(DateTime?), bool? isPp = default(bool?), SenCategoryEnum? senCategory = default(SenCategoryEnum?), StudentDemographicsSenNeeds senNeeds = default(StudentDemographicsSenNeeds), string countryOfBirth = default(string), List<string> nationalities = default(List<string>))
         {
-            this._object = _object;
-            this.ethnicity_code = ethnicityCode;
-            this.ethnicity_group = ethnicityGroup;
-            this.gender = gender;
-            this.in_care = inCare;
-            this.is_eal = isEal;
-            this.is_fsm = isFsm;
-            this.fsm_review_date = fsmReviewDate;
-            this.is_pp = isPp;
-            this.sen_category = senCategory;
-            this.sen_needs = senNeeds;
-            this.country_of_birth = countryOfBirth;
-            this.nationalities = nationalities;
+            this.Object = _object;
+            this.EthnicityCode = ethnicityCode;
+            this.EthnicityGroup = ethnicityGroup;
+            this.Gender = gender;
+            this.InCare = inCare;
+            this.IsEal = isEal;
+            this.IsFsm = isFsm;
+            this.FsmReviewDate = fsmReviewDate;
+            this.IsPp = isPp;
+            this.SenCategory = senCategory;
+            this.SenNeeds = senNeeds;
+            this.CountryOfBirth = countryOfBirth;
+            this.Nationalities = nationalities;
         }
         
         /// <summary>
@@ -152,21 +152,21 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// A detailed, Dfe standardised way of categorising the ethnicity of a student
         /// </summary>
         /// <value>A detailed, Dfe standardised way of categorising the ethnicity of a student</value>
         [DataMember(Name="ethnicity_code", EmitDefaultValue=false)]
-        public string ethnicity_code { get; set; }
+        public string EthnicityCode { get; set; }
 
         /// <summary>
         /// A broader categorisation of ethnicity that is standardised across the country, with all ethnicity codes grouped in to 8 sections
         /// </summary>
         /// <value>A broader categorisation of ethnicity that is standardised across the country, with all ethnicity codes grouped in to 8 sections</value>
         [DataMember(Name="ethnicity_group", EmitDefaultValue=false)]
-        public string ethnicity_group { get; set; }
+        public string EthnicityGroup { get; set; }
 
 
         /// <summary>
@@ -174,56 +174,56 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Looked after status - indicates whether the student is &#39;looked after&#39; by the local authority (this field will only be returned if &amp;demographics&#x3D;true and &amp;care&#x3D;true is included in your request)</value>
         [DataMember(Name="in_care", EmitDefaultValue=false)]
-        public bool? in_care { get; set; }
+        public bool? InCare { get; set; }
 
         /// <summary>
         /// English as an Additional Language (EAL) - this field will be true for a student whose first language is not English
         /// </summary>
         /// <value>English as an Additional Language (EAL) - this field will be true for a student whose first language is not English</value>
         [DataMember(Name="is_eal", EmitDefaultValue=false)]
-        public bool? is_eal { get; set; }
+        public bool? IsEal { get; set; }
 
         /// <summary>
         /// Free School Meals (FSM) - indicates if the student is eligible for free school meals
         /// </summary>
         /// <value>Free School Meals (FSM) - indicates if the student is eligible for free school meals</value>
         [DataMember(Name="is_fsm", EmitDefaultValue=false)]
-        public bool? is_fsm { get; set; }
+        public bool? IsFsm { get; set; }
 
         /// <summary>
         /// Free school meal review date -Review date for pupil&#39;s free school meal eligibility
         /// </summary>
         /// <value>Free school meal review date -Review date for pupil&#39;s free school meal eligibility</value>
         [DataMember(Name="fsm_review_date", EmitDefaultValue=false)]
-        public DateTime? fsm_review_date { get; set; }
+        public DateTime? FsmReviewDate { get; set; }
 
         /// <summary>
         /// Pupil Premium (PP) - schools receive extra funding for students who qualify as Pupil Premium. The includes any student who has qualified for Free School Meals (FSM) in the last 6 years, and any student in local-authority care
         /// </summary>
         /// <value>Pupil Premium (PP) - schools receive extra funding for students who qualify as Pupil Premium. The includes any student who has qualified for Free School Meals (FSM) in the last 6 years, and any student in local-authority care</value>
         [DataMember(Name="is_pp", EmitDefaultValue=false)]
-        public bool? is_pp { get; set; }
+        public bool? IsPp { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets sen_needs
+        /// Gets or Sets SenNeeds
         /// </summary>
         [DataMember(Name="sen_needs", EmitDefaultValue=false)]
-        public StudentDemographicsSenNeeds sen_needs { get; set; }
+        public StudentDemographicsSenNeeds SenNeeds { get; set; }
 
         /// <summary>
         /// The country of birth of the student
         /// </summary>
         /// <value>The country of birth of the student</value>
         [DataMember(Name="country_of_birth", EmitDefaultValue=false)]
-        public string country_of_birth { get; set; }
+        public string CountryOfBirth { get; set; }
 
         /// <summary>
         /// The nationality or nationalities of the student
         /// </summary>
         /// <value>The nationality or nationalities of the student</value>
         [DataMember(Name="nationalities", EmitDefaultValue=false)]
-        public List<string> nationalities { get; set; }
+        public List<string> Nationalities { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -233,19 +233,19 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StudentDemographics {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  ethnicity_code: ").Append(ethnicity_code).Append("\n");
-            sb.Append("  ethnicity_group: ").Append(ethnicity_group).Append("\n");
-            sb.Append("  gender: ").Append(gender).Append("\n");
-            sb.Append("  in_care: ").Append(in_care).Append("\n");
-            sb.Append("  is_eal: ").Append(is_eal).Append("\n");
-            sb.Append("  is_fsm: ").Append(is_fsm).Append("\n");
-            sb.Append("  fsm_review_date: ").Append(fsm_review_date).Append("\n");
-            sb.Append("  is_pp: ").Append(is_pp).Append("\n");
-            sb.Append("  sen_category: ").Append(sen_category).Append("\n");
-            sb.Append("  sen_needs: ").Append(sen_needs).Append("\n");
-            sb.Append("  country_of_birth: ").Append(country_of_birth).Append("\n");
-            sb.Append("  nationalities: ").Append(nationalities).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  EthnicityCode: ").Append(EthnicityCode).Append("\n");
+            sb.Append("  EthnicityGroup: ").Append(EthnicityGroup).Append("\n");
+            sb.Append("  Gender: ").Append(Gender).Append("\n");
+            sb.Append("  InCare: ").Append(InCare).Append("\n");
+            sb.Append("  IsEal: ").Append(IsEal).Append("\n");
+            sb.Append("  IsFsm: ").Append(IsFsm).Append("\n");
+            sb.Append("  FsmReviewDate: ").Append(FsmReviewDate).Append("\n");
+            sb.Append("  IsPp: ").Append(IsPp).Append("\n");
+            sb.Append("  SenCategory: ").Append(SenCategory).Append("\n");
+            sb.Append("  SenNeeds: ").Append(SenNeeds).Append("\n");
+            sb.Append("  CountryOfBirth: ").Append(CountryOfBirth).Append("\n");
+            sb.Append("  Nationalities: ").Append(Nationalities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -281,69 +281,69 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.ethnicity_code == input.ethnicity_code ||
-                    (this.ethnicity_code != null &&
-                    this.ethnicity_code.Equals(input.ethnicity_code))
+                    this.EthnicityCode == input.EthnicityCode ||
+                    (this.EthnicityCode != null &&
+                    this.EthnicityCode.Equals(input.EthnicityCode))
                 ) && 
                 (
-                    this.ethnicity_group == input.ethnicity_group ||
-                    (this.ethnicity_group != null &&
-                    this.ethnicity_group.Equals(input.ethnicity_group))
+                    this.EthnicityGroup == input.EthnicityGroup ||
+                    (this.EthnicityGroup != null &&
+                    this.EthnicityGroup.Equals(input.EthnicityGroup))
                 ) && 
                 (
-                    this.gender == input.gender ||
-                    (this.gender != null &&
-                    this.gender.Equals(input.gender))
+                    this.Gender == input.Gender ||
+                    (this.Gender != null &&
+                    this.Gender.Equals(input.Gender))
                 ) && 
                 (
-                    this.in_care == input.in_care ||
-                    (this.in_care != null &&
-                    this.in_care.Equals(input.in_care))
+                    this.InCare == input.InCare ||
+                    (this.InCare != null &&
+                    this.InCare.Equals(input.InCare))
                 ) && 
                 (
-                    this.is_eal == input.is_eal ||
-                    (this.is_eal != null &&
-                    this.is_eal.Equals(input.is_eal))
+                    this.IsEal == input.IsEal ||
+                    (this.IsEal != null &&
+                    this.IsEal.Equals(input.IsEal))
                 ) && 
                 (
-                    this.is_fsm == input.is_fsm ||
-                    (this.is_fsm != null &&
-                    this.is_fsm.Equals(input.is_fsm))
+                    this.IsFsm == input.IsFsm ||
+                    (this.IsFsm != null &&
+                    this.IsFsm.Equals(input.IsFsm))
                 ) && 
                 (
-                    this.fsm_review_date == input.fsm_review_date ||
-                    (this.fsm_review_date != null &&
-                    this.fsm_review_date.Equals(input.fsm_review_date))
+                    this.FsmReviewDate == input.FsmReviewDate ||
+                    (this.FsmReviewDate != null &&
+                    this.FsmReviewDate.Equals(input.FsmReviewDate))
                 ) && 
                 (
-                    this.is_pp == input.is_pp ||
-                    (this.is_pp != null &&
-                    this.is_pp.Equals(input.is_pp))
+                    this.IsPp == input.IsPp ||
+                    (this.IsPp != null &&
+                    this.IsPp.Equals(input.IsPp))
                 ) && 
                 (
-                    this.sen_category == input.sen_category ||
-                    (this.sen_category != null &&
-                    this.sen_category.Equals(input.sen_category))
+                    this.SenCategory == input.SenCategory ||
+                    (this.SenCategory != null &&
+                    this.SenCategory.Equals(input.SenCategory))
                 ) && 
                 (
-                    this.sen_needs == input.sen_needs ||
-                    (this.sen_needs != null &&
-                    this.sen_needs.Equals(input.sen_needs))
+                    this.SenNeeds == input.SenNeeds ||
+                    (this.SenNeeds != null &&
+                    this.SenNeeds.Equals(input.SenNeeds))
                 ) && 
                 (
-                    this.country_of_birth == input.country_of_birth ||
-                    (this.country_of_birth != null &&
-                    this.country_of_birth.Equals(input.country_of_birth))
+                    this.CountryOfBirth == input.CountryOfBirth ||
+                    (this.CountryOfBirth != null &&
+                    this.CountryOfBirth.Equals(input.CountryOfBirth))
                 ) && 
                 (
-                    this.nationalities == input.nationalities ||
-                    this.nationalities != null &&
-                    this.nationalities.SequenceEqual(input.nationalities)
+                    this.Nationalities == input.Nationalities ||
+                    this.Nationalities != null &&
+                    this.Nationalities.SequenceEqual(input.Nationalities)
                 );
         }
 
@@ -356,32 +356,32 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.ethnicity_code != null)
-                    hashCode = hashCode * 59 + this.ethnicity_code.GetHashCode();
-                if (this.ethnicity_group != null)
-                    hashCode = hashCode * 59 + this.ethnicity_group.GetHashCode();
-                if (this.gender != null)
-                    hashCode = hashCode * 59 + this.gender.GetHashCode();
-                if (this.in_care != null)
-                    hashCode = hashCode * 59 + this.in_care.GetHashCode();
-                if (this.is_eal != null)
-                    hashCode = hashCode * 59 + this.is_eal.GetHashCode();
-                if (this.is_fsm != null)
-                    hashCode = hashCode * 59 + this.is_fsm.GetHashCode();
-                if (this.fsm_review_date != null)
-                    hashCode = hashCode * 59 + this.fsm_review_date.GetHashCode();
-                if (this.is_pp != null)
-                    hashCode = hashCode * 59 + this.is_pp.GetHashCode();
-                if (this.sen_category != null)
-                    hashCode = hashCode * 59 + this.sen_category.GetHashCode();
-                if (this.sen_needs != null)
-                    hashCode = hashCode * 59 + this.sen_needs.GetHashCode();
-                if (this.country_of_birth != null)
-                    hashCode = hashCode * 59 + this.country_of_birth.GetHashCode();
-                if (this.nationalities != null)
-                    hashCode = hashCode * 59 + this.nationalities.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.EthnicityCode != null)
+                    hashCode = hashCode * 59 + this.EthnicityCode.GetHashCode();
+                if (this.EthnicityGroup != null)
+                    hashCode = hashCode * 59 + this.EthnicityGroup.GetHashCode();
+                if (this.Gender != null)
+                    hashCode = hashCode * 59 + this.Gender.GetHashCode();
+                if (this.InCare != null)
+                    hashCode = hashCode * 59 + this.InCare.GetHashCode();
+                if (this.IsEal != null)
+                    hashCode = hashCode * 59 + this.IsEal.GetHashCode();
+                if (this.IsFsm != null)
+                    hashCode = hashCode * 59 + this.IsFsm.GetHashCode();
+                if (this.FsmReviewDate != null)
+                    hashCode = hashCode * 59 + this.FsmReviewDate.GetHashCode();
+                if (this.IsPp != null)
+                    hashCode = hashCode * 59 + this.IsPp.GetHashCode();
+                if (this.SenCategory != null)
+                    hashCode = hashCode * 59 + this.SenCategory.GetHashCode();
+                if (this.SenNeeds != null)
+                    hashCode = hashCode * 59 + this.SenNeeds.GetHashCode();
+                if (this.CountryOfBirth != null)
+                    hashCode = hashCode * 59 + this.CountryOfBirth.GetHashCode();
+                if (this.Nationalities != null)
+                    hashCode = hashCode * 59 + this.Nationalities.GetHashCode();
                 return hashCode;
             }
         }

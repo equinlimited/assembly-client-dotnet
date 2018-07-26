@@ -37,8 +37,8 @@ namespace AssemblyClient.Model
         /// <param name="data">No description.</param>
         public CreateResultResponse(string message = default(string), List<CreateResultPayloadResults> data = default(List<CreateResultPayloadResults>))
         {
-            this.message = message;
-            this.data = data;
+            this.Message = message;
+            this.Data = data;
         }
         
         /// <summary>
@@ -46,14 +46,14 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
-        public string message { get; set; }
+        public string Message { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public List<CreateResultPayloadResults> data { get; set; }
+        public List<CreateResultPayloadResults> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -63,8 +63,8 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateResultResponse {\n");
-            sb.Append("  message: ").Append(message).Append("\n");
-            sb.Append("  data: ").Append(data).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,14 +100,14 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this.message == input.message ||
-                    (this.message != null &&
-                    this.message.Equals(input.message))
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
                 ) && 
                 (
-                    this.data == input.data ||
-                    this.data != null &&
-                    this.data.SequenceEqual(input.data)
+                    this.Data == input.Data ||
+                    this.Data != null &&
+                    this.Data.SequenceEqual(input.Data)
                 );
         }
 
@@ -120,10 +120,10 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.message != null)
-                    hashCode = hashCode * 59 + this.message.GetHashCode();
-                if (this.data != null)
-                    hashCode = hashCode * 59 + this.data.GetHashCode();
+                if (this.Message != null)
+                    hashCode = hashCode * 59 + this.Message.GetHashCode();
+                if (this.Data != null)
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;
             }
         }

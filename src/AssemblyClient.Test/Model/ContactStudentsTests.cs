@@ -67,28 +67,28 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'student_id'
+        /// Test the property 'StudentId'
         /// </summary>
         [Test]
-        public void student_idTest()
+        public void StudentIdTest()
         {
-            // TODO unit test for the property 'student_id'
+            // TODO unit test for the property 'StudentId'
         }
         /// <summary>
-        /// Test the property 'relationship'
+        /// Test the property 'Relationship'
         /// </summary>
         [Test]
-        public void relationshipTest()
+        public void RelationshipTest()
         {
-            // TODO unit test for the property 'relationship'
+            // TODO unit test for the property 'Relationship'
         }
 
     }

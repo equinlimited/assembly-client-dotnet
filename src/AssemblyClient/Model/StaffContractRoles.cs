@@ -39,10 +39,10 @@ namespace AssemblyClient.Model
         /// <param name="endDate">No description.</param>
         public StaffContractRoles(string _object = default(string), string roleType = default(string), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
         {
-            this._object = _object;
-            this.role_type = roleType;
-            this.start_date = startDate;
-            this.end_date = endDate;
+            this.Object = _object;
+            this.RoleType = roleType;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
         }
         
         /// <summary>
@@ -50,28 +50,28 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Type of role
         /// </summary>
         /// <value>Type of role</value>
         [DataMember(Name="role_type", EmitDefaultValue=false)]
-        public string role_type { get; set; }
+        public string RoleType { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
-        public DateTime? start_date { get; set; }
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="end_date", EmitDefaultValue=false)]
-        public DateTime? end_date { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -81,10 +81,10 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StaffContractRoles {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  role_type: ").Append(role_type).Append("\n");
-            sb.Append("  start_date: ").Append(start_date).Append("\n");
-            sb.Append("  end_date: ").Append(end_date).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  RoleType: ").Append(RoleType).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -120,24 +120,24 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.role_type == input.role_type ||
-                    (this.role_type != null &&
-                    this.role_type.Equals(input.role_type))
+                    this.RoleType == input.RoleType ||
+                    (this.RoleType != null &&
+                    this.RoleType.Equals(input.RoleType))
                 ) && 
                 (
-                    this.start_date == input.start_date ||
-                    (this.start_date != null &&
-                    this.start_date.Equals(input.start_date))
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 ) && 
                 (
-                    this.end_date == input.end_date ||
-                    (this.end_date != null &&
-                    this.end_date.Equals(input.end_date))
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
                 );
         }
 
@@ -150,14 +150,14 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.role_type != null)
-                    hashCode = hashCode * 59 + this.role_type.GetHashCode();
-                if (this.start_date != null)
-                    hashCode = hashCode * 59 + this.start_date.GetHashCode();
-                if (this.end_date != null)
-                    hashCode = hashCode * 59 + this.end_date.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.RoleType != null)
+                    hashCode = hashCode * 59 + this.RoleType.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
                 return hashCode;
             }
         }

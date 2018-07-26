@@ -44,15 +44,15 @@ namespace AssemblyClient.Model
         /// <param name="misType">misType.</param>
         public CalendarEvent(string _object = default(string), int? id = default(int?), string name = default(string), string description = default(string), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), bool? isActive = default(bool?), bool? isRecurrent = default(bool?), CalendarEventMisType misType = default(CalendarEventMisType))
         {
-            this._object = _object;
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            this.start_date = startDate;
-            this.end_date = endDate;
-            this.is_active = isActive;
-            this.is_recurrent = isRecurrent;
-            this.mis_type = misType;
+            this.Object = _object;
+            this.Id = id;
+            this.Name = name;
+            this.Description = description;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.IsActive = isActive;
+            this.IsRecurrent = isRecurrent;
+            this.MisType = misType;
         }
         
         /// <summary>
@@ -60,62 +60,62 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all calendar events on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all calendar events on the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// This details the user-defined &#39;category&#39; that the event is assigned to on SIMS.
         /// </summary>
         /// <value>This details the user-defined &#39;category&#39; that the event is assigned to on SIMS.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// The name of the instance of the event, usually more detailed and specific than the &#39;name&#39;
         /// </summary>
         /// <value>The name of the instance of the event, usually more detailed and specific than the &#39;name&#39;</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
-        public string description { get; set; }
+        public string Description { get; set; }
 
         /// <summary>
         /// Date and time of when the event starts
         /// </summary>
         /// <value>Date and time of when the event starts</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
-        public DateTime? start_date { get; set; }
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// Date and time of when the event ends
         /// </summary>
         /// <value>Date and time of when the event ends</value>
         [DataMember(Name="end_date", EmitDefaultValue=false)]
-        public DateTime? end_date { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Whether the event is active or not
         /// </summary>
         /// <value>Whether the event is active or not</value>
         [DataMember(Name="is_active", EmitDefaultValue=false)]
-        public bool? is_active { get; set; }
+        public bool? IsActive { get; set; }
 
         /// <summary>
         /// Whether the event recurs and (soon) details of recurrences
         /// </summary>
         /// <value>Whether the event recurs and (soon) details of recurrences</value>
         [DataMember(Name="is_recurrent", EmitDefaultValue=false)]
-        public bool? is_recurrent { get; set; }
+        public bool? IsRecurrent { get; set; }
 
         /// <summary>
-        /// Gets or Sets mis_type
+        /// Gets or Sets MisType
         /// </summary>
         [DataMember(Name="mis_type", EmitDefaultValue=false)]
-        public CalendarEventMisType mis_type { get; set; }
+        public CalendarEventMisType MisType { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -125,15 +125,15 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CalendarEvent {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  description: ").Append(description).Append("\n");
-            sb.Append("  start_date: ").Append(start_date).Append("\n");
-            sb.Append("  end_date: ").Append(end_date).Append("\n");
-            sb.Append("  is_active: ").Append(is_active).Append("\n");
-            sb.Append("  is_recurrent: ").Append(is_recurrent).Append("\n");
-            sb.Append("  mis_type: ").Append(mis_type).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  IsActive: ").Append(IsActive).Append("\n");
+            sb.Append("  IsRecurrent: ").Append(IsRecurrent).Append("\n");
+            sb.Append("  MisType: ").Append(MisType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,49 +169,49 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.description == input.description ||
-                    (this.description != null &&
-                    this.description.Equals(input.description))
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
                 ) && 
                 (
-                    this.start_date == input.start_date ||
-                    (this.start_date != null &&
-                    this.start_date.Equals(input.start_date))
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 ) && 
                 (
-                    this.end_date == input.end_date ||
-                    (this.end_date != null &&
-                    this.end_date.Equals(input.end_date))
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
                 ) && 
                 (
-                    this.is_active == input.is_active ||
-                    (this.is_active != null &&
-                    this.is_active.Equals(input.is_active))
+                    this.IsActive == input.IsActive ||
+                    (this.IsActive != null &&
+                    this.IsActive.Equals(input.IsActive))
                 ) && 
                 (
-                    this.is_recurrent == input.is_recurrent ||
-                    (this.is_recurrent != null &&
-                    this.is_recurrent.Equals(input.is_recurrent))
+                    this.IsRecurrent == input.IsRecurrent ||
+                    (this.IsRecurrent != null &&
+                    this.IsRecurrent.Equals(input.IsRecurrent))
                 ) && 
                 (
-                    this.mis_type == input.mis_type ||
-                    (this.mis_type != null &&
-                    this.mis_type.Equals(input.mis_type))
+                    this.MisType == input.MisType ||
+                    (this.MisType != null &&
+                    this.MisType.Equals(input.MisType))
                 );
         }
 
@@ -224,24 +224,24 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
-                if (this.description != null)
-                    hashCode = hashCode * 59 + this.description.GetHashCode();
-                if (this.start_date != null)
-                    hashCode = hashCode * 59 + this.start_date.GetHashCode();
-                if (this.end_date != null)
-                    hashCode = hashCode * 59 + this.end_date.GetHashCode();
-                if (this.is_active != null)
-                    hashCode = hashCode * 59 + this.is_active.GetHashCode();
-                if (this.is_recurrent != null)
-                    hashCode = hashCode * 59 + this.is_recurrent.GetHashCode();
-                if (this.mis_type != null)
-                    hashCode = hashCode * 59 + this.mis_type.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
+                if (this.IsActive != null)
+                    hashCode = hashCode * 59 + this.IsActive.GetHashCode();
+                if (this.IsRecurrent != null)
+                    hashCode = hashCode * 59 + this.IsRecurrent.GetHashCode();
+                if (this.MisType != null)
+                    hashCode = hashCode * 59 + this.MisType.GetHashCode();
                 return hashCode;
             }
         }

@@ -67,108 +67,108 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'ethnicity_code'
+        /// Test the property 'EthnicityCode'
         /// </summary>
         [Test]
-        public void ethnicity_codeTest()
+        public void EthnicityCodeTest()
         {
-            // TODO unit test for the property 'ethnicity_code'
+            // TODO unit test for the property 'EthnicityCode'
         }
         /// <summary>
-        /// Test the property 'ethnicity_group'
+        /// Test the property 'EthnicityGroup'
         /// </summary>
         [Test]
-        public void ethnicity_groupTest()
+        public void EthnicityGroupTest()
         {
-            // TODO unit test for the property 'ethnicity_group'
+            // TODO unit test for the property 'EthnicityGroup'
         }
         /// <summary>
-        /// Test the property 'gender'
+        /// Test the property 'Gender'
         /// </summary>
         [Test]
-        public void genderTest()
+        public void GenderTest()
         {
-            // TODO unit test for the property 'gender'
+            // TODO unit test for the property 'Gender'
         }
         /// <summary>
-        /// Test the property 'in_care'
+        /// Test the property 'InCare'
         /// </summary>
         [Test]
-        public void in_careTest()
+        public void InCareTest()
         {
-            // TODO unit test for the property 'in_care'
+            // TODO unit test for the property 'InCare'
         }
         /// <summary>
-        /// Test the property 'is_eal'
+        /// Test the property 'IsEal'
         /// </summary>
         [Test]
-        public void is_ealTest()
+        public void IsEalTest()
         {
-            // TODO unit test for the property 'is_eal'
+            // TODO unit test for the property 'IsEal'
         }
         /// <summary>
-        /// Test the property 'is_fsm'
+        /// Test the property 'IsFsm'
         /// </summary>
         [Test]
-        public void is_fsmTest()
+        public void IsFsmTest()
         {
-            // TODO unit test for the property 'is_fsm'
+            // TODO unit test for the property 'IsFsm'
         }
         /// <summary>
-        /// Test the property 'fsm_review_date'
+        /// Test the property 'FsmReviewDate'
         /// </summary>
         [Test]
-        public void fsm_review_dateTest()
+        public void FsmReviewDateTest()
         {
-            // TODO unit test for the property 'fsm_review_date'
+            // TODO unit test for the property 'FsmReviewDate'
         }
         /// <summary>
-        /// Test the property 'is_pp'
+        /// Test the property 'IsPp'
         /// </summary>
         [Test]
-        public void is_ppTest()
+        public void IsPpTest()
         {
-            // TODO unit test for the property 'is_pp'
+            // TODO unit test for the property 'IsPp'
         }
         /// <summary>
-        /// Test the property 'sen_category'
+        /// Test the property 'SenCategory'
         /// </summary>
         [Test]
-        public void sen_categoryTest()
+        public void SenCategoryTest()
         {
-            // TODO unit test for the property 'sen_category'
+            // TODO unit test for the property 'SenCategory'
         }
         /// <summary>
-        /// Test the property 'sen_needs'
+        /// Test the property 'SenNeeds'
         /// </summary>
         [Test]
-        public void sen_needsTest()
+        public void SenNeedsTest()
         {
-            // TODO unit test for the property 'sen_needs'
+            // TODO unit test for the property 'SenNeeds'
         }
         /// <summary>
-        /// Test the property 'country_of_birth'
+        /// Test the property 'CountryOfBirth'
         /// </summary>
         [Test]
-        public void country_of_birthTest()
+        public void CountryOfBirthTest()
         {
-            // TODO unit test for the property 'country_of_birth'
+            // TODO unit test for the property 'CountryOfBirth'
         }
         /// <summary>
-        /// Test the property 'nationalities'
+        /// Test the property 'Nationalities'
         /// </summary>
         [Test]
-        public void nationalitiesTest()
+        public void NationalitiesTest()
         {
-            // TODO unit test for the property 'nationalities'
+            // TODO unit test for the property 'Nationalities'
         }
 
     }

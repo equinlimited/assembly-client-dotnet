@@ -40,11 +40,11 @@ namespace AssemblyClient.Model
         /// <param name="studentIds">The IDs of students associated with the registration group.</param>
         public RegistrationGroup(string _object = default(string), int? id = default(int?), string name = default(string), List<int?> supervisorIds = default(List<int?>), List<int?> studentIds = default(List<int?>))
         {
-            this._object = _object;
-            this.id = id;
-            this.name = name;
-            this.supervisor_ids = supervisorIds;
-            this.student_ids = studentIds;
+            this.Object = _object;
+            this.Id = id;
+            this.Name = name;
+            this.SupervisorIds = supervisorIds;
+            this.StudentIds = studentIds;
         }
         
         /// <summary>
@@ -52,35 +52,35 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all registration groups on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all registration groups on the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// Name of the registration group
         /// </summary>
         /// <value>Name of the registration group</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// The IDs of staff members associated with the registration group
         /// </summary>
         /// <value>The IDs of staff members associated with the registration group</value>
         [DataMember(Name="supervisor_ids", EmitDefaultValue=false)]
-        public List<int?> supervisor_ids { get; set; }
+        public List<int?> SupervisorIds { get; set; }
 
         /// <summary>
         /// The IDs of students associated with the registration group
         /// </summary>
         /// <value>The IDs of students associated with the registration group</value>
         [DataMember(Name="student_ids", EmitDefaultValue=false)]
-        public List<int?> student_ids { get; set; }
+        public List<int?> StudentIds { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -90,11 +90,11 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RegistrationGroup {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  supervisor_ids: ").Append(supervisor_ids).Append("\n");
-            sb.Append("  student_ids: ").Append(student_ids).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  SupervisorIds: ").Append(SupervisorIds).Append("\n");
+            sb.Append("  StudentIds: ").Append(StudentIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -130,29 +130,29 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.supervisor_ids == input.supervisor_ids ||
-                    this.supervisor_ids != null &&
-                    this.supervisor_ids.SequenceEqual(input.supervisor_ids)
+                    this.SupervisorIds == input.SupervisorIds ||
+                    this.SupervisorIds != null &&
+                    this.SupervisorIds.SequenceEqual(input.SupervisorIds)
                 ) && 
                 (
-                    this.student_ids == input.student_ids ||
-                    this.student_ids != null &&
-                    this.student_ids.SequenceEqual(input.student_ids)
+                    this.StudentIds == input.StudentIds ||
+                    this.StudentIds != null &&
+                    this.StudentIds.SequenceEqual(input.StudentIds)
                 );
         }
 
@@ -165,16 +165,16 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
-                if (this.supervisor_ids != null)
-                    hashCode = hashCode * 59 + this.supervisor_ids.GetHashCode();
-                if (this.student_ids != null)
-                    hashCode = hashCode * 59 + this.student_ids.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.SupervisorIds != null)
+                    hashCode = hashCode * 59 + this.SupervisorIds.GetHashCode();
+                if (this.StudentIds != null)
+                    hashCode = hashCode * 59 + this.StudentIds.GetHashCode();
                 return hashCode;
             }
         }

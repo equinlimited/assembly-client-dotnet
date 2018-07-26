@@ -67,36 +67,36 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'name'
+        /// Test the property 'Name'
         /// </summary>
         [Test]
-        public void nameTest()
+        public void NameTest()
         {
-            // TODO unit test for the property 'name'
+            // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'start_date'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void start_dateTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'start_date'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
-        /// Test the property 'end_date'
+        /// Test the property 'EndDate'
         /// </summary>
         [Test]
-        public void end_dateTest()
+        public void EndDateTest()
         {
-            // TODO unit test for the property 'end_date'
+            // TODO unit test for the property 'EndDate'
         }
 
     }

@@ -44,15 +44,15 @@ namespace AssemblyClient.Model
         /// <param name="comments">Any additional comments.</param>
         public AttendanceListData(string _object = default(string), int? id = default(int?), int? studentId = default(int?), int? registrationGroupId = default(int?), DateTime? sessionDate = default(DateTime?), string sessionName = default(string), string attendanceMark = default(string), int? minutesLate = default(int?), string comments = default(string))
         {
-            this._object = _object;
-            this.id = id;
-            this.student_id = studentId;
-            this.registration_group_id = registrationGroupId;
-            this.session_date = sessionDate;
-            this.session_name = sessionName;
-            this.attendance_mark = attendanceMark;
-            this.minutes_late = minutesLate;
-            this.comments = comments;
+            this.Object = _object;
+            this.Id = id;
+            this.StudentId = studentId;
+            this.RegistrationGroupId = registrationGroupId;
+            this.SessionDate = sessionDate;
+            this.SessionName = sessionName;
+            this.AttendanceMark = attendanceMark;
+            this.MinutesLate = minutesLate;
+            this.Comments = comments;
         }
         
         /// <summary>
@@ -60,63 +60,63 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all attendances on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all attendances on the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The ID of the student that the attendance is attached to
         /// </summary>
         /// <value>The ID of the student that the attendance is attached to</value>
         [DataMember(Name="student_id", EmitDefaultValue=false)]
-        public int? student_id { get; set; }
+        public int? StudentId { get; set; }
 
         /// <summary>
         /// The ID of the subject that the attendance is attached to
         /// </summary>
         /// <value>The ID of the subject that the attendance is attached to</value>
         [DataMember(Name="registration_group_id", EmitDefaultValue=false)]
-        public int? registration_group_id { get; set; }
+        public int? RegistrationGroupId { get; set; }
 
         /// <summary>
         /// The date of the attendance
         /// </summary>
         /// <value>The date of the attendance</value>
         [DataMember(Name="session_date", EmitDefaultValue=false)]
-        public DateTime? session_date { get; set; }
+        public DateTime? SessionDate { get; set; }
 
         /// <summary>
         /// Denotes whether the attendance is an AM session or PM session (morning or afternoon)
         /// </summary>
         /// <value>Denotes whether the attendance is an AM session or PM session (morning or afternoon)</value>
         [DataMember(Name="session_name", EmitDefaultValue=false)]
-        public string session_name { get; set; }
+        public string SessionName { get; set; }
 
         /// <summary>
         /// The attendance mark
         /// </summary>
         /// <value>The attendance mark</value>
         [DataMember(Name="attendance_mark", EmitDefaultValue=false)]
-        public string attendance_mark { get; set; }
+        public string AttendanceMark { get; set; }
 
         /// <summary>
         /// If the attendance mark is &#39;L&#39; for &#39;Late&#39;, how many minutes late the student was
         /// </summary>
         /// <value>If the attendance mark is &#39;L&#39; for &#39;Late&#39;, how many minutes late the student was</value>
         [DataMember(Name="minutes_late", EmitDefaultValue=false)]
-        public int? minutes_late { get; set; }
+        public int? MinutesLate { get; set; }
 
         /// <summary>
         /// Any additional comments
         /// </summary>
         /// <value>Any additional comments</value>
         [DataMember(Name="comments", EmitDefaultValue=false)]
-        public string comments { get; set; }
+        public string Comments { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -126,15 +126,15 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AttendanceListData {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  student_id: ").Append(student_id).Append("\n");
-            sb.Append("  registration_group_id: ").Append(registration_group_id).Append("\n");
-            sb.Append("  session_date: ").Append(session_date).Append("\n");
-            sb.Append("  session_name: ").Append(session_name).Append("\n");
-            sb.Append("  attendance_mark: ").Append(attendance_mark).Append("\n");
-            sb.Append("  minutes_late: ").Append(minutes_late).Append("\n");
-            sb.Append("  comments: ").Append(comments).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  StudentId: ").Append(StudentId).Append("\n");
+            sb.Append("  RegistrationGroupId: ").Append(RegistrationGroupId).Append("\n");
+            sb.Append("  SessionDate: ").Append(SessionDate).Append("\n");
+            sb.Append("  SessionName: ").Append(SessionName).Append("\n");
+            sb.Append("  AttendanceMark: ").Append(AttendanceMark).Append("\n");
+            sb.Append("  MinutesLate: ").Append(MinutesLate).Append("\n");
+            sb.Append("  Comments: ").Append(Comments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -170,49 +170,49 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.student_id == input.student_id ||
-                    (this.student_id != null &&
-                    this.student_id.Equals(input.student_id))
+                    this.StudentId == input.StudentId ||
+                    (this.StudentId != null &&
+                    this.StudentId.Equals(input.StudentId))
                 ) && 
                 (
-                    this.registration_group_id == input.registration_group_id ||
-                    (this.registration_group_id != null &&
-                    this.registration_group_id.Equals(input.registration_group_id))
+                    this.RegistrationGroupId == input.RegistrationGroupId ||
+                    (this.RegistrationGroupId != null &&
+                    this.RegistrationGroupId.Equals(input.RegistrationGroupId))
                 ) && 
                 (
-                    this.session_date == input.session_date ||
-                    (this.session_date != null &&
-                    this.session_date.Equals(input.session_date))
+                    this.SessionDate == input.SessionDate ||
+                    (this.SessionDate != null &&
+                    this.SessionDate.Equals(input.SessionDate))
                 ) && 
                 (
-                    this.session_name == input.session_name ||
-                    (this.session_name != null &&
-                    this.session_name.Equals(input.session_name))
+                    this.SessionName == input.SessionName ||
+                    (this.SessionName != null &&
+                    this.SessionName.Equals(input.SessionName))
                 ) && 
                 (
-                    this.attendance_mark == input.attendance_mark ||
-                    (this.attendance_mark != null &&
-                    this.attendance_mark.Equals(input.attendance_mark))
+                    this.AttendanceMark == input.AttendanceMark ||
+                    (this.AttendanceMark != null &&
+                    this.AttendanceMark.Equals(input.AttendanceMark))
                 ) && 
                 (
-                    this.minutes_late == input.minutes_late ||
-                    (this.minutes_late != null &&
-                    this.minutes_late.Equals(input.minutes_late))
+                    this.MinutesLate == input.MinutesLate ||
+                    (this.MinutesLate != null &&
+                    this.MinutesLate.Equals(input.MinutesLate))
                 ) && 
                 (
-                    this.comments == input.comments ||
-                    (this.comments != null &&
-                    this.comments.Equals(input.comments))
+                    this.Comments == input.Comments ||
+                    (this.Comments != null &&
+                    this.Comments.Equals(input.Comments))
                 );
         }
 
@@ -225,24 +225,24 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.student_id != null)
-                    hashCode = hashCode * 59 + this.student_id.GetHashCode();
-                if (this.registration_group_id != null)
-                    hashCode = hashCode * 59 + this.registration_group_id.GetHashCode();
-                if (this.session_date != null)
-                    hashCode = hashCode * 59 + this.session_date.GetHashCode();
-                if (this.session_name != null)
-                    hashCode = hashCode * 59 + this.session_name.GetHashCode();
-                if (this.attendance_mark != null)
-                    hashCode = hashCode * 59 + this.attendance_mark.GetHashCode();
-                if (this.minutes_late != null)
-                    hashCode = hashCode * 59 + this.minutes_late.GetHashCode();
-                if (this.comments != null)
-                    hashCode = hashCode * 59 + this.comments.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.StudentId != null)
+                    hashCode = hashCode * 59 + this.StudentId.GetHashCode();
+                if (this.RegistrationGroupId != null)
+                    hashCode = hashCode * 59 + this.RegistrationGroupId.GetHashCode();
+                if (this.SessionDate != null)
+                    hashCode = hashCode * 59 + this.SessionDate.GetHashCode();
+                if (this.SessionName != null)
+                    hashCode = hashCode * 59 + this.SessionName.GetHashCode();
+                if (this.AttendanceMark != null)
+                    hashCode = hashCode * 59 + this.AttendanceMark.GetHashCode();
+                if (this.MinutesLate != null)
+                    hashCode = hashCode * 59 + this.MinutesLate.GetHashCode();
+                if (this.Comments != null)
+                    hashCode = hashCode * 59 + this.Comments.GetHashCode();
                 return hashCode;
             }
         }

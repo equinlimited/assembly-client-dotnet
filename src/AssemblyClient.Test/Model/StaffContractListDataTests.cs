@@ -67,132 +67,132 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'staff_member_id'
+        /// Test the property 'StaffMemberId'
         /// </summary>
         [Test]
-        public void staff_member_idTest()
+        public void StaffMemberIdTest()
         {
-            // TODO unit test for the property 'staff_member_id'
+            // TODO unit test for the property 'StaffMemberId'
         }
         /// <summary>
-        /// Test the property 'start_date'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void start_dateTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'start_date'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
-        /// Test the property 'end_date'
+        /// Test the property 'EndDate'
         /// </summary>
         [Test]
-        public void end_dateTest()
+        public void EndDateTest()
         {
-            // TODO unit test for the property 'end_date'
+            // TODO unit test for the property 'EndDate'
         }
         /// <summary>
-        /// Test the property 'national_insurance_number'
+        /// Test the property 'NationalInsuranceNumber'
         /// </summary>
         [Test]
-        public void national_insurance_numberTest()
+        public void NationalInsuranceNumberTest()
         {
-            // TODO unit test for the property 'national_insurance_number'
+            // TODO unit test for the property 'NationalInsuranceNumber'
         }
         /// <summary>
-        /// Test the property 'payroll_number'
+        /// Test the property 'PayrollNumber'
         /// </summary>
         [Test]
-        public void payroll_numberTest()
+        public void PayrollNumberTest()
         {
-            // TODO unit test for the property 'payroll_number'
+            // TODO unit test for the property 'PayrollNumber'
         }
         /// <summary>
-        /// Test the property 'contract_type'
+        /// Test the property 'ContractType'
         /// </summary>
         [Test]
-        public void contract_typeTest()
+        public void ContractTypeTest()
         {
-            // TODO unit test for the property 'contract_type'
+            // TODO unit test for the property 'ContractType'
         }
         /// <summary>
-        /// Test the property 'post'
+        /// Test the property 'Post'
         /// </summary>
         [Test]
-        public void postTest()
+        public void PostTest()
         {
-            // TODO unit test for the property 'post'
+            // TODO unit test for the property 'Post'
         }
         /// <summary>
-        /// Test the property 'origin'
+        /// Test the property 'Origin'
         /// </summary>
         [Test]
-        public void originTest()
+        public void OriginTest()
         {
-            // TODO unit test for the property 'origin'
+            // TODO unit test for the property 'Origin'
         }
         /// <summary>
-        /// Test the property 'destination'
+        /// Test the property 'Destination'
         /// </summary>
         [Test]
-        public void destinationTest()
+        public void DestinationTest()
         {
-            // TODO unit test for the property 'destination'
+            // TODO unit test for the property 'Destination'
         }
         /// <summary>
-        /// Test the property 'daily_rate'
+        /// Test the property 'DailyRate'
         /// </summary>
         [Test]
-        public void daily_rateTest()
+        public void DailyRateTest()
         {
-            // TODO unit test for the property 'daily_rate'
+            // TODO unit test for the property 'DailyRate'
         }
         /// <summary>
-        /// Test the property 'pay_review_date'
+        /// Test the property 'PayReviewDate'
         /// </summary>
         [Test]
-        public void pay_review_dateTest()
+        public void PayReviewDateTest()
         {
-            // TODO unit test for the property 'pay_review_date'
+            // TODO unit test for the property 'PayReviewDate'
         }
         /// <summary>
-        /// Test the property 'roles'
+        /// Test the property 'Roles'
         /// </summary>
         [Test]
-        public void rolesTest()
+        public void RolesTest()
         {
-            // TODO unit test for the property 'roles'
+            // TODO unit test for the property 'Roles'
         }
         /// <summary>
-        /// Test the property 'salaries'
+        /// Test the property 'Salaries'
         /// </summary>
         [Test]
-        public void salariesTest()
+        public void SalariesTest()
         {
-            // TODO unit test for the property 'salaries'
+            // TODO unit test for the property 'Salaries'
         }
         /// <summary>
-        /// Test the property 'allowances'
+        /// Test the property 'Allowances'
         /// </summary>
         [Test]
-        public void allowancesTest()
+        public void AllowancesTest()
         {
-            // TODO unit test for the property 'allowances'
+            // TODO unit test for the property 'Allowances'
         }
 
     }

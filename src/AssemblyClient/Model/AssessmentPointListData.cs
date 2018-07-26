@@ -40,11 +40,11 @@ namespace AssemblyClient.Model
         /// <param name="yearCode">This field ties an assessment point to a year group..</param>
         public AssessmentPointListData(string _object = default(string), int? rank = default(int?), string name = default(string), string type = default(string), string yearCode = default(string))
         {
-            this._object = _object;
-            this.rank = rank;
-            this.name = name;
-            this.type = type;
-            this.year_code = yearCode;
+            this.Object = _object;
+            this.Rank = rank;
+            this.Name = name;
+            this.Type = type;
+            this.YearCode = yearCode;
         }
         
         /// <summary>
@@ -52,35 +52,35 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// A stable number consistently assigned to assessment points across all environments. This field should be used to send results back to the Platform
         /// </summary>
         /// <value>A stable number consistently assigned to assessment points across all environments. This field should be used to send results back to the Platform</value>
         [DataMember(Name="rank", EmitDefaultValue=false)]
-        public int? rank { get; set; }
+        public int? Rank { get; set; }
 
         /// <summary>
         /// The name of the assessment point
         /// </summary>
         /// <value>The name of the assessment point</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// The time period that the assessment point relates to. This can be an entire key stage, an entire year, or a single term or half-term
         /// </summary>
         /// <value>The time period that the assessment point relates to. This can be an entire key stage, an entire year, or a single term or half-term</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public string type { get; set; }
+        public string Type { get; set; }
 
         /// <summary>
         /// This field ties an assessment point to a year group.
         /// </summary>
         /// <value>This field ties an assessment point to a year group.</value>
         [DataMember(Name="year_code", EmitDefaultValue=false)]
-        public string year_code { get; set; }
+        public string YearCode { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -90,11 +90,11 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AssessmentPointListData {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  rank: ").Append(rank).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  type: ").Append(type).Append("\n");
-            sb.Append("  year_code: ").Append(year_code).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Rank: ").Append(Rank).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  YearCode: ").Append(YearCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -130,29 +130,29 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.rank == input.rank ||
-                    (this.rank != null &&
-                    this.rank.Equals(input.rank))
+                    this.Rank == input.Rank ||
+                    (this.Rank != null &&
+                    this.Rank.Equals(input.Rank))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.type == input.type ||
-                    (this.type != null &&
-                    this.type.Equals(input.type))
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
                 ) && 
                 (
-                    this.year_code == input.year_code ||
-                    (this.year_code != null &&
-                    this.year_code.Equals(input.year_code))
+                    this.YearCode == input.YearCode ||
+                    (this.YearCode != null &&
+                    this.YearCode.Equals(input.YearCode))
                 );
         }
 
@@ -165,16 +165,16 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.rank != null)
-                    hashCode = hashCode * 59 + this.rank.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
-                if (this.type != null)
-                    hashCode = hashCode * 59 + this.type.GetHashCode();
-                if (this.year_code != null)
-                    hashCode = hashCode * 59 + this.year_code.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Rank != null)
+                    hashCode = hashCode * 59 + this.Rank.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Type != null)
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                if (this.YearCode != null)
+                    hashCode = hashCode * 59 + this.YearCode.GetHashCode();
                 return hashCode;
             }
         }

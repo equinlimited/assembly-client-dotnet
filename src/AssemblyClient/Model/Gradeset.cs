@@ -39,10 +39,10 @@ namespace AssemblyClient.Model
         /// <param name="grades">The grades are the acceptable values and ids that make up a gradeset..</param>
         public Gradeset(string _object = default(string), int? id = default(int?), string name = default(string), List<GradesetGrades> grades = default(List<GradesetGrades>))
         {
-            this._object = _object;
-            this.id = id;
-            this.name = name;
-            this.grades = grades;
+            this.Object = _object;
+            this.Id = id;
+            this.Name = name;
+            this.Grades = grades;
         }
         
         /// <summary>
@@ -50,28 +50,28 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all gradesets on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all gradesets on the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The name of the assessment family
         /// </summary>
         /// <value>The name of the assessment family</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// The grades are the acceptable values and ids that make up a gradeset.
         /// </summary>
         /// <value>The grades are the acceptable values and ids that make up a gradeset.</value>
         [DataMember(Name="grades", EmitDefaultValue=false)]
-        public List<GradesetGrades> grades { get; set; }
+        public List<GradesetGrades> Grades { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -81,10 +81,10 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Gradeset {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  grades: ").Append(grades).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Grades: ").Append(Grades).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -120,24 +120,24 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.grades == input.grades ||
-                    this.grades != null &&
-                    this.grades.SequenceEqual(input.grades)
+                    this.Grades == input.Grades ||
+                    this.Grades != null &&
+                    this.Grades.SequenceEqual(input.Grades)
                 );
         }
 
@@ -150,14 +150,14 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
-                if (this.grades != null)
-                    hashCode = hashCode * 59 + this.grades.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Grades != null)
+                    hashCode = hashCode * 59 + this.Grades.GetHashCode();
                 return hashCode;
             }
         }

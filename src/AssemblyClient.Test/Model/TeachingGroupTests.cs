@@ -67,76 +67,76 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'name'
+        /// Test the property 'Name'
         /// </summary>
         [Test]
-        public void nameTest()
+        public void NameTest()
         {
-            // TODO unit test for the property 'name'
+            // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'start_date'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void start_dateTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'start_date'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
-        /// Test the property 'end_date'
+        /// Test the property 'EndDate'
         /// </summary>
         [Test]
-        public void end_dateTest()
+        public void EndDateTest()
         {
-            // TODO unit test for the property 'end_date'
+            // TODO unit test for the property 'EndDate'
         }
         /// <summary>
-        /// Test the property 'supervisor_ids'
+        /// Test the property 'SupervisorIds'
         /// </summary>
         [Test]
-        public void supervisor_idsTest()
+        public void SupervisorIdsTest()
         {
-            // TODO unit test for the property 'supervisor_ids'
+            // TODO unit test for the property 'SupervisorIds'
         }
         /// <summary>
-        /// Test the property 'student_ids'
+        /// Test the property 'StudentIds'
         /// </summary>
         [Test]
-        public void student_idsTest()
+        public void StudentIdsTest()
         {
-            // TODO unit test for the property 'student_ids'
+            // TODO unit test for the property 'StudentIds'
         }
         /// <summary>
-        /// Test the property 'subject'
+        /// Test the property 'Subject'
         /// </summary>
         [Test]
-        public void subjectTest()
+        public void SubjectTest()
         {
-            // TODO unit test for the property 'subject'
+            // TODO unit test for the property 'Subject'
         }
         /// <summary>
-        /// Test the property 'mis_level'
+        /// Test the property 'MisLevel'
         /// </summary>
         [Test]
-        public void mis_levelTest()
+        public void MisLevelTest()
         {
-            // TODO unit test for the property 'mis_level'
+            // TODO unit test for the property 'MisLevel'
         }
 
     }

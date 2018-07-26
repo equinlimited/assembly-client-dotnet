@@ -51,22 +51,22 @@ namespace AssemblyClient.Model
         /// <param name="allowances">No description.</param>
         public StaffContractListData(string _object = default(string), int? id = default(int?), string staffMemberId = default(string), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string nationalInsuranceNumber = default(string), string payrollNumber = default(string), string contractType = default(string), string post = default(string), string origin = default(string), string destination = default(string), bool? dailyRate = default(bool?), DateTime? payReviewDate = default(DateTime?), List<StaffContractRoles> roles = default(List<StaffContractRoles>), List<StaffContractSalaries> salaries = default(List<StaffContractSalaries>), List<StaffContractAllowances> allowances = default(List<StaffContractAllowances>))
         {
-            this._object = _object;
-            this.id = id;
-            this.staff_member_id = staffMemberId;
-            this.start_date = startDate;
-            this.end_date = endDate;
-            this.national_insurance_number = nationalInsuranceNumber;
-            this.payroll_number = payrollNumber;
-            this.contract_type = contractType;
-            this.post = post;
-            this.origin = origin;
-            this.destination = destination;
-            this.daily_rate = dailyRate;
-            this.pay_review_date = payReviewDate;
-            this.roles = roles;
-            this.salaries = salaries;
-            this.allowances = allowances;
+            this.Object = _object;
+            this.Id = id;
+            this.StaffMemberId = staffMemberId;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.NationalInsuranceNumber = nationalInsuranceNumber;
+            this.PayrollNumber = payrollNumber;
+            this.ContractType = contractType;
+            this.Post = post;
+            this.Origin = origin;
+            this.Destination = destination;
+            this.DailyRate = dailyRate;
+            this.PayReviewDate = payReviewDate;
+            this.Roles = roles;
+            this.Salaries = salaries;
+            this.Allowances = allowances;
         }
         
         /// <summary>
@@ -74,112 +74,112 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to each contract in the Platform
         /// </summary>
         /// <value>Internal stable ID given to each contract in the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The ID of the staff member
         /// </summary>
         /// <value>The ID of the staff member</value>
         [DataMember(Name="staff_member_id", EmitDefaultValue=false)]
-        public string staff_member_id { get; set; }
+        public string StaffMemberId { get; set; }
 
         /// <summary>
         /// Contract start date
         /// </summary>
         /// <value>Contract start date</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
-        public DateTime? start_date { get; set; }
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// Contract end date
         /// </summary>
         /// <value>Contract end date</value>
         [DataMember(Name="end_date", EmitDefaultValue=false)]
-        public DateTime? end_date { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Employee NI number
         /// </summary>
         /// <value>Employee NI number</value>
         [DataMember(Name="national_insurance_number", EmitDefaultValue=false)]
-        public string national_insurance_number { get; set; }
+        public string NationalInsuranceNumber { get; set; }
 
         /// <summary>
         /// Employee payroll number
         /// </summary>
         /// <value>Employee payroll number</value>
         [DataMember(Name="payroll_number", EmitDefaultValue=false)]
-        public string payroll_number { get; set; }
+        public string PayrollNumber { get; set; }
 
         /// <summary>
         /// Contract type
         /// </summary>
         /// <value>Contract type</value>
         [DataMember(Name="contract_type", EmitDefaultValue=false)]
-        public string contract_type { get; set; }
+        public string ContractType { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="post", EmitDefaultValue=false)]
-        public string post { get; set; }
+        public string Post { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="origin", EmitDefaultValue=false)]
-        public string origin { get; set; }
+        public string Origin { get; set; }
 
         /// <summary>
         /// Completed after a contract has been terminated; this captures a post-holder’s destination
         /// </summary>
         /// <value>Completed after a contract has been terminated; this captures a post-holder’s destination</value>
         [DataMember(Name="destination", EmitDefaultValue=false)]
-        public string destination { get; set; }
+        public string Destination { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="daily_rate", EmitDefaultValue=false)]
-        public bool? daily_rate { get; set; }
+        public bool? DailyRate { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="pay_review_date", EmitDefaultValue=false)]
-        public DateTime? pay_review_date { get; set; }
+        public DateTime? PayReviewDate { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="roles", EmitDefaultValue=false)]
-        public List<StaffContractRoles> roles { get; set; }
+        public List<StaffContractRoles> Roles { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="salaries", EmitDefaultValue=false)]
-        public List<StaffContractSalaries> salaries { get; set; }
+        public List<StaffContractSalaries> Salaries { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="allowances", EmitDefaultValue=false)]
-        public List<StaffContractAllowances> allowances { get; set; }
+        public List<StaffContractAllowances> Allowances { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -189,22 +189,22 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StaffContractListData {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  staff_member_id: ").Append(staff_member_id).Append("\n");
-            sb.Append("  start_date: ").Append(start_date).Append("\n");
-            sb.Append("  end_date: ").Append(end_date).Append("\n");
-            sb.Append("  national_insurance_number: ").Append(national_insurance_number).Append("\n");
-            sb.Append("  payroll_number: ").Append(payroll_number).Append("\n");
-            sb.Append("  contract_type: ").Append(contract_type).Append("\n");
-            sb.Append("  post: ").Append(post).Append("\n");
-            sb.Append("  origin: ").Append(origin).Append("\n");
-            sb.Append("  destination: ").Append(destination).Append("\n");
-            sb.Append("  daily_rate: ").Append(daily_rate).Append("\n");
-            sb.Append("  pay_review_date: ").Append(pay_review_date).Append("\n");
-            sb.Append("  roles: ").Append(roles).Append("\n");
-            sb.Append("  salaries: ").Append(salaries).Append("\n");
-            sb.Append("  allowances: ").Append(allowances).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  StaffMemberId: ").Append(StaffMemberId).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  NationalInsuranceNumber: ").Append(NationalInsuranceNumber).Append("\n");
+            sb.Append("  PayrollNumber: ").Append(PayrollNumber).Append("\n");
+            sb.Append("  ContractType: ").Append(ContractType).Append("\n");
+            sb.Append("  Post: ").Append(Post).Append("\n");
+            sb.Append("  Origin: ").Append(Origin).Append("\n");
+            sb.Append("  Destination: ").Append(Destination).Append("\n");
+            sb.Append("  DailyRate: ").Append(DailyRate).Append("\n");
+            sb.Append("  PayReviewDate: ").Append(PayReviewDate).Append("\n");
+            sb.Append("  Roles: ").Append(Roles).Append("\n");
+            sb.Append("  Salaries: ").Append(Salaries).Append("\n");
+            sb.Append("  Allowances: ").Append(Allowances).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -240,84 +240,84 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.staff_member_id == input.staff_member_id ||
-                    (this.staff_member_id != null &&
-                    this.staff_member_id.Equals(input.staff_member_id))
+                    this.StaffMemberId == input.StaffMemberId ||
+                    (this.StaffMemberId != null &&
+                    this.StaffMemberId.Equals(input.StaffMemberId))
                 ) && 
                 (
-                    this.start_date == input.start_date ||
-                    (this.start_date != null &&
-                    this.start_date.Equals(input.start_date))
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 ) && 
                 (
-                    this.end_date == input.end_date ||
-                    (this.end_date != null &&
-                    this.end_date.Equals(input.end_date))
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
                 ) && 
                 (
-                    this.national_insurance_number == input.national_insurance_number ||
-                    (this.national_insurance_number != null &&
-                    this.national_insurance_number.Equals(input.national_insurance_number))
+                    this.NationalInsuranceNumber == input.NationalInsuranceNumber ||
+                    (this.NationalInsuranceNumber != null &&
+                    this.NationalInsuranceNumber.Equals(input.NationalInsuranceNumber))
                 ) && 
                 (
-                    this.payroll_number == input.payroll_number ||
-                    (this.payroll_number != null &&
-                    this.payroll_number.Equals(input.payroll_number))
+                    this.PayrollNumber == input.PayrollNumber ||
+                    (this.PayrollNumber != null &&
+                    this.PayrollNumber.Equals(input.PayrollNumber))
                 ) && 
                 (
-                    this.contract_type == input.contract_type ||
-                    (this.contract_type != null &&
-                    this.contract_type.Equals(input.contract_type))
+                    this.ContractType == input.ContractType ||
+                    (this.ContractType != null &&
+                    this.ContractType.Equals(input.ContractType))
                 ) && 
                 (
-                    this.post == input.post ||
-                    (this.post != null &&
-                    this.post.Equals(input.post))
+                    this.Post == input.Post ||
+                    (this.Post != null &&
+                    this.Post.Equals(input.Post))
                 ) && 
                 (
-                    this.origin == input.origin ||
-                    (this.origin != null &&
-                    this.origin.Equals(input.origin))
+                    this.Origin == input.Origin ||
+                    (this.Origin != null &&
+                    this.Origin.Equals(input.Origin))
                 ) && 
                 (
-                    this.destination == input.destination ||
-                    (this.destination != null &&
-                    this.destination.Equals(input.destination))
+                    this.Destination == input.Destination ||
+                    (this.Destination != null &&
+                    this.Destination.Equals(input.Destination))
                 ) && 
                 (
-                    this.daily_rate == input.daily_rate ||
-                    (this.daily_rate != null &&
-                    this.daily_rate.Equals(input.daily_rate))
+                    this.DailyRate == input.DailyRate ||
+                    (this.DailyRate != null &&
+                    this.DailyRate.Equals(input.DailyRate))
                 ) && 
                 (
-                    this.pay_review_date == input.pay_review_date ||
-                    (this.pay_review_date != null &&
-                    this.pay_review_date.Equals(input.pay_review_date))
+                    this.PayReviewDate == input.PayReviewDate ||
+                    (this.PayReviewDate != null &&
+                    this.PayReviewDate.Equals(input.PayReviewDate))
                 ) && 
                 (
-                    this.roles == input.roles ||
-                    this.roles != null &&
-                    this.roles.SequenceEqual(input.roles)
+                    this.Roles == input.Roles ||
+                    this.Roles != null &&
+                    this.Roles.SequenceEqual(input.Roles)
                 ) && 
                 (
-                    this.salaries == input.salaries ||
-                    this.salaries != null &&
-                    this.salaries.SequenceEqual(input.salaries)
+                    this.Salaries == input.Salaries ||
+                    this.Salaries != null &&
+                    this.Salaries.SequenceEqual(input.Salaries)
                 ) && 
                 (
-                    this.allowances == input.allowances ||
-                    this.allowances != null &&
-                    this.allowances.SequenceEqual(input.allowances)
+                    this.Allowances == input.Allowances ||
+                    this.Allowances != null &&
+                    this.Allowances.SequenceEqual(input.Allowances)
                 );
         }
 
@@ -330,38 +330,38 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.staff_member_id != null)
-                    hashCode = hashCode * 59 + this.staff_member_id.GetHashCode();
-                if (this.start_date != null)
-                    hashCode = hashCode * 59 + this.start_date.GetHashCode();
-                if (this.end_date != null)
-                    hashCode = hashCode * 59 + this.end_date.GetHashCode();
-                if (this.national_insurance_number != null)
-                    hashCode = hashCode * 59 + this.national_insurance_number.GetHashCode();
-                if (this.payroll_number != null)
-                    hashCode = hashCode * 59 + this.payroll_number.GetHashCode();
-                if (this.contract_type != null)
-                    hashCode = hashCode * 59 + this.contract_type.GetHashCode();
-                if (this.post != null)
-                    hashCode = hashCode * 59 + this.post.GetHashCode();
-                if (this.origin != null)
-                    hashCode = hashCode * 59 + this.origin.GetHashCode();
-                if (this.destination != null)
-                    hashCode = hashCode * 59 + this.destination.GetHashCode();
-                if (this.daily_rate != null)
-                    hashCode = hashCode * 59 + this.daily_rate.GetHashCode();
-                if (this.pay_review_date != null)
-                    hashCode = hashCode * 59 + this.pay_review_date.GetHashCode();
-                if (this.roles != null)
-                    hashCode = hashCode * 59 + this.roles.GetHashCode();
-                if (this.salaries != null)
-                    hashCode = hashCode * 59 + this.salaries.GetHashCode();
-                if (this.allowances != null)
-                    hashCode = hashCode * 59 + this.allowances.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.StaffMemberId != null)
+                    hashCode = hashCode * 59 + this.StaffMemberId.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
+                if (this.NationalInsuranceNumber != null)
+                    hashCode = hashCode * 59 + this.NationalInsuranceNumber.GetHashCode();
+                if (this.PayrollNumber != null)
+                    hashCode = hashCode * 59 + this.PayrollNumber.GetHashCode();
+                if (this.ContractType != null)
+                    hashCode = hashCode * 59 + this.ContractType.GetHashCode();
+                if (this.Post != null)
+                    hashCode = hashCode * 59 + this.Post.GetHashCode();
+                if (this.Origin != null)
+                    hashCode = hashCode * 59 + this.Origin.GetHashCode();
+                if (this.Destination != null)
+                    hashCode = hashCode * 59 + this.Destination.GetHashCode();
+                if (this.DailyRate != null)
+                    hashCode = hashCode * 59 + this.DailyRate.GetHashCode();
+                if (this.PayReviewDate != null)
+                    hashCode = hashCode * 59 + this.PayReviewDate.GetHashCode();
+                if (this.Roles != null)
+                    hashCode = hashCode * 59 + this.Roles.GetHashCode();
+                if (this.Salaries != null)
+                    hashCode = hashCode * 59 + this.Salaries.GetHashCode();
+                if (this.Allowances != null)
+                    hashCode = hashCode * 59 + this.Allowances.GetHashCode();
                 return hashCode;
             }
         }

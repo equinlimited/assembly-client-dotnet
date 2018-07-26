@@ -48,19 +48,19 @@ namespace AssemblyClient.Model
         /// <param name="headTeacher">The school&#39;s head teacher name.</param>
         public SchoolDetails(string _object = default(string), int? id = default(int?), string name = default(string), string urn = default(string), string laCode = default(string), string laName = default(string), string establishmentNumber = default(string), string establishmentType = default(string), string phase = default(string), string street = default(string), string town = default(string), string postcode = default(string), string headTeacher = default(string))
         {
-            this._object = _object;
-            this.id = id;
-            this.name = name;
-            this.urn = urn;
-            this.la_code = laCode;
-            this.la_name = laName;
-            this.establishment_number = establishmentNumber;
-            this.establishment_type = establishmentType;
-            this.phase = phase;
-            this.street = street;
-            this.town = town;
-            this.postcode = postcode;
-            this.head_teacher = headTeacher;
+            this.Object = _object;
+            this.Id = id;
+            this.Name = name;
+            this.Urn = urn;
+            this.LaCode = laCode;
+            this.LaName = laName;
+            this.EstablishmentNumber = establishmentNumber;
+            this.EstablishmentType = establishmentType;
+            this.Phase = phase;
+            this.Street = street;
+            this.Town = town;
+            this.Postcode = postcode;
+            this.HeadTeacher = headTeacher;
         }
         
         /// <summary>
@@ -68,91 +68,91 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all schools on Platform
         /// </summary>
         /// <value>Internal stable ID given to all schools on Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// Name of the school
         /// </summary>
         /// <value>Name of the school</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Unique Reference Number (URN) of the school
         /// </summary>
         /// <value>Unique Reference Number (URN) of the school</value>
         [DataMember(Name="urn", EmitDefaultValue=false)]
-        public string urn { get; set; }
+        public string Urn { get; set; }
 
         /// <summary>
         /// The code of the local authority that the school belongs to
         /// </summary>
         /// <value>The code of the local authority that the school belongs to</value>
         [DataMember(Name="la_code", EmitDefaultValue=false)]
-        public string la_code { get; set; }
+        public string LaCode { get; set; }
 
         /// <summary>
         /// The name of the local authority that the school belongs to
         /// </summary>
         /// <value>The name of the local authority that the school belongs to</value>
         [DataMember(Name="la_name", EmitDefaultValue=false)]
-        public string la_name { get; set; }
+        public string LaName { get; set; }
 
         /// <summary>
         /// The school&#39;s establishment or &#39;DfE number&#39;
         /// </summary>
         /// <value>The school&#39;s establishment or &#39;DfE number&#39;</value>
         [DataMember(Name="establishment_number", EmitDefaultValue=false)]
-        public string establishment_number { get; set; }
+        public string EstablishmentNumber { get; set; }
 
         /// <summary>
         /// The type of establishment
         /// </summary>
         /// <value>The type of establishment</value>
         [DataMember(Name="establishment_type", EmitDefaultValue=false)]
-        public string establishment_type { get; set; }
+        public string EstablishmentType { get; set; }
 
         /// <summary>
         /// The phase of the school (i.e. &#39;Secondary&#39;, &#39;Primary&#39; or &#39;All through&#39;)
         /// </summary>
         /// <value>The phase of the school (i.e. &#39;Secondary&#39;, &#39;Primary&#39; or &#39;All through&#39;)</value>
         [DataMember(Name="phase", EmitDefaultValue=false)]
-        public string phase { get; set; }
+        public string Phase { get; set; }
 
         /// <summary>
         /// The street that the school is on
         /// </summary>
         /// <value>The street that the school is on</value>
         [DataMember(Name="street", EmitDefaultValue=false)]
-        public string street { get; set; }
+        public string Street { get; set; }
 
         /// <summary>
         /// The town that the school is in
         /// </summary>
         /// <value>The town that the school is in</value>
         [DataMember(Name="town", EmitDefaultValue=false)]
-        public string town { get; set; }
+        public string Town { get; set; }
 
         /// <summary>
         /// The postcode of the school
         /// </summary>
         /// <value>The postcode of the school</value>
         [DataMember(Name="postcode", EmitDefaultValue=false)]
-        public string postcode { get; set; }
+        public string Postcode { get; set; }
 
         /// <summary>
         /// The school&#39;s head teacher name
         /// </summary>
         /// <value>The school&#39;s head teacher name</value>
         [DataMember(Name="head_teacher", EmitDefaultValue=false)]
-        public string head_teacher { get; set; }
+        public string HeadTeacher { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -162,19 +162,19 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SchoolDetails {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  urn: ").Append(urn).Append("\n");
-            sb.Append("  la_code: ").Append(la_code).Append("\n");
-            sb.Append("  la_name: ").Append(la_name).Append("\n");
-            sb.Append("  establishment_number: ").Append(establishment_number).Append("\n");
-            sb.Append("  establishment_type: ").Append(establishment_type).Append("\n");
-            sb.Append("  phase: ").Append(phase).Append("\n");
-            sb.Append("  street: ").Append(street).Append("\n");
-            sb.Append("  town: ").Append(town).Append("\n");
-            sb.Append("  postcode: ").Append(postcode).Append("\n");
-            sb.Append("  head_teacher: ").Append(head_teacher).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Urn: ").Append(Urn).Append("\n");
+            sb.Append("  LaCode: ").Append(LaCode).Append("\n");
+            sb.Append("  LaName: ").Append(LaName).Append("\n");
+            sb.Append("  EstablishmentNumber: ").Append(EstablishmentNumber).Append("\n");
+            sb.Append("  EstablishmentType: ").Append(EstablishmentType).Append("\n");
+            sb.Append("  Phase: ").Append(Phase).Append("\n");
+            sb.Append("  Street: ").Append(Street).Append("\n");
+            sb.Append("  Town: ").Append(Town).Append("\n");
+            sb.Append("  Postcode: ").Append(Postcode).Append("\n");
+            sb.Append("  HeadTeacher: ").Append(HeadTeacher).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -210,69 +210,69 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.urn == input.urn ||
-                    (this.urn != null &&
-                    this.urn.Equals(input.urn))
+                    this.Urn == input.Urn ||
+                    (this.Urn != null &&
+                    this.Urn.Equals(input.Urn))
                 ) && 
                 (
-                    this.la_code == input.la_code ||
-                    (this.la_code != null &&
-                    this.la_code.Equals(input.la_code))
+                    this.LaCode == input.LaCode ||
+                    (this.LaCode != null &&
+                    this.LaCode.Equals(input.LaCode))
                 ) && 
                 (
-                    this.la_name == input.la_name ||
-                    (this.la_name != null &&
-                    this.la_name.Equals(input.la_name))
+                    this.LaName == input.LaName ||
+                    (this.LaName != null &&
+                    this.LaName.Equals(input.LaName))
                 ) && 
                 (
-                    this.establishment_number == input.establishment_number ||
-                    (this.establishment_number != null &&
-                    this.establishment_number.Equals(input.establishment_number))
+                    this.EstablishmentNumber == input.EstablishmentNumber ||
+                    (this.EstablishmentNumber != null &&
+                    this.EstablishmentNumber.Equals(input.EstablishmentNumber))
                 ) && 
                 (
-                    this.establishment_type == input.establishment_type ||
-                    (this.establishment_type != null &&
-                    this.establishment_type.Equals(input.establishment_type))
+                    this.EstablishmentType == input.EstablishmentType ||
+                    (this.EstablishmentType != null &&
+                    this.EstablishmentType.Equals(input.EstablishmentType))
                 ) && 
                 (
-                    this.phase == input.phase ||
-                    (this.phase != null &&
-                    this.phase.Equals(input.phase))
+                    this.Phase == input.Phase ||
+                    (this.Phase != null &&
+                    this.Phase.Equals(input.Phase))
                 ) && 
                 (
-                    this.street == input.street ||
-                    (this.street != null &&
-                    this.street.Equals(input.street))
+                    this.Street == input.Street ||
+                    (this.Street != null &&
+                    this.Street.Equals(input.Street))
                 ) && 
                 (
-                    this.town == input.town ||
-                    (this.town != null &&
-                    this.town.Equals(input.town))
+                    this.Town == input.Town ||
+                    (this.Town != null &&
+                    this.Town.Equals(input.Town))
                 ) && 
                 (
-                    this.postcode == input.postcode ||
-                    (this.postcode != null &&
-                    this.postcode.Equals(input.postcode))
+                    this.Postcode == input.Postcode ||
+                    (this.Postcode != null &&
+                    this.Postcode.Equals(input.Postcode))
                 ) && 
                 (
-                    this.head_teacher == input.head_teacher ||
-                    (this.head_teacher != null &&
-                    this.head_teacher.Equals(input.head_teacher))
+                    this.HeadTeacher == input.HeadTeacher ||
+                    (this.HeadTeacher != null &&
+                    this.HeadTeacher.Equals(input.HeadTeacher))
                 );
         }
 
@@ -285,32 +285,32 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
-                if (this.urn != null)
-                    hashCode = hashCode * 59 + this.urn.GetHashCode();
-                if (this.la_code != null)
-                    hashCode = hashCode * 59 + this.la_code.GetHashCode();
-                if (this.la_name != null)
-                    hashCode = hashCode * 59 + this.la_name.GetHashCode();
-                if (this.establishment_number != null)
-                    hashCode = hashCode * 59 + this.establishment_number.GetHashCode();
-                if (this.establishment_type != null)
-                    hashCode = hashCode * 59 + this.establishment_type.GetHashCode();
-                if (this.phase != null)
-                    hashCode = hashCode * 59 + this.phase.GetHashCode();
-                if (this.street != null)
-                    hashCode = hashCode * 59 + this.street.GetHashCode();
-                if (this.town != null)
-                    hashCode = hashCode * 59 + this.town.GetHashCode();
-                if (this.postcode != null)
-                    hashCode = hashCode * 59 + this.postcode.GetHashCode();
-                if (this.head_teacher != null)
-                    hashCode = hashCode * 59 + this.head_teacher.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Urn != null)
+                    hashCode = hashCode * 59 + this.Urn.GetHashCode();
+                if (this.LaCode != null)
+                    hashCode = hashCode * 59 + this.LaCode.GetHashCode();
+                if (this.LaName != null)
+                    hashCode = hashCode * 59 + this.LaName.GetHashCode();
+                if (this.EstablishmentNumber != null)
+                    hashCode = hashCode * 59 + this.EstablishmentNumber.GetHashCode();
+                if (this.EstablishmentType != null)
+                    hashCode = hashCode * 59 + this.EstablishmentType.GetHashCode();
+                if (this.Phase != null)
+                    hashCode = hashCode * 59 + this.Phase.GetHashCode();
+                if (this.Street != null)
+                    hashCode = hashCode * 59 + this.Street.GetHashCode();
+                if (this.Town != null)
+                    hashCode = hashCode * 59 + this.Town.GetHashCode();
+                if (this.Postcode != null)
+                    hashCode = hashCode * 59 + this.Postcode.GetHashCode();
+                if (this.HeadTeacher != null)
+                    hashCode = hashCode * 59 + this.HeadTeacher.GetHashCode();
                 return hashCode;
             }
         }

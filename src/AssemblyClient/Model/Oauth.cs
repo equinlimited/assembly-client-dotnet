@@ -41,12 +41,12 @@ namespace AssemblyClient.Model
         /// <param name="schoolId">Internal Platform ID for school that the token applies to.</param>
         public Oauth(string accessToken = default(string), string refreshToken = default(string), string tokenType = default(string), string level = default(string), int? expiresIn = default(int?), int? schoolId = default(int?))
         {
-            this.access_token = accessToken;
-            this.refresh_token = refreshToken;
-            this.token_type = tokenType;
-            this.level = level;
-            this.expires_in = expiresIn;
-            this.school_id = schoolId;
+            this.AccessToken = accessToken;
+            this.RefreshToken = refreshToken;
+            this.TokenType = tokenType;
+            this.Level = level;
+            this.ExpiresIn = expiresIn;
+            this.SchoolId = schoolId;
         }
         
         /// <summary>
@@ -54,42 +54,42 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Access token grants authorisation to school data (currently valid for a period of 1 day)</value>
         [DataMember(Name="access_token", EmitDefaultValue=false)]
-        public string access_token { get; set; }
+        public string AccessToken { get; set; }
 
         /// <summary>
         /// Refresh tokens should be used to aquire a new access token upon expiry of access tokens
         /// </summary>
         /// <value>Refresh tokens should be used to aquire a new access token upon expiry of access tokens</value>
         [DataMember(Name="refresh_token", EmitDefaultValue=false)]
-        public string refresh_token { get; set; }
+        public string RefreshToken { get; set; }
 
         /// <summary>
         /// Provides the client with the information to utilise the access token to make a resource request
         /// </summary>
         /// <value>Provides the client with the information to utilise the access token to make a resource request</value>
         [DataMember(Name="token_type", EmitDefaultValue=false)]
-        public string token_type { get; set; }
+        public string TokenType { get; set; }
 
         /// <summary>
         /// Details whether the token gives access to application level resources or school data.
         /// </summary>
         /// <value>Details whether the token gives access to application level resources or school data.</value>
         [DataMember(Name="level", EmitDefaultValue=false)]
-        public string level { get; set; }
+        public string Level { get; set; }
 
         /// <summary>
         /// The amount of time (in seconds) that the access token is valid for
         /// </summary>
         /// <value>The amount of time (in seconds) that the access token is valid for</value>
         [DataMember(Name="expires_in", EmitDefaultValue=false)]
-        public int? expires_in { get; set; }
+        public int? ExpiresIn { get; set; }
 
         /// <summary>
         /// Internal Platform ID for school that the token applies to
         /// </summary>
         /// <value>Internal Platform ID for school that the token applies to</value>
         [DataMember(Name="school_id", EmitDefaultValue=false)]
-        public int? school_id { get; set; }
+        public int? SchoolId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,12 +99,12 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Oauth {\n");
-            sb.Append("  access_token: ").Append(access_token).Append("\n");
-            sb.Append("  refresh_token: ").Append(refresh_token).Append("\n");
-            sb.Append("  token_type: ").Append(token_type).Append("\n");
-            sb.Append("  level: ").Append(level).Append("\n");
-            sb.Append("  expires_in: ").Append(expires_in).Append("\n");
-            sb.Append("  school_id: ").Append(school_id).Append("\n");
+            sb.Append("  AccessToken: ").Append(AccessToken).Append("\n");
+            sb.Append("  RefreshToken: ").Append(RefreshToken).Append("\n");
+            sb.Append("  TokenType: ").Append(TokenType).Append("\n");
+            sb.Append("  Level: ").Append(Level).Append("\n");
+            sb.Append("  ExpiresIn: ").Append(ExpiresIn).Append("\n");
+            sb.Append("  SchoolId: ").Append(SchoolId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,34 +140,34 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this.access_token == input.access_token ||
-                    (this.access_token != null &&
-                    this.access_token.Equals(input.access_token))
+                    this.AccessToken == input.AccessToken ||
+                    (this.AccessToken != null &&
+                    this.AccessToken.Equals(input.AccessToken))
                 ) && 
                 (
-                    this.refresh_token == input.refresh_token ||
-                    (this.refresh_token != null &&
-                    this.refresh_token.Equals(input.refresh_token))
+                    this.RefreshToken == input.RefreshToken ||
+                    (this.RefreshToken != null &&
+                    this.RefreshToken.Equals(input.RefreshToken))
                 ) && 
                 (
-                    this.token_type == input.token_type ||
-                    (this.token_type != null &&
-                    this.token_type.Equals(input.token_type))
+                    this.TokenType == input.TokenType ||
+                    (this.TokenType != null &&
+                    this.TokenType.Equals(input.TokenType))
                 ) && 
                 (
-                    this.level == input.level ||
-                    (this.level != null &&
-                    this.level.Equals(input.level))
+                    this.Level == input.Level ||
+                    (this.Level != null &&
+                    this.Level.Equals(input.Level))
                 ) && 
                 (
-                    this.expires_in == input.expires_in ||
-                    (this.expires_in != null &&
-                    this.expires_in.Equals(input.expires_in))
+                    this.ExpiresIn == input.ExpiresIn ||
+                    (this.ExpiresIn != null &&
+                    this.ExpiresIn.Equals(input.ExpiresIn))
                 ) && 
                 (
-                    this.school_id == input.school_id ||
-                    (this.school_id != null &&
-                    this.school_id.Equals(input.school_id))
+                    this.SchoolId == input.SchoolId ||
+                    (this.SchoolId != null &&
+                    this.SchoolId.Equals(input.SchoolId))
                 );
         }
 
@@ -180,18 +180,18 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.access_token != null)
-                    hashCode = hashCode * 59 + this.access_token.GetHashCode();
-                if (this.refresh_token != null)
-                    hashCode = hashCode * 59 + this.refresh_token.GetHashCode();
-                if (this.token_type != null)
-                    hashCode = hashCode * 59 + this.token_type.GetHashCode();
-                if (this.level != null)
-                    hashCode = hashCode * 59 + this.level.GetHashCode();
-                if (this.expires_in != null)
-                    hashCode = hashCode * 59 + this.expires_in.GetHashCode();
-                if (this.school_id != null)
-                    hashCode = hashCode * 59 + this.school_id.GetHashCode();
+                if (this.AccessToken != null)
+                    hashCode = hashCode * 59 + this.AccessToken.GetHashCode();
+                if (this.RefreshToken != null)
+                    hashCode = hashCode * 59 + this.RefreshToken.GetHashCode();
+                if (this.TokenType != null)
+                    hashCode = hashCode * 59 + this.TokenType.GetHashCode();
+                if (this.Level != null)
+                    hashCode = hashCode * 59 + this.Level.GetHashCode();
+                if (this.ExpiresIn != null)
+                    hashCode = hashCode * 59 + this.ExpiresIn.GetHashCode();
+                if (this.SchoolId != null)
+                    hashCode = hashCode * 59 + this.SchoolId.GetHashCode();
                 return hashCode;
             }
         }

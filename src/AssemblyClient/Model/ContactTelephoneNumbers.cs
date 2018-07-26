@@ -68,7 +68,7 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>The location associated with the telephone number. *Values*  |Value|Description| |- --|- --| |&#x60;Home&#x60;|Home| |&#x60;Work&#x60;|Work| |&#x60;Other&#x60;|Other| |&#x60;null&#x60;|Not Applicable / Unknown| </value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? type { get; set; }
+        public TypeEnum? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactTelephoneNumbers" /> class.
         /// </summary>
@@ -79,11 +79,11 @@ namespace AssemblyClient.Model
         /// <param name="isPrimary">Indicates whether this is the primary telephone number.</param>
         public ContactTelephoneNumbers(string _object = default(string), int? id = default(int?), string telephoneNumber = default(string), TypeEnum? type = default(TypeEnum?), bool? isPrimary = default(bool?))
         {
-            this._object = _object;
-            this.id = id;
-            this.telephone_number = telephoneNumber;
-            this.type = type;
-            this.is_primary = isPrimary;
+            this.Object = _object;
+            this.Id = id;
+            this.TelephoneNumber = telephoneNumber;
+            this.Type = type;
+            this.IsPrimary = isPrimary;
         }
         
         /// <summary>
@@ -91,21 +91,21 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all telephone numbers on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all telephone numbers on the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The telephone number
         /// </summary>
         /// <value>The telephone number</value>
         [DataMember(Name="telephone_number", EmitDefaultValue=false)]
-        public string telephone_number { get; set; }
+        public string TelephoneNumber { get; set; }
 
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Indicates whether this is the primary telephone number</value>
         [DataMember(Name="is_primary", EmitDefaultValue=false)]
-        public bool? is_primary { get; set; }
+        public bool? IsPrimary { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -123,11 +123,11 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactTelephoneNumbers {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  telephone_number: ").Append(telephone_number).Append("\n");
-            sb.Append("  type: ").Append(type).Append("\n");
-            sb.Append("  is_primary: ").Append(is_primary).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  TelephoneNumber: ").Append(TelephoneNumber).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  IsPrimary: ").Append(IsPrimary).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -163,29 +163,29 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.telephone_number == input.telephone_number ||
-                    (this.telephone_number != null &&
-                    this.telephone_number.Equals(input.telephone_number))
+                    this.TelephoneNumber == input.TelephoneNumber ||
+                    (this.TelephoneNumber != null &&
+                    this.TelephoneNumber.Equals(input.TelephoneNumber))
                 ) && 
                 (
-                    this.type == input.type ||
-                    (this.type != null &&
-                    this.type.Equals(input.type))
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
                 ) && 
                 (
-                    this.is_primary == input.is_primary ||
-                    (this.is_primary != null &&
-                    this.is_primary.Equals(input.is_primary))
+                    this.IsPrimary == input.IsPrimary ||
+                    (this.IsPrimary != null &&
+                    this.IsPrimary.Equals(input.IsPrimary))
                 );
         }
 
@@ -198,16 +198,16 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.telephone_number != null)
-                    hashCode = hashCode * 59 + this.telephone_number.GetHashCode();
-                if (this.type != null)
-                    hashCode = hashCode * 59 + this.type.GetHashCode();
-                if (this.is_primary != null)
-                    hashCode = hashCode * 59 + this.is_primary.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.TelephoneNumber != null)
+                    hashCode = hashCode * 59 + this.TelephoneNumber.GetHashCode();
+                if (this.Type != null)
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                if (this.IsPrimary != null)
+                    hashCode = hashCode * 59 + this.IsPrimary.GetHashCode();
                 return hashCode;
             }
         }

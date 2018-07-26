@@ -67,108 +67,108 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'name'
+        /// Test the property 'Name'
         /// </summary>
         [Test]
-        public void nameTest()
+        public void NameTest()
         {
-            // TODO unit test for the property 'name'
+            // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'urn'
+        /// Test the property 'Urn'
         /// </summary>
         [Test]
-        public void urnTest()
+        public void UrnTest()
         {
-            // TODO unit test for the property 'urn'
+            // TODO unit test for the property 'Urn'
         }
         /// <summary>
-        /// Test the property 'la_code'
+        /// Test the property 'LaCode'
         /// </summary>
         [Test]
-        public void la_codeTest()
+        public void LaCodeTest()
         {
-            // TODO unit test for the property 'la_code'
+            // TODO unit test for the property 'LaCode'
         }
         /// <summary>
-        /// Test the property 'la_name'
+        /// Test the property 'LaName'
         /// </summary>
         [Test]
-        public void la_nameTest()
+        public void LaNameTest()
         {
-            // TODO unit test for the property 'la_name'
+            // TODO unit test for the property 'LaName'
         }
         /// <summary>
-        /// Test the property 'establishment_number'
+        /// Test the property 'EstablishmentNumber'
         /// </summary>
         [Test]
-        public void establishment_numberTest()
+        public void EstablishmentNumberTest()
         {
-            // TODO unit test for the property 'establishment_number'
+            // TODO unit test for the property 'EstablishmentNumber'
         }
         /// <summary>
-        /// Test the property 'establishment_type'
+        /// Test the property 'EstablishmentType'
         /// </summary>
         [Test]
-        public void establishment_typeTest()
+        public void EstablishmentTypeTest()
         {
-            // TODO unit test for the property 'establishment_type'
+            // TODO unit test for the property 'EstablishmentType'
         }
         /// <summary>
-        /// Test the property 'phase'
+        /// Test the property 'Phase'
         /// </summary>
         [Test]
-        public void phaseTest()
+        public void PhaseTest()
         {
-            // TODO unit test for the property 'phase'
+            // TODO unit test for the property 'Phase'
         }
         /// <summary>
-        /// Test the property 'street'
+        /// Test the property 'Street'
         /// </summary>
         [Test]
-        public void streetTest()
+        public void StreetTest()
         {
-            // TODO unit test for the property 'street'
+            // TODO unit test for the property 'Street'
         }
         /// <summary>
-        /// Test the property 'town'
+        /// Test the property 'Town'
         /// </summary>
         [Test]
-        public void townTest()
+        public void TownTest()
         {
-            // TODO unit test for the property 'town'
+            // TODO unit test for the property 'Town'
         }
         /// <summary>
-        /// Test the property 'postcode'
+        /// Test the property 'Postcode'
         /// </summary>
         [Test]
-        public void postcodeTest()
+        public void PostcodeTest()
         {
-            // TODO unit test for the property 'postcode'
+            // TODO unit test for the property 'Postcode'
         }
         /// <summary>
-        /// Test the property 'head_teacher'
+        /// Test the property 'HeadTeacher'
         /// </summary>
         [Test]
-        public void head_teacherTest()
+        public void HeadTeacherTest()
         {
-            // TODO unit test for the property 'head_teacher'
+            // TODO unit test for the property 'HeadTeacher'
         }
 
     }

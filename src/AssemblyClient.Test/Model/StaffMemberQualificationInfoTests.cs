@@ -67,52 +67,52 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'teacher_number'
+        /// Test the property 'TeacherNumber'
         /// </summary>
         [Test]
-        public void teacher_numberTest()
+        public void TeacherNumberTest()
         {
-            // TODO unit test for the property 'teacher_number'
+            // TODO unit test for the property 'TeacherNumber'
         }
         /// <summary>
-        /// Test the property 'qt_status'
+        /// Test the property 'QtStatus'
         /// </summary>
         [Test]
-        public void qt_statusTest()
+        public void QtStatusTest()
         {
-            // TODO unit test for the property 'qt_status'
+            // TODO unit test for the property 'QtStatus'
         }
         /// <summary>
-        /// Test the property 'hlta_status'
+        /// Test the property 'HltaStatus'
         /// </summary>
         [Test]
-        public void hlta_statusTest()
+        public void HltaStatusTest()
         {
-            // TODO unit test for the property 'hlta_status'
+            // TODO unit test for the property 'HltaStatus'
         }
         /// <summary>
-        /// Test the property 'qts_route'
+        /// Test the property 'QtsRoute'
         /// </summary>
         [Test]
-        public void qts_routeTest()
+        public void QtsRouteTest()
         {
-            // TODO unit test for the property 'qts_route'
+            // TODO unit test for the property 'QtsRoute'
         }
         /// <summary>
-        /// Test the property 'qualifications'
+        /// Test the property 'Qualifications'
         /// </summary>
         [Test]
-        public void qualificationsTest()
+        public void QualificationsTest()
         {
-            // TODO unit test for the property 'qualifications'
+            // TODO unit test for the property 'Qualifications'
         }
 
     }

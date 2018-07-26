@@ -67,76 +67,76 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'staff_member_id'
+        /// Test the property 'StaffMemberId'
         /// </summary>
         [Test]
-        public void staff_member_idTest()
+        public void StaffMemberIdTest()
         {
-            // TODO unit test for the property 'staff_member_id'
+            // TODO unit test for the property 'StaffMemberId'
         }
         /// <summary>
-        /// Test the property 'start_date'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void start_dateTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'start_date'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
-        /// Test the property 'end_date'
+        /// Test the property 'EndDate'
         /// </summary>
         [Test]
-        public void end_dateTest()
+        public void EndDateTest()
         {
-            // TODO unit test for the property 'end_date'
+            // TODO unit test for the property 'EndDate'
         }
         /// <summary>
-        /// Test the property 'working_days_lost'
+        /// Test the property 'WorkingDaysLost'
         /// </summary>
         [Test]
-        public void working_days_lostTest()
+        public void WorkingDaysLostTest()
         {
-            // TODO unit test for the property 'working_days_lost'
+            // TODO unit test for the property 'WorkingDaysLost'
         }
         /// <summary>
-        /// Test the property 'absence_category'
+        /// Test the property 'AbsenceCategory'
         /// </summary>
         [Test]
-        public void absence_categoryTest()
+        public void AbsenceCategoryTest()
         {
-            // TODO unit test for the property 'absence_category'
+            // TODO unit test for the property 'AbsenceCategory'
         }
         /// <summary>
-        /// Test the property 'illness_category'
+        /// Test the property 'IllnessCategory'
         /// </summary>
         [Test]
-        public void illness_categoryTest()
+        public void IllnessCategoryTest()
         {
-            // TODO unit test for the property 'illness_category'
+            // TODO unit test for the property 'IllnessCategory'
         }
         /// <summary>
-        /// Test the property 'pay_rate'
+        /// Test the property 'PayRate'
         /// </summary>
         [Test]
-        public void pay_rateTest()
+        public void PayRateTest()
         {
-            // TODO unit test for the property 'pay_rate'
+            // TODO unit test for the property 'PayRate'
         }
 
     }

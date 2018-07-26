@@ -40,11 +40,11 @@ namespace AssemblyClient.Model
         /// <param name="endDate">No description.</param>
         public StaffContractAllowances(string _object = default(string), string additionalPaymentType = default(string), float? additionalPaymentAmount = default(float?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
         {
-            this._object = _object;
-            this.additional_payment_type = additionalPaymentType;
-            this.additional_payment_amount = additionalPaymentAmount;
-            this.start_date = startDate;
-            this.end_date = endDate;
+            this.Object = _object;
+            this.AdditionalPaymentType = additionalPaymentType;
+            this.AdditionalPaymentAmount = additionalPaymentAmount;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
         }
         
         /// <summary>
@@ -52,35 +52,35 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="additional_payment_type", EmitDefaultValue=false)]
-        public string additional_payment_type { get; set; }
+        public string AdditionalPaymentType { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="additional_payment_amount", EmitDefaultValue=false)]
-        public float? additional_payment_amount { get; set; }
+        public float? AdditionalPaymentAmount { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
-        public DateTime? start_date { get; set; }
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="end_date", EmitDefaultValue=false)]
-        public DateTime? end_date { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -90,11 +90,11 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StaffContractAllowances {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  additional_payment_type: ").Append(additional_payment_type).Append("\n");
-            sb.Append("  additional_payment_amount: ").Append(additional_payment_amount).Append("\n");
-            sb.Append("  start_date: ").Append(start_date).Append("\n");
-            sb.Append("  end_date: ").Append(end_date).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  AdditionalPaymentType: ").Append(AdditionalPaymentType).Append("\n");
+            sb.Append("  AdditionalPaymentAmount: ").Append(AdditionalPaymentAmount).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -130,29 +130,29 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.additional_payment_type == input.additional_payment_type ||
-                    (this.additional_payment_type != null &&
-                    this.additional_payment_type.Equals(input.additional_payment_type))
+                    this.AdditionalPaymentType == input.AdditionalPaymentType ||
+                    (this.AdditionalPaymentType != null &&
+                    this.AdditionalPaymentType.Equals(input.AdditionalPaymentType))
                 ) && 
                 (
-                    this.additional_payment_amount == input.additional_payment_amount ||
-                    (this.additional_payment_amount != null &&
-                    this.additional_payment_amount.Equals(input.additional_payment_amount))
+                    this.AdditionalPaymentAmount == input.AdditionalPaymentAmount ||
+                    (this.AdditionalPaymentAmount != null &&
+                    this.AdditionalPaymentAmount.Equals(input.AdditionalPaymentAmount))
                 ) && 
                 (
-                    this.start_date == input.start_date ||
-                    (this.start_date != null &&
-                    this.start_date.Equals(input.start_date))
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 ) && 
                 (
-                    this.end_date == input.end_date ||
-                    (this.end_date != null &&
-                    this.end_date.Equals(input.end_date))
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
                 );
         }
 
@@ -165,16 +165,16 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.additional_payment_type != null)
-                    hashCode = hashCode * 59 + this.additional_payment_type.GetHashCode();
-                if (this.additional_payment_amount != null)
-                    hashCode = hashCode * 59 + this.additional_payment_amount.GetHashCode();
-                if (this.start_date != null)
-                    hashCode = hashCode * 59 + this.start_date.GetHashCode();
-                if (this.end_date != null)
-                    hashCode = hashCode * 59 + this.end_date.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.AdditionalPaymentType != null)
+                    hashCode = hashCode * 59 + this.AdditionalPaymentType.GetHashCode();
+                if (this.AdditionalPaymentAmount != null)
+                    hashCode = hashCode * 59 + this.AdditionalPaymentAmount.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
                 return hashCode;
             }
         }

@@ -67,100 +67,100 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'hours_per_week'
+        /// Test the property 'HoursPerWeek'
         /// </summary>
         [Test]
-        public void hours_per_weekTest()
+        public void HoursPerWeekTest()
         {
-            // TODO unit test for the property 'hours_per_week'
+            // TODO unit test for the property 'HoursPerWeek'
         }
         /// <summary>
-        /// Test the property 'fte'
+        /// Test the property 'Fte'
         /// </summary>
         [Test]
-        public void fteTest()
+        public void FteTest()
         {
-            // TODO unit test for the property 'fte'
+            // TODO unit test for the property 'Fte'
         }
         /// <summary>
-        /// Test the property 'weeks_per_year'
+        /// Test the property 'WeeksPerYear'
         /// </summary>
         [Test]
-        public void weeks_per_yearTest()
+        public void WeeksPerYearTest()
         {
-            // TODO unit test for the property 'weeks_per_year'
+            // TODO unit test for the property 'WeeksPerYear'
         }
         /// <summary>
-        /// Test the property 'pay_range'
+        /// Test the property 'PayRange'
         /// </summary>
         [Test]
-        public void pay_rangeTest()
+        public void PayRangeTest()
         {
-            // TODO unit test for the property 'pay_range'
+            // TODO unit test for the property 'PayRange'
         }
         /// <summary>
-        /// Test the property 'start_date'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void start_dateTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'start_date'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
-        /// Test the property 'end_date'
+        /// Test the property 'EndDate'
         /// </summary>
         [Test]
-        public void end_dateTest()
+        public void EndDateTest()
         {
-            // TODO unit test for the property 'end_date'
+            // TODO unit test for the property 'EndDate'
         }
         /// <summary>
-        /// Test the property 'pay_scale_framework'
+        /// Test the property 'PayScaleFramework'
         /// </summary>
         [Test]
-        public void pay_scale_frameworkTest()
+        public void PayScaleFrameworkTest()
         {
-            // TODO unit test for the property 'pay_scale_framework'
+            // TODO unit test for the property 'PayScaleFramework'
         }
         /// <summary>
-        /// Test the property 'regional_spine'
+        /// Test the property 'RegionalSpine'
         /// </summary>
         [Test]
-        public void regional_spineTest()
+        public void RegionalSpineTest()
         {
-            // TODO unit test for the property 'regional_spine'
+            // TODO unit test for the property 'RegionalSpine'
         }
         /// <summary>
-        /// Test the property 'base_pay'
+        /// Test the property 'BasePay'
         /// </summary>
         [Test]
-        public void base_payTest()
+        public void BasePayTest()
         {
-            // TODO unit test for the property 'base_pay'
+            // TODO unit test for the property 'BasePay'
         }
         /// <summary>
-        /// Test the property 'actual_pay'
+        /// Test the property 'ActualPay'
         /// </summary>
         [Test]
-        public void actual_payTest()
+        public void ActualPayTest()
         {
-            // TODO unit test for the property 'actual_pay'
+            // TODO unit test for the property 'ActualPay'
         }
         /// <summary>
-        /// Test the property 'safeguarded_salary'
+        /// Test the property 'SafeguardedSalary'
         /// </summary>
         [Test]
-        public void safeguarded_salaryTest()
+        public void SafeguardedSalaryTest()
         {
-            // TODO unit test for the property 'safeguarded_salary'
+            // TODO unit test for the property 'SafeguardedSalary'
         }
 
     }

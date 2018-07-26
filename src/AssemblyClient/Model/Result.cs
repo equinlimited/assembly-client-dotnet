@@ -46,17 +46,17 @@ namespace AssemblyClient.Model
         /// <param name="updatedAt">The date and time that the result was last updated on Assembly.</param>
         public Result(string _object = default(string), int? id = default(int?), int? studentId = default(int?), int? subjectId = default(int?), int? assessmentId = default(int?), int? assessmentPointRank = default(int?), int? aspectId = default(int?), int? gradeId = default(int?), DateTime? resultDate = default(DateTime?), DateTime? createdAt = default(DateTime?), DateTime? updatedAt = default(DateTime?))
         {
-            this._object = _object;
-            this.id = id;
-            this.student_id = studentId;
-            this.subject_id = subjectId;
-            this.assessment_id = assessmentId;
-            this.assessment_point_rank = assessmentPointRank;
-            this.aspect_id = aspectId;
-            this.grade_id = gradeId;
-            this.result_date = resultDate;
-            this.created_at = createdAt;
-            this.updated_at = updatedAt;
+            this.Object = _object;
+            this.Id = id;
+            this.StudentId = studentId;
+            this.SubjectId = subjectId;
+            this.AssessmentId = assessmentId;
+            this.AssessmentPointRank = assessmentPointRank;
+            this.AspectId = aspectId;
+            this.GradeId = gradeId;
+            this.ResultDate = resultDate;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
         }
         
         /// <summary>
@@ -64,77 +64,77 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all results on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all results on the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The ID of the student that the result is attached to
         /// </summary>
         /// <value>The ID of the student that the result is attached to</value>
         [DataMember(Name="student_id", EmitDefaultValue=false)]
-        public int? student_id { get; set; }
+        public int? StudentId { get; set; }
 
         /// <summary>
         /// The ID of the subject that the result is attached to
         /// </summary>
         /// <value>The ID of the subject that the result is attached to</value>
         [DataMember(Name="subject_id", EmitDefaultValue=false)]
-        public int? subject_id { get; set; }
+        public int? SubjectId { get; set; }
 
         /// <summary>
         /// The ID of the assessment that the result is attached to
         /// </summary>
         /// <value>The ID of the assessment that the result is attached to</value>
         [DataMember(Name="assessment_id", EmitDefaultValue=false)]
-        public int? assessment_id { get; set; }
+        public int? AssessmentId { get; set; }
 
         /// <summary>
         /// The rank of the assessment point
         /// </summary>
         /// <value>The rank of the assessment point</value>
         [DataMember(Name="assessment_point_rank", EmitDefaultValue=false)]
-        public int? assessment_point_rank { get; set; }
+        public int? AssessmentPointRank { get; set; }
 
         /// <summary>
         /// The ID of the aspect that the result is attached to
         /// </summary>
         /// <value>The ID of the aspect that the result is attached to</value>
         [DataMember(Name="aspect_id", EmitDefaultValue=false)]
-        public int? aspect_id { get; set; }
+        public int? AspectId { get; set; }
 
         /// <summary>
         /// The ID of the grade
         /// </summary>
         /// <value>The ID of the grade</value>
         [DataMember(Name="grade_id", EmitDefaultValue=false)]
-        public int? grade_id { get; set; }
+        public int? GradeId { get; set; }
 
         /// <summary>
         /// The date on which the result was recorded in the MIS or standardised assessment system
         /// </summary>
         /// <value>The date on which the result was recorded in the MIS or standardised assessment system</value>
         [DataMember(Name="result_date", EmitDefaultValue=false)]
-        public DateTime? result_date { get; set; }
+        public DateTime? ResultDate { get; set; }
 
         /// <summary>
         /// The date and time that the result was first created on Assembly
         /// </summary>
         /// <value>The date and time that the result was first created on Assembly</value>
         [DataMember(Name="created_at", EmitDefaultValue=false)]
-        public DateTime? created_at { get; set; }
+        public DateTime? CreatedAt { get; set; }
 
         /// <summary>
         /// The date and time that the result was last updated on Assembly
         /// </summary>
         /// <value>The date and time that the result was last updated on Assembly</value>
         [DataMember(Name="updated_at", EmitDefaultValue=false)]
-        public DateTime? updated_at { get; set; }
+        public DateTime? UpdatedAt { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -144,17 +144,17 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Result {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  student_id: ").Append(student_id).Append("\n");
-            sb.Append("  subject_id: ").Append(subject_id).Append("\n");
-            sb.Append("  assessment_id: ").Append(assessment_id).Append("\n");
-            sb.Append("  assessment_point_rank: ").Append(assessment_point_rank).Append("\n");
-            sb.Append("  aspect_id: ").Append(aspect_id).Append("\n");
-            sb.Append("  grade_id: ").Append(grade_id).Append("\n");
-            sb.Append("  result_date: ").Append(result_date).Append("\n");
-            sb.Append("  created_at: ").Append(created_at).Append("\n");
-            sb.Append("  updated_at: ").Append(updated_at).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  StudentId: ").Append(StudentId).Append("\n");
+            sb.Append("  SubjectId: ").Append(SubjectId).Append("\n");
+            sb.Append("  AssessmentId: ").Append(AssessmentId).Append("\n");
+            sb.Append("  AssessmentPointRank: ").Append(AssessmentPointRank).Append("\n");
+            sb.Append("  AspectId: ").Append(AspectId).Append("\n");
+            sb.Append("  GradeId: ").Append(GradeId).Append("\n");
+            sb.Append("  ResultDate: ").Append(ResultDate).Append("\n");
+            sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
+            sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -190,59 +190,59 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.student_id == input.student_id ||
-                    (this.student_id != null &&
-                    this.student_id.Equals(input.student_id))
+                    this.StudentId == input.StudentId ||
+                    (this.StudentId != null &&
+                    this.StudentId.Equals(input.StudentId))
                 ) && 
                 (
-                    this.subject_id == input.subject_id ||
-                    (this.subject_id != null &&
-                    this.subject_id.Equals(input.subject_id))
+                    this.SubjectId == input.SubjectId ||
+                    (this.SubjectId != null &&
+                    this.SubjectId.Equals(input.SubjectId))
                 ) && 
                 (
-                    this.assessment_id == input.assessment_id ||
-                    (this.assessment_id != null &&
-                    this.assessment_id.Equals(input.assessment_id))
+                    this.AssessmentId == input.AssessmentId ||
+                    (this.AssessmentId != null &&
+                    this.AssessmentId.Equals(input.AssessmentId))
                 ) && 
                 (
-                    this.assessment_point_rank == input.assessment_point_rank ||
-                    (this.assessment_point_rank != null &&
-                    this.assessment_point_rank.Equals(input.assessment_point_rank))
+                    this.AssessmentPointRank == input.AssessmentPointRank ||
+                    (this.AssessmentPointRank != null &&
+                    this.AssessmentPointRank.Equals(input.AssessmentPointRank))
                 ) && 
                 (
-                    this.aspect_id == input.aspect_id ||
-                    (this.aspect_id != null &&
-                    this.aspect_id.Equals(input.aspect_id))
+                    this.AspectId == input.AspectId ||
+                    (this.AspectId != null &&
+                    this.AspectId.Equals(input.AspectId))
                 ) && 
                 (
-                    this.grade_id == input.grade_id ||
-                    (this.grade_id != null &&
-                    this.grade_id.Equals(input.grade_id))
+                    this.GradeId == input.GradeId ||
+                    (this.GradeId != null &&
+                    this.GradeId.Equals(input.GradeId))
                 ) && 
                 (
-                    this.result_date == input.result_date ||
-                    (this.result_date != null &&
-                    this.result_date.Equals(input.result_date))
+                    this.ResultDate == input.ResultDate ||
+                    (this.ResultDate != null &&
+                    this.ResultDate.Equals(input.ResultDate))
                 ) && 
                 (
-                    this.created_at == input.created_at ||
-                    (this.created_at != null &&
-                    this.created_at.Equals(input.created_at))
+                    this.CreatedAt == input.CreatedAt ||
+                    (this.CreatedAt != null &&
+                    this.CreatedAt.Equals(input.CreatedAt))
                 ) && 
                 (
-                    this.updated_at == input.updated_at ||
-                    (this.updated_at != null &&
-                    this.updated_at.Equals(input.updated_at))
+                    this.UpdatedAt == input.UpdatedAt ||
+                    (this.UpdatedAt != null &&
+                    this.UpdatedAt.Equals(input.UpdatedAt))
                 );
         }
 
@@ -255,28 +255,28 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.student_id != null)
-                    hashCode = hashCode * 59 + this.student_id.GetHashCode();
-                if (this.subject_id != null)
-                    hashCode = hashCode * 59 + this.subject_id.GetHashCode();
-                if (this.assessment_id != null)
-                    hashCode = hashCode * 59 + this.assessment_id.GetHashCode();
-                if (this.assessment_point_rank != null)
-                    hashCode = hashCode * 59 + this.assessment_point_rank.GetHashCode();
-                if (this.aspect_id != null)
-                    hashCode = hashCode * 59 + this.aspect_id.GetHashCode();
-                if (this.grade_id != null)
-                    hashCode = hashCode * 59 + this.grade_id.GetHashCode();
-                if (this.result_date != null)
-                    hashCode = hashCode * 59 + this.result_date.GetHashCode();
-                if (this.created_at != null)
-                    hashCode = hashCode * 59 + this.created_at.GetHashCode();
-                if (this.updated_at != null)
-                    hashCode = hashCode * 59 + this.updated_at.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.StudentId != null)
+                    hashCode = hashCode * 59 + this.StudentId.GetHashCode();
+                if (this.SubjectId != null)
+                    hashCode = hashCode * 59 + this.SubjectId.GetHashCode();
+                if (this.AssessmentId != null)
+                    hashCode = hashCode * 59 + this.AssessmentId.GetHashCode();
+                if (this.AssessmentPointRank != null)
+                    hashCode = hashCode * 59 + this.AssessmentPointRank.GetHashCode();
+                if (this.AspectId != null)
+                    hashCode = hashCode * 59 + this.AspectId.GetHashCode();
+                if (this.GradeId != null)
+                    hashCode = hashCode * 59 + this.GradeId.GetHashCode();
+                if (this.ResultDate != null)
+                    hashCode = hashCode * 59 + this.ResultDate.GetHashCode();
+                if (this.CreatedAt != null)
+                    hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
+                if (this.UpdatedAt != null)
+                    hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
                 return hashCode;
             }
         }

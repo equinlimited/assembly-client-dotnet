@@ -44,15 +44,15 @@ namespace AssemblyClient.Model
         /// <param name="misLevel">The official examination or assessment &#39;level&#39; of the teaching group taken directly from the MIS.</param>
         public TeachingGroupListData(string _object = default(string), int? id = default(int?), string name = default(string), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), List<int?> supervisorIds = default(List<int?>), List<int?> studentIds = default(List<int?>), TeachingGroupSubject subject = default(TeachingGroupSubject), string misLevel = default(string))
         {
-            this._object = _object;
-            this.id = id;
-            this.name = name;
-            this.start_date = startDate;
-            this.end_date = endDate;
-            this.supervisor_ids = supervisorIds;
-            this.student_ids = studentIds;
-            this.subject = subject;
-            this.mis_level = misLevel;
+            this.Object = _object;
+            this.Id = id;
+            this.Name = name;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.SupervisorIds = supervisorIds;
+            this.StudentIds = studentIds;
+            this.Subject = subject;
+            this.MisLevel = misLevel;
         }
         
         /// <summary>
@@ -60,62 +60,62 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all teaching groups in the Platform
         /// </summary>
         /// <value>Internal stable ID given to all teaching groups in the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// Name of teaching group
         /// </summary>
         /// <value>Name of teaching group</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// The start date of the teaching group
         /// </summary>
         /// <value>The start date of the teaching group</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
-        public DateTime? start_date { get; set; }
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// The end date of the teaching group
         /// </summary>
         /// <value>The end date of the teaching group</value>
         [DataMember(Name="end_date", EmitDefaultValue=false)]
-        public DateTime? end_date { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// The IDs of supervisors associated with the teaching group
         /// </summary>
         /// <value>The IDs of supervisors associated with the teaching group</value>
         [DataMember(Name="supervisor_ids", EmitDefaultValue=false)]
-        public List<int?> supervisor_ids { get; set; }
+        public List<int?> SupervisorIds { get; set; }
 
         /// <summary>
         /// The IDs of students associated with the teaching group
         /// </summary>
         /// <value>The IDs of students associated with the teaching group</value>
         [DataMember(Name="student_ids", EmitDefaultValue=false)]
-        public List<int?> student_ids { get; set; }
+        public List<int?> StudentIds { get; set; }
 
         /// <summary>
-        /// Gets or Sets subject
+        /// Gets or Sets Subject
         /// </summary>
         [DataMember(Name="subject", EmitDefaultValue=false)]
-        public TeachingGroupSubject subject { get; set; }
+        public TeachingGroupSubject Subject { get; set; }
 
         /// <summary>
         /// The official examination or assessment &#39;level&#39; of the teaching group taken directly from the MIS
         /// </summary>
         /// <value>The official examination or assessment &#39;level&#39; of the teaching group taken directly from the MIS</value>
         [DataMember(Name="mis_level", EmitDefaultValue=false)]
-        public string mis_level { get; set; }
+        public string MisLevel { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -125,15 +125,15 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TeachingGroupListData {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  start_date: ").Append(start_date).Append("\n");
-            sb.Append("  end_date: ").Append(end_date).Append("\n");
-            sb.Append("  supervisor_ids: ").Append(supervisor_ids).Append("\n");
-            sb.Append("  student_ids: ").Append(student_ids).Append("\n");
-            sb.Append("  subject: ").Append(subject).Append("\n");
-            sb.Append("  mis_level: ").Append(mis_level).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  SupervisorIds: ").Append(SupervisorIds).Append("\n");
+            sb.Append("  StudentIds: ").Append(StudentIds).Append("\n");
+            sb.Append("  Subject: ").Append(Subject).Append("\n");
+            sb.Append("  MisLevel: ").Append(MisLevel).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,49 +169,49 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.start_date == input.start_date ||
-                    (this.start_date != null &&
-                    this.start_date.Equals(input.start_date))
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 ) && 
                 (
-                    this.end_date == input.end_date ||
-                    (this.end_date != null &&
-                    this.end_date.Equals(input.end_date))
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
                 ) && 
                 (
-                    this.supervisor_ids == input.supervisor_ids ||
-                    this.supervisor_ids != null &&
-                    this.supervisor_ids.SequenceEqual(input.supervisor_ids)
+                    this.SupervisorIds == input.SupervisorIds ||
+                    this.SupervisorIds != null &&
+                    this.SupervisorIds.SequenceEqual(input.SupervisorIds)
                 ) && 
                 (
-                    this.student_ids == input.student_ids ||
-                    this.student_ids != null &&
-                    this.student_ids.SequenceEqual(input.student_ids)
+                    this.StudentIds == input.StudentIds ||
+                    this.StudentIds != null &&
+                    this.StudentIds.SequenceEqual(input.StudentIds)
                 ) && 
                 (
-                    this.subject == input.subject ||
-                    (this.subject != null &&
-                    this.subject.Equals(input.subject))
+                    this.Subject == input.Subject ||
+                    (this.Subject != null &&
+                    this.Subject.Equals(input.Subject))
                 ) && 
                 (
-                    this.mis_level == input.mis_level ||
-                    (this.mis_level != null &&
-                    this.mis_level.Equals(input.mis_level))
+                    this.MisLevel == input.MisLevel ||
+                    (this.MisLevel != null &&
+                    this.MisLevel.Equals(input.MisLevel))
                 );
         }
 
@@ -224,24 +224,24 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
-                if (this.start_date != null)
-                    hashCode = hashCode * 59 + this.start_date.GetHashCode();
-                if (this.end_date != null)
-                    hashCode = hashCode * 59 + this.end_date.GetHashCode();
-                if (this.supervisor_ids != null)
-                    hashCode = hashCode * 59 + this.supervisor_ids.GetHashCode();
-                if (this.student_ids != null)
-                    hashCode = hashCode * 59 + this.student_ids.GetHashCode();
-                if (this.subject != null)
-                    hashCode = hashCode * 59 + this.subject.GetHashCode();
-                if (this.mis_level != null)
-                    hashCode = hashCode * 59 + this.mis_level.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
+                if (this.SupervisorIds != null)
+                    hashCode = hashCode * 59 + this.SupervisorIds.GetHashCode();
+                if (this.StudentIds != null)
+                    hashCode = hashCode * 59 + this.StudentIds.GetHashCode();
+                if (this.Subject != null)
+                    hashCode = hashCode * 59 + this.Subject.GetHashCode();
+                if (this.MisLevel != null)
+                    hashCode = hashCode * 59 + this.MisLevel.GetHashCode();
                 return hashCode;
             }
         }

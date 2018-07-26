@@ -41,12 +41,12 @@ namespace AssemblyClient.Model
         /// <param name="qualifications">A list of all qualifications/degrees completed by a staff member.</param>
         public StaffMemberQualificationInfo(string _object = default(string), string teacherNumber = default(string), bool? qtStatus = default(bool?), bool? hltaStatus = default(bool?), string qtsRoute = default(string), List<StaffMemberQualificationInfoQualifications> qualifications = default(List<StaffMemberQualificationInfoQualifications>))
         {
-            this._object = _object;
-            this.teacher_number = teacherNumber;
-            this.qt_status = qtStatus;
-            this.hlta_status = hltaStatus;
-            this.qts_route = qtsRoute;
-            this.qualifications = qualifications;
+            this.Object = _object;
+            this.TeacherNumber = teacherNumber;
+            this.QtStatus = qtStatus;
+            this.HltaStatus = hltaStatus;
+            this.QtsRoute = qtsRoute;
+            this.Qualifications = qualifications;
         }
         
         /// <summary>
@@ -54,42 +54,42 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// The DfE Teacher Reference number (also known as GTC number). For members of staff who have one this is a unique identifier
         /// </summary>
         /// <value>The DfE Teacher Reference number (also known as GTC number). For members of staff who have one this is a unique identifier</value>
         [DataMember(Name="teacher_number", EmitDefaultValue=false)]
-        public string teacher_number { get; set; }
+        public string TeacherNumber { get; set; }
 
         /// <summary>
         /// Whether or not the staff member holds Qualified Teacher Status
         /// </summary>
         /// <value>Whether or not the staff member holds Qualified Teacher Status</value>
         [DataMember(Name="qt_status", EmitDefaultValue=false)]
-        public bool? qt_status { get; set; }
+        public bool? QtStatus { get; set; }
 
         /// <summary>
         /// Whether or not the staff member holds Higher Level Teaching Assistant Status
         /// </summary>
         /// <value>Whether or not the staff member holds Higher Level Teaching Assistant Status</value>
         [DataMember(Name="hlta_status", EmitDefaultValue=false)]
-        public bool? hlta_status { get; set; }
+        public bool? HltaStatus { get; set; }
 
         /// <summary>
         /// The route by which a teacher obtains Qualified Teacher Status (e.g. the Graduate Teacher programme).
         /// </summary>
         /// <value>The route by which a teacher obtains Qualified Teacher Status (e.g. the Graduate Teacher programme).</value>
         [DataMember(Name="qts_route", EmitDefaultValue=false)]
-        public string qts_route { get; set; }
+        public string QtsRoute { get; set; }
 
         /// <summary>
         /// A list of all qualifications/degrees completed by a staff member
         /// </summary>
         /// <value>A list of all qualifications/degrees completed by a staff member</value>
         [DataMember(Name="qualifications", EmitDefaultValue=false)]
-        public List<StaffMemberQualificationInfoQualifications> qualifications { get; set; }
+        public List<StaffMemberQualificationInfoQualifications> Qualifications { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,12 +99,12 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StaffMemberQualificationInfo {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  teacher_number: ").Append(teacher_number).Append("\n");
-            sb.Append("  qt_status: ").Append(qt_status).Append("\n");
-            sb.Append("  hlta_status: ").Append(hlta_status).Append("\n");
-            sb.Append("  qts_route: ").Append(qts_route).Append("\n");
-            sb.Append("  qualifications: ").Append(qualifications).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  TeacherNumber: ").Append(TeacherNumber).Append("\n");
+            sb.Append("  QtStatus: ").Append(QtStatus).Append("\n");
+            sb.Append("  HltaStatus: ").Append(HltaStatus).Append("\n");
+            sb.Append("  QtsRoute: ").Append(QtsRoute).Append("\n");
+            sb.Append("  Qualifications: ").Append(Qualifications).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,34 +140,34 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.teacher_number == input.teacher_number ||
-                    (this.teacher_number != null &&
-                    this.teacher_number.Equals(input.teacher_number))
+                    this.TeacherNumber == input.TeacherNumber ||
+                    (this.TeacherNumber != null &&
+                    this.TeacherNumber.Equals(input.TeacherNumber))
                 ) && 
                 (
-                    this.qt_status == input.qt_status ||
-                    (this.qt_status != null &&
-                    this.qt_status.Equals(input.qt_status))
+                    this.QtStatus == input.QtStatus ||
+                    (this.QtStatus != null &&
+                    this.QtStatus.Equals(input.QtStatus))
                 ) && 
                 (
-                    this.hlta_status == input.hlta_status ||
-                    (this.hlta_status != null &&
-                    this.hlta_status.Equals(input.hlta_status))
+                    this.HltaStatus == input.HltaStatus ||
+                    (this.HltaStatus != null &&
+                    this.HltaStatus.Equals(input.HltaStatus))
                 ) && 
                 (
-                    this.qts_route == input.qts_route ||
-                    (this.qts_route != null &&
-                    this.qts_route.Equals(input.qts_route))
+                    this.QtsRoute == input.QtsRoute ||
+                    (this.QtsRoute != null &&
+                    this.QtsRoute.Equals(input.QtsRoute))
                 ) && 
                 (
-                    this.qualifications == input.qualifications ||
-                    this.qualifications != null &&
-                    this.qualifications.SequenceEqual(input.qualifications)
+                    this.Qualifications == input.Qualifications ||
+                    this.Qualifications != null &&
+                    this.Qualifications.SequenceEqual(input.Qualifications)
                 );
         }
 
@@ -180,18 +180,18 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.teacher_number != null)
-                    hashCode = hashCode * 59 + this.teacher_number.GetHashCode();
-                if (this.qt_status != null)
-                    hashCode = hashCode * 59 + this.qt_status.GetHashCode();
-                if (this.hlta_status != null)
-                    hashCode = hashCode * 59 + this.hlta_status.GetHashCode();
-                if (this.qts_route != null)
-                    hashCode = hashCode * 59 + this.qts_route.GetHashCode();
-                if (this.qualifications != null)
-                    hashCode = hashCode * 59 + this.qualifications.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.TeacherNumber != null)
+                    hashCode = hashCode * 59 + this.TeacherNumber.GetHashCode();
+                if (this.QtStatus != null)
+                    hashCode = hashCode * 59 + this.QtStatus.GetHashCode();
+                if (this.HltaStatus != null)
+                    hashCode = hashCode * 59 + this.HltaStatus.GetHashCode();
+                if (this.QtsRoute != null)
+                    hashCode = hashCode * 59 + this.QtsRoute.GetHashCode();
+                if (this.Qualifications != null)
+                    hashCode = hashCode * 59 + this.Qualifications.GetHashCode();
                 return hashCode;
             }
         }

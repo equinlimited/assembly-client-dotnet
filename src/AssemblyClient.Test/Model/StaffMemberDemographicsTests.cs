@@ -67,36 +67,36 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property 'gender'
+        /// Test the property 'Gender'
         /// </summary>
         [Test]
-        public void genderTest()
+        public void GenderTest()
         {
-            // TODO unit test for the property 'gender'
+            // TODO unit test for the property 'Gender'
         }
         /// <summary>
-        /// Test the property 'ethnicity_code'
+        /// Test the property 'EthnicityCode'
         /// </summary>
         [Test]
-        public void ethnicity_codeTest()
+        public void EthnicityCodeTest()
         {
-            // TODO unit test for the property 'ethnicity_code'
+            // TODO unit test for the property 'EthnicityCode'
         }
         /// <summary>
-        /// Test the property 'ethnicity_group'
+        /// Test the property 'EthnicityGroup'
         /// </summary>
         [Test]
-        public void ethnicity_groupTest()
+        public void EthnicityGroupTest()
         {
-            // TODO unit test for the property 'ethnicity_group'
+            // TODO unit test for the property 'EthnicityGroup'
         }
         /// <summary>
-        /// Test the property 'disability'
+        /// Test the property 'Disability'
         /// </summary>
         [Test]
-        public void disabilityTest()
+        public void DisabilityTest()
         {
-            // TODO unit test for the property 'disability'
+            // TODO unit test for the property 'Disability'
         }
 
     }

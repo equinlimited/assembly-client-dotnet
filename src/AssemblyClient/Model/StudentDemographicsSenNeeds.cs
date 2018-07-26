@@ -43,14 +43,14 @@ namespace AssemblyClient.Model
         /// <param name="priority">The priority of the sen need.</param>
         public StudentDemographicsSenNeeds(string _object = default(string), int? id = default(int?), DateTime? startDate = default(DateTime?), string senNeedCode = default(string), string senNeedName = default(string), string senBroadNeedTypeCode = default(string), string senBroadNeedTypeName = default(string), int? priority = default(int?))
         {
-            this._object = _object;
-            this.id = id;
-            this.start_date = startDate;
-            this.sen_need_code = senNeedCode;
-            this.sen_need_name = senNeedName;
-            this.sen_broad_need_type_code = senBroadNeedTypeCode;
-            this.sen_broad_need_type_name = senBroadNeedTypeName;
-            this.priority = priority;
+            this.Object = _object;
+            this.Id = id;
+            this.StartDate = startDate;
+            this.SenNeedCode = senNeedCode;
+            this.SenNeedName = senNeedName;
+            this.SenBroadNeedTypeCode = senBroadNeedTypeCode;
+            this.SenBroadNeedTypeName = senBroadNeedTypeName;
+            this.Priority = priority;
         }
         
         /// <summary>
@@ -58,56 +58,56 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// The id of the sen need
         /// </summary>
         /// <value>The id of the sen need</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The start date for the need
         /// </summary>
         /// <value>The start date for the need</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
-        public DateTime? start_date { get; set; }
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// The code of the sen need
         /// </summary>
         /// <value>The code of the sen need</value>
         [DataMember(Name="sen_need_code", EmitDefaultValue=false)]
-        public string sen_need_code { get; set; }
+        public string SenNeedCode { get; set; }
 
         /// <summary>
         /// The name of the sen need
         /// </summary>
         /// <value>The name of the sen need</value>
         [DataMember(Name="sen_need_name", EmitDefaultValue=false)]
-        public string sen_need_name { get; set; }
+        public string SenNeedName { get; set; }
 
         /// <summary>
         /// The code for the broad need
         /// </summary>
         /// <value>The code for the broad need</value>
         [DataMember(Name="sen_broad_need_type_code", EmitDefaultValue=false)]
-        public string sen_broad_need_type_code { get; set; }
+        public string SenBroadNeedTypeCode { get; set; }
 
         /// <summary>
         /// The name of the broad need
         /// </summary>
         /// <value>The name of the broad need</value>
         [DataMember(Name="sen_broad_need_type_name", EmitDefaultValue=false)]
-        public string sen_broad_need_type_name { get; set; }
+        public string SenBroadNeedTypeName { get; set; }
 
         /// <summary>
         /// The priority of the sen need
         /// </summary>
         /// <value>The priority of the sen need</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
-        public int? priority { get; set; }
+        public int? Priority { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -117,14 +117,14 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StudentDemographicsSenNeeds {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  start_date: ").Append(start_date).Append("\n");
-            sb.Append("  sen_need_code: ").Append(sen_need_code).Append("\n");
-            sb.Append("  sen_need_name: ").Append(sen_need_name).Append("\n");
-            sb.Append("  sen_broad_need_type_code: ").Append(sen_broad_need_type_code).Append("\n");
-            sb.Append("  sen_broad_need_type_name: ").Append(sen_broad_need_type_name).Append("\n");
-            sb.Append("  priority: ").Append(priority).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  SenNeedCode: ").Append(SenNeedCode).Append("\n");
+            sb.Append("  SenNeedName: ").Append(SenNeedName).Append("\n");
+            sb.Append("  SenBroadNeedTypeCode: ").Append(SenBroadNeedTypeCode).Append("\n");
+            sb.Append("  SenBroadNeedTypeName: ").Append(SenBroadNeedTypeName).Append("\n");
+            sb.Append("  Priority: ").Append(Priority).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,44 +160,44 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.start_date == input.start_date ||
-                    (this.start_date != null &&
-                    this.start_date.Equals(input.start_date))
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 ) && 
                 (
-                    this.sen_need_code == input.sen_need_code ||
-                    (this.sen_need_code != null &&
-                    this.sen_need_code.Equals(input.sen_need_code))
+                    this.SenNeedCode == input.SenNeedCode ||
+                    (this.SenNeedCode != null &&
+                    this.SenNeedCode.Equals(input.SenNeedCode))
                 ) && 
                 (
-                    this.sen_need_name == input.sen_need_name ||
-                    (this.sen_need_name != null &&
-                    this.sen_need_name.Equals(input.sen_need_name))
+                    this.SenNeedName == input.SenNeedName ||
+                    (this.SenNeedName != null &&
+                    this.SenNeedName.Equals(input.SenNeedName))
                 ) && 
                 (
-                    this.sen_broad_need_type_code == input.sen_broad_need_type_code ||
-                    (this.sen_broad_need_type_code != null &&
-                    this.sen_broad_need_type_code.Equals(input.sen_broad_need_type_code))
+                    this.SenBroadNeedTypeCode == input.SenBroadNeedTypeCode ||
+                    (this.SenBroadNeedTypeCode != null &&
+                    this.SenBroadNeedTypeCode.Equals(input.SenBroadNeedTypeCode))
                 ) && 
                 (
-                    this.sen_broad_need_type_name == input.sen_broad_need_type_name ||
-                    (this.sen_broad_need_type_name != null &&
-                    this.sen_broad_need_type_name.Equals(input.sen_broad_need_type_name))
+                    this.SenBroadNeedTypeName == input.SenBroadNeedTypeName ||
+                    (this.SenBroadNeedTypeName != null &&
+                    this.SenBroadNeedTypeName.Equals(input.SenBroadNeedTypeName))
                 ) && 
                 (
-                    this.priority == input.priority ||
-                    (this.priority != null &&
-                    this.priority.Equals(input.priority))
+                    this.Priority == input.Priority ||
+                    (this.Priority != null &&
+                    this.Priority.Equals(input.Priority))
                 );
         }
 
@@ -210,22 +210,22 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.start_date != null)
-                    hashCode = hashCode * 59 + this.start_date.GetHashCode();
-                if (this.sen_need_code != null)
-                    hashCode = hashCode * 59 + this.sen_need_code.GetHashCode();
-                if (this.sen_need_name != null)
-                    hashCode = hashCode * 59 + this.sen_need_name.GetHashCode();
-                if (this.sen_broad_need_type_code != null)
-                    hashCode = hashCode * 59 + this.sen_broad_need_type_code.GetHashCode();
-                if (this.sen_broad_need_type_name != null)
-                    hashCode = hashCode * 59 + this.sen_broad_need_type_name.GetHashCode();
-                if (this.priority != null)
-                    hashCode = hashCode * 59 + this.priority.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.SenNeedCode != null)
+                    hashCode = hashCode * 59 + this.SenNeedCode.GetHashCode();
+                if (this.SenNeedName != null)
+                    hashCode = hashCode * 59 + this.SenNeedName.GetHashCode();
+                if (this.SenBroadNeedTypeCode != null)
+                    hashCode = hashCode * 59 + this.SenBroadNeedTypeCode.GetHashCode();
+                if (this.SenBroadNeedTypeName != null)
+                    hashCode = hashCode * 59 + this.SenBroadNeedTypeName.GetHashCode();
+                if (this.Priority != null)
+                    hashCode = hashCode * 59 + this.Priority.GetHashCode();
                 return hashCode;
             }
         }

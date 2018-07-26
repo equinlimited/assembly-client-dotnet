@@ -67,156 +67,156 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'mis_id'
+        /// Test the property 'MisId'
         /// </summary>
         [Test]
-        public void mis_idTest()
+        public void MisIdTest()
         {
-            // TODO unit test for the property 'mis_id'
+            // TODO unit test for the property 'MisId'
         }
         /// <summary>
-        /// Test the property 'staff_code'
+        /// Test the property 'StaffCode'
         /// </summary>
         [Test]
-        public void staff_codeTest()
+        public void StaffCodeTest()
         {
-            // TODO unit test for the property 'staff_code'
+            // TODO unit test for the property 'StaffCode'
         }
         /// <summary>
-        /// Test the property 'first_name'
+        /// Test the property 'FirstName'
         /// </summary>
         [Test]
-        public void first_nameTest()
+        public void FirstNameTest()
         {
-            // TODO unit test for the property 'first_name'
+            // TODO unit test for the property 'FirstName'
         }
         /// <summary>
-        /// Test the property 'legal_first_name'
+        /// Test the property 'LegalFirstName'
         /// </summary>
         [Test]
-        public void legal_first_nameTest()
+        public void LegalFirstNameTest()
         {
-            // TODO unit test for the property 'legal_first_name'
+            // TODO unit test for the property 'LegalFirstName'
         }
         /// <summary>
-        /// Test the property 'middle_name'
+        /// Test the property 'MiddleName'
         /// </summary>
         [Test]
-        public void middle_nameTest()
+        public void MiddleNameTest()
         {
-            // TODO unit test for the property 'middle_name'
+            // TODO unit test for the property 'MiddleName'
         }
         /// <summary>
-        /// Test the property 'last_name'
+        /// Test the property 'LastName'
         /// </summary>
         [Test]
-        public void last_nameTest()
+        public void LastNameTest()
         {
-            // TODO unit test for the property 'last_name'
+            // TODO unit test for the property 'LastName'
         }
         /// <summary>
-        /// Test the property 'legal_last_name'
+        /// Test the property 'LegalLastName'
         /// </summary>
         [Test]
-        public void legal_last_nameTest()
+        public void LegalLastNameTest()
         {
-            // TODO unit test for the property 'legal_last_name'
+            // TODO unit test for the property 'LegalLastName'
         }
         /// <summary>
-        /// Test the property 'former_last_name'
+        /// Test the property 'FormerLastName'
         /// </summary>
         [Test]
-        public void former_last_nameTest()
+        public void FormerLastNameTest()
         {
-            // TODO unit test for the property 'former_last_name'
+            // TODO unit test for the property 'FormerLastName'
         }
         /// <summary>
-        /// Test the property 'dob'
+        /// Test the property 'Dob'
         /// </summary>
         [Test]
-        public void dobTest()
+        public void DobTest()
         {
-            // TODO unit test for the property 'dob'
+            // TODO unit test for the property 'Dob'
         }
         /// <summary>
-        /// Test the property 'title'
+        /// Test the property 'Title'
         /// </summary>
         [Test]
-        public void titleTest()
+        public void TitleTest()
         {
-            // TODO unit test for the property 'title'
+            // TODO unit test for the property 'Title'
         }
         /// <summary>
-        /// Test the property 'email'
+        /// Test the property 'Email'
         /// </summary>
         [Test]
-        public void emailTest()
+        public void EmailTest()
         {
-            // TODO unit test for the property 'email'
+            // TODO unit test for the property 'Email'
         }
         /// <summary>
-        /// Test the property 'is_teaching_staff'
+        /// Test the property 'IsTeachingStaff'
         /// </summary>
         [Test]
-        public void is_teaching_staffTest()
+        public void IsTeachingStaffTest()
         {
-            // TODO unit test for the property 'is_teaching_staff'
+            // TODO unit test for the property 'IsTeachingStaff'
         }
         /// <summary>
-        /// Test the property 'included_in_census'
+        /// Test the property 'IncludedInCensus'
         /// </summary>
         [Test]
-        public void included_in_censusTest()
+        public void IncludedInCensusTest()
         {
-            // TODO unit test for the property 'included_in_census'
+            // TODO unit test for the property 'IncludedInCensus'
         }
         /// <summary>
-        /// Test the property 'start_date'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void start_dateTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'start_date'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
-        /// Test the property 'end_date'
+        /// Test the property 'EndDate'
         /// </summary>
         [Test]
-        public void end_dateTest()
+        public void EndDateTest()
         {
-            // TODO unit test for the property 'end_date'
+            // TODO unit test for the property 'EndDate'
         }
         /// <summary>
-        /// Test the property 'demographics'
+        /// Test the property 'Demographics'
         /// </summary>
         [Test]
-        public void demographicsTest()
+        public void DemographicsTest()
         {
-            // TODO unit test for the property 'demographics'
+            // TODO unit test for the property 'Demographics'
         }
         /// <summary>
-        /// Test the property 'qualification_info'
+        /// Test the property 'QualificationInfo'
         /// </summary>
         [Test]
-        public void qualification_infoTest()
+        public void QualificationInfoTest()
         {
-            // TODO unit test for the property 'qualification_info'
+            // TODO unit test for the property 'QualificationInfo'
         }
 
     }

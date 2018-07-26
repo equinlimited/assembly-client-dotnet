@@ -67,84 +67,84 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'student_id'
+        /// Test the property 'StudentId'
         /// </summary>
         [Test]
-        public void student_idTest()
+        public void StudentIdTest()
         {
-            // TODO unit test for the property 'student_id'
+            // TODO unit test for the property 'StudentId'
         }
         /// <summary>
-        /// Test the property 'exclusion_type'
+        /// Test the property 'ExclusionType'
         /// </summary>
         [Test]
-        public void exclusion_typeTest()
+        public void ExclusionTypeTest()
         {
-            // TODO unit test for the property 'exclusion_type'
+            // TODO unit test for the property 'ExclusionType'
         }
         /// <summary>
-        /// Test the property 'exclusions_reason'
+        /// Test the property 'ExclusionsReason'
         /// </summary>
         [Test]
-        public void exclusions_reasonTest()
+        public void ExclusionsReasonTest()
         {
-            // TODO unit test for the property 'exclusions_reason'
+            // TODO unit test for the property 'ExclusionsReason'
         }
         /// <summary>
-        /// Test the property 'start_date'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void start_dateTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'start_date'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
-        /// Test the property 'start_session'
+        /// Test the property 'StartSession'
         /// </summary>
         [Test]
-        public void start_sessionTest()
+        public void StartSessionTest()
         {
-            // TODO unit test for the property 'start_session'
+            // TODO unit test for the property 'StartSession'
         }
         /// <summary>
-        /// Test the property 'end_date'
+        /// Test the property 'EndDate'
         /// </summary>
         [Test]
-        public void end_dateTest()
+        public void EndDateTest()
         {
-            // TODO unit test for the property 'end_date'
+            // TODO unit test for the property 'EndDate'
         }
         /// <summary>
-        /// Test the property 'end_session'
+        /// Test the property 'EndSession'
         /// </summary>
         [Test]
-        public void end_sessionTest()
+        public void EndSessionTest()
         {
-            // TODO unit test for the property 'end_session'
+            // TODO unit test for the property 'EndSession'
         }
         /// <summary>
-        /// Test the property 'exclusion_length'
+        /// Test the property 'ExclusionLength'
         /// </summary>
         [Test]
-        public void exclusion_lengthTest()
+        public void ExclusionLengthTest()
         {
-            // TODO unit test for the property 'exclusion_length'
+            // TODO unit test for the property 'ExclusionLength'
         }
 
     }

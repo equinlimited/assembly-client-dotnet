@@ -36,7 +36,7 @@ namespace AssemblyClient.Model
         /// <param name="results">No description.</param>
         public UpdateMultipleResultPayload(List<CreateResultPayloadResults> results = default(List<CreateResultPayloadResults>))
         {
-            this.results = results;
+            this.Results = results;
         }
         
         /// <summary>
@@ -44,7 +44,7 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
-        public List<CreateResultPayloadResults> results { get; set; }
+        public List<CreateResultPayloadResults> Results { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,7 +54,7 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateMultipleResultPayload {\n");
-            sb.Append("  results: ").Append(results).Append("\n");
+            sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,9 +90,9 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this.results == input.results ||
-                    this.results != null &&
-                    this.results.SequenceEqual(input.results)
+                    this.Results == input.Results ||
+                    this.Results != null &&
+                    this.Results.SequenceEqual(input.Results)
                 );
         }
 
@@ -105,8 +105,8 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.results != null)
-                    hashCode = hashCode * 59 + this.results.GetHashCode();
+                if (this.Results != null)
+                    hashCode = hashCode * 59 + this.Results.GetHashCode();
                 return hashCode;
             }
         }

@@ -40,11 +40,11 @@ namespace AssemblyClient.Model
         /// <param name="results">No description.</param>
         public CreateResultPayload(int? subjectId = default(int?), int? facetId = default(int?), int? assessmentPointRank = default(int?), int? assessmentId = default(int?), List<CreateResultPayloadResults> results = default(List<CreateResultPayloadResults>))
         {
-            this.subject_id = subjectId;
-            this.facet_id = facetId;
-            this.assessment_point_rank = assessmentPointRank;
-            this.assessment_id = assessmentId;
-            this.results = results;
+            this.SubjectId = subjectId;
+            this.FacetId = facetId;
+            this.AssessmentPointRank = assessmentPointRank;
+            this.AssessmentId = assessmentId;
+            this.Results = results;
         }
         
         /// <summary>
@@ -52,35 +52,35 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="subject_id", EmitDefaultValue=false)]
-        public int? subject_id { get; set; }
+        public int? SubjectId { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="facet_id", EmitDefaultValue=false)]
-        public int? facet_id { get; set; }
+        public int? FacetId { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="assessment_point_rank", EmitDefaultValue=false)]
-        public int? assessment_point_rank { get; set; }
+        public int? AssessmentPointRank { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="assessment_id", EmitDefaultValue=false)]
-        public int? assessment_id { get; set; }
+        public int? AssessmentId { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
-        public List<CreateResultPayloadResults> results { get; set; }
+        public List<CreateResultPayloadResults> Results { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -90,11 +90,11 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateResultPayload {\n");
-            sb.Append("  subject_id: ").Append(subject_id).Append("\n");
-            sb.Append("  facet_id: ").Append(facet_id).Append("\n");
-            sb.Append("  assessment_point_rank: ").Append(assessment_point_rank).Append("\n");
-            sb.Append("  assessment_id: ").Append(assessment_id).Append("\n");
-            sb.Append("  results: ").Append(results).Append("\n");
+            sb.Append("  SubjectId: ").Append(SubjectId).Append("\n");
+            sb.Append("  FacetId: ").Append(FacetId).Append("\n");
+            sb.Append("  AssessmentPointRank: ").Append(AssessmentPointRank).Append("\n");
+            sb.Append("  AssessmentId: ").Append(AssessmentId).Append("\n");
+            sb.Append("  Results: ").Append(Results).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -130,29 +130,29 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this.subject_id == input.subject_id ||
-                    (this.subject_id != null &&
-                    this.subject_id.Equals(input.subject_id))
+                    this.SubjectId == input.SubjectId ||
+                    (this.SubjectId != null &&
+                    this.SubjectId.Equals(input.SubjectId))
                 ) && 
                 (
-                    this.facet_id == input.facet_id ||
-                    (this.facet_id != null &&
-                    this.facet_id.Equals(input.facet_id))
+                    this.FacetId == input.FacetId ||
+                    (this.FacetId != null &&
+                    this.FacetId.Equals(input.FacetId))
                 ) && 
                 (
-                    this.assessment_point_rank == input.assessment_point_rank ||
-                    (this.assessment_point_rank != null &&
-                    this.assessment_point_rank.Equals(input.assessment_point_rank))
+                    this.AssessmentPointRank == input.AssessmentPointRank ||
+                    (this.AssessmentPointRank != null &&
+                    this.AssessmentPointRank.Equals(input.AssessmentPointRank))
                 ) && 
                 (
-                    this.assessment_id == input.assessment_id ||
-                    (this.assessment_id != null &&
-                    this.assessment_id.Equals(input.assessment_id))
+                    this.AssessmentId == input.AssessmentId ||
+                    (this.AssessmentId != null &&
+                    this.AssessmentId.Equals(input.AssessmentId))
                 ) && 
                 (
-                    this.results == input.results ||
-                    this.results != null &&
-                    this.results.SequenceEqual(input.results)
+                    this.Results == input.Results ||
+                    this.Results != null &&
+                    this.Results.SequenceEqual(input.Results)
                 );
         }
 
@@ -165,16 +165,16 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.subject_id != null)
-                    hashCode = hashCode * 59 + this.subject_id.GetHashCode();
-                if (this.facet_id != null)
-                    hashCode = hashCode * 59 + this.facet_id.GetHashCode();
-                if (this.assessment_point_rank != null)
-                    hashCode = hashCode * 59 + this.assessment_point_rank.GetHashCode();
-                if (this.assessment_id != null)
-                    hashCode = hashCode * 59 + this.assessment_id.GetHashCode();
-                if (this.results != null)
-                    hashCode = hashCode * 59 + this.results.GetHashCode();
+                if (this.SubjectId != null)
+                    hashCode = hashCode * 59 + this.SubjectId.GetHashCode();
+                if (this.FacetId != null)
+                    hashCode = hashCode * 59 + this.FacetId.GetHashCode();
+                if (this.AssessmentPointRank != null)
+                    hashCode = hashCode * 59 + this.AssessmentPointRank.GetHashCode();
+                if (this.AssessmentId != null)
+                    hashCode = hashCode * 59 + this.AssessmentId.GetHashCode();
+                if (this.Results != null)
+                    hashCode = hashCode * 59 + this.Results.GetHashCode();
                 return hashCode;
             }
         }

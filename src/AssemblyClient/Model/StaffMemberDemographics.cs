@@ -56,7 +56,7 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>The gender of a staff member *Values*  |Value|Description| |- --|- --| |&#x60;M&#x60;|Male| |&#x60;F&#x60;|Female| </value>
         [DataMember(Name="gender", EmitDefaultValue=false)]
-        public GenderEnum? gender { get; set; }
+        public GenderEnum? Gender { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="StaffMemberDemographics" /> class.
         /// </summary>
@@ -66,10 +66,10 @@ namespace AssemblyClient.Model
         /// <param name="disability">The disability status of a staff member.</param>
         public StaffMemberDemographics(GenderEnum? gender = default(GenderEnum?), string ethnicityCode = default(string), string ethnicityGroup = default(string), string disability = default(string))
         {
-            this.gender = gender;
-            this.ethnicity_code = ethnicityCode;
-            this.ethnicity_group = ethnicityGroup;
-            this.disability = disability;
+            this.Gender = gender;
+            this.EthnicityCode = ethnicityCode;
+            this.EthnicityGroup = ethnicityGroup;
+            this.Disability = disability;
         }
         
 
@@ -78,21 +78,21 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>A detailed, Dfe standardised way of categorising the ethnicity of a student </value>
         [DataMember(Name="ethnicity_code", EmitDefaultValue=false)]
-        public string ethnicity_code { get; set; }
+        public string EthnicityCode { get; set; }
 
         /// <summary>
         /// A broader categorisation of ethnicity that is standardised across the country, with all ethnicity codes grouped in to 8 sections
         /// </summary>
         /// <value>A broader categorisation of ethnicity that is standardised across the country, with all ethnicity codes grouped in to 8 sections</value>
         [DataMember(Name="ethnicity_group", EmitDefaultValue=false)]
-        public string ethnicity_group { get; set; }
+        public string EthnicityGroup { get; set; }
 
         /// <summary>
         /// The disability status of a staff member
         /// </summary>
         /// <value>The disability status of a staff member</value>
         [DataMember(Name="disability", EmitDefaultValue=false)]
-        public string disability { get; set; }
+        public string Disability { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -102,10 +102,10 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StaffMemberDemographics {\n");
-            sb.Append("  gender: ").Append(gender).Append("\n");
-            sb.Append("  ethnicity_code: ").Append(ethnicity_code).Append("\n");
-            sb.Append("  ethnicity_group: ").Append(ethnicity_group).Append("\n");
-            sb.Append("  disability: ").Append(disability).Append("\n");
+            sb.Append("  Gender: ").Append(Gender).Append("\n");
+            sb.Append("  EthnicityCode: ").Append(EthnicityCode).Append("\n");
+            sb.Append("  EthnicityGroup: ").Append(EthnicityGroup).Append("\n");
+            sb.Append("  Disability: ").Append(Disability).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,24 +141,24 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this.gender == input.gender ||
-                    (this.gender != null &&
-                    this.gender.Equals(input.gender))
+                    this.Gender == input.Gender ||
+                    (this.Gender != null &&
+                    this.Gender.Equals(input.Gender))
                 ) && 
                 (
-                    this.ethnicity_code == input.ethnicity_code ||
-                    (this.ethnicity_code != null &&
-                    this.ethnicity_code.Equals(input.ethnicity_code))
+                    this.EthnicityCode == input.EthnicityCode ||
+                    (this.EthnicityCode != null &&
+                    this.EthnicityCode.Equals(input.EthnicityCode))
                 ) && 
                 (
-                    this.ethnicity_group == input.ethnicity_group ||
-                    (this.ethnicity_group != null &&
-                    this.ethnicity_group.Equals(input.ethnicity_group))
+                    this.EthnicityGroup == input.EthnicityGroup ||
+                    (this.EthnicityGroup != null &&
+                    this.EthnicityGroup.Equals(input.EthnicityGroup))
                 ) && 
                 (
-                    this.disability == input.disability ||
-                    (this.disability != null &&
-                    this.disability.Equals(input.disability))
+                    this.Disability == input.Disability ||
+                    (this.Disability != null &&
+                    this.Disability.Equals(input.Disability))
                 );
         }
 
@@ -171,14 +171,14 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.gender != null)
-                    hashCode = hashCode * 59 + this.gender.GetHashCode();
-                if (this.ethnicity_code != null)
-                    hashCode = hashCode * 59 + this.ethnicity_code.GetHashCode();
-                if (this.ethnicity_group != null)
-                    hashCode = hashCode * 59 + this.ethnicity_group.GetHashCode();
-                if (this.disability != null)
-                    hashCode = hashCode * 59 + this.disability.GetHashCode();
+                if (this.Gender != null)
+                    hashCode = hashCode * 59 + this.Gender.GetHashCode();
+                if (this.EthnicityCode != null)
+                    hashCode = hashCode * 59 + this.EthnicityCode.GetHashCode();
+                if (this.EthnicityGroup != null)
+                    hashCode = hashCode * 59 + this.EthnicityGroup.GetHashCode();
+                if (this.Disability != null)
+                    hashCode = hashCode * 59 + this.Disability.GetHashCode();
                 return hashCode;
             }
         }

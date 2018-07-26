@@ -54,25 +54,25 @@ namespace AssemblyClient.Model
         /// <param name="qualificationInfo">qualificationInfo.</param>
         public StaffMember(string _object = default(string), int? id = default(int?), string misId = default(string), string staffCode = default(string), string firstName = default(string), string legalFirstName = default(string), string middleName = default(string), string lastName = default(string), string legalLastName = default(string), string formerLastName = default(string), string dob = default(string), string title = default(string), string email = default(string), bool? isTeachingStaff = default(bool?), bool? includedInCensus = default(bool?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), StaffMemberDemographics demographics = default(StaffMemberDemographics), StaffMemberQualificationInfo qualificationInfo = default(StaffMemberQualificationInfo))
         {
-            this._object = _object;
-            this.id = id;
-            this.mis_id = misId;
-            this.staff_code = staffCode;
-            this.first_name = firstName;
-            this.legal_first_name = legalFirstName;
-            this.middle_name = middleName;
-            this.last_name = lastName;
-            this.legal_last_name = legalLastName;
-            this.former_last_name = formerLastName;
-            this.dob = dob;
-            this.title = title;
-            this.email = email;
-            this.is_teaching_staff = isTeachingStaff;
-            this.included_in_census = includedInCensus;
-            this.start_date = startDate;
-            this.end_date = endDate;
-            this.demographics = demographics;
-            this.qualification_info = qualificationInfo;
+            this.Object = _object;
+            this.Id = id;
+            this.MisId = misId;
+            this.StaffCode = staffCode;
+            this.FirstName = firstName;
+            this.LegalFirstName = legalFirstName;
+            this.MiddleName = middleName;
+            this.LastName = lastName;
+            this.LegalLastName = legalLastName;
+            this.FormerLastName = formerLastName;
+            this.Dob = dob;
+            this.Title = title;
+            this.Email = email;
+            this.IsTeachingStaff = isTeachingStaff;
+            this.IncludedInCensus = includedInCensus;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.Demographics = demographics;
+            this.QualificationInfo = qualificationInfo;
         }
         
         /// <summary>
@@ -80,131 +80,131 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to each staff member in the Platform
         /// </summary>
         /// <value>Internal stable ID given to each staff member in the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The ID of the staff member from the MIS
         /// </summary>
         /// <value>The ID of the staff member from the MIS</value>
         [DataMember(Name="mis_id", EmitDefaultValue=false)]
-        public string mis_id { get; set; }
+        public string MisId { get; set; }
 
         /// <summary>
         /// The staff code from the MIS
         /// </summary>
         /// <value>The staff code from the MIS</value>
         [DataMember(Name="staff_code", EmitDefaultValue=false)]
-        public string staff_code { get; set; }
+        public string StaffCode { get; set; }
 
         /// <summary>
         /// The first name of the staff member
         /// </summary>
         /// <value>The first name of the staff member</value>
         [DataMember(Name="first_name", EmitDefaultValue=false)]
-        public string first_name { get; set; }
+        public string FirstName { get; set; }
 
         /// <summary>
         /// The legal first name of the staff member
         /// </summary>
         /// <value>The legal first name of the staff member</value>
         [DataMember(Name="legal_first_name", EmitDefaultValue=false)]
-        public string legal_first_name { get; set; }
+        public string LegalFirstName { get; set; }
 
         /// <summary>
         /// The middle name of the staff member
         /// </summary>
         /// <value>The middle name of the staff member</value>
         [DataMember(Name="middle_name", EmitDefaultValue=false)]
-        public string middle_name { get; set; }
+        public string MiddleName { get; set; }
 
         /// <summary>
         /// The last name of the staff member
         /// </summary>
         /// <value>The last name of the staff member</value>
         [DataMember(Name="last_name", EmitDefaultValue=false)]
-        public string last_name { get; set; }
+        public string LastName { get; set; }
 
         /// <summary>
         /// The legal last name of the staff member
         /// </summary>
         /// <value>The legal last name of the staff member</value>
         [DataMember(Name="legal_last_name", EmitDefaultValue=false)]
-        public string legal_last_name { get; set; }
+        public string LegalLastName { get; set; }
 
         /// <summary>
         /// The former last name of the staff member
         /// </summary>
         /// <value>The former last name of the staff member</value>
         [DataMember(Name="former_last_name", EmitDefaultValue=false)]
-        public string former_last_name { get; set; }
+        public string FormerLastName { get; set; }
 
         /// <summary>
         /// The staff member&#39;s date of birth
         /// </summary>
         /// <value>The staff member&#39;s date of birth</value>
         [DataMember(Name="dob", EmitDefaultValue=false)]
-        public string dob { get; set; }
+        public string Dob { get; set; }
 
         /// <summary>
         /// The title of the staff member
         /// </summary>
         /// <value>The title of the staff member</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
-        public string title { get; set; }
+        public string Title { get; set; }
 
         /// <summary>
         /// The email address of the staff member.
         /// </summary>
         /// <value>The email address of the staff member.</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
-        public string email { get; set; }
+        public string Email { get; set; }
 
         /// <summary>
         /// Indicates whether the staff member is a teacher
         /// </summary>
         /// <value>Indicates whether the staff member is a teacher</value>
         [DataMember(Name="is_teaching_staff", EmitDefaultValue=false)]
-        public bool? is_teaching_staff { get; set; }
+        public bool? IsTeachingStaff { get; set; }
 
         /// <summary>
         /// Indicates whether the staff member is a teacher
         /// </summary>
         /// <value>Indicates whether the staff member is a teacher</value>
         [DataMember(Name="included_in_census", EmitDefaultValue=false)]
-        public bool? included_in_census { get; set; }
+        public bool? IncludedInCensus { get; set; }
 
         /// <summary>
         /// When the staff member&#39;s employment started
         /// </summary>
         /// <value>When the staff member&#39;s employment started</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
-        public DateTime? start_date { get; set; }
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// When the staff member&#39;s employment ended/is due to end
         /// </summary>
         /// <value>When the staff member&#39;s employment ended/is due to end</value>
         [DataMember(Name="end_date", EmitDefaultValue=false)]
-        public DateTime? end_date { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets demographics
+        /// Gets or Sets Demographics
         /// </summary>
         [DataMember(Name="demographics", EmitDefaultValue=false)]
-        public StaffMemberDemographics demographics { get; set; }
+        public StaffMemberDemographics Demographics { get; set; }
 
         /// <summary>
-        /// Gets or Sets qualification_info
+        /// Gets or Sets QualificationInfo
         /// </summary>
         [DataMember(Name="qualification_info", EmitDefaultValue=false)]
-        public StaffMemberQualificationInfo qualification_info { get; set; }
+        public StaffMemberQualificationInfo QualificationInfo { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -214,25 +214,25 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StaffMember {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  mis_id: ").Append(mis_id).Append("\n");
-            sb.Append("  staff_code: ").Append(staff_code).Append("\n");
-            sb.Append("  first_name: ").Append(first_name).Append("\n");
-            sb.Append("  legal_first_name: ").Append(legal_first_name).Append("\n");
-            sb.Append("  middle_name: ").Append(middle_name).Append("\n");
-            sb.Append("  last_name: ").Append(last_name).Append("\n");
-            sb.Append("  legal_last_name: ").Append(legal_last_name).Append("\n");
-            sb.Append("  former_last_name: ").Append(former_last_name).Append("\n");
-            sb.Append("  dob: ").Append(dob).Append("\n");
-            sb.Append("  title: ").Append(title).Append("\n");
-            sb.Append("  email: ").Append(email).Append("\n");
-            sb.Append("  is_teaching_staff: ").Append(is_teaching_staff).Append("\n");
-            sb.Append("  included_in_census: ").Append(included_in_census).Append("\n");
-            sb.Append("  start_date: ").Append(start_date).Append("\n");
-            sb.Append("  end_date: ").Append(end_date).Append("\n");
-            sb.Append("  demographics: ").Append(demographics).Append("\n");
-            sb.Append("  qualification_info: ").Append(qualification_info).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  MisId: ").Append(MisId).Append("\n");
+            sb.Append("  StaffCode: ").Append(StaffCode).Append("\n");
+            sb.Append("  FirstName: ").Append(FirstName).Append("\n");
+            sb.Append("  LegalFirstName: ").Append(LegalFirstName).Append("\n");
+            sb.Append("  MiddleName: ").Append(MiddleName).Append("\n");
+            sb.Append("  LastName: ").Append(LastName).Append("\n");
+            sb.Append("  LegalLastName: ").Append(LegalLastName).Append("\n");
+            sb.Append("  FormerLastName: ").Append(FormerLastName).Append("\n");
+            sb.Append("  Dob: ").Append(Dob).Append("\n");
+            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  IsTeachingStaff: ").Append(IsTeachingStaff).Append("\n");
+            sb.Append("  IncludedInCensus: ").Append(IncludedInCensus).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  Demographics: ").Append(Demographics).Append("\n");
+            sb.Append("  QualificationInfo: ").Append(QualificationInfo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -268,99 +268,99 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.mis_id == input.mis_id ||
-                    (this.mis_id != null &&
-                    this.mis_id.Equals(input.mis_id))
+                    this.MisId == input.MisId ||
+                    (this.MisId != null &&
+                    this.MisId.Equals(input.MisId))
                 ) && 
                 (
-                    this.staff_code == input.staff_code ||
-                    (this.staff_code != null &&
-                    this.staff_code.Equals(input.staff_code))
+                    this.StaffCode == input.StaffCode ||
+                    (this.StaffCode != null &&
+                    this.StaffCode.Equals(input.StaffCode))
                 ) && 
                 (
-                    this.first_name == input.first_name ||
-                    (this.first_name != null &&
-                    this.first_name.Equals(input.first_name))
+                    this.FirstName == input.FirstName ||
+                    (this.FirstName != null &&
+                    this.FirstName.Equals(input.FirstName))
                 ) && 
                 (
-                    this.legal_first_name == input.legal_first_name ||
-                    (this.legal_first_name != null &&
-                    this.legal_first_name.Equals(input.legal_first_name))
+                    this.LegalFirstName == input.LegalFirstName ||
+                    (this.LegalFirstName != null &&
+                    this.LegalFirstName.Equals(input.LegalFirstName))
                 ) && 
                 (
-                    this.middle_name == input.middle_name ||
-                    (this.middle_name != null &&
-                    this.middle_name.Equals(input.middle_name))
+                    this.MiddleName == input.MiddleName ||
+                    (this.MiddleName != null &&
+                    this.MiddleName.Equals(input.MiddleName))
                 ) && 
                 (
-                    this.last_name == input.last_name ||
-                    (this.last_name != null &&
-                    this.last_name.Equals(input.last_name))
+                    this.LastName == input.LastName ||
+                    (this.LastName != null &&
+                    this.LastName.Equals(input.LastName))
                 ) && 
                 (
-                    this.legal_last_name == input.legal_last_name ||
-                    (this.legal_last_name != null &&
-                    this.legal_last_name.Equals(input.legal_last_name))
+                    this.LegalLastName == input.LegalLastName ||
+                    (this.LegalLastName != null &&
+                    this.LegalLastName.Equals(input.LegalLastName))
                 ) && 
                 (
-                    this.former_last_name == input.former_last_name ||
-                    (this.former_last_name != null &&
-                    this.former_last_name.Equals(input.former_last_name))
+                    this.FormerLastName == input.FormerLastName ||
+                    (this.FormerLastName != null &&
+                    this.FormerLastName.Equals(input.FormerLastName))
                 ) && 
                 (
-                    this.dob == input.dob ||
-                    (this.dob != null &&
-                    this.dob.Equals(input.dob))
+                    this.Dob == input.Dob ||
+                    (this.Dob != null &&
+                    this.Dob.Equals(input.Dob))
                 ) && 
                 (
-                    this.title == input.title ||
-                    (this.title != null &&
-                    this.title.Equals(input.title))
+                    this.Title == input.Title ||
+                    (this.Title != null &&
+                    this.Title.Equals(input.Title))
                 ) && 
                 (
-                    this.email == input.email ||
-                    (this.email != null &&
-                    this.email.Equals(input.email))
+                    this.Email == input.Email ||
+                    (this.Email != null &&
+                    this.Email.Equals(input.Email))
                 ) && 
                 (
-                    this.is_teaching_staff == input.is_teaching_staff ||
-                    (this.is_teaching_staff != null &&
-                    this.is_teaching_staff.Equals(input.is_teaching_staff))
+                    this.IsTeachingStaff == input.IsTeachingStaff ||
+                    (this.IsTeachingStaff != null &&
+                    this.IsTeachingStaff.Equals(input.IsTeachingStaff))
                 ) && 
                 (
-                    this.included_in_census == input.included_in_census ||
-                    (this.included_in_census != null &&
-                    this.included_in_census.Equals(input.included_in_census))
+                    this.IncludedInCensus == input.IncludedInCensus ||
+                    (this.IncludedInCensus != null &&
+                    this.IncludedInCensus.Equals(input.IncludedInCensus))
                 ) && 
                 (
-                    this.start_date == input.start_date ||
-                    (this.start_date != null &&
-                    this.start_date.Equals(input.start_date))
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 ) && 
                 (
-                    this.end_date == input.end_date ||
-                    (this.end_date != null &&
-                    this.end_date.Equals(input.end_date))
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
                 ) && 
                 (
-                    this.demographics == input.demographics ||
-                    (this.demographics != null &&
-                    this.demographics.Equals(input.demographics))
+                    this.Demographics == input.Demographics ||
+                    (this.Demographics != null &&
+                    this.Demographics.Equals(input.Demographics))
                 ) && 
                 (
-                    this.qualification_info == input.qualification_info ||
-                    (this.qualification_info != null &&
-                    this.qualification_info.Equals(input.qualification_info))
+                    this.QualificationInfo == input.QualificationInfo ||
+                    (this.QualificationInfo != null &&
+                    this.QualificationInfo.Equals(input.QualificationInfo))
                 );
         }
 
@@ -373,44 +373,44 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.mis_id != null)
-                    hashCode = hashCode * 59 + this.mis_id.GetHashCode();
-                if (this.staff_code != null)
-                    hashCode = hashCode * 59 + this.staff_code.GetHashCode();
-                if (this.first_name != null)
-                    hashCode = hashCode * 59 + this.first_name.GetHashCode();
-                if (this.legal_first_name != null)
-                    hashCode = hashCode * 59 + this.legal_first_name.GetHashCode();
-                if (this.middle_name != null)
-                    hashCode = hashCode * 59 + this.middle_name.GetHashCode();
-                if (this.last_name != null)
-                    hashCode = hashCode * 59 + this.last_name.GetHashCode();
-                if (this.legal_last_name != null)
-                    hashCode = hashCode * 59 + this.legal_last_name.GetHashCode();
-                if (this.former_last_name != null)
-                    hashCode = hashCode * 59 + this.former_last_name.GetHashCode();
-                if (this.dob != null)
-                    hashCode = hashCode * 59 + this.dob.GetHashCode();
-                if (this.title != null)
-                    hashCode = hashCode * 59 + this.title.GetHashCode();
-                if (this.email != null)
-                    hashCode = hashCode * 59 + this.email.GetHashCode();
-                if (this.is_teaching_staff != null)
-                    hashCode = hashCode * 59 + this.is_teaching_staff.GetHashCode();
-                if (this.included_in_census != null)
-                    hashCode = hashCode * 59 + this.included_in_census.GetHashCode();
-                if (this.start_date != null)
-                    hashCode = hashCode * 59 + this.start_date.GetHashCode();
-                if (this.end_date != null)
-                    hashCode = hashCode * 59 + this.end_date.GetHashCode();
-                if (this.demographics != null)
-                    hashCode = hashCode * 59 + this.demographics.GetHashCode();
-                if (this.qualification_info != null)
-                    hashCode = hashCode * 59 + this.qualification_info.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.MisId != null)
+                    hashCode = hashCode * 59 + this.MisId.GetHashCode();
+                if (this.StaffCode != null)
+                    hashCode = hashCode * 59 + this.StaffCode.GetHashCode();
+                if (this.FirstName != null)
+                    hashCode = hashCode * 59 + this.FirstName.GetHashCode();
+                if (this.LegalFirstName != null)
+                    hashCode = hashCode * 59 + this.LegalFirstName.GetHashCode();
+                if (this.MiddleName != null)
+                    hashCode = hashCode * 59 + this.MiddleName.GetHashCode();
+                if (this.LastName != null)
+                    hashCode = hashCode * 59 + this.LastName.GetHashCode();
+                if (this.LegalLastName != null)
+                    hashCode = hashCode * 59 + this.LegalLastName.GetHashCode();
+                if (this.FormerLastName != null)
+                    hashCode = hashCode * 59 + this.FormerLastName.GetHashCode();
+                if (this.Dob != null)
+                    hashCode = hashCode * 59 + this.Dob.GetHashCode();
+                if (this.Title != null)
+                    hashCode = hashCode * 59 + this.Title.GetHashCode();
+                if (this.Email != null)
+                    hashCode = hashCode * 59 + this.Email.GetHashCode();
+                if (this.IsTeachingStaff != null)
+                    hashCode = hashCode * 59 + this.IsTeachingStaff.GetHashCode();
+                if (this.IncludedInCensus != null)
+                    hashCode = hashCode * 59 + this.IncludedInCensus.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
+                if (this.Demographics != null)
+                    hashCode = hashCode * 59 + this.Demographics.GetHashCode();
+                if (this.QualificationInfo != null)
+                    hashCode = hashCode * 59 + this.QualificationInfo.GetHashCode();
                 return hashCode;
             }
         }

@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_object** | **string** | Object type | [optional] 
-**name** | **string** | Name of the event type in the MIS | [optional] 
-**description** | **string** | Description of the event type in the MIS | [optional] 
+**Object** | **string** | Object type | [optional] 
+**Name** | **string** | Name of the event type in the MIS | [optional] 
+**Description** | **string** | Description of the event type in the MIS | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

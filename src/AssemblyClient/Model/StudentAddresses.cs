@@ -42,13 +42,13 @@ namespace AssemblyClient.Model
         /// <param name="postcode">The postcode.</param>
         public StudentAddresses(string _object = default(string), string addressLine1 = default(string), string addressLine2 = default(string), string townCity = default(string), string county = default(string), string country = default(string), string postcode = default(string))
         {
-            this._object = _object;
-            this.address_line_1 = addressLine1;
-            this.address_line_2 = addressLine2;
-            this.town_city = townCity;
-            this.county = county;
-            this.country = country;
-            this.postcode = postcode;
+            this.Object = _object;
+            this.AddressLine1 = addressLine1;
+            this.AddressLine2 = addressLine2;
+            this.TownCity = townCity;
+            this.County = county;
+            this.Country = country;
+            this.Postcode = postcode;
         }
         
         /// <summary>
@@ -56,49 +56,49 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// The first line of the address
         /// </summary>
         /// <value>The first line of the address</value>
         [DataMember(Name="address_line_1", EmitDefaultValue=false)]
-        public string address_line_1 { get; set; }
+        public string AddressLine1 { get; set; }
 
         /// <summary>
         /// The second line of the address
         /// </summary>
         /// <value>The second line of the address</value>
         [DataMember(Name="address_line_2", EmitDefaultValue=false)]
-        public string address_line_2 { get; set; }
+        public string AddressLine2 { get; set; }
 
         /// <summary>
         /// The town or city
         /// </summary>
         /// <value>The town or city</value>
         [DataMember(Name="town_city", EmitDefaultValue=false)]
-        public string town_city { get; set; }
+        public string TownCity { get; set; }
 
         /// <summary>
         /// The county
         /// </summary>
         /// <value>The county</value>
         [DataMember(Name="county", EmitDefaultValue=false)]
-        public string county { get; set; }
+        public string County { get; set; }
 
         /// <summary>
         /// The country
         /// </summary>
         /// <value>The country</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
-        public string country { get; set; }
+        public string Country { get; set; }
 
         /// <summary>
         /// The postcode
         /// </summary>
         /// <value>The postcode</value>
         [DataMember(Name="postcode", EmitDefaultValue=false)]
-        public string postcode { get; set; }
+        public string Postcode { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -108,13 +108,13 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StudentAddresses {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  address_line_1: ").Append(address_line_1).Append("\n");
-            sb.Append("  address_line_2: ").Append(address_line_2).Append("\n");
-            sb.Append("  town_city: ").Append(town_city).Append("\n");
-            sb.Append("  county: ").Append(county).Append("\n");
-            sb.Append("  country: ").Append(country).Append("\n");
-            sb.Append("  postcode: ").Append(postcode).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  AddressLine1: ").Append(AddressLine1).Append("\n");
+            sb.Append("  AddressLine2: ").Append(AddressLine2).Append("\n");
+            sb.Append("  TownCity: ").Append(TownCity).Append("\n");
+            sb.Append("  County: ").Append(County).Append("\n");
+            sb.Append("  Country: ").Append(Country).Append("\n");
+            sb.Append("  Postcode: ").Append(Postcode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,39 +150,39 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.address_line_1 == input.address_line_1 ||
-                    (this.address_line_1 != null &&
-                    this.address_line_1.Equals(input.address_line_1))
+                    this.AddressLine1 == input.AddressLine1 ||
+                    (this.AddressLine1 != null &&
+                    this.AddressLine1.Equals(input.AddressLine1))
                 ) && 
                 (
-                    this.address_line_2 == input.address_line_2 ||
-                    (this.address_line_2 != null &&
-                    this.address_line_2.Equals(input.address_line_2))
+                    this.AddressLine2 == input.AddressLine2 ||
+                    (this.AddressLine2 != null &&
+                    this.AddressLine2.Equals(input.AddressLine2))
                 ) && 
                 (
-                    this.town_city == input.town_city ||
-                    (this.town_city != null &&
-                    this.town_city.Equals(input.town_city))
+                    this.TownCity == input.TownCity ||
+                    (this.TownCity != null &&
+                    this.TownCity.Equals(input.TownCity))
                 ) && 
                 (
-                    this.county == input.county ||
-                    (this.county != null &&
-                    this.county.Equals(input.county))
+                    this.County == input.County ||
+                    (this.County != null &&
+                    this.County.Equals(input.County))
                 ) && 
                 (
-                    this.country == input.country ||
-                    (this.country != null &&
-                    this.country.Equals(input.country))
+                    this.Country == input.Country ||
+                    (this.Country != null &&
+                    this.Country.Equals(input.Country))
                 ) && 
                 (
-                    this.postcode == input.postcode ||
-                    (this.postcode != null &&
-                    this.postcode.Equals(input.postcode))
+                    this.Postcode == input.Postcode ||
+                    (this.Postcode != null &&
+                    this.Postcode.Equals(input.Postcode))
                 );
         }
 
@@ -195,20 +195,20 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.address_line_1 != null)
-                    hashCode = hashCode * 59 + this.address_line_1.GetHashCode();
-                if (this.address_line_2 != null)
-                    hashCode = hashCode * 59 + this.address_line_2.GetHashCode();
-                if (this.town_city != null)
-                    hashCode = hashCode * 59 + this.town_city.GetHashCode();
-                if (this.county != null)
-                    hashCode = hashCode * 59 + this.county.GetHashCode();
-                if (this.country != null)
-                    hashCode = hashCode * 59 + this.country.GetHashCode();
-                if (this.postcode != null)
-                    hashCode = hashCode * 59 + this.postcode.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.AddressLine1 != null)
+                    hashCode = hashCode * 59 + this.AddressLine1.GetHashCode();
+                if (this.AddressLine2 != null)
+                    hashCode = hashCode * 59 + this.AddressLine2.GetHashCode();
+                if (this.TownCity != null)
+                    hashCode = hashCode * 59 + this.TownCity.GetHashCode();
+                if (this.County != null)
+                    hashCode = hashCode * 59 + this.County.GetHashCode();
+                if (this.Country != null)
+                    hashCode = hashCode * 59 + this.Country.GetHashCode();
+                if (this.Postcode != null)
+                    hashCode = hashCode * 59 + this.Postcode.GetHashCode();
                 return hashCode;
             }
         }

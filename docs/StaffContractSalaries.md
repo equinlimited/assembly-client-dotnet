@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_object** | **string** | Object type | [optional] 
-**hours_per_week** | **float?** | No description | [optional] 
-**fte** | **float?** | No description | [optional] 
-**weeks_per_year** | **float?** | No description | [optional] 
-**pay_range** | **string** | No description | [optional] 
-**start_date** | **DateTime?** | No description | [optional] 
-**end_date** | **DateTime?** | No description | [optional] 
-**pay_scale_framework** | **string** | No description | [optional] 
-**regional_spine** | **string** | No description | [optional] 
-**base_pay** | **float?** | No description | [optional] 
-**actual_pay** | **float?** | No description | [optional] 
-**safeguarded_salary** | **bool?** | No description | [optional] 
+**Object** | **string** | Object type | [optional] 
+**HoursPerWeek** | **float?** | No description | [optional] 
+**Fte** | **float?** | No description | [optional] 
+**WeeksPerYear** | **float?** | No description | [optional] 
+**PayRange** | **string** | No description | [optional] 
+**StartDate** | **DateTime?** | No description | [optional] 
+**EndDate** | **DateTime?** | No description | [optional] 
+**PayScaleFramework** | **string** | No description | [optional] 
+**RegionalSpine** | **string** | No description | [optional] 
+**BasePay** | **float?** | No description | [optional] 
+**ActualPay** | **float?** | No description | [optional] 
+**SafeguardedSalary** | **bool?** | No description | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

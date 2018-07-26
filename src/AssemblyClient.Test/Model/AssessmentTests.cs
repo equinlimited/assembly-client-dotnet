@@ -67,52 +67,52 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'name'
+        /// Test the property 'Name'
         /// </summary>
         [Test]
-        public void nameTest()
+        public void NameTest()
         {
-            // TODO unit test for the property 'name'
+            // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'family_id'
+        /// Test the property 'FamilyId'
         /// </summary>
         [Test]
-        public void family_idTest()
+        public void FamilyIdTest()
         {
-            // TODO unit test for the property 'family_id'
+            // TODO unit test for the property 'FamilyId'
         }
         /// <summary>
-        /// Test the property 'family_name'
+        /// Test the property 'FamilyName'
         /// </summary>
         [Test]
-        public void family_nameTest()
+        public void FamilyNameTest()
         {
-            // TODO unit test for the property 'family_name'
+            // TODO unit test for the property 'FamilyName'
         }
         /// <summary>
-        /// Test the property 'mis_mappings'
+        /// Test the property 'MisMappings'
         /// </summary>
         [Test]
-        public void mis_mappingsTest()
+        public void MisMappingsTest()
         {
-            // TODO unit test for the property 'mis_mappings'
+            // TODO unit test for the property 'MisMappings'
         }
 
     }

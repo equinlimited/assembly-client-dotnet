@@ -41,12 +41,12 @@ namespace AssemblyClient.Model
         /// <param name="misMappings">Names of any MIS assessments (e.g. SIMS Aspects) that have been mapped to the assessment.</param>
         public AssessmentListData(string _object = default(string), int? id = default(int?), string name = default(string), int? familyId = default(int?), string familyName = default(string), List<string> misMappings = default(List<string>))
         {
-            this._object = _object;
-            this.id = id;
-            this.name = name;
-            this.family_id = familyId;
-            this.family_name = familyName;
-            this.mis_mappings = misMappings;
+            this.Object = _object;
+            this.Id = id;
+            this.Name = name;
+            this.FamilyId = familyId;
+            this.FamilyName = familyName;
+            this.MisMappings = misMappings;
         }
         
         /// <summary>
@@ -54,42 +54,42 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all assessments on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all assessments on the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The name of the assessment
         /// </summary>
         /// <value>The name of the assessment</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all assessment families on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all assessment families on the Platform</value>
         [DataMember(Name="family_id", EmitDefaultValue=false)]
-        public int? family_id { get; set; }
+        public int? FamilyId { get; set; }
 
         /// <summary>
         /// The name of the assessment family
         /// </summary>
         /// <value>The name of the assessment family</value>
         [DataMember(Name="family_name", EmitDefaultValue=false)]
-        public string family_name { get; set; }
+        public string FamilyName { get; set; }
 
         /// <summary>
         /// Names of any MIS assessments (e.g. SIMS Aspects) that have been mapped to the assessment
         /// </summary>
         /// <value>Names of any MIS assessments (e.g. SIMS Aspects) that have been mapped to the assessment</value>
         [DataMember(Name="mis_mappings", EmitDefaultValue=false)]
-        public List<string> mis_mappings { get; set; }
+        public List<string> MisMappings { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,12 +99,12 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AssessmentListData {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  family_id: ").Append(family_id).Append("\n");
-            sb.Append("  family_name: ").Append(family_name).Append("\n");
-            sb.Append("  mis_mappings: ").Append(mis_mappings).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  FamilyId: ").Append(FamilyId).Append("\n");
+            sb.Append("  FamilyName: ").Append(FamilyName).Append("\n");
+            sb.Append("  MisMappings: ").Append(MisMappings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,34 +140,34 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.family_id == input.family_id ||
-                    (this.family_id != null &&
-                    this.family_id.Equals(input.family_id))
+                    this.FamilyId == input.FamilyId ||
+                    (this.FamilyId != null &&
+                    this.FamilyId.Equals(input.FamilyId))
                 ) && 
                 (
-                    this.family_name == input.family_name ||
-                    (this.family_name != null &&
-                    this.family_name.Equals(input.family_name))
+                    this.FamilyName == input.FamilyName ||
+                    (this.FamilyName != null &&
+                    this.FamilyName.Equals(input.FamilyName))
                 ) && 
                 (
-                    this.mis_mappings == input.mis_mappings ||
-                    this.mis_mappings != null &&
-                    this.mis_mappings.SequenceEqual(input.mis_mappings)
+                    this.MisMappings == input.MisMappings ||
+                    this.MisMappings != null &&
+                    this.MisMappings.SequenceEqual(input.MisMappings)
                 );
         }
 
@@ -180,18 +180,18 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
-                if (this.family_id != null)
-                    hashCode = hashCode * 59 + this.family_id.GetHashCode();
-                if (this.family_name != null)
-                    hashCode = hashCode * 59 + this.family_name.GetHashCode();
-                if (this.mis_mappings != null)
-                    hashCode = hashCode * 59 + this.mis_mappings.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.FamilyId != null)
+                    hashCode = hashCode * 59 + this.FamilyId.GetHashCode();
+                if (this.FamilyName != null)
+                    hashCode = hashCode * 59 + this.FamilyName.GetHashCode();
+                if (this.MisMappings != null)
+                    hashCode = hashCode * 59 + this.MisMappings.GetHashCode();
                 return hashCode;
             }
         }

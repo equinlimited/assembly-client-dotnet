@@ -67,76 +67,76 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'student_id'
+        /// Test the property 'StudentId'
         /// </summary>
         [Test]
-        public void student_idTest()
+        public void StudentIdTest()
         {
-            // TODO unit test for the property 'student_id'
+            // TODO unit test for the property 'StudentId'
         }
         /// <summary>
-        /// Test the property 'registration_group_id'
+        /// Test the property 'RegistrationGroupId'
         /// </summary>
         [Test]
-        public void registration_group_idTest()
+        public void RegistrationGroupIdTest()
         {
-            // TODO unit test for the property 'registration_group_id'
+            // TODO unit test for the property 'RegistrationGroupId'
         }
         /// <summary>
-        /// Test the property 'session_date'
+        /// Test the property 'SessionDate'
         /// </summary>
         [Test]
-        public void session_dateTest()
+        public void SessionDateTest()
         {
-            // TODO unit test for the property 'session_date'
+            // TODO unit test for the property 'SessionDate'
         }
         /// <summary>
-        /// Test the property 'session_name'
+        /// Test the property 'SessionName'
         /// </summary>
         [Test]
-        public void session_nameTest()
+        public void SessionNameTest()
         {
-            // TODO unit test for the property 'session_name'
+            // TODO unit test for the property 'SessionName'
         }
         /// <summary>
-        /// Test the property 'attendance_mark'
+        /// Test the property 'AttendanceMark'
         /// </summary>
         [Test]
-        public void attendance_markTest()
+        public void AttendanceMarkTest()
         {
-            // TODO unit test for the property 'attendance_mark'
+            // TODO unit test for the property 'AttendanceMark'
         }
         /// <summary>
-        /// Test the property 'minutes_late'
+        /// Test the property 'MinutesLate'
         /// </summary>
         [Test]
-        public void minutes_lateTest()
+        public void MinutesLateTest()
         {
-            // TODO unit test for the property 'minutes_late'
+            // TODO unit test for the property 'MinutesLate'
         }
         /// <summary>
-        /// Test the property 'comments'
+        /// Test the property 'Comments'
         /// </summary>
         [Test]
-        public void commentsTest()
+        public void CommentsTest()
         {
-            // TODO unit test for the property 'comments'
+            // TODO unit test for the property 'Comments'
         }
 
     }

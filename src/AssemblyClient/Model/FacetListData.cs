@@ -68,7 +68,7 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>The name of the facet *Values*  |Value|Description| |- --|- --| |&#x60;achieved&#x60;|Result has been achieved| |&#x60;target&#x60;|Result has been set as a target to achieve| |&#x60;prediction&#x60;|Result is a prediction| |&#x60;baseline&#x60;|Result is a baseline comparison value| </value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public NameEnum? name { get; set; }
+        public NameEnum? Name { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetListData" /> class.
         /// </summary>
@@ -77,9 +77,9 @@ namespace AssemblyClient.Model
         /// <param name="name">The name of the facet *Values*  |Value|Description| |- --|- --| |&#x60;achieved&#x60;|Result has been achieved| |&#x60;target&#x60;|Result has been set as a target to achieve| |&#x60;prediction&#x60;|Result is a prediction| |&#x60;baseline&#x60;|Result is a baseline comparison value| .</param>
         public FacetListData(string _object = default(string), int? id = default(int?), NameEnum? name = default(NameEnum?))
         {
-            this._object = _object;
-            this.id = id;
-            this.name = name;
+            this.Object = _object;
+            this.Id = id;
+            this.Name = name;
         }
         
         /// <summary>
@@ -87,14 +87,14 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all facets on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all facets on the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
 
         /// <summary>
@@ -105,9 +105,9 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FacetListData {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,19 +143,19 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 );
         }
 
@@ -168,12 +168,12 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 return hashCode;
             }
         }

@@ -38,9 +38,9 @@ namespace AssemblyClient.Model
         /// <param name="data">data.</param>
         public Error(string error = default(string), string message = default(string), ErrorData data = default(ErrorData))
         {
-            this._error = error;
-            this.message = message;
-            this.data = data;
+            this._Error = error;
+            this.Message = message;
+            this.Data = data;
         }
         
         /// <summary>
@@ -48,20 +48,20 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Summary of error</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
-        public string _error { get; set; }
+        public string _Error { get; set; }
 
         /// <summary>
         /// A longer description of the error that occured, depending on the error.
         /// </summary>
         /// <value>A longer description of the error that occured, depending on the error.</value>
         [DataMember(Name="message", EmitDefaultValue=false)]
-        public string message { get; set; }
+        public string Message { get; set; }
 
         /// <summary>
-        /// Gets or Sets data
+        /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public ErrorData data { get; set; }
+        public ErrorData Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,9 +71,9 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Error {\n");
-            sb.Append("  _error: ").Append(_error).Append("\n");
-            sb.Append("  message: ").Append(message).Append("\n");
-            sb.Append("  data: ").Append(data).Append("\n");
+            sb.Append("  _Error: ").Append(_Error).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,19 +109,19 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._error == input._error ||
-                    (this._error != null &&
-                    this._error.Equals(input._error))
+                    this._Error == input._Error ||
+                    (this._Error != null &&
+                    this._Error.Equals(input._Error))
                 ) && 
                 (
-                    this.message == input.message ||
-                    (this.message != null &&
-                    this.message.Equals(input.message))
+                    this.Message == input.Message ||
+                    (this.Message != null &&
+                    this.Message.Equals(input.Message))
                 ) && 
                 (
-                    this.data == input.data ||
-                    (this.data != null &&
-                    this.data.Equals(input.data))
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
                 );
         }
 
@@ -134,12 +134,12 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._error != null)
-                    hashCode = hashCode * 59 + this._error.GetHashCode();
-                if (this.message != null)
-                    hashCode = hashCode * 59 + this.message.GetHashCode();
-                if (this.data != null)
-                    hashCode = hashCode * 59 + this.data.GetHashCode();
+                if (this._Error != null)
+                    hashCode = hashCode * 59 + this._Error.GetHashCode();
+                if (this.Message != null)
+                    hashCode = hashCode * 59 + this.Message.GetHashCode();
+                if (this.Data != null)
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;
             }
         }

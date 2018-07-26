@@ -67,36 +67,36 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'relationship_type'
+        /// Test the property 'RelationshipType'
         /// </summary>
         [Test]
-        public void relationship_typeTest()
+        public void RelationshipTypeTest()
         {
-            // TODO unit test for the property 'relationship_type'
+            // TODO unit test for the property 'RelationshipType'
         }
         /// <summary>
-        /// Test the property 'priority'
+        /// Test the property 'Priority'
         /// </summary>
         [Test]
-        public void priorityTest()
+        public void PriorityTest()
         {
-            // TODO unit test for the property 'priority'
+            // TODO unit test for the property 'Priority'
         }
         /// <summary>
-        /// Test the property 'parental_responsibility'
+        /// Test the property 'ParentalResponsibility'
         /// </summary>
         [Test]
-        public void parental_responsibilityTest()
+        public void ParentalResponsibilityTest()
         {
-            // TODO unit test for the property 'parental_responsibility'
+            // TODO unit test for the property 'ParentalResponsibility'
         }
 
     }

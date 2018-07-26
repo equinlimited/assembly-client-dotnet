@@ -67,68 +67,68 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'qualification_code'
+        /// Test the property 'QualificationCode'
         /// </summary>
         [Test]
-        public void qualification_codeTest()
+        public void QualificationCodeTest()
         {
-            // TODO unit test for the property 'qualification_code'
+            // TODO unit test for the property 'QualificationCode'
         }
         /// <summary>
-        /// Test the property 'degree_class'
+        /// Test the property 'DegreeClass'
         /// </summary>
         [Test]
-        public void degree_classTest()
+        public void DegreeClassTest()
         {
-            // TODO unit test for the property 'degree_class'
+            // TODO unit test for the property 'DegreeClass'
         }
         /// <summary>
-        /// Test the property 'first_subject_code'
+        /// Test the property 'FirstSubjectCode'
         /// </summary>
         [Test]
-        public void first_subject_codeTest()
+        public void FirstSubjectCodeTest()
         {
-            // TODO unit test for the property 'first_subject_code'
+            // TODO unit test for the property 'FirstSubjectCode'
         }
         /// <summary>
-        /// Test the property 'first_subject_name'
+        /// Test the property 'FirstSubjectName'
         /// </summary>
         [Test]
-        public void first_subject_nameTest()
+        public void FirstSubjectNameTest()
         {
-            // TODO unit test for the property 'first_subject_name'
+            // TODO unit test for the property 'FirstSubjectName'
         }
         /// <summary>
-        /// Test the property 'second_subject_code'
+        /// Test the property 'SecondSubjectCode'
         /// </summary>
         [Test]
-        public void second_subject_codeTest()
+        public void SecondSubjectCodeTest()
         {
-            // TODO unit test for the property 'second_subject_code'
+            // TODO unit test for the property 'SecondSubjectCode'
         }
         /// <summary>
-        /// Test the property 'second_subject_name'
+        /// Test the property 'SecondSubjectName'
         /// </summary>
         [Test]
-        public void second_subject_nameTest()
+        public void SecondSubjectNameTest()
         {
-            // TODO unit test for the property 'second_subject_name'
+            // TODO unit test for the property 'SecondSubjectName'
         }
 
     }

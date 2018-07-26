@@ -56,7 +56,7 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>The gender of the contact *Values*  |Value|Description| |- --|- --| |&#x60;M&#x60;|Male| |&#x60;F&#x60;|Female| </value>
         [DataMember(Name="gender", EmitDefaultValue=false)]
-        public GenderEnum? gender { get; set; }
+        public GenderEnum? Gender { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Contact" /> class.
         /// </summary>
@@ -73,17 +73,17 @@ namespace AssemblyClient.Model
         /// <param name="students">A list of student IDs that the contact is responsible for.</param>
         public Contact(string _object = default(string), int? id = default(int?), string firstName = default(string), string middleName = default(string), string lastName = default(string), GenderEnum? gender = default(GenderEnum?), string title = default(string), string salutation = default(string), List<ContactEmails> emails = default(List<ContactEmails>), List<ContactTelephoneNumbers> telephoneNumbers = default(List<ContactTelephoneNumbers>), List<ContactStudents> students = default(List<ContactStudents>))
         {
-            this._object = _object;
-            this.id = id;
-            this.first_name = firstName;
-            this.middle_name = middleName;
-            this.last_name = lastName;
-            this.gender = gender;
-            this.title = title;
-            this.salutation = salutation;
-            this.emails = emails;
-            this.telephone_numbers = telephoneNumbers;
-            this.students = students;
+            this.Object = _object;
+            this.Id = id;
+            this.FirstName = firstName;
+            this.MiddleName = middleName;
+            this.LastName = lastName;
+            this.Gender = gender;
+            this.Title = title;
+            this.Salutation = salutation;
+            this.Emails = emails;
+            this.TelephoneNumbers = telephoneNumbers;
+            this.Students = students;
         }
         
         /// <summary>
@@ -91,35 +91,35 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all contacts on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all contacts on the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The first name of the contact
         /// </summary>
         /// <value>The first name of the contact</value>
         [DataMember(Name="first_name", EmitDefaultValue=false)]
-        public string first_name { get; set; }
+        public string FirstName { get; set; }
 
         /// <summary>
         /// The middle name of the contact
         /// </summary>
         /// <value>The middle name of the contact</value>
         [DataMember(Name="middle_name", EmitDefaultValue=false)]
-        public string middle_name { get; set; }
+        public string MiddleName { get; set; }
 
         /// <summary>
         /// The last name of the contact
         /// </summary>
         /// <value>The last name of the contact</value>
         [DataMember(Name="last_name", EmitDefaultValue=false)]
-        public string last_name { get; set; }
+        public string LastName { get; set; }
 
 
         /// <summary>
@@ -127,35 +127,35 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>The title of the contact</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
-        public string title { get; set; }
+        public string Title { get; set; }
 
         /// <summary>
         /// The salutation for the contact
         /// </summary>
         /// <value>The salutation for the contact</value>
         [DataMember(Name="salutation", EmitDefaultValue=false)]
-        public string salutation { get; set; }
+        public string Salutation { get; set; }
 
         /// <summary>
         /// A list of emails for the contact
         /// </summary>
         /// <value>A list of emails for the contact</value>
         [DataMember(Name="emails", EmitDefaultValue=false)]
-        public List<ContactEmails> emails { get; set; }
+        public List<ContactEmails> Emails { get; set; }
 
         /// <summary>
         /// A list of telephone numbers for the contact
         /// </summary>
         /// <value>A list of telephone numbers for the contact</value>
         [DataMember(Name="telephone_numbers", EmitDefaultValue=false)]
-        public List<ContactTelephoneNumbers> telephone_numbers { get; set; }
+        public List<ContactTelephoneNumbers> TelephoneNumbers { get; set; }
 
         /// <summary>
         /// A list of student IDs that the contact is responsible for
         /// </summary>
         /// <value>A list of student IDs that the contact is responsible for</value>
         [DataMember(Name="students", EmitDefaultValue=false)]
-        public List<ContactStudents> students { get; set; }
+        public List<ContactStudents> Students { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -165,17 +165,17 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Contact {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  first_name: ").Append(first_name).Append("\n");
-            sb.Append("  middle_name: ").Append(middle_name).Append("\n");
-            sb.Append("  last_name: ").Append(last_name).Append("\n");
-            sb.Append("  gender: ").Append(gender).Append("\n");
-            sb.Append("  title: ").Append(title).Append("\n");
-            sb.Append("  salutation: ").Append(salutation).Append("\n");
-            sb.Append("  emails: ").Append(emails).Append("\n");
-            sb.Append("  telephone_numbers: ").Append(telephone_numbers).Append("\n");
-            sb.Append("  students: ").Append(students).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  FirstName: ").Append(FirstName).Append("\n");
+            sb.Append("  MiddleName: ").Append(MiddleName).Append("\n");
+            sb.Append("  LastName: ").Append(LastName).Append("\n");
+            sb.Append("  Gender: ").Append(Gender).Append("\n");
+            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  Salutation: ").Append(Salutation).Append("\n");
+            sb.Append("  Emails: ").Append(Emails).Append("\n");
+            sb.Append("  TelephoneNumbers: ").Append(TelephoneNumbers).Append("\n");
+            sb.Append("  Students: ").Append(Students).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -211,59 +211,59 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.first_name == input.first_name ||
-                    (this.first_name != null &&
-                    this.first_name.Equals(input.first_name))
+                    this.FirstName == input.FirstName ||
+                    (this.FirstName != null &&
+                    this.FirstName.Equals(input.FirstName))
                 ) && 
                 (
-                    this.middle_name == input.middle_name ||
-                    (this.middle_name != null &&
-                    this.middle_name.Equals(input.middle_name))
+                    this.MiddleName == input.MiddleName ||
+                    (this.MiddleName != null &&
+                    this.MiddleName.Equals(input.MiddleName))
                 ) && 
                 (
-                    this.last_name == input.last_name ||
-                    (this.last_name != null &&
-                    this.last_name.Equals(input.last_name))
+                    this.LastName == input.LastName ||
+                    (this.LastName != null &&
+                    this.LastName.Equals(input.LastName))
                 ) && 
                 (
-                    this.gender == input.gender ||
-                    (this.gender != null &&
-                    this.gender.Equals(input.gender))
+                    this.Gender == input.Gender ||
+                    (this.Gender != null &&
+                    this.Gender.Equals(input.Gender))
                 ) && 
                 (
-                    this.title == input.title ||
-                    (this.title != null &&
-                    this.title.Equals(input.title))
+                    this.Title == input.Title ||
+                    (this.Title != null &&
+                    this.Title.Equals(input.Title))
                 ) && 
                 (
-                    this.salutation == input.salutation ||
-                    (this.salutation != null &&
-                    this.salutation.Equals(input.salutation))
+                    this.Salutation == input.Salutation ||
+                    (this.Salutation != null &&
+                    this.Salutation.Equals(input.Salutation))
                 ) && 
                 (
-                    this.emails == input.emails ||
-                    this.emails != null &&
-                    this.emails.SequenceEqual(input.emails)
+                    this.Emails == input.Emails ||
+                    this.Emails != null &&
+                    this.Emails.SequenceEqual(input.Emails)
                 ) && 
                 (
-                    this.telephone_numbers == input.telephone_numbers ||
-                    this.telephone_numbers != null &&
-                    this.telephone_numbers.SequenceEqual(input.telephone_numbers)
+                    this.TelephoneNumbers == input.TelephoneNumbers ||
+                    this.TelephoneNumbers != null &&
+                    this.TelephoneNumbers.SequenceEqual(input.TelephoneNumbers)
                 ) && 
                 (
-                    this.students == input.students ||
-                    this.students != null &&
-                    this.students.SequenceEqual(input.students)
+                    this.Students == input.Students ||
+                    this.Students != null &&
+                    this.Students.SequenceEqual(input.Students)
                 );
         }
 
@@ -276,28 +276,28 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.first_name != null)
-                    hashCode = hashCode * 59 + this.first_name.GetHashCode();
-                if (this.middle_name != null)
-                    hashCode = hashCode * 59 + this.middle_name.GetHashCode();
-                if (this.last_name != null)
-                    hashCode = hashCode * 59 + this.last_name.GetHashCode();
-                if (this.gender != null)
-                    hashCode = hashCode * 59 + this.gender.GetHashCode();
-                if (this.title != null)
-                    hashCode = hashCode * 59 + this.title.GetHashCode();
-                if (this.salutation != null)
-                    hashCode = hashCode * 59 + this.salutation.GetHashCode();
-                if (this.emails != null)
-                    hashCode = hashCode * 59 + this.emails.GetHashCode();
-                if (this.telephone_numbers != null)
-                    hashCode = hashCode * 59 + this.telephone_numbers.GetHashCode();
-                if (this.students != null)
-                    hashCode = hashCode * 59 + this.students.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.FirstName != null)
+                    hashCode = hashCode * 59 + this.FirstName.GetHashCode();
+                if (this.MiddleName != null)
+                    hashCode = hashCode * 59 + this.MiddleName.GetHashCode();
+                if (this.LastName != null)
+                    hashCode = hashCode * 59 + this.LastName.GetHashCode();
+                if (this.Gender != null)
+                    hashCode = hashCode * 59 + this.Gender.GetHashCode();
+                if (this.Title != null)
+                    hashCode = hashCode * 59 + this.Title.GetHashCode();
+                if (this.Salutation != null)
+                    hashCode = hashCode * 59 + this.Salutation.GetHashCode();
+                if (this.Emails != null)
+                    hashCode = hashCode * 59 + this.Emails.GetHashCode();
+                if (this.TelephoneNumbers != null)
+                    hashCode = hashCode * 59 + this.TelephoneNumbers.GetHashCode();
+                if (this.Students != null)
+                    hashCode = hashCode * 59 + this.Students.GetHashCode();
                 return hashCode;
             }
         }

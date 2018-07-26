@@ -38,9 +38,9 @@ namespace AssemblyClient.Model
         /// <param name="relationship">relationship.</param>
         public ContactStudents(string _object = default(string), int? studentId = default(int?), ContactRelationship relationship = default(ContactRelationship))
         {
-            this._object = _object;
-            this.student_id = studentId;
-            this.relationship = relationship;
+            this.Object = _object;
+            this.StudentId = studentId;
+            this.Relationship = relationship;
         }
         
         /// <summary>
@@ -48,20 +48,20 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all students on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all students on the Platform</value>
         [DataMember(Name="student_id", EmitDefaultValue=false)]
-        public int? student_id { get; set; }
+        public int? StudentId { get; set; }
 
         /// <summary>
-        /// Gets or Sets relationship
+        /// Gets or Sets Relationship
         /// </summary>
         [DataMember(Name="relationship", EmitDefaultValue=false)]
-        public ContactRelationship relationship { get; set; }
+        public ContactRelationship Relationship { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,9 +71,9 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactStudents {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  student_id: ").Append(student_id).Append("\n");
-            sb.Append("  relationship: ").Append(relationship).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  StudentId: ").Append(StudentId).Append("\n");
+            sb.Append("  Relationship: ").Append(Relationship).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,19 +109,19 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.student_id == input.student_id ||
-                    (this.student_id != null &&
-                    this.student_id.Equals(input.student_id))
+                    this.StudentId == input.StudentId ||
+                    (this.StudentId != null &&
+                    this.StudentId.Equals(input.StudentId))
                 ) && 
                 (
-                    this.relationship == input.relationship ||
-                    (this.relationship != null &&
-                    this.relationship.Equals(input.relationship))
+                    this.Relationship == input.Relationship ||
+                    (this.Relationship != null &&
+                    this.Relationship.Equals(input.Relationship))
                 );
         }
 
@@ -134,12 +134,12 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.student_id != null)
-                    hashCode = hashCode * 59 + this.student_id.GetHashCode();
-                if (this.relationship != null)
-                    hashCode = hashCode * 59 + this.relationship.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.StudentId != null)
+                    hashCode = hashCode * 59 + this.StudentId.GetHashCode();
+                if (this.Relationship != null)
+                    hashCode = hashCode * 59 + this.Relationship.GetHashCode();
                 return hashCode;
             }
         }

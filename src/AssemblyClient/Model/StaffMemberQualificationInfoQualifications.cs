@@ -43,14 +43,14 @@ namespace AssemblyClient.Model
         /// <param name="secondSubjectName">The name of the subject.</param>
         public StaffMemberQualificationInfoQualifications(string _object = default(string), int? id = default(int?), string qualificationCode = default(string), string degreeClass = default(string), string firstSubjectCode = default(string), string firstSubjectName = default(string), string secondSubjectCode = default(string), string secondSubjectName = default(string))
         {
-            this._object = _object;
-            this.id = id;
-            this.qualification_code = qualificationCode;
-            this.degree_class = degreeClass;
-            this.first_subject_code = firstSubjectCode;
-            this.first_subject_name = firstSubjectName;
-            this.second_subject_code = secondSubjectCode;
-            this.second_subject_name = secondSubjectName;
+            this.Object = _object;
+            this.Id = id;
+            this.QualificationCode = qualificationCode;
+            this.DegreeClass = degreeClass;
+            this.FirstSubjectCode = firstSubjectCode;
+            this.FirstSubjectName = firstSubjectName;
+            this.SecondSubjectCode = secondSubjectCode;
+            this.SecondSubjectName = secondSubjectName;
         }
         
         /// <summary>
@@ -58,56 +58,56 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all staff qualifications on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all staff qualifications on the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// A code describing the type of qualification 
         /// </summary>
         /// <value>A code describing the type of qualification </value>
         [DataMember(Name="qualification_code", EmitDefaultValue=false)]
-        public string qualification_code { get; set; }
+        public string QualificationCode { get; set; }
 
         /// <summary>
         /// Identifies the result of the qualification
         /// </summary>
         /// <value>Identifies the result of the qualification</value>
         [DataMember(Name="degree_class", EmitDefaultValue=false)]
-        public string degree_class { get; set; }
+        public string DegreeClass { get; set; }
 
         /// <summary>
         /// A code identifying the main or joint main subject of the qualification
         /// </summary>
         /// <value>A code identifying the main or joint main subject of the qualification</value>
         [DataMember(Name="first_subject_code", EmitDefaultValue=false)]
-        public string first_subject_code { get; set; }
+        public string FirstSubjectCode { get; set; }
 
         /// <summary>
         /// The name of the subject
         /// </summary>
         /// <value>The name of the subject</value>
         [DataMember(Name="first_subject_name", EmitDefaultValue=false)]
-        public string first_subject_name { get; set; }
+        public string FirstSubjectName { get; set; }
 
         /// <summary>
         /// A code identifying the main or joint main subject of the qualification
         /// </summary>
         /// <value>A code identifying the main or joint main subject of the qualification</value>
         [DataMember(Name="second_subject_code", EmitDefaultValue=false)]
-        public string second_subject_code { get; set; }
+        public string SecondSubjectCode { get; set; }
 
         /// <summary>
         /// The name of the subject
         /// </summary>
         /// <value>The name of the subject</value>
         [DataMember(Name="second_subject_name", EmitDefaultValue=false)]
-        public string second_subject_name { get; set; }
+        public string SecondSubjectName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -117,14 +117,14 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StaffMemberQualificationInfoQualifications {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  qualification_code: ").Append(qualification_code).Append("\n");
-            sb.Append("  degree_class: ").Append(degree_class).Append("\n");
-            sb.Append("  first_subject_code: ").Append(first_subject_code).Append("\n");
-            sb.Append("  first_subject_name: ").Append(first_subject_name).Append("\n");
-            sb.Append("  second_subject_code: ").Append(second_subject_code).Append("\n");
-            sb.Append("  second_subject_name: ").Append(second_subject_name).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  QualificationCode: ").Append(QualificationCode).Append("\n");
+            sb.Append("  DegreeClass: ").Append(DegreeClass).Append("\n");
+            sb.Append("  FirstSubjectCode: ").Append(FirstSubjectCode).Append("\n");
+            sb.Append("  FirstSubjectName: ").Append(FirstSubjectName).Append("\n");
+            sb.Append("  SecondSubjectCode: ").Append(SecondSubjectCode).Append("\n");
+            sb.Append("  SecondSubjectName: ").Append(SecondSubjectName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,44 +160,44 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.qualification_code == input.qualification_code ||
-                    (this.qualification_code != null &&
-                    this.qualification_code.Equals(input.qualification_code))
+                    this.QualificationCode == input.QualificationCode ||
+                    (this.QualificationCode != null &&
+                    this.QualificationCode.Equals(input.QualificationCode))
                 ) && 
                 (
-                    this.degree_class == input.degree_class ||
-                    (this.degree_class != null &&
-                    this.degree_class.Equals(input.degree_class))
+                    this.DegreeClass == input.DegreeClass ||
+                    (this.DegreeClass != null &&
+                    this.DegreeClass.Equals(input.DegreeClass))
                 ) && 
                 (
-                    this.first_subject_code == input.first_subject_code ||
-                    (this.first_subject_code != null &&
-                    this.first_subject_code.Equals(input.first_subject_code))
+                    this.FirstSubjectCode == input.FirstSubjectCode ||
+                    (this.FirstSubjectCode != null &&
+                    this.FirstSubjectCode.Equals(input.FirstSubjectCode))
                 ) && 
                 (
-                    this.first_subject_name == input.first_subject_name ||
-                    (this.first_subject_name != null &&
-                    this.first_subject_name.Equals(input.first_subject_name))
+                    this.FirstSubjectName == input.FirstSubjectName ||
+                    (this.FirstSubjectName != null &&
+                    this.FirstSubjectName.Equals(input.FirstSubjectName))
                 ) && 
                 (
-                    this.second_subject_code == input.second_subject_code ||
-                    (this.second_subject_code != null &&
-                    this.second_subject_code.Equals(input.second_subject_code))
+                    this.SecondSubjectCode == input.SecondSubjectCode ||
+                    (this.SecondSubjectCode != null &&
+                    this.SecondSubjectCode.Equals(input.SecondSubjectCode))
                 ) && 
                 (
-                    this.second_subject_name == input.second_subject_name ||
-                    (this.second_subject_name != null &&
-                    this.second_subject_name.Equals(input.second_subject_name))
+                    this.SecondSubjectName == input.SecondSubjectName ||
+                    (this.SecondSubjectName != null &&
+                    this.SecondSubjectName.Equals(input.SecondSubjectName))
                 );
         }
 
@@ -210,22 +210,22 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.qualification_code != null)
-                    hashCode = hashCode * 59 + this.qualification_code.GetHashCode();
-                if (this.degree_class != null)
-                    hashCode = hashCode * 59 + this.degree_class.GetHashCode();
-                if (this.first_subject_code != null)
-                    hashCode = hashCode * 59 + this.first_subject_code.GetHashCode();
-                if (this.first_subject_name != null)
-                    hashCode = hashCode * 59 + this.first_subject_name.GetHashCode();
-                if (this.second_subject_code != null)
-                    hashCode = hashCode * 59 + this.second_subject_code.GetHashCode();
-                if (this.second_subject_name != null)
-                    hashCode = hashCode * 59 + this.second_subject_name.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.QualificationCode != null)
+                    hashCode = hashCode * 59 + this.QualificationCode.GetHashCode();
+                if (this.DegreeClass != null)
+                    hashCode = hashCode * 59 + this.DegreeClass.GetHashCode();
+                if (this.FirstSubjectCode != null)
+                    hashCode = hashCode * 59 + this.FirstSubjectCode.GetHashCode();
+                if (this.FirstSubjectName != null)
+                    hashCode = hashCode * 59 + this.FirstSubjectName.GetHashCode();
+                if (this.SecondSubjectCode != null)
+                    hashCode = hashCode * 59 + this.SecondSubjectCode.GetHashCode();
+                if (this.SecondSubjectName != null)
+                    hashCode = hashCode * 59 + this.SecondSubjectName.GetHashCode();
                 return hashCode;
             }
         }

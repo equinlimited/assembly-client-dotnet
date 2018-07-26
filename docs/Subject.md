@@ -3,11 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_object** | **string** | Object type | [optional] 
-**id** | **int?** | Internal stable ID given to all subjects in the Platform | [optional] 
-**name** | **string** | Full name of subject  | [optional] 
-**code** | **string** | Shortened code of subject | [optional] 
-**mis_subjects** | [**SubjectMisSubjects**](SubjectMisSubjects.md) |  | [optional] 
+**Object** | **string** | Object type | [optional] 
+**Id** | **int?** | Internal stable ID given to all subjects in the Platform | [optional] 
+**Name** | **string** | Full name of subject  | [optional] 
+**Code** | **string** | Shortened code of subject | [optional] 
+**MisSubjects** | [**SubjectMisSubjects**](SubjectMisSubjects.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

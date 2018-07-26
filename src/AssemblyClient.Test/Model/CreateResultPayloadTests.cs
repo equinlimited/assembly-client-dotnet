@@ -67,44 +67,44 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property 'subject_id'
+        /// Test the property 'SubjectId'
         /// </summary>
         [Test]
-        public void subject_idTest()
+        public void SubjectIdTest()
         {
-            // TODO unit test for the property 'subject_id'
+            // TODO unit test for the property 'SubjectId'
         }
         /// <summary>
-        /// Test the property 'facet_id'
+        /// Test the property 'FacetId'
         /// </summary>
         [Test]
-        public void facet_idTest()
+        public void FacetIdTest()
         {
-            // TODO unit test for the property 'facet_id'
+            // TODO unit test for the property 'FacetId'
         }
         /// <summary>
-        /// Test the property 'assessment_point_rank'
+        /// Test the property 'AssessmentPointRank'
         /// </summary>
         [Test]
-        public void assessment_point_rankTest()
+        public void AssessmentPointRankTest()
         {
-            // TODO unit test for the property 'assessment_point_rank'
+            // TODO unit test for the property 'AssessmentPointRank'
         }
         /// <summary>
-        /// Test the property 'assessment_id'
+        /// Test the property 'AssessmentId'
         /// </summary>
         [Test]
-        public void assessment_idTest()
+        public void AssessmentIdTest()
         {
-            // TODO unit test for the property 'assessment_id'
+            // TODO unit test for the property 'AssessmentId'
         }
         /// <summary>
-        /// Test the property 'results'
+        /// Test the property 'Results'
         /// </summary>
         [Test]
-        public void resultsTest()
+        public void ResultsTest()
         {
-            // TODO unit test for the property 'results'
+            // TODO unit test for the property 'Results'
         }
 
     }

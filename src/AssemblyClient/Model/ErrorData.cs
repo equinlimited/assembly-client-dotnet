@@ -38,9 +38,9 @@ namespace AssemblyClient.Model
         /// <param name="limit">The total number of requests the current token may make within a 5 minute window..</param>
         public ErrorData(int? count = default(int?), int? period = default(int?), int? limit = default(int?))
         {
-            this.count = count;
-            this.period = period;
-            this.limit = limit;
+            this.Count = count;
+            this.Period = period;
+            this.Limit = limit;
         }
         
         /// <summary>
@@ -48,21 +48,21 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>The number of requests you have made with the current token.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
-        public int? count { get; set; }
+        public int? Count { get; set; }
 
         /// <summary>
         /// The number of seconds until the current token may make another request.
         /// </summary>
         /// <value>The number of seconds until the current token may make another request.</value>
         [DataMember(Name="period", EmitDefaultValue=false)]
-        public int? period { get; set; }
+        public int? Period { get; set; }
 
         /// <summary>
         /// The total number of requests the current token may make within a 5 minute window.
         /// </summary>
         /// <value>The total number of requests the current token may make within a 5 minute window.</value>
         [DataMember(Name="limit", EmitDefaultValue=false)]
-        public int? limit { get; set; }
+        public int? Limit { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -72,9 +72,9 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ErrorData {\n");
-            sb.Append("  count: ").Append(count).Append("\n");
-            sb.Append("  period: ").Append(period).Append("\n");
-            sb.Append("  limit: ").Append(limit).Append("\n");
+            sb.Append("  Count: ").Append(Count).Append("\n");
+            sb.Append("  Period: ").Append(Period).Append("\n");
+            sb.Append("  Limit: ").Append(Limit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,19 +110,19 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this.count == input.count ||
-                    (this.count != null &&
-                    this.count.Equals(input.count))
+                    this.Count == input.Count ||
+                    (this.Count != null &&
+                    this.Count.Equals(input.Count))
                 ) && 
                 (
-                    this.period == input.period ||
-                    (this.period != null &&
-                    this.period.Equals(input.period))
+                    this.Period == input.Period ||
+                    (this.Period != null &&
+                    this.Period.Equals(input.Period))
                 ) && 
                 (
-                    this.limit == input.limit ||
-                    (this.limit != null &&
-                    this.limit.Equals(input.limit))
+                    this.Limit == input.Limit ||
+                    (this.Limit != null &&
+                    this.Limit.Equals(input.Limit))
                 );
         }
 
@@ -135,12 +135,12 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.count != null)
-                    hashCode = hashCode * 59 + this.count.GetHashCode();
-                if (this.period != null)
-                    hashCode = hashCode * 59 + this.period.GetHashCode();
-                if (this.limit != null)
-                    hashCode = hashCode * 59 + this.limit.GetHashCode();
+                if (this.Count != null)
+                    hashCode = hashCode * 59 + this.Count.GetHashCode();
+                if (this.Period != null)
+                    hashCode = hashCode * 59 + this.Period.GetHashCode();
+                if (this.Limit != null)
+                    hashCode = hashCode * 59 + this.Limit.GetHashCode();
                 return hashCode;
             }
         }

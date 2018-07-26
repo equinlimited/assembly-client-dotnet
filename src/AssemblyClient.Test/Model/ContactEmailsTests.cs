@@ -67,44 +67,44 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'id'
+        /// Test the property 'Id'
         /// </summary>
         [Test]
-        public void idTest()
+        public void IdTest()
         {
-            // TODO unit test for the property 'id'
+            // TODO unit test for the property 'Id'
         }
         /// <summary>
-        /// Test the property 'email'
+        /// Test the property 'Email'
         /// </summary>
         [Test]
-        public void emailTest()
+        public void EmailTest()
         {
-            // TODO unit test for the property 'email'
+            // TODO unit test for the property 'Email'
         }
         /// <summary>
-        /// Test the property 'type'
+        /// Test the property 'Type'
         /// </summary>
         [Test]
-        public void typeTest()
+        public void TypeTest()
         {
-            // TODO unit test for the property 'type'
+            // TODO unit test for the property 'Type'
         }
         /// <summary>
-        /// Test the property 'is_primary'
+        /// Test the property 'IsPrimary'
         /// </summary>
         [Test]
-        public void is_primaryTest()
+        public void IsPrimaryTest()
         {
-            // TODO unit test for the property 'is_primary'
+            // TODO unit test for the property 'IsPrimary'
         }
 
     }

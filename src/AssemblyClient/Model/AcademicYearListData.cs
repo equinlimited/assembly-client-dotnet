@@ -40,11 +40,11 @@ namespace AssemblyClient.Model
         /// <param name="terms">Provides details of the individual terms that make up the academic year where available (currently for SIMS schools only).</param>
         public AcademicYearListData(int? id = default(int?), string name = default(string), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), List<AcademicYearTerms> terms = default(List<AcademicYearTerms>))
         {
-            this.id = id;
-            this.name = name;
-            this.start_date = startDate;
-            this.end_date = endDate;
-            this.terms = terms;
+            this.Id = id;
+            this.Name = name;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.Terms = terms;
         }
         
         /// <summary>
@@ -52,14 +52,14 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Internal stable ID given to academic year on Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// Name of academic year
         /// </summary>
         /// <value>Name of academic year</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Date on which academic year starts
@@ -67,7 +67,7 @@ namespace AssemblyClient.Model
         /// <value>Date on which academic year starts</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
         [JsonConverter(typeof(SwaggerDateConverter))]
-        public DateTime? start_date { get; set; }
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// Date on which academic year ends
@@ -75,14 +75,14 @@ namespace AssemblyClient.Model
         /// <value>Date on which academic year ends</value>
         [DataMember(Name="end_date", EmitDefaultValue=false)]
         [JsonConverter(typeof(SwaggerDateConverter))]
-        public DateTime? end_date { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Provides details of the individual terms that make up the academic year where available (currently for SIMS schools only)
         /// </summary>
         /// <value>Provides details of the individual terms that make up the academic year where available (currently for SIMS schools only)</value>
         [DataMember(Name="terms", EmitDefaultValue=false)]
-        public List<AcademicYearTerms> terms { get; set; }
+        public List<AcademicYearTerms> Terms { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -92,11 +92,11 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AcademicYearListData {\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  start_date: ").Append(start_date).Append("\n");
-            sb.Append("  end_date: ").Append(end_date).Append("\n");
-            sb.Append("  terms: ").Append(terms).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  Terms: ").Append(Terms).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,29 +132,29 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.start_date == input.start_date ||
-                    (this.start_date != null &&
-                    this.start_date.Equals(input.start_date))
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 ) && 
                 (
-                    this.end_date == input.end_date ||
-                    (this.end_date != null &&
-                    this.end_date.Equals(input.end_date))
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
                 ) && 
                 (
-                    this.terms == input.terms ||
-                    this.terms != null &&
-                    this.terms.SequenceEqual(input.terms)
+                    this.Terms == input.Terms ||
+                    this.Terms != null &&
+                    this.Terms.SequenceEqual(input.Terms)
                 );
         }
 
@@ -167,16 +167,16 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
-                if (this.start_date != null)
-                    hashCode = hashCode * 59 + this.start_date.GetHashCode();
-                if (this.end_date != null)
-                    hashCode = hashCode * 59 + this.end_date.GetHashCode();
-                if (this.terms != null)
-                    hashCode = hashCode * 59 + this.terms.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
+                if (this.Terms != null)
+                    hashCode = hashCode * 59 + this.Terms.GetHashCode();
                 return hashCode;
             }
         }

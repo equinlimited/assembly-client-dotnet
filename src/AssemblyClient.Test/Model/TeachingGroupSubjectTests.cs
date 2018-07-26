@@ -67,12 +67,12 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property 'subject'
+        /// Test the property 'Subject'
         /// </summary>
         [Test]
-        public void subjectTest()
+        public void SubjectTest()
         {
-            // TODO unit test for the property 'subject'
+            // TODO unit test for the property 'Subject'
         }
 
     }

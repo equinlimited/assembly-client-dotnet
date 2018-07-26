@@ -36,14 +36,14 @@ namespace AssemblyClient.Model
         /// <param name="subject">subject.</param>
         public TeachingGroupSubject(SubjectListData subject = default(SubjectListData))
         {
-            this.subject = subject;
+            this.Subject = subject;
         }
         
         /// <summary>
-        /// Gets or Sets subject
+        /// Gets or Sets Subject
         /// </summary>
         [DataMember(Name="subject", EmitDefaultValue=false)]
-        public SubjectListData subject { get; set; }
+        public SubjectListData Subject { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,7 +53,7 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TeachingGroupSubject {\n");
-            sb.Append("  subject: ").Append(subject).Append("\n");
+            sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,9 +89,9 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this.subject == input.subject ||
-                    (this.subject != null &&
-                    this.subject.Equals(input.subject))
+                    this.Subject == input.Subject ||
+                    (this.Subject != null &&
+                    this.Subject.Equals(input.Subject))
                 );
         }
 
@@ -104,8 +104,8 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.subject != null)
-                    hashCode = hashCode * 59 + this.subject.GetHashCode();
+                if (this.Subject != null)
+                    hashCode = hashCode * 59 + this.Subject.GetHashCode();
                 return hashCode;
             }
         }

@@ -67,44 +67,44 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'additional_payment_type'
+        /// Test the property 'AdditionalPaymentType'
         /// </summary>
         [Test]
-        public void additional_payment_typeTest()
+        public void AdditionalPaymentTypeTest()
         {
-            // TODO unit test for the property 'additional_payment_type'
+            // TODO unit test for the property 'AdditionalPaymentType'
         }
         /// <summary>
-        /// Test the property 'additional_payment_amount'
+        /// Test the property 'AdditionalPaymentAmount'
         /// </summary>
         [Test]
-        public void additional_payment_amountTest()
+        public void AdditionalPaymentAmountTest()
         {
-            // TODO unit test for the property 'additional_payment_amount'
+            // TODO unit test for the property 'AdditionalPaymentAmount'
         }
         /// <summary>
-        /// Test the property 'start_date'
+        /// Test the property 'StartDate'
         /// </summary>
         [Test]
-        public void start_dateTest()
+        public void StartDateTest()
         {
-            // TODO unit test for the property 'start_date'
+            // TODO unit test for the property 'StartDate'
         }
         /// <summary>
-        /// Test the property 'end_date'
+        /// Test the property 'EndDate'
         /// </summary>
         [Test]
-        public void end_dateTest()
+        public void EndDateTest()
         {
-            // TODO unit test for the property 'end_date'
+            // TODO unit test for the property 'EndDate'
         }
 
     }

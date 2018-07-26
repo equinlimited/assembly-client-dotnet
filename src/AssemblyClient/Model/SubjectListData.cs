@@ -40,11 +40,11 @@ namespace AssemblyClient.Model
         /// <param name="misSubjects">misSubjects.</param>
         public SubjectListData(string _object = default(string), int? id = default(int?), string name = default(string), string code = default(string), SubjectMisSubjects misSubjects = default(SubjectMisSubjects))
         {
-            this._object = _object;
-            this.id = id;
-            this.name = name;
-            this.code = code;
-            this.mis_subjects = misSubjects;
+            this.Object = _object;
+            this.Id = id;
+            this.Name = name;
+            this.Code = code;
+            this.MisSubjects = misSubjects;
         }
         
         /// <summary>
@@ -52,34 +52,34 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all subjects in the Platform
         /// </summary>
         /// <value>Internal stable ID given to all subjects in the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// Full name of subject 
         /// </summary>
         /// <value>Full name of subject </value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Shortened code of subject
         /// </summary>
         /// <value>Shortened code of subject</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
-        public string code { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
-        /// Gets or Sets mis_subjects
+        /// Gets or Sets MisSubjects
         /// </summary>
         [DataMember(Name="mis_subjects", EmitDefaultValue=false)]
-        public SubjectMisSubjects mis_subjects { get; set; }
+        public SubjectMisSubjects MisSubjects { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -89,11 +89,11 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SubjectListData {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  code: ").Append(code).Append("\n");
-            sb.Append("  mis_subjects: ").Append(mis_subjects).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  MisSubjects: ").Append(MisSubjects).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -129,29 +129,29 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.code == input.code ||
-                    (this.code != null &&
-                    this.code.Equals(input.code))
+                    this.Code == input.Code ||
+                    (this.Code != null &&
+                    this.Code.Equals(input.Code))
                 ) && 
                 (
-                    this.mis_subjects == input.mis_subjects ||
-                    (this.mis_subjects != null &&
-                    this.mis_subjects.Equals(input.mis_subjects))
+                    this.MisSubjects == input.MisSubjects ||
+                    (this.MisSubjects != null &&
+                    this.MisSubjects.Equals(input.MisSubjects))
                 );
         }
 
@@ -164,16 +164,16 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
-                if (this.code != null)
-                    hashCode = hashCode * 59 + this.code.GetHashCode();
-                if (this.mis_subjects != null)
-                    hashCode = hashCode * 59 + this.mis_subjects.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Code != null)
+                    hashCode = hashCode * 59 + this.Code.GetHashCode();
+                if (this.MisSubjects != null)
+                    hashCode = hashCode * 59 + this.MisSubjects.GetHashCode();
                 return hashCode;
             }
         }

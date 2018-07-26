@@ -39,10 +39,10 @@ namespace AssemblyClient.Model
         /// <param name="parentalResponsibility">Indicates whether the contact has parental responsibility for the student.</param>
         public ContactRelationship(string _object = default(string), string relationshipType = default(string), int? priority = default(int?), bool? parentalResponsibility = default(bool?))
         {
-            this._object = _object;
-            this.relationship_type = relationshipType;
-            this.priority = priority;
-            this.parental_responsibility = parentalResponsibility;
+            this.Object = _object;
+            this.RelationshipType = relationshipType;
+            this.Priority = priority;
+            this.ParentalResponsibility = parentalResponsibility;
         }
         
         /// <summary>
@@ -50,28 +50,28 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// The relationship between the contact and the student
         /// </summary>
         /// <value>The relationship between the contact and the student</value>
         [DataMember(Name="relationship_type", EmitDefaultValue=false)]
-        public string relationship_type { get; set; }
+        public string RelationshipType { get; set; }
 
         /// <summary>
         /// The priority of this contact for the student
         /// </summary>
         /// <value>The priority of this contact for the student</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
-        public int? priority { get; set; }
+        public int? Priority { get; set; }
 
         /// <summary>
         /// Indicates whether the contact has parental responsibility for the student
         /// </summary>
         /// <value>Indicates whether the contact has parental responsibility for the student</value>
         [DataMember(Name="parental_responsibility", EmitDefaultValue=false)]
-        public bool? parental_responsibility { get; set; }
+        public bool? ParentalResponsibility { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -81,10 +81,10 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactRelationship {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  relationship_type: ").Append(relationship_type).Append("\n");
-            sb.Append("  priority: ").Append(priority).Append("\n");
-            sb.Append("  parental_responsibility: ").Append(parental_responsibility).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  RelationshipType: ").Append(RelationshipType).Append("\n");
+            sb.Append("  Priority: ").Append(Priority).Append("\n");
+            sb.Append("  ParentalResponsibility: ").Append(ParentalResponsibility).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -120,24 +120,24 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.relationship_type == input.relationship_type ||
-                    (this.relationship_type != null &&
-                    this.relationship_type.Equals(input.relationship_type))
+                    this.RelationshipType == input.RelationshipType ||
+                    (this.RelationshipType != null &&
+                    this.RelationshipType.Equals(input.RelationshipType))
                 ) && 
                 (
-                    this.priority == input.priority ||
-                    (this.priority != null &&
-                    this.priority.Equals(input.priority))
+                    this.Priority == input.Priority ||
+                    (this.Priority != null &&
+                    this.Priority.Equals(input.Priority))
                 ) && 
                 (
-                    this.parental_responsibility == input.parental_responsibility ||
-                    (this.parental_responsibility != null &&
-                    this.parental_responsibility.Equals(input.parental_responsibility))
+                    this.ParentalResponsibility == input.ParentalResponsibility ||
+                    (this.ParentalResponsibility != null &&
+                    this.ParentalResponsibility.Equals(input.ParentalResponsibility))
                 );
         }
 
@@ -150,14 +150,14 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.relationship_type != null)
-                    hashCode = hashCode * 59 + this.relationship_type.GetHashCode();
-                if (this.priority != null)
-                    hashCode = hashCode * 59 + this.priority.GetHashCode();
-                if (this.parental_responsibility != null)
-                    hashCode = hashCode * 59 + this.parental_responsibility.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.RelationshipType != null)
+                    hashCode = hashCode * 59 + this.RelationshipType.GetHashCode();
+                if (this.Priority != null)
+                    hashCode = hashCode * 59 + this.Priority.GetHashCode();
+                if (this.ParentalResponsibility != null)
+                    hashCode = hashCode * 59 + this.ParentalResponsibility.GetHashCode();
                 return hashCode;
             }
         }

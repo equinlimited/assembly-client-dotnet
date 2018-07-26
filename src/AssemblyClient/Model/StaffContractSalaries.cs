@@ -47,18 +47,18 @@ namespace AssemblyClient.Model
         /// <param name="safeguardedSalary">No description.</param>
         public StaffContractSalaries(string _object = default(string), float? hoursPerWeek = default(float?), float? fte = default(float?), float? weeksPerYear = default(float?), string payRange = default(string), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string payScaleFramework = default(string), string regionalSpine = default(string), float? basePay = default(float?), float? actualPay = default(float?), bool? safeguardedSalary = default(bool?))
         {
-            this._object = _object;
-            this.hours_per_week = hoursPerWeek;
-            this.fte = fte;
-            this.weeks_per_year = weeksPerYear;
-            this.pay_range = payRange;
-            this.start_date = startDate;
-            this.end_date = endDate;
-            this.pay_scale_framework = payScaleFramework;
-            this.regional_spine = regionalSpine;
-            this.base_pay = basePay;
-            this.actual_pay = actualPay;
-            this.safeguarded_salary = safeguardedSalary;
+            this.Object = _object;
+            this.HoursPerWeek = hoursPerWeek;
+            this.Fte = fte;
+            this.WeeksPerYear = weeksPerYear;
+            this.PayRange = payRange;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.PayScaleFramework = payScaleFramework;
+            this.RegionalSpine = regionalSpine;
+            this.BasePay = basePay;
+            this.ActualPay = actualPay;
+            this.SafeguardedSalary = safeguardedSalary;
         }
         
         /// <summary>
@@ -66,84 +66,84 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="hours_per_week", EmitDefaultValue=false)]
-        public float? hours_per_week { get; set; }
+        public float? HoursPerWeek { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="fte", EmitDefaultValue=false)]
-        public float? fte { get; set; }
+        public float? Fte { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="weeks_per_year", EmitDefaultValue=false)]
-        public float? weeks_per_year { get; set; }
+        public float? WeeksPerYear { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="pay_range", EmitDefaultValue=false)]
-        public string pay_range { get; set; }
+        public string PayRange { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
-        public DateTime? start_date { get; set; }
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="end_date", EmitDefaultValue=false)]
-        public DateTime? end_date { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="pay_scale_framework", EmitDefaultValue=false)]
-        public string pay_scale_framework { get; set; }
+        public string PayScaleFramework { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="regional_spine", EmitDefaultValue=false)]
-        public string regional_spine { get; set; }
+        public string RegionalSpine { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="base_pay", EmitDefaultValue=false)]
-        public float? base_pay { get; set; }
+        public float? BasePay { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="actual_pay", EmitDefaultValue=false)]
-        public float? actual_pay { get; set; }
+        public float? ActualPay { get; set; }
 
         /// <summary>
         /// No description
         /// </summary>
         /// <value>No description</value>
         [DataMember(Name="safeguarded_salary", EmitDefaultValue=false)]
-        public bool? safeguarded_salary { get; set; }
+        public bool? SafeguardedSalary { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -153,18 +153,18 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StaffContractSalaries {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  hours_per_week: ").Append(hours_per_week).Append("\n");
-            sb.Append("  fte: ").Append(fte).Append("\n");
-            sb.Append("  weeks_per_year: ").Append(weeks_per_year).Append("\n");
-            sb.Append("  pay_range: ").Append(pay_range).Append("\n");
-            sb.Append("  start_date: ").Append(start_date).Append("\n");
-            sb.Append("  end_date: ").Append(end_date).Append("\n");
-            sb.Append("  pay_scale_framework: ").Append(pay_scale_framework).Append("\n");
-            sb.Append("  regional_spine: ").Append(regional_spine).Append("\n");
-            sb.Append("  base_pay: ").Append(base_pay).Append("\n");
-            sb.Append("  actual_pay: ").Append(actual_pay).Append("\n");
-            sb.Append("  safeguarded_salary: ").Append(safeguarded_salary).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  HoursPerWeek: ").Append(HoursPerWeek).Append("\n");
+            sb.Append("  Fte: ").Append(Fte).Append("\n");
+            sb.Append("  WeeksPerYear: ").Append(WeeksPerYear).Append("\n");
+            sb.Append("  PayRange: ").Append(PayRange).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  PayScaleFramework: ").Append(PayScaleFramework).Append("\n");
+            sb.Append("  RegionalSpine: ").Append(RegionalSpine).Append("\n");
+            sb.Append("  BasePay: ").Append(BasePay).Append("\n");
+            sb.Append("  ActualPay: ").Append(ActualPay).Append("\n");
+            sb.Append("  SafeguardedSalary: ").Append(SafeguardedSalary).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -200,64 +200,64 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.hours_per_week == input.hours_per_week ||
-                    (this.hours_per_week != null &&
-                    this.hours_per_week.Equals(input.hours_per_week))
+                    this.HoursPerWeek == input.HoursPerWeek ||
+                    (this.HoursPerWeek != null &&
+                    this.HoursPerWeek.Equals(input.HoursPerWeek))
                 ) && 
                 (
-                    this.fte == input.fte ||
-                    (this.fte != null &&
-                    this.fte.Equals(input.fte))
+                    this.Fte == input.Fte ||
+                    (this.Fte != null &&
+                    this.Fte.Equals(input.Fte))
                 ) && 
                 (
-                    this.weeks_per_year == input.weeks_per_year ||
-                    (this.weeks_per_year != null &&
-                    this.weeks_per_year.Equals(input.weeks_per_year))
+                    this.WeeksPerYear == input.WeeksPerYear ||
+                    (this.WeeksPerYear != null &&
+                    this.WeeksPerYear.Equals(input.WeeksPerYear))
                 ) && 
                 (
-                    this.pay_range == input.pay_range ||
-                    (this.pay_range != null &&
-                    this.pay_range.Equals(input.pay_range))
+                    this.PayRange == input.PayRange ||
+                    (this.PayRange != null &&
+                    this.PayRange.Equals(input.PayRange))
                 ) && 
                 (
-                    this.start_date == input.start_date ||
-                    (this.start_date != null &&
-                    this.start_date.Equals(input.start_date))
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 ) && 
                 (
-                    this.end_date == input.end_date ||
-                    (this.end_date != null &&
-                    this.end_date.Equals(input.end_date))
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
                 ) && 
                 (
-                    this.pay_scale_framework == input.pay_scale_framework ||
-                    (this.pay_scale_framework != null &&
-                    this.pay_scale_framework.Equals(input.pay_scale_framework))
+                    this.PayScaleFramework == input.PayScaleFramework ||
+                    (this.PayScaleFramework != null &&
+                    this.PayScaleFramework.Equals(input.PayScaleFramework))
                 ) && 
                 (
-                    this.regional_spine == input.regional_spine ||
-                    (this.regional_spine != null &&
-                    this.regional_spine.Equals(input.regional_spine))
+                    this.RegionalSpine == input.RegionalSpine ||
+                    (this.RegionalSpine != null &&
+                    this.RegionalSpine.Equals(input.RegionalSpine))
                 ) && 
                 (
-                    this.base_pay == input.base_pay ||
-                    (this.base_pay != null &&
-                    this.base_pay.Equals(input.base_pay))
+                    this.BasePay == input.BasePay ||
+                    (this.BasePay != null &&
+                    this.BasePay.Equals(input.BasePay))
                 ) && 
                 (
-                    this.actual_pay == input.actual_pay ||
-                    (this.actual_pay != null &&
-                    this.actual_pay.Equals(input.actual_pay))
+                    this.ActualPay == input.ActualPay ||
+                    (this.ActualPay != null &&
+                    this.ActualPay.Equals(input.ActualPay))
                 ) && 
                 (
-                    this.safeguarded_salary == input.safeguarded_salary ||
-                    (this.safeguarded_salary != null &&
-                    this.safeguarded_salary.Equals(input.safeguarded_salary))
+                    this.SafeguardedSalary == input.SafeguardedSalary ||
+                    (this.SafeguardedSalary != null &&
+                    this.SafeguardedSalary.Equals(input.SafeguardedSalary))
                 );
         }
 
@@ -270,30 +270,30 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.hours_per_week != null)
-                    hashCode = hashCode * 59 + this.hours_per_week.GetHashCode();
-                if (this.fte != null)
-                    hashCode = hashCode * 59 + this.fte.GetHashCode();
-                if (this.weeks_per_year != null)
-                    hashCode = hashCode * 59 + this.weeks_per_year.GetHashCode();
-                if (this.pay_range != null)
-                    hashCode = hashCode * 59 + this.pay_range.GetHashCode();
-                if (this.start_date != null)
-                    hashCode = hashCode * 59 + this.start_date.GetHashCode();
-                if (this.end_date != null)
-                    hashCode = hashCode * 59 + this.end_date.GetHashCode();
-                if (this.pay_scale_framework != null)
-                    hashCode = hashCode * 59 + this.pay_scale_framework.GetHashCode();
-                if (this.regional_spine != null)
-                    hashCode = hashCode * 59 + this.regional_spine.GetHashCode();
-                if (this.base_pay != null)
-                    hashCode = hashCode * 59 + this.base_pay.GetHashCode();
-                if (this.actual_pay != null)
-                    hashCode = hashCode * 59 + this.actual_pay.GetHashCode();
-                if (this.safeguarded_salary != null)
-                    hashCode = hashCode * 59 + this.safeguarded_salary.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.HoursPerWeek != null)
+                    hashCode = hashCode * 59 + this.HoursPerWeek.GetHashCode();
+                if (this.Fte != null)
+                    hashCode = hashCode * 59 + this.Fte.GetHashCode();
+                if (this.WeeksPerYear != null)
+                    hashCode = hashCode * 59 + this.WeeksPerYear.GetHashCode();
+                if (this.PayRange != null)
+                    hashCode = hashCode * 59 + this.PayRange.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
+                if (this.PayScaleFramework != null)
+                    hashCode = hashCode * 59 + this.PayScaleFramework.GetHashCode();
+                if (this.RegionalSpine != null)
+                    hashCode = hashCode * 59 + this.RegionalSpine.GetHashCode();
+                if (this.BasePay != null)
+                    hashCode = hashCode * 59 + this.BasePay.GetHashCode();
+                if (this.ActualPay != null)
+                    hashCode = hashCode * 59 + this.ActualPay.GetHashCode();
+                if (this.SafeguardedSalary != null)
+                    hashCode = hashCode * 59 + this.SafeguardedSalary.GetHashCode();
                 return hashCode;
             }
         }

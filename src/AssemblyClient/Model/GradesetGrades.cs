@@ -38,9 +38,9 @@ namespace AssemblyClient.Model
         /// <param name="value">The value of the grade as a number.</param>
         public GradesetGrades(int? id = default(int?), string name = default(string), float? value = default(float?))
         {
-            this.id = id;
-            this.name = name;
-            this.value = value;
+            this.Id = id;
+            this.Name = name;
+            this.Value = value;
         }
         
         /// <summary>
@@ -48,21 +48,21 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Internal stable ID given to all grades. Results should be written back to the Platform using the ID (as opposed to the &#39;name&#39;)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The name of the grade as a string
         /// </summary>
         /// <value>The name of the grade as a string</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// The value of the grade as a number
         /// </summary>
         /// <value>The value of the grade as a number</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
-        public float? value { get; set; }
+        public float? Value { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -72,9 +72,9 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GradesetGrades {\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  name: ").Append(name).Append("\n");
-            sb.Append("  value: ").Append(value).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,19 +110,19 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.name == input.name ||
-                    (this.name != null &&
-                    this.name.Equals(input.name))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.value == input.value ||
-                    (this.value != null &&
-                    this.value.Equals(input.value))
+                    this.Value == input.Value ||
+                    (this.Value != null &&
+                    this.Value.Equals(input.Value))
                 );
         }
 
@@ -135,12 +135,12 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.name != null)
-                    hashCode = hashCode * 59 + this.name.GetHashCode();
-                if (this.value != null)
-                    hashCode = hashCode * 59 + this.value.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Value != null)
+                    hashCode = hashCode * 59 + this.Value.GetHashCode();
                 return hashCode;
             }
         }

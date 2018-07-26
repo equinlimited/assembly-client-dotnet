@@ -67,52 +67,52 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property 'access_token'
+        /// Test the property 'AccessToken'
         /// </summary>
         [Test]
-        public void access_tokenTest()
+        public void AccessTokenTest()
         {
-            // TODO unit test for the property 'access_token'
+            // TODO unit test for the property 'AccessToken'
         }
         /// <summary>
-        /// Test the property 'refresh_token'
+        /// Test the property 'RefreshToken'
         /// </summary>
         [Test]
-        public void refresh_tokenTest()
+        public void RefreshTokenTest()
         {
-            // TODO unit test for the property 'refresh_token'
+            // TODO unit test for the property 'RefreshToken'
         }
         /// <summary>
-        /// Test the property 'token_type'
+        /// Test the property 'TokenType'
         /// </summary>
         [Test]
-        public void token_typeTest()
+        public void TokenTypeTest()
         {
-            // TODO unit test for the property 'token_type'
+            // TODO unit test for the property 'TokenType'
         }
         /// <summary>
-        /// Test the property 'level'
+        /// Test the property 'Level'
         /// </summary>
         [Test]
-        public void levelTest()
+        public void LevelTest()
         {
-            // TODO unit test for the property 'level'
+            // TODO unit test for the property 'Level'
         }
         /// <summary>
-        /// Test the property 'expires_in'
+        /// Test the property 'ExpiresIn'
         /// </summary>
         [Test]
-        public void expires_inTest()
+        public void ExpiresInTest()
         {
-            // TODO unit test for the property 'expires_in'
+            // TODO unit test for the property 'ExpiresIn'
         }
         /// <summary>
-        /// Test the property 'school_id'
+        /// Test the property 'SchoolId'
         /// </summary>
         [Test]
-        public void school_idTest()
+        public void SchoolIdTest()
         {
-            // TODO unit test for the property 'school_id'
+            // TODO unit test for the property 'SchoolId'
         }
 
     }

@@ -44,15 +44,15 @@ namespace AssemblyClient.Model
         /// <param name="payRate">Whether or not the staff member was paid for the absence, and at what rate.</param>
         public StaffAbsence(string _object = default(string), int? id = default(int?), int? staffMemberId = default(int?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), float? workingDaysLost = default(float?), string absenceCategory = default(string), string illnessCategory = default(string), string payRate = default(string))
         {
-            this._object = _object;
-            this.id = id;
-            this.staff_member_id = staffMemberId;
-            this.start_date = startDate;
-            this.end_date = endDate;
-            this.working_days_lost = workingDaysLost;
-            this.absence_category = absenceCategory;
-            this.illness_category = illnessCategory;
-            this.pay_rate = payRate;
+            this.Object = _object;
+            this.Id = id;
+            this.StaffMemberId = staffMemberId;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.WorkingDaysLost = workingDaysLost;
+            this.AbsenceCategory = absenceCategory;
+            this.IllnessCategory = illnessCategory;
+            this.PayRate = payRate;
         }
         
         /// <summary>
@@ -60,63 +60,63 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// Internal stable ID given to all absences on the Platform
         /// </summary>
         /// <value>Internal stable ID given to all absences on the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The ID of the staff member who the absence is for
         /// </summary>
         /// <value>The ID of the staff member who the absence is for</value>
         [DataMember(Name="staff_member_id", EmitDefaultValue=false)]
-        public int? staff_member_id { get; set; }
+        public int? StaffMemberId { get; set; }
 
         /// <summary>
         /// The start date of the absence
         /// </summary>
         /// <value>The start date of the absence</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
-        public DateTime? start_date { get; set; }
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
         /// The end date of the absence
         /// </summary>
         /// <value>The end date of the absence</value>
         [DataMember(Name="end_date", EmitDefaultValue=false)]
-        public DateTime? end_date { get; set; }
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Number of working days that were lost during the absence
         /// </summary>
         /// <value>Number of working days that were lost during the absence</value>
         [DataMember(Name="working_days_lost", EmitDefaultValue=false)]
-        public float? working_days_lost { get; set; }
+        public float? WorkingDaysLost { get; set; }
 
         /// <summary>
         /// The category of the absence
         /// </summary>
         /// <value>The category of the absence</value>
         [DataMember(Name="absence_category", EmitDefaultValue=false)]
-        public string absence_category { get; set; }
+        public string AbsenceCategory { get; set; }
 
         /// <summary>
         /// If the absence category was &#39;Illness&#39;, the specific code
         /// </summary>
         /// <value>If the absence category was &#39;Illness&#39;, the specific code</value>
         [DataMember(Name="illness_category", EmitDefaultValue=false)]
-        public string illness_category { get; set; }
+        public string IllnessCategory { get; set; }
 
         /// <summary>
         /// Whether or not the staff member was paid for the absence, and at what rate
         /// </summary>
         /// <value>Whether or not the staff member was paid for the absence, and at what rate</value>
         [DataMember(Name="pay_rate", EmitDefaultValue=false)]
-        public string pay_rate { get; set; }
+        public string PayRate { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -126,15 +126,15 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StaffAbsence {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  id: ").Append(id).Append("\n");
-            sb.Append("  staff_member_id: ").Append(staff_member_id).Append("\n");
-            sb.Append("  start_date: ").Append(start_date).Append("\n");
-            sb.Append("  end_date: ").Append(end_date).Append("\n");
-            sb.Append("  working_days_lost: ").Append(working_days_lost).Append("\n");
-            sb.Append("  absence_category: ").Append(absence_category).Append("\n");
-            sb.Append("  illness_category: ").Append(illness_category).Append("\n");
-            sb.Append("  pay_rate: ").Append(pay_rate).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  StaffMemberId: ").Append(StaffMemberId).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  WorkingDaysLost: ").Append(WorkingDaysLost).Append("\n");
+            sb.Append("  AbsenceCategory: ").Append(AbsenceCategory).Append("\n");
+            sb.Append("  IllnessCategory: ").Append(IllnessCategory).Append("\n");
+            sb.Append("  PayRate: ").Append(PayRate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -170,49 +170,49 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.id == input.id ||
-                    (this.id != null &&
-                    this.id.Equals(input.id))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.staff_member_id == input.staff_member_id ||
-                    (this.staff_member_id != null &&
-                    this.staff_member_id.Equals(input.staff_member_id))
+                    this.StaffMemberId == input.StaffMemberId ||
+                    (this.StaffMemberId != null &&
+                    this.StaffMemberId.Equals(input.StaffMemberId))
                 ) && 
                 (
-                    this.start_date == input.start_date ||
-                    (this.start_date != null &&
-                    this.start_date.Equals(input.start_date))
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 ) && 
                 (
-                    this.end_date == input.end_date ||
-                    (this.end_date != null &&
-                    this.end_date.Equals(input.end_date))
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
                 ) && 
                 (
-                    this.working_days_lost == input.working_days_lost ||
-                    (this.working_days_lost != null &&
-                    this.working_days_lost.Equals(input.working_days_lost))
+                    this.WorkingDaysLost == input.WorkingDaysLost ||
+                    (this.WorkingDaysLost != null &&
+                    this.WorkingDaysLost.Equals(input.WorkingDaysLost))
                 ) && 
                 (
-                    this.absence_category == input.absence_category ||
-                    (this.absence_category != null &&
-                    this.absence_category.Equals(input.absence_category))
+                    this.AbsenceCategory == input.AbsenceCategory ||
+                    (this.AbsenceCategory != null &&
+                    this.AbsenceCategory.Equals(input.AbsenceCategory))
                 ) && 
                 (
-                    this.illness_category == input.illness_category ||
-                    (this.illness_category != null &&
-                    this.illness_category.Equals(input.illness_category))
+                    this.IllnessCategory == input.IllnessCategory ||
+                    (this.IllnessCategory != null &&
+                    this.IllnessCategory.Equals(input.IllnessCategory))
                 ) && 
                 (
-                    this.pay_rate == input.pay_rate ||
-                    (this.pay_rate != null &&
-                    this.pay_rate.Equals(input.pay_rate))
+                    this.PayRate == input.PayRate ||
+                    (this.PayRate != null &&
+                    this.PayRate.Equals(input.PayRate))
                 );
         }
 
@@ -225,24 +225,24 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.id != null)
-                    hashCode = hashCode * 59 + this.id.GetHashCode();
-                if (this.staff_member_id != null)
-                    hashCode = hashCode * 59 + this.staff_member_id.GetHashCode();
-                if (this.start_date != null)
-                    hashCode = hashCode * 59 + this.start_date.GetHashCode();
-                if (this.end_date != null)
-                    hashCode = hashCode * 59 + this.end_date.GetHashCode();
-                if (this.working_days_lost != null)
-                    hashCode = hashCode * 59 + this.working_days_lost.GetHashCode();
-                if (this.absence_category != null)
-                    hashCode = hashCode * 59 + this.absence_category.GetHashCode();
-                if (this.illness_category != null)
-                    hashCode = hashCode * 59 + this.illness_category.GetHashCode();
-                if (this.pay_rate != null)
-                    hashCode = hashCode * 59 + this.pay_rate.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.StaffMemberId != null)
+                    hashCode = hashCode * 59 + this.StaffMemberId.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
+                if (this.WorkingDaysLost != null)
+                    hashCode = hashCode * 59 + this.WorkingDaysLost.GetHashCode();
+                if (this.AbsenceCategory != null)
+                    hashCode = hashCode * 59 + this.AbsenceCategory.GetHashCode();
+                if (this.IllnessCategory != null)
+                    hashCode = hashCode * 59 + this.IllnessCategory.GetHashCode();
+                if (this.PayRate != null)
+                    hashCode = hashCode * 59 + this.PayRate.GetHashCode();
                 return hashCode;
             }
         }

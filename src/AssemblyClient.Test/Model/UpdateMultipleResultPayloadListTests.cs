@@ -67,60 +67,60 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'total_count'
+        /// Test the property 'TotalCount'
         /// </summary>
         [Test]
-        public void total_countTest()
+        public void TotalCountTest()
         {
-            // TODO unit test for the property 'total_count'
+            // TODO unit test for the property 'TotalCount'
         }
         /// <summary>
-        /// Test the property 'total_pages'
+        /// Test the property 'TotalPages'
         /// </summary>
         [Test]
-        public void total_pagesTest()
+        public void TotalPagesTest()
         {
-            // TODO unit test for the property 'total_pages'
+            // TODO unit test for the property 'TotalPages'
         }
         /// <summary>
-        /// Test the property 'current_page'
+        /// Test the property 'CurrentPage'
         /// </summary>
         [Test]
-        public void current_pageTest()
+        public void CurrentPageTest()
         {
-            // TODO unit test for the property 'current_page'
+            // TODO unit test for the property 'CurrentPage'
         }
         /// <summary>
-        /// Test the property 'prev_page'
+        /// Test the property 'PrevPage'
         /// </summary>
         [Test]
-        public void prev_pageTest()
+        public void PrevPageTest()
         {
-            // TODO unit test for the property 'prev_page'
+            // TODO unit test for the property 'PrevPage'
         }
         /// <summary>
-        /// Test the property 'next_page'
+        /// Test the property 'NextPage'
         /// </summary>
         [Test]
-        public void next_pageTest()
+        public void NextPageTest()
         {
-            // TODO unit test for the property 'next_page'
+            // TODO unit test for the property 'NextPage'
         }
         /// <summary>
-        /// Test the property 'data'
+        /// Test the property 'Data'
         /// </summary>
         [Test]
-        public void dataTest()
+        public void DataTest()
         {
-            // TODO unit test for the property 'data'
+            // TODO unit test for the property 'Data'
         }
 
     }

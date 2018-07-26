@@ -37,8 +37,8 @@ namespace AssemblyClient.Model
         /// <param name="data">data.</param>
         public ErrorRateLimit(string error = default(string), ErrorData data = default(ErrorData))
         {
-            this.error = error;
-            this.data = data;
+            this.Error = error;
+            this.Data = data;
         }
         
         /// <summary>
@@ -46,13 +46,13 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Summary of error</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
-        public string error { get; set; }
+        public string Error { get; set; }
 
         /// <summary>
-        /// Gets or Sets data
+        /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public ErrorData data { get; set; }
+        public ErrorData Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,8 +62,8 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ErrorRateLimit {\n");
-            sb.Append("  error: ").Append(error).Append("\n");
-            sb.Append("  data: ").Append(data).Append("\n");
+            sb.Append("  Error: ").Append(Error).Append("\n");
+            sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,14 +99,14 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this.error == input.error ||
-                    (this.error != null &&
-                    this.error.Equals(input.error))
+                    this.Error == input.Error ||
+                    (this.Error != null &&
+                    this.Error.Equals(input.Error))
                 ) && 
                 (
-                    this.data == input.data ||
-                    (this.data != null &&
-                    this.data.Equals(input.data))
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
                 );
         }
 
@@ -119,10 +119,10 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.error != null)
-                    hashCode = hashCode * 59 + this.error.GetHashCode();
-                if (this.data != null)
-                    hashCode = hashCode * 59 + this.data.GetHashCode();
+                if (this.Error != null)
+                    hashCode = hashCode * 59 + this.Error.GetHashCode();
+                if (this.Data != null)
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
                 return hashCode;
             }
         }

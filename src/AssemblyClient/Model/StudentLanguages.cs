@@ -42,13 +42,13 @@ namespace AssemblyClient.Model
         /// <param name="proficiencyInEnglishName">A student&#39;s proficiency in English name.</param>
         public StudentLanguages(string _object = default(string), string homeLanguageCode = default(string), string homeLanguageName = default(string), string firstLanguageCode = default(string), string firstLanguageName = default(string), string proficiencyInEnglishCode = default(string), string proficiencyInEnglishName = default(string))
         {
-            this._object = _object;
-            this.home_language_code = homeLanguageCode;
-            this.home_language_name = homeLanguageName;
-            this.first_language_code = firstLanguageCode;
-            this.first_language_name = firstLanguageName;
-            this.proficiency_in_english_code = proficiencyInEnglishCode;
-            this.proficiency_in_english_name = proficiencyInEnglishName;
+            this.Object = _object;
+            this.HomeLanguageCode = homeLanguageCode;
+            this.HomeLanguageName = homeLanguageName;
+            this.FirstLanguageCode = firstLanguageCode;
+            this.FirstLanguageName = firstLanguageName;
+            this.ProficiencyInEnglishCode = proficiencyInEnglishCode;
+            this.ProficiencyInEnglishName = proficiencyInEnglishName;
         }
         
         /// <summary>
@@ -56,49 +56,49 @@ namespace AssemblyClient.Model
         /// </summary>
         /// <value>Object type</value>
         [DataMember(Name="object", EmitDefaultValue=false)]
-        public string _object { get; set; }
+        public string Object { get; set; }
 
         /// <summary>
         /// The code of a student&#39;s home language
         /// </summary>
         /// <value>The code of a student&#39;s home language</value>
         [DataMember(Name="home_language_code", EmitDefaultValue=false)]
-        public string home_language_code { get; set; }
+        public string HomeLanguageCode { get; set; }
 
         /// <summary>
         /// The name of a student&#39;s home language
         /// </summary>
         /// <value>The name of a student&#39;s home language</value>
         [DataMember(Name="home_language_name", EmitDefaultValue=false)]
-        public string home_language_name { get; set; }
+        public string HomeLanguageName { get; set; }
 
         /// <summary>
         /// The code of a student&#39;s first language
         /// </summary>
         /// <value>The code of a student&#39;s first language</value>
         [DataMember(Name="first_language_code", EmitDefaultValue=false)]
-        public string first_language_code { get; set; }
+        public string FirstLanguageCode { get; set; }
 
         /// <summary>
         /// The name of a student&#39;s first language
         /// </summary>
         /// <value>The name of a student&#39;s first language</value>
         [DataMember(Name="first_language_name", EmitDefaultValue=false)]
-        public string first_language_name { get; set; }
+        public string FirstLanguageName { get; set; }
 
         /// <summary>
         /// A student&#39;s proficiency in English code
         /// </summary>
         /// <value>A student&#39;s proficiency in English code</value>
         [DataMember(Name="proficiency_in_english_code", EmitDefaultValue=false)]
-        public string proficiency_in_english_code { get; set; }
+        public string ProficiencyInEnglishCode { get; set; }
 
         /// <summary>
         /// A student&#39;s proficiency in English name
         /// </summary>
         /// <value>A student&#39;s proficiency in English name</value>
         [DataMember(Name="proficiency_in_english_name", EmitDefaultValue=false)]
-        public string proficiency_in_english_name { get; set; }
+        public string ProficiencyInEnglishName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -108,13 +108,13 @@ namespace AssemblyClient.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StudentLanguages {\n");
-            sb.Append("  _object: ").Append(_object).Append("\n");
-            sb.Append("  home_language_code: ").Append(home_language_code).Append("\n");
-            sb.Append("  home_language_name: ").Append(home_language_name).Append("\n");
-            sb.Append("  first_language_code: ").Append(first_language_code).Append("\n");
-            sb.Append("  first_language_name: ").Append(first_language_name).Append("\n");
-            sb.Append("  proficiency_in_english_code: ").Append(proficiency_in_english_code).Append("\n");
-            sb.Append("  proficiency_in_english_name: ").Append(proficiency_in_english_name).Append("\n");
+            sb.Append("  Object: ").Append(Object).Append("\n");
+            sb.Append("  HomeLanguageCode: ").Append(HomeLanguageCode).Append("\n");
+            sb.Append("  HomeLanguageName: ").Append(HomeLanguageName).Append("\n");
+            sb.Append("  FirstLanguageCode: ").Append(FirstLanguageCode).Append("\n");
+            sb.Append("  FirstLanguageName: ").Append(FirstLanguageName).Append("\n");
+            sb.Append("  ProficiencyInEnglishCode: ").Append(ProficiencyInEnglishCode).Append("\n");
+            sb.Append("  ProficiencyInEnglishName: ").Append(ProficiencyInEnglishName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,39 +150,39 @@ namespace AssemblyClient.Model
 
             return 
                 (
-                    this._object == input._object ||
-                    (this._object != null &&
-                    this._object.Equals(input._object))
+                    this.Object == input.Object ||
+                    (this.Object != null &&
+                    this.Object.Equals(input.Object))
                 ) && 
                 (
-                    this.home_language_code == input.home_language_code ||
-                    (this.home_language_code != null &&
-                    this.home_language_code.Equals(input.home_language_code))
+                    this.HomeLanguageCode == input.HomeLanguageCode ||
+                    (this.HomeLanguageCode != null &&
+                    this.HomeLanguageCode.Equals(input.HomeLanguageCode))
                 ) && 
                 (
-                    this.home_language_name == input.home_language_name ||
-                    (this.home_language_name != null &&
-                    this.home_language_name.Equals(input.home_language_name))
+                    this.HomeLanguageName == input.HomeLanguageName ||
+                    (this.HomeLanguageName != null &&
+                    this.HomeLanguageName.Equals(input.HomeLanguageName))
                 ) && 
                 (
-                    this.first_language_code == input.first_language_code ||
-                    (this.first_language_code != null &&
-                    this.first_language_code.Equals(input.first_language_code))
+                    this.FirstLanguageCode == input.FirstLanguageCode ||
+                    (this.FirstLanguageCode != null &&
+                    this.FirstLanguageCode.Equals(input.FirstLanguageCode))
                 ) && 
                 (
-                    this.first_language_name == input.first_language_name ||
-                    (this.first_language_name != null &&
-                    this.first_language_name.Equals(input.first_language_name))
+                    this.FirstLanguageName == input.FirstLanguageName ||
+                    (this.FirstLanguageName != null &&
+                    this.FirstLanguageName.Equals(input.FirstLanguageName))
                 ) && 
                 (
-                    this.proficiency_in_english_code == input.proficiency_in_english_code ||
-                    (this.proficiency_in_english_code != null &&
-                    this.proficiency_in_english_code.Equals(input.proficiency_in_english_code))
+                    this.ProficiencyInEnglishCode == input.ProficiencyInEnglishCode ||
+                    (this.ProficiencyInEnglishCode != null &&
+                    this.ProficiencyInEnglishCode.Equals(input.ProficiencyInEnglishCode))
                 ) && 
                 (
-                    this.proficiency_in_english_name == input.proficiency_in_english_name ||
-                    (this.proficiency_in_english_name != null &&
-                    this.proficiency_in_english_name.Equals(input.proficiency_in_english_name))
+                    this.ProficiencyInEnglishName == input.ProficiencyInEnglishName ||
+                    (this.ProficiencyInEnglishName != null &&
+                    this.ProficiencyInEnglishName.Equals(input.ProficiencyInEnglishName))
                 );
         }
 
@@ -195,20 +195,20 @@ namespace AssemblyClient.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._object != null)
-                    hashCode = hashCode * 59 + this._object.GetHashCode();
-                if (this.home_language_code != null)
-                    hashCode = hashCode * 59 + this.home_language_code.GetHashCode();
-                if (this.home_language_name != null)
-                    hashCode = hashCode * 59 + this.home_language_name.GetHashCode();
-                if (this.first_language_code != null)
-                    hashCode = hashCode * 59 + this.first_language_code.GetHashCode();
-                if (this.first_language_name != null)
-                    hashCode = hashCode * 59 + this.first_language_name.GetHashCode();
-                if (this.proficiency_in_english_code != null)
-                    hashCode = hashCode * 59 + this.proficiency_in_english_code.GetHashCode();
-                if (this.proficiency_in_english_name != null)
-                    hashCode = hashCode * 59 + this.proficiency_in_english_name.GetHashCode();
+                if (this.Object != null)
+                    hashCode = hashCode * 59 + this.Object.GetHashCode();
+                if (this.HomeLanguageCode != null)
+                    hashCode = hashCode * 59 + this.HomeLanguageCode.GetHashCode();
+                if (this.HomeLanguageName != null)
+                    hashCode = hashCode * 59 + this.HomeLanguageName.GetHashCode();
+                if (this.FirstLanguageCode != null)
+                    hashCode = hashCode * 59 + this.FirstLanguageCode.GetHashCode();
+                if (this.FirstLanguageName != null)
+                    hashCode = hashCode * 59 + this.FirstLanguageName.GetHashCode();
+                if (this.ProficiencyInEnglishCode != null)
+                    hashCode = hashCode * 59 + this.ProficiencyInEnglishCode.GetHashCode();
+                if (this.ProficiencyInEnglishName != null)
+                    hashCode = hashCode * 59 + this.ProficiencyInEnglishName.GetHashCode();
                 return hashCode;
             }
         }

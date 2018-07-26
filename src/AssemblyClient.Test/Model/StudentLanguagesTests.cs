@@ -67,60 +67,60 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property '_object'
+        /// Test the property 'Object'
         /// </summary>
         [Test]
-        public void _objectTest()
+        public void ObjectTest()
         {
-            // TODO unit test for the property '_object'
+            // TODO unit test for the property 'Object'
         }
         /// <summary>
-        /// Test the property 'home_language_code'
+        /// Test the property 'HomeLanguageCode'
         /// </summary>
         [Test]
-        public void home_language_codeTest()
+        public void HomeLanguageCodeTest()
         {
-            // TODO unit test for the property 'home_language_code'
+            // TODO unit test for the property 'HomeLanguageCode'
         }
         /// <summary>
-        /// Test the property 'home_language_name'
+        /// Test the property 'HomeLanguageName'
         /// </summary>
         [Test]
-        public void home_language_nameTest()
+        public void HomeLanguageNameTest()
         {
-            // TODO unit test for the property 'home_language_name'
+            // TODO unit test for the property 'HomeLanguageName'
         }
         /// <summary>
-        /// Test the property 'first_language_code'
+        /// Test the property 'FirstLanguageCode'
         /// </summary>
         [Test]
-        public void first_language_codeTest()
+        public void FirstLanguageCodeTest()
         {
-            // TODO unit test for the property 'first_language_code'
+            // TODO unit test for the property 'FirstLanguageCode'
         }
         /// <summary>
-        /// Test the property 'first_language_name'
+        /// Test the property 'FirstLanguageName'
         /// </summary>
         [Test]
-        public void first_language_nameTest()
+        public void FirstLanguageNameTest()
         {
-            // TODO unit test for the property 'first_language_name'
+            // TODO unit test for the property 'FirstLanguageName'
         }
         /// <summary>
-        /// Test the property 'proficiency_in_english_code'
+        /// Test the property 'ProficiencyInEnglishCode'
         /// </summary>
         [Test]
-        public void proficiency_in_english_codeTest()
+        public void ProficiencyInEnglishCodeTest()
         {
-            // TODO unit test for the property 'proficiency_in_english_code'
+            // TODO unit test for the property 'ProficiencyInEnglishCode'
         }
         /// <summary>
-        /// Test the property 'proficiency_in_english_name'
+        /// Test the property 'ProficiencyInEnglishName'
         /// </summary>
         [Test]
-        public void proficiency_in_english_nameTest()
+        public void ProficiencyInEnglishNameTest()
         {
-            // TODO unit test for the property 'proficiency_in_english_name'
+            // TODO unit test for the property 'ProficiencyInEnglishName'
         }
 
     }

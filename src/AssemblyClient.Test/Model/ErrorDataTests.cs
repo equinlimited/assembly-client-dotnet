@@ -67,28 +67,28 @@ namespace AssemblyClient.Test
 
 
         /// <summary>
-        /// Test the property 'count'
+        /// Test the property 'Count'
         /// </summary>
         [Test]
-        public void countTest()
+        public void CountTest()
         {
-            // TODO unit test for the property 'count'
+            // TODO unit test for the property 'Count'
         }
         /// <summary>
-        /// Test the property 'period'
+        /// Test the property 'Period'
         /// </summary>
         [Test]
-        public void periodTest()
+        public void PeriodTest()
         {
-            // TODO unit test for the property 'period'
+            // TODO unit test for the property 'Period'
         }
         /// <summary>
-        /// Test the property 'limit'
+        /// Test the property 'Limit'
         /// </summary>
         [Test]
-        public void limitTest()
+        public void LimitTest()
         {
-            // TODO unit test for the property 'limit'
+            // TODO unit test for the property 'Limit'
         }
 
     }

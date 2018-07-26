@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message** | **string** | No description | [optional] 
-**data** | [**List&lt;CreateResultPayloadResults&gt;**](CreateResultPayloadResults.md) | No description | [optional] 
+**Message** | **string** | No description | [optional] 
+**Data** | [**List&lt;CreateResultPayloadResults&gt;**](CreateResultPayloadResults.md) | No description | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
