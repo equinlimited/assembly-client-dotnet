@@ -81,7 +81,7 @@ Contact: help@assembly.education
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\assembly-client-dotnet\assembly-client-dotnet.csproj">
-          <Project>{80648002-8904-4260-8F2E-685BC9402F0A}</Project>
+          <Project>{9706F0CA-2B6F-4C2B-B5A7-0DEAE529AB01}</Project>
           <Name>assembly-client-dotnet</Name>
       </ProjectReference>
   </ItemGroup>
