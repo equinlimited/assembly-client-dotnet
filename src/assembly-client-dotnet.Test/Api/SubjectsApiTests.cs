@@ -65,16 +65,16 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test Subjects
+        /// Test GetSubjects
         /// </summary>
         [Test]
-        public void SubjectsTest()
+        public void GetSubjectsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //bool? misMappings = null;
             //int? page = null;
             //int? perPage = null;
-            //var response = instance.Subjects(misMappings, page, perPage);
+            //var response = instance.GetSubjects(misMappings, page, perPage);
             //Assert.IsInstanceOf<SubjectList> (response, "response is SubjectList");
         }
         

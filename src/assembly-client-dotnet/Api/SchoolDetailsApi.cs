@@ -32,7 +32,7 @@ namespace assembly-client-dotnet.Api
         /// </remarks>
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SchoolDetails</returns>
-        SchoolDetails SchoolDetails ();
+        SchoolDetails GetSchoolDetails ();
 
         /// <summary>
         /// 
@@ -42,7 +42,7 @@ namespace assembly-client-dotnet.Api
         /// </remarks>
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SchoolDetails</returns>
-        ApiResponse<SchoolDetails> SchoolDetailsWithHttpInfo ();
+        ApiResponse<SchoolDetails> GetSchoolDetailsWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -53,7 +53,7 @@ namespace assembly-client-dotnet.Api
         /// </remarks>
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SchoolDetails</returns>
-        System.Threading.Tasks.Task<SchoolDetails> SchoolDetailsAsync ();
+        System.Threading.Tasks.Task<SchoolDetails> GetSchoolDetailsAsync ();
 
         /// <summary>
         /// 
@@ -63,7 +63,7 @@ namespace assembly-client-dotnet.Api
         /// </remarks>
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SchoolDetails)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SchoolDetails>> SchoolDetailsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<SchoolDetails>> GetSchoolDetailsAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -169,9 +169,9 @@ namespace assembly-client-dotnet.Api
         /// </summary>
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SchoolDetails</returns>
-        public SchoolDetails SchoolDetails ()
+        public SchoolDetails GetSchoolDetails ()
         {
-             ApiResponse<SchoolDetails> localVarResponse = SchoolDetailsWithHttpInfo();
+             ApiResponse<SchoolDetails> localVarResponse = GetSchoolDetailsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -180,7 +180,7 @@ namespace assembly-client-dotnet.Api
         /// </summary>
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SchoolDetails</returns>
-        public ApiResponse< SchoolDetails > SchoolDetailsWithHttpInfo ()
+        public ApiResponse< SchoolDetails > GetSchoolDetailsWithHttpInfo ()
         {
 
             var localVarPath = "/school_details";
@@ -222,7 +222,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SchoolDetails", localVarResponse);
+                Exception exception = ExceptionFactory("GetSchoolDetails", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -236,9 +236,9 @@ namespace assembly-client-dotnet.Api
         /// </summary>
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SchoolDetails</returns>
-        public async System.Threading.Tasks.Task<SchoolDetails> SchoolDetailsAsync ()
+        public async System.Threading.Tasks.Task<SchoolDetails> GetSchoolDetailsAsync ()
         {
-             ApiResponse<SchoolDetails> localVarResponse = await SchoolDetailsAsyncWithHttpInfo();
+             ApiResponse<SchoolDetails> localVarResponse = await GetSchoolDetailsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -248,7 +248,7 @@ namespace assembly-client-dotnet.Api
         /// </summary>
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SchoolDetails)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SchoolDetails>> SchoolDetailsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<SchoolDetails>> GetSchoolDetailsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/school_details";
@@ -290,7 +290,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SchoolDetails", localVarResponse);
+                Exception exception = ExceptionFactory("GetSchoolDetails", localVarResponse);
                 if (exception != null) throw exception;
             }
 

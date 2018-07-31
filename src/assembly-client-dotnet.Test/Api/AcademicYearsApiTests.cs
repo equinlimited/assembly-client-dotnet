@@ -65,15 +65,15 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test AcademicYears
+        /// Test GetAcademicYears
         /// </summary>
         [Test]
-        public void AcademicYearsTest()
+        public void GetAcademicYearsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? page = null;
             //int? perPage = null;
-            //var response = instance.AcademicYears(page, perPage);
+            //var response = instance.GetAcademicYears(page, perPage);
             //Assert.IsInstanceOf<AcademicYearList> (response, "response is AcademicYearList");
         }
         

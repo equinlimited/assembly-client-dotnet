@@ -36,7 +36,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ExclusionList</returns>
-        ExclusionList Exclusions (string startDate = null, string endDate = null, int? page = null, int? perPage = null);
+        ExclusionList GetExclusions (string startDate = null, string endDate = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -50,7 +50,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ExclusionList</returns>
-        ApiResponse<ExclusionList> ExclusionsWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null);
+        ApiResponse<ExclusionList> GetExclusionsWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null);
         /// <summary>
         /// 
         /// </summary>
@@ -64,7 +64,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ExclusionList</returns>
-        ExclusionList ExclusionsStudentId (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null);
+        ExclusionList GetExclusionsStudentId (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -79,7 +79,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ExclusionList</returns>
-        ApiResponse<ExclusionList> ExclusionsStudentIdWithHttpInfo (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null);
+        ApiResponse<ExclusionList> GetExclusionsStudentIdWithHttpInfo (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -94,7 +94,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ExclusionList</returns>
-        System.Threading.Tasks.Task<ExclusionList> ExclusionsAsync (string startDate = null, string endDate = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ExclusionList> GetExclusionsAsync (string startDate = null, string endDate = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -108,7 +108,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ExclusionList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExclusionList>> ExclusionsAsyncWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ExclusionList>> GetExclusionsAsyncWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null);
         /// <summary>
         /// 
         /// </summary>
@@ -122,7 +122,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ExclusionList</returns>
-        System.Threading.Tasks.Task<ExclusionList> ExclusionsStudentIdAsync (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ExclusionList> GetExclusionsStudentIdAsync (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -137,7 +137,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ExclusionList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExclusionList>> ExclusionsStudentIdAsyncWithHttpInfo (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ExclusionList>> GetExclusionsStudentIdAsyncWithHttpInfo (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null);
         #endregion Asynchronous Operations
     }
 
@@ -247,9 +247,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ExclusionList</returns>
-        public ExclusionList Exclusions (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+        public ExclusionList GetExclusions (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<ExclusionList> localVarResponse = ExclusionsWithHttpInfo(startDate, endDate, page, perPage);
+             ApiResponse<ExclusionList> localVarResponse = GetExclusionsWithHttpInfo(startDate, endDate, page, perPage);
              return localVarResponse.Data;
         }
 
@@ -262,7 +262,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ExclusionList</returns>
-        public ApiResponse< ExclusionList > ExclusionsWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+        public ApiResponse< ExclusionList > GetExclusionsWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/exclusions";
@@ -308,7 +308,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Exclusions", localVarResponse);
+                Exception exception = ExceptionFactory("GetExclusions", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -326,9 +326,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ExclusionList</returns>
-        public async System.Threading.Tasks.Task<ExclusionList> ExclusionsAsync (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ExclusionList> GetExclusionsAsync (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<ExclusionList> localVarResponse = await ExclusionsAsyncWithHttpInfo(startDate, endDate, page, perPage);
+             ApiResponse<ExclusionList> localVarResponse = await GetExclusionsAsyncWithHttpInfo(startDate, endDate, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -342,7 +342,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ExclusionList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExclusionList>> ExclusionsAsyncWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExclusionList>> GetExclusionsAsyncWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/exclusions";
@@ -388,7 +388,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Exclusions", localVarResponse);
+                Exception exception = ExceptionFactory("GetExclusions", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -407,9 +407,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ExclusionList</returns>
-        public ExclusionList ExclusionsStudentId (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+        public ExclusionList GetExclusionsStudentId (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<ExclusionList> localVarResponse = ExclusionsStudentIdWithHttpInfo(studentId, startDate, endDate, page, perPage);
+             ApiResponse<ExclusionList> localVarResponse = GetExclusionsStudentIdWithHttpInfo(studentId, startDate, endDate, page, perPage);
              return localVarResponse.Data;
         }
 
@@ -423,11 +423,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ExclusionList</returns>
-        public ApiResponse< ExclusionList > ExclusionsStudentIdWithHttpInfo (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+        public ApiResponse< ExclusionList > GetExclusionsStudentIdWithHttpInfo (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
         {
             // verify the required parameter 'studentId' is set
             if (studentId == null)
-                throw new ApiException(400, "Missing required parameter 'studentId' when calling ExclusionsApi->ExclusionsStudentId");
+                throw new ApiException(400, "Missing required parameter 'studentId' when calling ExclusionsApi->GetExclusionsStudentId");
 
             var localVarPath = "/exclusions/{student_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -473,7 +473,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ExclusionsStudentId", localVarResponse);
+                Exception exception = ExceptionFactory("GetExclusionsStudentId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -492,9 +492,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ExclusionList</returns>
-        public async System.Threading.Tasks.Task<ExclusionList> ExclusionsStudentIdAsync (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ExclusionList> GetExclusionsStudentIdAsync (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<ExclusionList> localVarResponse = await ExclusionsStudentIdAsyncWithHttpInfo(studentId, startDate, endDate, page, perPage);
+             ApiResponse<ExclusionList> localVarResponse = await GetExclusionsStudentIdAsyncWithHttpInfo(studentId, startDate, endDate, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -509,11 +509,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ExclusionList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExclusionList>> ExclusionsStudentIdAsyncWithHttpInfo (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExclusionList>> GetExclusionsStudentIdAsyncWithHttpInfo (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
         {
             // verify the required parameter 'studentId' is set
             if (studentId == null)
-                throw new ApiException(400, "Missing required parameter 'studentId' when calling ExclusionsApi->ExclusionsStudentId");
+                throw new ApiException(400, "Missing required parameter 'studentId' when calling ExclusionsApi->GetExclusionsStudentId");
 
             var localVarPath = "/exclusions/{student_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -559,7 +559,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ExclusionsStudentId", localVarResponse);
+                Exception exception = ExceptionFactory("GetExclusionsStudentId", localVarResponse);
                 if (exception != null) throw exception;
             }
 

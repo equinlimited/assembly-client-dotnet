@@ -65,16 +65,16 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test Contacts
+        /// Test GetContacts
         /// </summary>
         [Test]
-        public void ContactsTest()
+        public void GetContactsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? studentId = null;
             //int? page = null;
             //int? perPage = null;
-            //var response = instance.Contacts(studentId, page, perPage);
+            //var response = instance.GetContacts(studentId, page, perPage);
             //Assert.IsInstanceOf<ContactList> (response, "response is ContactList");
         }
         

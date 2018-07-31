@@ -65,10 +65,10 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test Attendances
+        /// Test GetAttendances
         /// </summary>
         [Test]
-        public void AttendancesTest()
+        public void GetAttendancesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? studentId = null;
@@ -78,7 +78,7 @@ namespace assembly-client-dotnet.Test
             //int? page = null;
             //int? perPage = null;
             //string ifModifiedSince = null;
-            //var response = instance.Attendances(studentId, registrationGroupId, startDate, endDate, page, perPage, ifModifiedSince);
+            //var response = instance.GetAttendances(studentId, registrationGroupId, startDate, endDate, page, perPage, ifModifiedSince);
             //Assert.IsInstanceOf<AttendanceList> (response, "response is AttendanceList");
         }
         

@@ -65,10 +65,10 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test TeachingGroups
+        /// Test GetTeachingGroups
         /// </summary>
         [Test]
-        public void TeachingGroupsTest()
+        public void GetTeachingGroupsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string subjectCode = null;
@@ -77,29 +77,29 @@ namespace assembly-client-dotnet.Test
             //int? academicYearId = null;
             //int? page = null;
             //int? perPage = null;
-            //var response = instance.TeachingGroups(subjectCode, yearCode, date, academicYearId, page, perPage);
+            //var response = instance.GetTeachingGroups(subjectCode, yearCode, date, academicYearId, page, perPage);
             //Assert.IsInstanceOf<TeachingGroupList> (response, "response is TeachingGroupList");
         }
         
         /// <summary>
-        /// Test TeachingGroupsGroupId
+        /// Test GetTeachingGroupsGroupId
         /// </summary>
         [Test]
-        public void TeachingGroupsGroupIdTest()
+        public void GetTeachingGroupsGroupIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string groupId = null;
             //string date = null;
             //int? academicYearId = null;
-            //var response = instance.TeachingGroupsGroupId(groupId, date, academicYearId);
+            //var response = instance.GetTeachingGroupsGroupId(groupId, date, academicYearId);
             //Assert.IsInstanceOf<TeachingGroup> (response, "response is TeachingGroup");
         }
         
         /// <summary>
-        /// Test TeachingGroupsGroupIdStudents
+        /// Test GetTeachingGroupsGroupIdStudents
         /// </summary>
         [Test]
-        public void TeachingGroupsGroupIdStudentsTest()
+        public void GetTeachingGroupsGroupIdStudentsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string groupId = null;
@@ -111,7 +111,7 @@ namespace assembly-client-dotnet.Test
             //int? page = null;
             //int? perPage = null;
             //string ifModifiedSince = null;
-            //var response = instance.TeachingGroupsGroupIdStudents(groupId, yearCode, date, academicYearId, demographics, care, page, perPage, ifModifiedSince);
+            //var response = instance.GetTeachingGroupsGroupIdStudents(groupId, yearCode, date, academicYearId, demographics, care, page, perPage, ifModifiedSince);
             //Assert.IsInstanceOf<StudentList> (response, "response is StudentList");
         }
         

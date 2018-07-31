@@ -4,14 +4,14 @@ All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**YearGroups**](YearGroupsApi.md#yeargroups) | **GET** /year_groups | 
-[**YearGroupsGroupId**](YearGroupsApi.md#yeargroupsgroupid) | **GET** /year_groups/{group_id} | 
-[**YearGroupsGroupIdStudents**](YearGroupsApi.md#yeargroupsgroupidstudents) | **GET** /year_groups/{group_id}/students | 
+[**GetYearGroups**](YearGroupsApi.md#getyeargroups) | **GET** /year_groups | 
+[**GetYearGroupsGroupId**](YearGroupsApi.md#getyeargroupsgroupid) | **GET** /year_groups/{group_id} | 
+[**GetYearGroupsGroupIdStudents**](YearGroupsApi.md#getyeargroupsgroupidstudents) | **GET** /year_groups/{group_id}/students | 
 
 
-<a name="yeargroups"></a>
-# **YearGroups**
-> YearGroupList YearGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="getyeargroups"></a>
+# **GetYearGroups**
+> YearGroupList GetYearGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -27,7 +27,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class YearGroupsExample
+    public class GetYearGroupsExample
     {
         public void main()
         {
@@ -44,12 +44,12 @@ namespace Example
 
             try
             {
-                YearGroupList result = apiInstance.YearGroups(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
+                YearGroupList result = apiInstance.GetYearGroups(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling YearGroupsApi.YearGroups: " + e.Message );
+                Debug.Print("Exception when calling YearGroupsApi.GetYearGroups: " + e.Message );
             }
         }
     }
@@ -82,9 +82,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="yeargroupsgroupid"></a>
-# **YearGroupsGroupId**
-> YearGroup YearGroupsGroupId (string groupId, string date = null, int? academicYearId = null)
+<a name="getyeargroupsgroupid"></a>
+# **GetYearGroupsGroupId**
+> YearGroup GetYearGroupsGroupId (string groupId, string date = null, int? academicYearId = null)
 
 
 
@@ -100,7 +100,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class YearGroupsGroupIdExample
+    public class GetYearGroupsGroupIdExample
     {
         public void main()
         {
@@ -114,12 +114,12 @@ namespace Example
 
             try
             {
-                YearGroup result = apiInstance.YearGroupsGroupId(groupId, date, academicYearId);
+                YearGroup result = apiInstance.GetYearGroupsGroupId(groupId, date, academicYearId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling YearGroupsApi.YearGroupsGroupId: " + e.Message );
+                Debug.Print("Exception when calling YearGroupsApi.GetYearGroupsGroupId: " + e.Message );
             }
         }
     }
@@ -149,9 +149,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="yeargroupsgroupidstudents"></a>
-# **YearGroupsGroupIdStudents**
-> StudentList YearGroupsGroupIdStudents (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="getyeargroupsgroupidstudents"></a>
+# **GetYearGroupsGroupIdStudents**
+> StudentList GetYearGroupsGroupIdStudents (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -167,7 +167,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class YearGroupsGroupIdStudentsExample
+    public class GetYearGroupsGroupIdStudentsExample
     {
         public void main()
         {
@@ -184,12 +184,12 @@ namespace Example
 
             try
             {
-                StudentList result = apiInstance.YearGroupsGroupIdStudents(groupId, date, academicYearId, page, perPage, ifModifiedSince);
+                StudentList result = apiInstance.GetYearGroupsGroupIdStudents(groupId, date, academicYearId, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling YearGroupsApi.YearGroupsGroupIdStudents: " + e.Message );
+                Debug.Print("Exception when calling YearGroupsApi.GetYearGroupsGroupIdStudents: " + e.Message );
             }
         }
     }

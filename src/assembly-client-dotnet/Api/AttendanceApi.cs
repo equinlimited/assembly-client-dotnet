@@ -39,7 +39,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>AttendanceList</returns>
-        AttendanceList Attendances (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        AttendanceList GetAttendances (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -56,7 +56,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of AttendanceList</returns>
-        ApiResponse<AttendanceList> AttendancesWithHttpInfo (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        ApiResponse<AttendanceList> GetAttendancesWithHttpInfo (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -74,7 +74,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of AttendanceList</returns>
-        System.Threading.Tasks.Task<AttendanceList> AttendancesAsync (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<AttendanceList> GetAttendancesAsync (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -91,7 +91,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (AttendanceList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttendanceList>> AttendancesAsyncWithHttpInfo (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<AttendanceList>> GetAttendancesAsyncWithHttpInfo (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         #endregion Asynchronous Operations
     }
 
@@ -204,9 +204,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>AttendanceList</returns>
-        public AttendanceList Attendances (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public AttendanceList GetAttendances (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<AttendanceList> localVarResponse = AttendancesWithHttpInfo(studentId, registrationGroupId, startDate, endDate, page, perPage, ifModifiedSince);
+             ApiResponse<AttendanceList> localVarResponse = GetAttendancesWithHttpInfo(studentId, registrationGroupId, startDate, endDate, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -222,7 +222,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of AttendanceList</returns>
-        public ApiResponse< AttendanceList > AttendancesWithHttpInfo (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public ApiResponse< AttendanceList > GetAttendancesWithHttpInfo (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/attendances";
@@ -271,7 +271,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Attendances", localVarResponse);
+                Exception exception = ExceptionFactory("GetAttendances", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -292,9 +292,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of AttendanceList</returns>
-        public async System.Threading.Tasks.Task<AttendanceList> AttendancesAsync (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<AttendanceList> GetAttendancesAsync (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<AttendanceList> localVarResponse = await AttendancesAsyncWithHttpInfo(studentId, registrationGroupId, startDate, endDate, page, perPage, ifModifiedSince);
+             ApiResponse<AttendanceList> localVarResponse = await GetAttendancesAsyncWithHttpInfo(studentId, registrationGroupId, startDate, endDate, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -311,7 +311,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (AttendanceList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AttendanceList>> AttendancesAsyncWithHttpInfo (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AttendanceList>> GetAttendancesAsyncWithHttpInfo (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/attendances";
@@ -360,7 +360,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Attendances", localVarResponse);
+                Exception exception = ExceptionFactory("GetAttendances", localVarResponse);
                 if (exception != null) throw exception;
             }
 

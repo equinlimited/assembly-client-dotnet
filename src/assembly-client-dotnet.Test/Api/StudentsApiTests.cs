@@ -65,10 +65,10 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test Students
+        /// Test GetStudents
         /// </summary>
         [Test]
-        public void StudentsTest()
+        public void GetStudentsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string yearCode = null;
@@ -83,15 +83,15 @@ namespace assembly-client-dotnet.Test
             //int? page = null;
             //int? perPage = null;
             //string ifModifiedSince = null;
-            //var response = instance.Students(yearCode, students, date, demographics, contacts, senNeeds, addresses, care, languages, page, perPage, ifModifiedSince);
+            //var response = instance.GetStudents(yearCode, students, date, demographics, contacts, senNeeds, addresses, care, languages, page, perPage, ifModifiedSince);
             //Assert.IsInstanceOf<StudentList> (response, "response is StudentList");
         }
         
         /// <summary>
-        /// Test StudentsStudentId
+        /// Test GetStudentsStudentId
         /// </summary>
         [Test]
-        public void StudentsStudentIdTest()
+        public void GetStudentsStudentIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string studentId = null;
@@ -103,7 +103,7 @@ namespace assembly-client-dotnet.Test
             //bool? care = null;
             //bool? languages = null;
             //string ifModifiedSince = null;
-            //var response = instance.StudentsStudentId(studentId, date, demographics, contacts, senNeeds, addresses, care, languages, ifModifiedSince);
+            //var response = instance.GetStudentsStudentId(studentId, date, demographics, contacts, senNeeds, addresses, care, languages, ifModifiedSince);
             //Assert.IsInstanceOf<Student> (response, "response is Student");
         }
         

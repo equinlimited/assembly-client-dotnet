@@ -4,22 +4,22 @@ All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AssessmentPoints**](AssessmentsApi.md#assessmentpoints) | **GET** /assessment_points | 
-[**AssessmentPointsAssessmentPointRank**](AssessmentsApi.md#assessmentpointsassessmentpointrank) | **GET** /assessment_points/{assessment_point_rank} | 
-[**AssessmentPointsAssessmentPointRankResults**](AssessmentsApi.md#assessmentpointsassessmentpointrankresults) | **GET** /assessment_points/{assessment_point_rank}/results | 
-[**Assessments**](AssessmentsApi.md#assessments) | **GET** /assessments | 
-[**AssessmentsAssessmentId**](AssessmentsApi.md#assessmentsassessmentid) | **GET** /assessments/{assessment_id} | 
-[**AssessmentsAssessmentIdGradeSet**](AssessmentsApi.md#assessmentsassessmentidgradeset) | **GET** /assessments/{assessment_id}/grade_set | 
-[**AssessmentsAssessmentIdResults**](AssessmentsApi.md#assessmentsassessmentidresults) | **GET** /assessments/{assessment_id}/results | 
-[**FacetFacetId**](AssessmentsApi.md#facetfacetid) | **GET** /facet/{facet_id} | 
-[**Facets**](AssessmentsApi.md#facets) | **GET** /facets | 
+[**GetAssessmentPoints**](AssessmentsApi.md#getassessmentpoints) | **GET** /assessment_points | 
+[**GetAssessmentPointsAssessmentPointRank**](AssessmentsApi.md#getassessmentpointsassessmentpointrank) | **GET** /assessment_points/{assessment_point_rank} | 
+[**GetAssessmentPointsAssessmentPointRankResults**](AssessmentsApi.md#getassessmentpointsassessmentpointrankresults) | **GET** /assessment_points/{assessment_point_rank}/results | 
+[**GetAssessments**](AssessmentsApi.md#getassessments) | **GET** /assessments | 
+[**GetAssessmentsAssessmentId**](AssessmentsApi.md#getassessmentsassessmentid) | **GET** /assessments/{assessment_id} | 
+[**GetAssessmentsAssessmentIdGradeSet**](AssessmentsApi.md#getassessmentsassessmentidgradeset) | **GET** /assessments/{assessment_id}/grade_set | 
+[**GetAssessmentsAssessmentIdResults**](AssessmentsApi.md#getassessmentsassessmentidresults) | **GET** /assessments/{assessment_id}/results | 
+[**GetFacetFacetId**](AssessmentsApi.md#getfacetfacetid) | **GET** /facet/{facet_id} | 
+[**GetFacets**](AssessmentsApi.md#getfacets) | **GET** /facets | 
 [**PatchResults**](AssessmentsApi.md#patchresults) | **PATCH** /results | 
 [**PatchResultsResultId**](AssessmentsApi.md#patchresultsresultid) | **PATCH** /results/{result_id} | 
 
 
-<a name="assessmentpoints"></a>
-# **AssessmentPoints**
-> AssessmentPointList AssessmentPoints (string yearCode = null, string type = null, int? page = null, int? perPage = null)
+<a name="getassessmentpoints"></a>
+# **GetAssessmentPoints**
+> AssessmentPointList GetAssessmentPoints (string yearCode = null, string type = null, int? page = null, int? perPage = null)
 
 
 
@@ -35,7 +35,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class AssessmentPointsExample
+    public class GetAssessmentPointsExample
     {
         public void main()
         {
@@ -50,12 +50,12 @@ namespace Example
 
             try
             {
-                AssessmentPointList result = apiInstance.AssessmentPoints(yearCode, type, page, perPage);
+                AssessmentPointList result = apiInstance.GetAssessmentPoints(yearCode, type, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AssessmentsApi.AssessmentPoints: " + e.Message );
+                Debug.Print("Exception when calling AssessmentsApi.GetAssessmentPoints: " + e.Message );
             }
         }
     }
@@ -86,9 +86,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="assessmentpointsassessmentpointrank"></a>
-# **AssessmentPointsAssessmentPointRank**
-> AssessmentPoint AssessmentPointsAssessmentPointRank (string assessmentPointRank)
+<a name="getassessmentpointsassessmentpointrank"></a>
+# **GetAssessmentPointsAssessmentPointRank**
+> AssessmentPoint GetAssessmentPointsAssessmentPointRank (string assessmentPointRank)
 
 
 
@@ -104,7 +104,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class AssessmentPointsAssessmentPointRankExample
+    public class GetAssessmentPointsAssessmentPointRankExample
     {
         public void main()
         {
@@ -116,12 +116,12 @@ namespace Example
 
             try
             {
-                AssessmentPoint result = apiInstance.AssessmentPointsAssessmentPointRank(assessmentPointRank);
+                AssessmentPoint result = apiInstance.GetAssessmentPointsAssessmentPointRank(assessmentPointRank);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AssessmentsApi.AssessmentPointsAssessmentPointRank: " + e.Message );
+                Debug.Print("Exception when calling AssessmentsApi.GetAssessmentPointsAssessmentPointRank: " + e.Message );
             }
         }
     }
@@ -149,9 +149,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="assessmentpointsassessmentpointrankresults"></a>
-# **AssessmentPointsAssessmentPointRankResults**
-> ResultList AssessmentPointsAssessmentPointRankResults (string assessmentPointRank, string students = null, int? page = null, int? perPage = null)
+<a name="getassessmentpointsassessmentpointrankresults"></a>
+# **GetAssessmentPointsAssessmentPointRankResults**
+> ResultList GetAssessmentPointsAssessmentPointRankResults (string assessmentPointRank, string students = null, int? page = null, int? perPage = null)
 
 
 
@@ -167,7 +167,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class AssessmentPointsAssessmentPointRankResultsExample
+    public class GetAssessmentPointsAssessmentPointRankResultsExample
     {
         public void main()
         {
@@ -182,12 +182,12 @@ namespace Example
 
             try
             {
-                ResultList result = apiInstance.AssessmentPointsAssessmentPointRankResults(assessmentPointRank, students, page, perPage);
+                ResultList result = apiInstance.GetAssessmentPointsAssessmentPointRankResults(assessmentPointRank, students, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AssessmentsApi.AssessmentPointsAssessmentPointRankResults: " + e.Message );
+                Debug.Print("Exception when calling AssessmentsApi.GetAssessmentPointsAssessmentPointRankResults: " + e.Message );
             }
         }
     }
@@ -218,9 +218,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="assessments"></a>
-# **Assessments**
-> AssessmentList Assessments (bool? misMappings = null, int? page = null, int? perPage = null)
+<a name="getassessments"></a>
+# **GetAssessments**
+> AssessmentList GetAssessments (bool? misMappings = null, int? page = null, int? perPage = null)
 
 
 
@@ -236,7 +236,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class AssessmentsExample
+    public class GetAssessmentsExample
     {
         public void main()
         {
@@ -250,12 +250,12 @@ namespace Example
 
             try
             {
-                AssessmentList result = apiInstance.Assessments(misMappings, page, perPage);
+                AssessmentList result = apiInstance.GetAssessments(misMappings, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AssessmentsApi.Assessments: " + e.Message );
+                Debug.Print("Exception when calling AssessmentsApi.GetAssessments: " + e.Message );
             }
         }
     }
@@ -285,9 +285,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="assessmentsassessmentid"></a>
-# **AssessmentsAssessmentId**
-> Assessment AssessmentsAssessmentId (string assessmentId)
+<a name="getassessmentsassessmentid"></a>
+# **GetAssessmentsAssessmentId**
+> Assessment GetAssessmentsAssessmentId (string assessmentId)
 
 
 
@@ -303,7 +303,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class AssessmentsAssessmentIdExample
+    public class GetAssessmentsAssessmentIdExample
     {
         public void main()
         {
@@ -315,12 +315,12 @@ namespace Example
 
             try
             {
-                Assessment result = apiInstance.AssessmentsAssessmentId(assessmentId);
+                Assessment result = apiInstance.GetAssessmentsAssessmentId(assessmentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AssessmentsApi.AssessmentsAssessmentId: " + e.Message );
+                Debug.Print("Exception when calling AssessmentsApi.GetAssessmentsAssessmentId: " + e.Message );
             }
         }
     }
@@ -348,9 +348,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="assessmentsassessmentidgradeset"></a>
-# **AssessmentsAssessmentIdGradeSet**
-> Gradeset AssessmentsAssessmentIdGradeSet (string assessmentId)
+<a name="getassessmentsassessmentidgradeset"></a>
+# **GetAssessmentsAssessmentIdGradeSet**
+> Gradeset GetAssessmentsAssessmentIdGradeSet (string assessmentId)
 
 
 
@@ -366,7 +366,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class AssessmentsAssessmentIdGradeSetExample
+    public class GetAssessmentsAssessmentIdGradeSetExample
     {
         public void main()
         {
@@ -378,12 +378,12 @@ namespace Example
 
             try
             {
-                Gradeset result = apiInstance.AssessmentsAssessmentIdGradeSet(assessmentId);
+                Gradeset result = apiInstance.GetAssessmentsAssessmentIdGradeSet(assessmentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AssessmentsApi.AssessmentsAssessmentIdGradeSet: " + e.Message );
+                Debug.Print("Exception when calling AssessmentsApi.GetAssessmentsAssessmentIdGradeSet: " + e.Message );
             }
         }
     }
@@ -411,9 +411,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="assessmentsassessmentidresults"></a>
-# **AssessmentsAssessmentIdResults**
-> Result AssessmentsAssessmentIdResults (string assessmentId, string students = null)
+<a name="getassessmentsassessmentidresults"></a>
+# **GetAssessmentsAssessmentIdResults**
+> Result GetAssessmentsAssessmentIdResults (string assessmentId, string students = null)
 
 
 
@@ -429,7 +429,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class AssessmentsAssessmentIdResultsExample
+    public class GetAssessmentsAssessmentIdResultsExample
     {
         public void main()
         {
@@ -442,12 +442,12 @@ namespace Example
 
             try
             {
-                Result result = apiInstance.AssessmentsAssessmentIdResults(assessmentId, students);
+                Result result = apiInstance.GetAssessmentsAssessmentIdResults(assessmentId, students);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AssessmentsApi.AssessmentsAssessmentIdResults: " + e.Message );
+                Debug.Print("Exception when calling AssessmentsApi.GetAssessmentsAssessmentIdResults: " + e.Message );
             }
         }
     }
@@ -476,9 +476,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="facetfacetid"></a>
-# **FacetFacetId**
-> Facet FacetFacetId (string facetId)
+<a name="getfacetfacetid"></a>
+# **GetFacetFacetId**
+> Facet GetFacetFacetId (string facetId)
 
 
 
@@ -494,7 +494,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class FacetFacetIdExample
+    public class GetFacetFacetIdExample
     {
         public void main()
         {
@@ -506,12 +506,12 @@ namespace Example
 
             try
             {
-                Facet result = apiInstance.FacetFacetId(facetId);
+                Facet result = apiInstance.GetFacetFacetId(facetId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AssessmentsApi.FacetFacetId: " + e.Message );
+                Debug.Print("Exception when calling AssessmentsApi.GetFacetFacetId: " + e.Message );
             }
         }
     }
@@ -539,9 +539,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="facets"></a>
-# **Facets**
-> FacetList Facets (int? page = null, int? perPage = null)
+<a name="getfacets"></a>
+# **GetFacets**
+> FacetList GetFacets (int? page = null, int? perPage = null)
 
 
 
@@ -557,7 +557,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class FacetsExample
+    public class GetFacetsExample
     {
         public void main()
         {
@@ -570,12 +570,12 @@ namespace Example
 
             try
             {
-                FacetList result = apiInstance.Facets(page, perPage);
+                FacetList result = apiInstance.GetFacets(page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AssessmentsApi.Facets: " + e.Message );
+                Debug.Print("Exception when calling AssessmentsApi.GetFacets: " + e.Message );
             }
         }
     }

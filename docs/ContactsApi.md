@@ -4,12 +4,12 @@ All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Contacts**](ContactsApi.md#contacts) | **GET** /contacts | 
+[**GetContacts**](ContactsApi.md#getcontacts) | **GET** /contacts | 
 
 
-<a name="contacts"></a>
-# **Contacts**
-> ContactList Contacts (int? studentId = null, int? page = null, int? perPage = null)
+<a name="getcontacts"></a>
+# **GetContacts**
+> ContactList GetContacts (int? studentId = null, int? page = null, int? perPage = null)
 
 
 
@@ -25,7 +25,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class ContactsExample
+    public class GetContactsExample
     {
         public void main()
         {
@@ -39,12 +39,12 @@ namespace Example
 
             try
             {
-                ContactList result = apiInstance.Contacts(studentId, page, perPage);
+                ContactList result = apiInstance.GetContacts(studentId, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ContactsApi.Contacts: " + e.Message );
+                Debug.Print("Exception when calling ContactsApi.GetContacts: " + e.Message );
             }
         }
     }

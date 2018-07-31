@@ -4,13 +4,13 @@ All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Exclusions**](ExclusionsApi.md#exclusions) | **GET** /exclusions | 
-[**ExclusionsStudentId**](ExclusionsApi.md#exclusionsstudentid) | **GET** /exclusions/{student_id} | 
+[**GetExclusions**](ExclusionsApi.md#getexclusions) | **GET** /exclusions | 
+[**GetExclusionsStudentId**](ExclusionsApi.md#getexclusionsstudentid) | **GET** /exclusions/{student_id} | 
 
 
-<a name="exclusions"></a>
-# **Exclusions**
-> ExclusionList Exclusions (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+<a name="getexclusions"></a>
+# **GetExclusions**
+> ExclusionList GetExclusions (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
 
 
 
@@ -26,7 +26,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class ExclusionsExample
+    public class GetExclusionsExample
     {
         public void main()
         {
@@ -41,12 +41,12 @@ namespace Example
 
             try
             {
-                ExclusionList result = apiInstance.Exclusions(startDate, endDate, page, perPage);
+                ExclusionList result = apiInstance.GetExclusions(startDate, endDate, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ExclusionsApi.Exclusions: " + e.Message );
+                Debug.Print("Exception when calling ExclusionsApi.GetExclusions: " + e.Message );
             }
         }
     }
@@ -77,9 +77,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="exclusionsstudentid"></a>
-# **ExclusionsStudentId**
-> ExclusionList ExclusionsStudentId (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+<a name="getexclusionsstudentid"></a>
+# **GetExclusionsStudentId**
+> ExclusionList GetExclusionsStudentId (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
 
 
 
@@ -95,7 +95,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class ExclusionsStudentIdExample
+    public class GetExclusionsStudentIdExample
     {
         public void main()
         {
@@ -111,12 +111,12 @@ namespace Example
 
             try
             {
-                ExclusionList result = apiInstance.ExclusionsStudentId(studentId, startDate, endDate, page, perPage);
+                ExclusionList result = apiInstance.GetExclusionsStudentId(studentId, startDate, endDate, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ExclusionsApi.ExclusionsStudentId: " + e.Message );
+                Debug.Print("Exception when calling ExclusionsApi.GetExclusionsStudentId: " + e.Message );
             }
         }
     }

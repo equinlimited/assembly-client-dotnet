@@ -65,25 +65,25 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test Exclusions
+        /// Test GetExclusions
         /// </summary>
         [Test]
-        public void ExclusionsTest()
+        public void GetExclusionsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string startDate = null;
             //string endDate = null;
             //int? page = null;
             //int? perPage = null;
-            //var response = instance.Exclusions(startDate, endDate, page, perPage);
+            //var response = instance.GetExclusions(startDate, endDate, page, perPage);
             //Assert.IsInstanceOf<ExclusionList> (response, "response is ExclusionList");
         }
         
         /// <summary>
-        /// Test ExclusionsStudentId
+        /// Test GetExclusionsStudentId
         /// </summary>
         [Test]
-        public void ExclusionsStudentIdTest()
+        public void GetExclusionsStudentIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string studentId = null;
@@ -91,7 +91,7 @@ namespace assembly-client-dotnet.Test
             //string endDate = null;
             //int? page = null;
             //int? perPage = null;
-            //var response = instance.ExclusionsStudentId(studentId, startDate, endDate, page, perPage);
+            //var response = instance.GetExclusionsStudentId(studentId, startDate, endDate, page, perPage);
             //Assert.IsInstanceOf<ExclusionList> (response, "response is ExclusionList");
         }
         

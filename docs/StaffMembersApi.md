@@ -4,16 +4,16 @@ All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**StaffAbsences**](StaffMembersApi.md#staffabsences) | **GET** /staff_absences | 
-[**StaffContracts**](StaffMembersApi.md#staffcontracts) | **GET** /staff_contracts | 
-[**StaffContractsStaffMemberId**](StaffMembersApi.md#staffcontractsstaffmemberid) | **GET** /staff_contracts/{staff_member_id} | 
-[**StaffMembers**](StaffMembersApi.md#staffmembers) | **GET** /staff_members | 
-[**StaffMembersStaffMemberId**](StaffMembersApi.md#staffmembersstaffmemberid) | **GET** /staff_members/{staff_member_id} | 
+[**GetStaffAbsences**](StaffMembersApi.md#getstaffabsences) | **GET** /staff_absences | 
+[**GetStaffContracts**](StaffMembersApi.md#getstaffcontracts) | **GET** /staff_contracts | 
+[**GetStaffContractsStaffMemberId**](StaffMembersApi.md#getstaffcontractsstaffmemberid) | **GET** /staff_contracts/{staff_member_id} | 
+[**GetStaffMembers**](StaffMembersApi.md#getstaffmembers) | **GET** /staff_members | 
+[**GetStaffMembersStaffMemberId**](StaffMembersApi.md#getstaffmembersstaffmemberid) | **GET** /staff_members/{staff_member_id} | 
 
 
-<a name="staffabsences"></a>
-# **StaffAbsences**
-> StaffAbsenceList StaffAbsences (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="getstaffabsences"></a>
+# **GetStaffAbsences**
+> StaffAbsenceList GetStaffAbsences (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -29,7 +29,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class StaffAbsencesExample
+    public class GetStaffAbsencesExample
     {
         public void main()
         {
@@ -45,12 +45,12 @@ namespace Example
 
             try
             {
-                StaffAbsenceList result = apiInstance.StaffAbsences(startDate, endDate, page, perPage, ifModifiedSince);
+                StaffAbsenceList result = apiInstance.GetStaffAbsences(startDate, endDate, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StaffMembersApi.StaffAbsences: " + e.Message );
+                Debug.Print("Exception when calling StaffMembersApi.GetStaffAbsences: " + e.Message );
             }
         }
     }
@@ -82,9 +82,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="staffcontracts"></a>
-# **StaffContracts**
-> StaffContractList StaffContracts (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="getstaffcontracts"></a>
+# **GetStaffContracts**
+> StaffContractList GetStaffContracts (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -100,7 +100,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class StaffContractsExample
+    public class GetStaffContractsExample
     {
         public void main()
         {
@@ -118,12 +118,12 @@ namespace Example
 
             try
             {
-                StaffContractList result = apiInstance.StaffContracts(date, roles, salaries, allowances, page, perPage, ifModifiedSince);
+                StaffContractList result = apiInstance.GetStaffContracts(date, roles, salaries, allowances, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StaffMembersApi.StaffContracts: " + e.Message );
+                Debug.Print("Exception when calling StaffMembersApi.GetStaffContracts: " + e.Message );
             }
         }
     }
@@ -157,9 +157,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="staffcontractsstaffmemberid"></a>
-# **StaffContractsStaffMemberId**
-> StaffContractList StaffContractsStaffMemberId (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="getstaffcontractsstaffmemberid"></a>
+# **GetStaffContractsStaffMemberId**
+> StaffContractList GetStaffContractsStaffMemberId (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -175,7 +175,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class StaffContractsStaffMemberIdExample
+    public class GetStaffContractsStaffMemberIdExample
     {
         public void main()
         {
@@ -194,12 +194,12 @@ namespace Example
 
             try
             {
-                StaffContractList result = apiInstance.StaffContractsStaffMemberId(staffMemberId, date, roles, salaries, allowances, page, perPage, ifModifiedSince);
+                StaffContractList result = apiInstance.GetStaffContractsStaffMemberId(staffMemberId, date, roles, salaries, allowances, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StaffMembersApi.StaffContractsStaffMemberId: " + e.Message );
+                Debug.Print("Exception when calling StaffMembersApi.GetStaffContractsStaffMemberId: " + e.Message );
             }
         }
     }
@@ -234,9 +234,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="staffmembers"></a>
-# **StaffMembers**
-> StaffMemberList StaffMembers (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="getstaffmembers"></a>
+# **GetStaffMembers**
+> StaffMemberList GetStaffMembers (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -252,7 +252,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class StaffMembersExample
+    public class GetStaffMembersExample
     {
         public void main()
         {
@@ -269,12 +269,12 @@ namespace Example
 
             try
             {
-                StaffMemberList result = apiInstance.StaffMembers(teachersOnly, demographics, qualifications, page, perPage, ifModifiedSince);
+                StaffMemberList result = apiInstance.GetStaffMembers(teachersOnly, demographics, qualifications, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StaffMembersApi.StaffMembers: " + e.Message );
+                Debug.Print("Exception when calling StaffMembersApi.GetStaffMembers: " + e.Message );
             }
         }
     }
@@ -307,9 +307,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="staffmembersstaffmemberid"></a>
-# **StaffMembersStaffMemberId**
-> StaffMember StaffMembersStaffMemberId (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null)
+<a name="getstaffmembersstaffmemberid"></a>
+# **GetStaffMembersStaffMemberId**
+> StaffMember GetStaffMembersStaffMemberId (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null)
 
 
 
@@ -325,7 +325,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class StaffMembersStaffMemberIdExample
+    public class GetStaffMembersStaffMemberIdExample
     {
         public void main()
         {
@@ -340,12 +340,12 @@ namespace Example
 
             try
             {
-                StaffMember result = apiInstance.StaffMembersStaffMemberId(staffMemberId, demographics, qualifications, ifModifiedSince);
+                StaffMember result = apiInstance.GetStaffMembersStaffMemberId(staffMemberId, demographics, qualifications, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StaffMembersApi.StaffMembersStaffMemberId: " + e.Message );
+                Debug.Print("Exception when calling StaffMembersApi.GetStaffMembersStaffMemberId: " + e.Message );
             }
         }
     }

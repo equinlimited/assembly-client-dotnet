@@ -65,10 +65,10 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test YearGroups
+        /// Test GetYearGroups
         /// </summary>
         [Test]
-        public void YearGroupsTest()
+        public void GetYearGroupsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string yearCode = null;
@@ -77,29 +77,29 @@ namespace assembly-client-dotnet.Test
             //int? page = null;
             //int? perPage = null;
             //string ifModifiedSince = null;
-            //var response = instance.YearGroups(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
+            //var response = instance.GetYearGroups(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
             //Assert.IsInstanceOf<YearGroupList> (response, "response is YearGroupList");
         }
         
         /// <summary>
-        /// Test YearGroupsGroupId
+        /// Test GetYearGroupsGroupId
         /// </summary>
         [Test]
-        public void YearGroupsGroupIdTest()
+        public void GetYearGroupsGroupIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string groupId = null;
             //string date = null;
             //int? academicYearId = null;
-            //var response = instance.YearGroupsGroupId(groupId, date, academicYearId);
+            //var response = instance.GetYearGroupsGroupId(groupId, date, academicYearId);
             //Assert.IsInstanceOf<YearGroup> (response, "response is YearGroup");
         }
         
         /// <summary>
-        /// Test YearGroupsGroupIdStudents
+        /// Test GetYearGroupsGroupIdStudents
         /// </summary>
         [Test]
-        public void YearGroupsGroupIdStudentsTest()
+        public void GetYearGroupsGroupIdStudentsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string groupId = null;
@@ -108,7 +108,7 @@ namespace assembly-client-dotnet.Test
             //int? page = null;
             //int? perPage = null;
             //string ifModifiedSince = null;
-            //var response = instance.YearGroupsGroupIdStudents(groupId, date, academicYearId, page, perPage, ifModifiedSince);
+            //var response = instance.GetYearGroupsGroupIdStudents(groupId, date, academicYearId, page, perPage, ifModifiedSince);
             //Assert.IsInstanceOf<StudentList> (response, "response is StudentList");
         }
         

@@ -4,12 +4,12 @@ All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Subjects**](SubjectsApi.md#subjects) | **GET** /subjects | 
+[**GetSubjects**](SubjectsApi.md#getsubjects) | **GET** /subjects | 
 
 
-<a name="subjects"></a>
-# **Subjects**
-> SubjectList Subjects (bool? misMappings = null, int? page = null, int? perPage = null)
+<a name="getsubjects"></a>
+# **GetSubjects**
+> SubjectList GetSubjects (bool? misMappings = null, int? page = null, int? perPage = null)
 
 
 
@@ -25,7 +25,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class SubjectsExample
+    public class GetSubjectsExample
     {
         public void main()
         {
@@ -39,12 +39,12 @@ namespace Example
 
             try
             {
-                SubjectList result = apiInstance.Subjects(misMappings, page, perPage);
+                SubjectList result = apiInstance.GetSubjects(misMappings, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling SubjectsApi.Subjects: " + e.Message );
+                Debug.Print("Exception when calling SubjectsApi.GetSubjects: " + e.Message );
             }
         }
     }

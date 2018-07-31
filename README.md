@@ -80,12 +80,12 @@ namespace Example
 
             try
             {
-                AcademicYearList result = apiInstance.AcademicYears(page, perPage);
+                AcademicYearList result = apiInstance.GetAcademicYears(page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AcademicYearsApi.AcademicYears: " + e.Message );
+                Debug.Print("Exception when calling AcademicYearsApi.GetAcademicYears: " + e.Message );
             }
 
         }
@@ -100,41 +100,41 @@ All URIs are relative to *https://api-sandbox.assembly.education*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AcademicYearsApi* | [**AcademicYears**](docs/AcademicYearsApi.md#academicyears) | **GET** /academic_years | 
-*AssessmentsApi* | [**AssessmentPoints**](docs/AssessmentsApi.md#assessmentpoints) | **GET** /assessment_points | 
-*AssessmentsApi* | [**AssessmentPointsAssessmentPointRank**](docs/AssessmentsApi.md#assessmentpointsassessmentpointrank) | **GET** /assessment_points/{assessment_point_rank} | 
-*AssessmentsApi* | [**AssessmentPointsAssessmentPointRankResults**](docs/AssessmentsApi.md#assessmentpointsassessmentpointrankresults) | **GET** /assessment_points/{assessment_point_rank}/results | 
-*AssessmentsApi* | [**Assessments**](docs/AssessmentsApi.md#assessments) | **GET** /assessments | 
-*AssessmentsApi* | [**AssessmentsAssessmentId**](docs/AssessmentsApi.md#assessmentsassessmentid) | **GET** /assessments/{assessment_id} | 
-*AssessmentsApi* | [**AssessmentsAssessmentIdGradeSet**](docs/AssessmentsApi.md#assessmentsassessmentidgradeset) | **GET** /assessments/{assessment_id}/grade_set | 
-*AssessmentsApi* | [**AssessmentsAssessmentIdResults**](docs/AssessmentsApi.md#assessmentsassessmentidresults) | **GET** /assessments/{assessment_id}/results | 
-*AssessmentsApi* | [**FacetFacetId**](docs/AssessmentsApi.md#facetfacetid) | **GET** /facet/{facet_id} | 
-*AssessmentsApi* | [**Facets**](docs/AssessmentsApi.md#facets) | **GET** /facets | 
+*AcademicYearsApi* | [**GetAcademicYears**](docs/AcademicYearsApi.md#getacademicyears) | **GET** /academic_years | 
+*AssessmentsApi* | [**GetAssessmentPoints**](docs/AssessmentsApi.md#getassessmentpoints) | **GET** /assessment_points | 
+*AssessmentsApi* | [**GetAssessmentPointsAssessmentPointRank**](docs/AssessmentsApi.md#getassessmentpointsassessmentpointrank) | **GET** /assessment_points/{assessment_point_rank} | 
+*AssessmentsApi* | [**GetAssessmentPointsAssessmentPointRankResults**](docs/AssessmentsApi.md#getassessmentpointsassessmentpointrankresults) | **GET** /assessment_points/{assessment_point_rank}/results | 
+*AssessmentsApi* | [**GetAssessments**](docs/AssessmentsApi.md#getassessments) | **GET** /assessments | 
+*AssessmentsApi* | [**GetAssessmentsAssessmentId**](docs/AssessmentsApi.md#getassessmentsassessmentid) | **GET** /assessments/{assessment_id} | 
+*AssessmentsApi* | [**GetAssessmentsAssessmentIdGradeSet**](docs/AssessmentsApi.md#getassessmentsassessmentidgradeset) | **GET** /assessments/{assessment_id}/grade_set | 
+*AssessmentsApi* | [**GetAssessmentsAssessmentIdResults**](docs/AssessmentsApi.md#getassessmentsassessmentidresults) | **GET** /assessments/{assessment_id}/results | 
+*AssessmentsApi* | [**GetFacetFacetId**](docs/AssessmentsApi.md#getfacetfacetid) | **GET** /facet/{facet_id} | 
+*AssessmentsApi* | [**GetFacets**](docs/AssessmentsApi.md#getfacets) | **GET** /facets | 
 *AssessmentsApi* | [**PatchResults**](docs/AssessmentsApi.md#patchresults) | **PATCH** /results | 
 *AssessmentsApi* | [**PatchResultsResultId**](docs/AssessmentsApi.md#patchresultsresultid) | **PATCH** /results/{result_id} | 
-*AttendanceApi* | [**Attendances**](docs/AttendanceApi.md#attendances) | **GET** /attendances | 
-*ContactsApi* | [**Contacts**](docs/ContactsApi.md#contacts) | **GET** /contacts | 
-*EventsApi* | [**CalendarEvents**](docs/EventsApi.md#calendarevents) | **GET** /calendar_events | 
-*ExclusionsApi* | [**Exclusions**](docs/ExclusionsApi.md#exclusions) | **GET** /exclusions | 
-*ExclusionsApi* | [**ExclusionsStudentId**](docs/ExclusionsApi.md#exclusionsstudentid) | **GET** /exclusions/{student_id} | 
-*RegistrationGroupsApi* | [**RegistrationGroups**](docs/RegistrationGroupsApi.md#registrationgroups) | **GET** /registration_groups | 
-*RegistrationGroupsApi* | [**RegistrationGroupsGroupId**](docs/RegistrationGroupsApi.md#registrationgroupsgroupid) | **GET** /registration_groups/{group_id} | 
-*RegistrationGroupsApi* | [**RegistrationGroupsGroupIdStudents**](docs/RegistrationGroupsApi.md#registrationgroupsgroupidstudents) | **GET** /registration_groups/{group_id}/students | 
-*SchoolDetailsApi* | [**SchoolDetails**](docs/SchoolDetailsApi.md#schooldetails) | **GET** /school_details | 
-*StaffMembersApi* | [**StaffAbsences**](docs/StaffMembersApi.md#staffabsences) | **GET** /staff_absences | 
-*StaffMembersApi* | [**StaffContracts**](docs/StaffMembersApi.md#staffcontracts) | **GET** /staff_contracts | 
-*StaffMembersApi* | [**StaffContractsStaffMemberId**](docs/StaffMembersApi.md#staffcontractsstaffmemberid) | **GET** /staff_contracts/{staff_member_id} | 
-*StaffMembersApi* | [**StaffMembers**](docs/StaffMembersApi.md#staffmembers) | **GET** /staff_members | 
-*StaffMembersApi* | [**StaffMembersStaffMemberId**](docs/StaffMembersApi.md#staffmembersstaffmemberid) | **GET** /staff_members/{staff_member_id} | 
-*StudentsApi* | [**Students**](docs/StudentsApi.md#students) | **GET** /students | 
-*StudentsApi* | [**StudentsStudentId**](docs/StudentsApi.md#studentsstudentid) | **GET** /students/{student_id} | 
-*SubjectsApi* | [**Subjects**](docs/SubjectsApi.md#subjects) | **GET** /subjects | 
-*TeachingGroupsApi* | [**TeachingGroups**](docs/TeachingGroupsApi.md#teachinggroups) | **GET** /teaching_groups | 
-*TeachingGroupsApi* | [**TeachingGroupsGroupId**](docs/TeachingGroupsApi.md#teachinggroupsgroupid) | **GET** /teaching_groups/{group_id} | 
-*TeachingGroupsApi* | [**TeachingGroupsGroupIdStudents**](docs/TeachingGroupsApi.md#teachinggroupsgroupidstudents) | **GET** /teaching_groups/{group_id}/students | 
-*YearGroupsApi* | [**YearGroups**](docs/YearGroupsApi.md#yeargroups) | **GET** /year_groups | 
-*YearGroupsApi* | [**YearGroupsGroupId**](docs/YearGroupsApi.md#yeargroupsgroupid) | **GET** /year_groups/{group_id} | 
-*YearGroupsApi* | [**YearGroupsGroupIdStudents**](docs/YearGroupsApi.md#yeargroupsgroupidstudents) | **GET** /year_groups/{group_id}/students | 
+*AttendanceApi* | [**GetAttendances**](docs/AttendanceApi.md#getattendances) | **GET** /attendances | 
+*ContactsApi* | [**GetContacts**](docs/ContactsApi.md#getcontacts) | **GET** /contacts | 
+*EventsApi* | [**GetCalendarEvents**](docs/EventsApi.md#getcalendarevents) | **GET** /calendar_events | 
+*ExclusionsApi* | [**GetExclusions**](docs/ExclusionsApi.md#getexclusions) | **GET** /exclusions | 
+*ExclusionsApi* | [**GetExclusionsStudentId**](docs/ExclusionsApi.md#getexclusionsstudentid) | **GET** /exclusions/{student_id} | 
+*RegistrationGroupsApi* | [**GetRegistrationGroups**](docs/RegistrationGroupsApi.md#getregistrationgroups) | **GET** /registration_groups | 
+*RegistrationGroupsApi* | [**GetRegistrationGroupsGroupId**](docs/RegistrationGroupsApi.md#getregistrationgroupsgroupid) | **GET** /registration_groups/{group_id} | 
+*RegistrationGroupsApi* | [**GetRegistrationGroupsGroupIdStudents**](docs/RegistrationGroupsApi.md#getregistrationgroupsgroupidstudents) | **GET** /registration_groups/{group_id}/students | 
+*SchoolDetailsApi* | [**GetSchoolDetails**](docs/SchoolDetailsApi.md#getschooldetails) | **GET** /school_details | 
+*StaffMembersApi* | [**GetStaffAbsences**](docs/StaffMembersApi.md#getstaffabsences) | **GET** /staff_absences | 
+*StaffMembersApi* | [**GetStaffContracts**](docs/StaffMembersApi.md#getstaffcontracts) | **GET** /staff_contracts | 
+*StaffMembersApi* | [**GetStaffContractsStaffMemberId**](docs/StaffMembersApi.md#getstaffcontractsstaffmemberid) | **GET** /staff_contracts/{staff_member_id} | 
+*StaffMembersApi* | [**GetStaffMembers**](docs/StaffMembersApi.md#getstaffmembers) | **GET** /staff_members | 
+*StaffMembersApi* | [**GetStaffMembersStaffMemberId**](docs/StaffMembersApi.md#getstaffmembersstaffmemberid) | **GET** /staff_members/{staff_member_id} | 
+*StudentsApi* | [**GetStudents**](docs/StudentsApi.md#getstudents) | **GET** /students | 
+*StudentsApi* | [**GetStudentsStudentId**](docs/StudentsApi.md#getstudentsstudentid) | **GET** /students/{student_id} | 
+*SubjectsApi* | [**GetSubjects**](docs/SubjectsApi.md#getsubjects) | **GET** /subjects | 
+*TeachingGroupsApi* | [**GetTeachingGroups**](docs/TeachingGroupsApi.md#getteachinggroups) | **GET** /teaching_groups | 
+*TeachingGroupsApi* | [**GetTeachingGroupsGroupId**](docs/TeachingGroupsApi.md#getteachinggroupsgroupid) | **GET** /teaching_groups/{group_id} | 
+*TeachingGroupsApi* | [**GetTeachingGroupsGroupIdStudents**](docs/TeachingGroupsApi.md#getteachinggroupsgroupidstudents) | **GET** /teaching_groups/{group_id}/students | 
+*YearGroupsApi* | [**GetYearGroups**](docs/YearGroupsApi.md#getyeargroups) | **GET** /year_groups | 
+*YearGroupsApi* | [**GetYearGroupsGroupId**](docs/YearGroupsApi.md#getyeargroupsgroupid) | **GET** /year_groups/{group_id} | 
+*YearGroupsApi* | [**GetYearGroupsGroupIdStudents**](docs/YearGroupsApi.md#getyeargroupsgroupidstudents) | **GET** /year_groups/{group_id}/students | 
 
 
 <a name="documentation-for-models"></a>

@@ -35,7 +35,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ContactList</returns>
-        ContactList Contacts (int? studentId = null, int? page = null, int? perPage = null);
+        ContactList GetContacts (int? studentId = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -48,7 +48,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ContactList</returns>
-        ApiResponse<ContactList> ContactsWithHttpInfo (int? studentId = null, int? page = null, int? perPage = null);
+        ApiResponse<ContactList> GetContactsWithHttpInfo (int? studentId = null, int? page = null, int? perPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -62,7 +62,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ContactList</returns>
-        System.Threading.Tasks.Task<ContactList> ContactsAsync (int? studentId = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ContactList> GetContactsAsync (int? studentId = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -75,7 +75,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactList>> ContactsAsyncWithHttpInfo (int? studentId = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactList>> GetContactsAsyncWithHttpInfo (int? studentId = null, int? page = null, int? perPage = null);
         #endregion Asynchronous Operations
     }
 
@@ -184,9 +184,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ContactList</returns>
-        public ContactList Contacts (int? studentId = null, int? page = null, int? perPage = null)
+        public ContactList GetContacts (int? studentId = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<ContactList> localVarResponse = ContactsWithHttpInfo(studentId, page, perPage);
+             ApiResponse<ContactList> localVarResponse = GetContactsWithHttpInfo(studentId, page, perPage);
              return localVarResponse.Data;
         }
 
@@ -198,7 +198,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ContactList</returns>
-        public ApiResponse< ContactList > ContactsWithHttpInfo (int? studentId = null, int? page = null, int? perPage = null)
+        public ApiResponse< ContactList > GetContactsWithHttpInfo (int? studentId = null, int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/contacts";
@@ -243,7 +243,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Contacts", localVarResponse);
+                Exception exception = ExceptionFactory("GetContacts", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -260,9 +260,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ContactList</returns>
-        public async System.Threading.Tasks.Task<ContactList> ContactsAsync (int? studentId = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ContactList> GetContactsAsync (int? studentId = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<ContactList> localVarResponse = await ContactsAsyncWithHttpInfo(studentId, page, perPage);
+             ApiResponse<ContactList> localVarResponse = await GetContactsAsyncWithHttpInfo(studentId, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -275,7 +275,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> ContactsAsyncWithHttpInfo (int? studentId = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> GetContactsAsyncWithHttpInfo (int? studentId = null, int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/contacts";
@@ -320,7 +320,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Contacts", localVarResponse);
+                Exception exception = ExceptionFactory("GetContacts", localVarResponse);
                 if (exception != null) throw exception;
             }
 

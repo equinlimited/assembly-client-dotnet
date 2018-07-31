@@ -65,17 +65,17 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test CalendarEvents
+        /// Test GetCalendarEvents
         /// </summary>
         [Test]
-        public void CalendarEventsTest()
+        public void GetCalendarEventsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string eventType = null;
             //int? page = null;
             //int? perPage = null;
             //string ifModifiedSince = null;
-            //var response = instance.CalendarEvents(eventType, page, perPage, ifModifiedSince);
+            //var response = instance.GetCalendarEvents(eventType, page, perPage, ifModifiedSince);
             //Assert.IsInstanceOf<CalendarEventList> (response, "response is CalendarEventList");
         }
         

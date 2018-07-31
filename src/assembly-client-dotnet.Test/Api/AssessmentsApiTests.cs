@@ -65,120 +65,120 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test AssessmentPoints
+        /// Test GetAssessmentPoints
         /// </summary>
         [Test]
-        public void AssessmentPointsTest()
+        public void GetAssessmentPointsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string yearCode = null;
             //string type = null;
             //int? page = null;
             //int? perPage = null;
-            //var response = instance.AssessmentPoints(yearCode, type, page, perPage);
+            //var response = instance.GetAssessmentPoints(yearCode, type, page, perPage);
             //Assert.IsInstanceOf<AssessmentPointList> (response, "response is AssessmentPointList");
         }
         
         /// <summary>
-        /// Test AssessmentPointsAssessmentPointRank
+        /// Test GetAssessmentPointsAssessmentPointRank
         /// </summary>
         [Test]
-        public void AssessmentPointsAssessmentPointRankTest()
+        public void GetAssessmentPointsAssessmentPointRankTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string assessmentPointRank = null;
-            //var response = instance.AssessmentPointsAssessmentPointRank(assessmentPointRank);
+            //var response = instance.GetAssessmentPointsAssessmentPointRank(assessmentPointRank);
             //Assert.IsInstanceOf<AssessmentPoint> (response, "response is AssessmentPoint");
         }
         
         /// <summary>
-        /// Test AssessmentPointsAssessmentPointRankResults
+        /// Test GetAssessmentPointsAssessmentPointRankResults
         /// </summary>
         [Test]
-        public void AssessmentPointsAssessmentPointRankResultsTest()
+        public void GetAssessmentPointsAssessmentPointRankResultsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string assessmentPointRank = null;
             //string students = null;
             //int? page = null;
             //int? perPage = null;
-            //var response = instance.AssessmentPointsAssessmentPointRankResults(assessmentPointRank, students, page, perPage);
+            //var response = instance.GetAssessmentPointsAssessmentPointRankResults(assessmentPointRank, students, page, perPage);
             //Assert.IsInstanceOf<ResultList> (response, "response is ResultList");
         }
         
         /// <summary>
-        /// Test Assessments
+        /// Test GetAssessments
         /// </summary>
         [Test]
-        public void AssessmentsTest()
+        public void GetAssessmentsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //bool? misMappings = null;
             //int? page = null;
             //int? perPage = null;
-            //var response = instance.Assessments(misMappings, page, perPage);
+            //var response = instance.GetAssessments(misMappings, page, perPage);
             //Assert.IsInstanceOf<AssessmentList> (response, "response is AssessmentList");
         }
         
         /// <summary>
-        /// Test AssessmentsAssessmentId
+        /// Test GetAssessmentsAssessmentId
         /// </summary>
         [Test]
-        public void AssessmentsAssessmentIdTest()
+        public void GetAssessmentsAssessmentIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string assessmentId = null;
-            //var response = instance.AssessmentsAssessmentId(assessmentId);
+            //var response = instance.GetAssessmentsAssessmentId(assessmentId);
             //Assert.IsInstanceOf<Assessment> (response, "response is Assessment");
         }
         
         /// <summary>
-        /// Test AssessmentsAssessmentIdGradeSet
+        /// Test GetAssessmentsAssessmentIdGradeSet
         /// </summary>
         [Test]
-        public void AssessmentsAssessmentIdGradeSetTest()
+        public void GetAssessmentsAssessmentIdGradeSetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string assessmentId = null;
-            //var response = instance.AssessmentsAssessmentIdGradeSet(assessmentId);
+            //var response = instance.GetAssessmentsAssessmentIdGradeSet(assessmentId);
             //Assert.IsInstanceOf<Gradeset> (response, "response is Gradeset");
         }
         
         /// <summary>
-        /// Test AssessmentsAssessmentIdResults
+        /// Test GetAssessmentsAssessmentIdResults
         /// </summary>
         [Test]
-        public void AssessmentsAssessmentIdResultsTest()
+        public void GetAssessmentsAssessmentIdResultsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string assessmentId = null;
             //string students = null;
-            //var response = instance.AssessmentsAssessmentIdResults(assessmentId, students);
+            //var response = instance.GetAssessmentsAssessmentIdResults(assessmentId, students);
             //Assert.IsInstanceOf<Result> (response, "response is Result");
         }
         
         /// <summary>
-        /// Test FacetFacetId
+        /// Test GetFacetFacetId
         /// </summary>
         [Test]
-        public void FacetFacetIdTest()
+        public void GetFacetFacetIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string facetId = null;
-            //var response = instance.FacetFacetId(facetId);
+            //var response = instance.GetFacetFacetId(facetId);
             //Assert.IsInstanceOf<Facet> (response, "response is Facet");
         }
         
         /// <summary>
-        /// Test Facets
+        /// Test GetFacets
         /// </summary>
         [Test]
-        public void FacetsTest()
+        public void GetFacetsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? page = null;
             //int? perPage = null;
-            //var response = instance.Facets(page, perPage);
+            //var response = instance.GetFacets(page, perPage);
             //Assert.IsInstanceOf<FacetList> (response, "response is FacetList");
         }
         

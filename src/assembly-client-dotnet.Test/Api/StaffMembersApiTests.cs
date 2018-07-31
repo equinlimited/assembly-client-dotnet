@@ -65,10 +65,10 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test StaffAbsences
+        /// Test GetStaffAbsences
         /// </summary>
         [Test]
-        public void StaffAbsencesTest()
+        public void GetStaffAbsencesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string startDate = null;
@@ -76,15 +76,15 @@ namespace assembly-client-dotnet.Test
             //int? page = null;
             //int? perPage = null;
             //string ifModifiedSince = null;
-            //var response = instance.StaffAbsences(startDate, endDate, page, perPage, ifModifiedSince);
+            //var response = instance.GetStaffAbsences(startDate, endDate, page, perPage, ifModifiedSince);
             //Assert.IsInstanceOf<StaffAbsenceList> (response, "response is StaffAbsenceList");
         }
         
         /// <summary>
-        /// Test StaffContracts
+        /// Test GetStaffContracts
         /// </summary>
         [Test]
-        public void StaffContractsTest()
+        public void GetStaffContractsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string date = null;
@@ -94,15 +94,15 @@ namespace assembly-client-dotnet.Test
             //int? page = null;
             //int? perPage = null;
             //string ifModifiedSince = null;
-            //var response = instance.StaffContracts(date, roles, salaries, allowances, page, perPage, ifModifiedSince);
+            //var response = instance.GetStaffContracts(date, roles, salaries, allowances, page, perPage, ifModifiedSince);
             //Assert.IsInstanceOf<StaffContractList> (response, "response is StaffContractList");
         }
         
         /// <summary>
-        /// Test StaffContractsStaffMemberId
+        /// Test GetStaffContractsStaffMemberId
         /// </summary>
         [Test]
-        public void StaffContractsStaffMemberIdTest()
+        public void GetStaffContractsStaffMemberIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string staffMemberId = null;
@@ -113,15 +113,15 @@ namespace assembly-client-dotnet.Test
             //int? page = null;
             //int? perPage = null;
             //string ifModifiedSince = null;
-            //var response = instance.StaffContractsStaffMemberId(staffMemberId, date, roles, salaries, allowances, page, perPage, ifModifiedSince);
+            //var response = instance.GetStaffContractsStaffMemberId(staffMemberId, date, roles, salaries, allowances, page, perPage, ifModifiedSince);
             //Assert.IsInstanceOf<StaffContractList> (response, "response is StaffContractList");
         }
         
         /// <summary>
-        /// Test StaffMembers
+        /// Test GetStaffMembers
         /// </summary>
         [Test]
-        public void StaffMembersTest()
+        public void GetStaffMembersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //bool? teachersOnly = null;
@@ -130,22 +130,22 @@ namespace assembly-client-dotnet.Test
             //int? page = null;
             //int? perPage = null;
             //string ifModifiedSince = null;
-            //var response = instance.StaffMembers(teachersOnly, demographics, qualifications, page, perPage, ifModifiedSince);
+            //var response = instance.GetStaffMembers(teachersOnly, demographics, qualifications, page, perPage, ifModifiedSince);
             //Assert.IsInstanceOf<StaffMemberList> (response, "response is StaffMemberList");
         }
         
         /// <summary>
-        /// Test StaffMembersStaffMemberId
+        /// Test GetStaffMembersStaffMemberId
         /// </summary>
         [Test]
-        public void StaffMembersStaffMemberIdTest()
+        public void GetStaffMembersStaffMemberIdTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string staffMemberId = null;
             //bool? demographics = null;
             //bool? qualifications = null;
             //string ifModifiedSince = null;
-            //var response = instance.StaffMembersStaffMemberId(staffMemberId, demographics, qualifications, ifModifiedSince);
+            //var response = instance.GetStaffMembersStaffMemberId(staffMemberId, demographics, qualifications, ifModifiedSince);
             //Assert.IsInstanceOf<StaffMember> (response, "response is StaffMember");
         }
         

@@ -44,7 +44,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StudentList</returns>
-        StudentList Students (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        StudentList GetStudents (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -66,7 +66,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StudentList</returns>
-        ApiResponse<StudentList> StudentsWithHttpInfo (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        ApiResponse<StudentList> GetStudentsWithHttpInfo (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -84,7 +84,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="languages">Return language information along with this object (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Student</returns>
-        Student StudentsStudentId (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null);
+        Student GetStudentsStudentId (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -103,7 +103,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="languages">Return language information along with this object (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of Student</returns>
-        ApiResponse<Student> StudentsStudentIdWithHttpInfo (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null);
+        ApiResponse<Student> GetStudentsStudentIdWithHttpInfo (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -126,7 +126,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StudentList</returns>
-        System.Threading.Tasks.Task<StudentList> StudentsAsync (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<StudentList> GetStudentsAsync (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -148,7 +148,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StudentList>> StudentsAsyncWithHttpInfo (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<StudentList>> GetStudentsAsyncWithHttpInfo (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -166,7 +166,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="languages">Return language information along with this object (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of Student</returns>
-        System.Threading.Tasks.Task<Student> StudentsStudentIdAsync (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<Student> GetStudentsStudentIdAsync (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -185,7 +185,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="languages">Return language information along with this object (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (Student)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Student>> StudentsStudentIdAsyncWithHttpInfo (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<Student>> GetStudentsStudentIdAsyncWithHttpInfo (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null);
         #endregion Asynchronous Operations
     }
 
@@ -303,9 +303,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StudentList</returns>
-        public StudentList Students (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public StudentList GetStudents (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StudentList> localVarResponse = StudentsWithHttpInfo(yearCode, students, date, demographics, contacts, senNeeds, addresses, care, languages, page, perPage, ifModifiedSince);
+             ApiResponse<StudentList> localVarResponse = GetStudentsWithHttpInfo(yearCode, students, date, demographics, contacts, senNeeds, addresses, care, languages, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -326,7 +326,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StudentList</returns>
-        public ApiResponse< StudentList > StudentsWithHttpInfo (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public ApiResponse< StudentList > GetStudentsWithHttpInfo (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/students";
@@ -380,7 +380,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Students", localVarResponse);
+                Exception exception = ExceptionFactory("GetStudents", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -406,9 +406,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StudentList</returns>
-        public async System.Threading.Tasks.Task<StudentList> StudentsAsync (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<StudentList> GetStudentsAsync (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StudentList> localVarResponse = await StudentsAsyncWithHttpInfo(yearCode, students, date, demographics, contacts, senNeeds, addresses, care, languages, page, perPage, ifModifiedSince);
+             ApiResponse<StudentList> localVarResponse = await GetStudentsAsyncWithHttpInfo(yearCode, students, date, demographics, contacts, senNeeds, addresses, care, languages, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -430,7 +430,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StudentList>> StudentsAsyncWithHttpInfo (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StudentList>> GetStudentsAsyncWithHttpInfo (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/students";
@@ -484,7 +484,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Students", localVarResponse);
+                Exception exception = ExceptionFactory("GetStudents", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -507,9 +507,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="languages">Return language information along with this object (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Student</returns>
-        public Student StudentsStudentId (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null)
+        public Student GetStudentsStudentId (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null)
         {
-             ApiResponse<Student> localVarResponse = StudentsStudentIdWithHttpInfo(studentId, date, demographics, contacts, senNeeds, addresses, care, languages, ifModifiedSince);
+             ApiResponse<Student> localVarResponse = GetStudentsStudentIdWithHttpInfo(studentId, date, demographics, contacts, senNeeds, addresses, care, languages, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -527,11 +527,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="languages">Return language information along with this object (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of Student</returns>
-        public ApiResponse< Student > StudentsStudentIdWithHttpInfo (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null)
+        public ApiResponse< Student > GetStudentsStudentIdWithHttpInfo (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'studentId' is set
             if (studentId == null)
-                throw new ApiException(400, "Missing required parameter 'studentId' when calling StudentsApi->StudentsStudentId");
+                throw new ApiException(400, "Missing required parameter 'studentId' when calling StudentsApi->GetStudentsStudentId");
 
             var localVarPath = "/students/{student_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -581,7 +581,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StudentsStudentId", localVarResponse);
+                Exception exception = ExceptionFactory("GetStudentsStudentId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -604,9 +604,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="languages">Return language information along with this object (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of Student</returns>
-        public async System.Threading.Tasks.Task<Student> StudentsStudentIdAsync (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<Student> GetStudentsStudentIdAsync (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null)
         {
-             ApiResponse<Student> localVarResponse = await StudentsStudentIdAsyncWithHttpInfo(studentId, date, demographics, contacts, senNeeds, addresses, care, languages, ifModifiedSince);
+             ApiResponse<Student> localVarResponse = await GetStudentsStudentIdAsyncWithHttpInfo(studentId, date, demographics, contacts, senNeeds, addresses, care, languages, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -625,11 +625,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="languages">Return language information along with this object (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (Student)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Student>> StudentsStudentIdAsyncWithHttpInfo (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Student>> GetStudentsStudentIdAsyncWithHttpInfo (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'studentId' is set
             if (studentId == null)
-                throw new ApiException(400, "Missing required parameter 'studentId' when calling StudentsApi->StudentsStudentId");
+                throw new ApiException(400, "Missing required parameter 'studentId' when calling StudentsApi->GetStudentsStudentId");
 
             var localVarPath = "/students/{student_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -679,7 +679,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StudentsStudentId", localVarResponse);
+                Exception exception = ExceptionFactory("GetStudentsStudentId", localVarResponse);
                 if (exception != null) throw exception;
             }
 

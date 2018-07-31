@@ -36,7 +36,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>CalendarEventList</returns>
-        CalendarEventList CalendarEvents (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        CalendarEventList GetCalendarEvents (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -50,7 +50,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of CalendarEventList</returns>
-        ApiResponse<CalendarEventList> CalendarEventsWithHttpInfo (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        ApiResponse<CalendarEventList> GetCalendarEventsWithHttpInfo (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -65,7 +65,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of CalendarEventList</returns>
-        System.Threading.Tasks.Task<CalendarEventList> CalendarEventsAsync (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<CalendarEventList> GetCalendarEventsAsync (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -79,7 +79,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (CalendarEventList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CalendarEventList>> CalendarEventsAsyncWithHttpInfo (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<CalendarEventList>> GetCalendarEventsAsyncWithHttpInfo (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         #endregion Asynchronous Operations
     }
 
@@ -189,9 +189,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>CalendarEventList</returns>
-        public CalendarEventList CalendarEvents (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public CalendarEventList GetCalendarEvents (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<CalendarEventList> localVarResponse = CalendarEventsWithHttpInfo(eventType, page, perPage, ifModifiedSince);
+             ApiResponse<CalendarEventList> localVarResponse = GetCalendarEventsWithHttpInfo(eventType, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -204,7 +204,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of CalendarEventList</returns>
-        public ApiResponse< CalendarEventList > CalendarEventsWithHttpInfo (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public ApiResponse< CalendarEventList > GetCalendarEventsWithHttpInfo (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/calendar_events";
@@ -250,7 +250,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CalendarEvents", localVarResponse);
+                Exception exception = ExceptionFactory("GetCalendarEvents", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -268,9 +268,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of CalendarEventList</returns>
-        public async System.Threading.Tasks.Task<CalendarEventList> CalendarEventsAsync (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<CalendarEventList> GetCalendarEventsAsync (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<CalendarEventList> localVarResponse = await CalendarEventsAsyncWithHttpInfo(eventType, page, perPage, ifModifiedSince);
+             ApiResponse<CalendarEventList> localVarResponse = await GetCalendarEventsAsyncWithHttpInfo(eventType, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -284,7 +284,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (CalendarEventList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CalendarEventList>> CalendarEventsAsyncWithHttpInfo (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CalendarEventList>> GetCalendarEventsAsyncWithHttpInfo (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/calendar_events";
@@ -330,7 +330,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("CalendarEvents", localVarResponse);
+                Exception exception = ExceptionFactory("GetCalendarEvents", localVarResponse);
                 if (exception != null) throw exception;
             }
 

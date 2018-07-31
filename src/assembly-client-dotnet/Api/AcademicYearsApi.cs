@@ -34,7 +34,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>AcademicYearList</returns>
-        AcademicYearList AcademicYears (int? page = null, int? perPage = null);
+        AcademicYearList GetAcademicYears (int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -46,7 +46,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of AcademicYearList</returns>
-        ApiResponse<AcademicYearList> AcademicYearsWithHttpInfo (int? page = null, int? perPage = null);
+        ApiResponse<AcademicYearList> GetAcademicYearsWithHttpInfo (int? page = null, int? perPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -59,7 +59,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of AcademicYearList</returns>
-        System.Threading.Tasks.Task<AcademicYearList> AcademicYearsAsync (int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<AcademicYearList> GetAcademicYearsAsync (int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -71,7 +71,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (AcademicYearList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AcademicYearList>> AcademicYearsAsyncWithHttpInfo (int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ApiResponse<AcademicYearList>> GetAcademicYearsAsyncWithHttpInfo (int? page = null, int? perPage = null);
         #endregion Asynchronous Operations
     }
 
@@ -179,9 +179,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>AcademicYearList</returns>
-        public AcademicYearList AcademicYears (int? page = null, int? perPage = null)
+        public AcademicYearList GetAcademicYears (int? page = null, int? perPage = null)
         {
-             ApiResponse<AcademicYearList> localVarResponse = AcademicYearsWithHttpInfo(page, perPage);
+             ApiResponse<AcademicYearList> localVarResponse = GetAcademicYearsWithHttpInfo(page, perPage);
              return localVarResponse.Data;
         }
 
@@ -192,7 +192,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of AcademicYearList</returns>
-        public ApiResponse< AcademicYearList > AcademicYearsWithHttpInfo (int? page = null, int? perPage = null)
+        public ApiResponse< AcademicYearList > GetAcademicYearsWithHttpInfo (int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/academic_years";
@@ -236,7 +236,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AcademicYears", localVarResponse);
+                Exception exception = ExceptionFactory("GetAcademicYears", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -252,9 +252,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of AcademicYearList</returns>
-        public async System.Threading.Tasks.Task<AcademicYearList> AcademicYearsAsync (int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<AcademicYearList> GetAcademicYearsAsync (int? page = null, int? perPage = null)
         {
-             ApiResponse<AcademicYearList> localVarResponse = await AcademicYearsAsyncWithHttpInfo(page, perPage);
+             ApiResponse<AcademicYearList> localVarResponse = await GetAcademicYearsAsyncWithHttpInfo(page, perPage);
              return localVarResponse.Data;
 
         }
@@ -266,7 +266,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (AcademicYearList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AcademicYearList>> AcademicYearsAsyncWithHttpInfo (int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AcademicYearList>> GetAcademicYearsAsyncWithHttpInfo (int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/academic_years";
@@ -310,7 +310,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AcademicYears", localVarResponse);
+                Exception exception = ExceptionFactory("GetAcademicYears", localVarResponse);
                 if (exception != null) throw exception;
             }
 

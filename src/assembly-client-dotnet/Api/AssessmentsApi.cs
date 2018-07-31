@@ -36,7 +36,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>AssessmentPointList</returns>
-        AssessmentPointList AssessmentPoints (string yearCode = null, string type = null, int? page = null, int? perPage = null);
+        AssessmentPointList GetAssessmentPoints (string yearCode = null, string type = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -50,7 +50,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of AssessmentPointList</returns>
-        ApiResponse<AssessmentPointList> AssessmentPointsWithHttpInfo (string yearCode = null, string type = null, int? page = null, int? perPage = null);
+        ApiResponse<AssessmentPointList> GetAssessmentPointsWithHttpInfo (string yearCode = null, string type = null, int? page = null, int? perPage = null);
         /// <summary>
         /// 
         /// </summary>
@@ -60,7 +60,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentPointRank">The rank of the assessment point as an Integer</param>
         /// <returns>AssessmentPoint</returns>
-        AssessmentPoint AssessmentPointsAssessmentPointRank (string assessmentPointRank);
+        AssessmentPoint GetAssessmentPointsAssessmentPointRank (string assessmentPointRank);
 
         /// <summary>
         /// 
@@ -71,7 +71,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentPointRank">The rank of the assessment point as an Integer</param>
         /// <returns>ApiResponse of AssessmentPoint</returns>
-        ApiResponse<AssessmentPoint> AssessmentPointsAssessmentPointRankWithHttpInfo (string assessmentPointRank);
+        ApiResponse<AssessmentPoint> GetAssessmentPointsAssessmentPointRankWithHttpInfo (string assessmentPointRank);
         /// <summary>
         /// 
         /// </summary>
@@ -84,7 +84,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ResultList</returns>
-        ResultList AssessmentPointsAssessmentPointRankResults (string assessmentPointRank, string students = null, int? page = null, int? perPage = null);
+        ResultList GetAssessmentPointsAssessmentPointRankResults (string assessmentPointRank, string students = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -98,7 +98,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ResultList</returns>
-        ApiResponse<ResultList> AssessmentPointsAssessmentPointRankResultsWithHttpInfo (string assessmentPointRank, string students = null, int? page = null, int? perPage = null);
+        ApiResponse<ResultList> GetAssessmentPointsAssessmentPointRankResultsWithHttpInfo (string assessmentPointRank, string students = null, int? page = null, int? perPage = null);
         /// <summary>
         /// 
         /// </summary>
@@ -110,7 +110,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>AssessmentList</returns>
-        AssessmentList Assessments (bool? misMappings = null, int? page = null, int? perPage = null);
+        AssessmentList GetAssessments (bool? misMappings = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -123,7 +123,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of AssessmentList</returns>
-        ApiResponse<AssessmentList> AssessmentsWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null);
+        ApiResponse<AssessmentList> GetAssessmentsWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null);
         /// <summary>
         /// 
         /// </summary>
@@ -133,7 +133,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Assessment</returns>
-        Assessment AssessmentsAssessmentId (string assessmentId);
+        Assessment GetAssessmentsAssessmentId (string assessmentId);
 
         /// <summary>
         /// 
@@ -144,7 +144,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>ApiResponse of Assessment</returns>
-        ApiResponse<Assessment> AssessmentsAssessmentIdWithHttpInfo (string assessmentId);
+        ApiResponse<Assessment> GetAssessmentsAssessmentIdWithHttpInfo (string assessmentId);
         /// <summary>
         /// 
         /// </summary>
@@ -154,7 +154,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Gradeset</returns>
-        Gradeset AssessmentsAssessmentIdGradeSet (string assessmentId);
+        Gradeset GetAssessmentsAssessmentIdGradeSet (string assessmentId);
 
         /// <summary>
         /// 
@@ -165,7 +165,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>ApiResponse of Gradeset</returns>
-        ApiResponse<Gradeset> AssessmentsAssessmentIdGradeSetWithHttpInfo (string assessmentId);
+        ApiResponse<Gradeset> GetAssessmentsAssessmentIdGradeSetWithHttpInfo (string assessmentId);
         /// <summary>
         /// 
         /// </summary>
@@ -176,7 +176,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <returns>Result</returns>
-        Result AssessmentsAssessmentIdResults (string assessmentId, string students = null);
+        Result GetAssessmentsAssessmentIdResults (string assessmentId, string students = null);
 
         /// <summary>
         /// 
@@ -188,7 +188,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <returns>ApiResponse of Result</returns>
-        ApiResponse<Result> AssessmentsAssessmentIdResultsWithHttpInfo (string assessmentId, string students = null);
+        ApiResponse<Result> GetAssessmentsAssessmentIdResultsWithHttpInfo (string assessmentId, string students = null);
         /// <summary>
         /// 
         /// </summary>
@@ -198,7 +198,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="facetId">ID of the facet as an Integer.</param>
         /// <returns>Facet</returns>
-        Facet FacetFacetId (string facetId);
+        Facet GetFacetFacetId (string facetId);
 
         /// <summary>
         /// 
@@ -209,7 +209,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="facetId">ID of the facet as an Integer.</param>
         /// <returns>ApiResponse of Facet</returns>
-        ApiResponse<Facet> FacetFacetIdWithHttpInfo (string facetId);
+        ApiResponse<Facet> GetFacetFacetIdWithHttpInfo (string facetId);
         /// <summary>
         /// 
         /// </summary>
@@ -220,7 +220,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>FacetList</returns>
-        FacetList Facets (int? page = null, int? perPage = null);
+        FacetList GetFacets (int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -232,7 +232,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of FacetList</returns>
-        ApiResponse<FacetList> FacetsWithHttpInfo (int? page = null, int? perPage = null);
+        ApiResponse<FacetList> GetFacetsWithHttpInfo (int? page = null, int? perPage = null);
         /// <summary>
         /// 
         /// </summary>
@@ -291,7 +291,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of AssessmentPointList</returns>
-        System.Threading.Tasks.Task<AssessmentPointList> AssessmentPointsAsync (string yearCode = null, string type = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<AssessmentPointList> GetAssessmentPointsAsync (string yearCode = null, string type = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -305,7 +305,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (AssessmentPointList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AssessmentPointList>> AssessmentPointsAsyncWithHttpInfo (string yearCode = null, string type = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ApiResponse<AssessmentPointList>> GetAssessmentPointsAsyncWithHttpInfo (string yearCode = null, string type = null, int? page = null, int? perPage = null);
         /// <summary>
         /// 
         /// </summary>
@@ -315,7 +315,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentPointRank">The rank of the assessment point as an Integer</param>
         /// <returns>Task of AssessmentPoint</returns>
-        System.Threading.Tasks.Task<AssessmentPoint> AssessmentPointsAssessmentPointRankAsync (string assessmentPointRank);
+        System.Threading.Tasks.Task<AssessmentPoint> GetAssessmentPointsAssessmentPointRankAsync (string assessmentPointRank);
 
         /// <summary>
         /// 
@@ -326,7 +326,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentPointRank">The rank of the assessment point as an Integer</param>
         /// <returns>Task of ApiResponse (AssessmentPoint)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AssessmentPoint>> AssessmentPointsAssessmentPointRankAsyncWithHttpInfo (string assessmentPointRank);
+        System.Threading.Tasks.Task<ApiResponse<AssessmentPoint>> GetAssessmentPointsAssessmentPointRankAsyncWithHttpInfo (string assessmentPointRank);
         /// <summary>
         /// 
         /// </summary>
@@ -339,7 +339,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ResultList</returns>
-        System.Threading.Tasks.Task<ResultList> AssessmentPointsAssessmentPointRankResultsAsync (string assessmentPointRank, string students = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ResultList> GetAssessmentPointsAssessmentPointRankResultsAsync (string assessmentPointRank, string students = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -353,7 +353,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ResultList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResultList>> AssessmentPointsAssessmentPointRankResultsAsyncWithHttpInfo (string assessmentPointRank, string students = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ResultList>> GetAssessmentPointsAssessmentPointRankResultsAsyncWithHttpInfo (string assessmentPointRank, string students = null, int? page = null, int? perPage = null);
         /// <summary>
         /// 
         /// </summary>
@@ -365,7 +365,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of AssessmentList</returns>
-        System.Threading.Tasks.Task<AssessmentList> AssessmentsAsync (bool? misMappings = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<AssessmentList> GetAssessmentsAsync (bool? misMappings = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -378,7 +378,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (AssessmentList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AssessmentList>> AssessmentsAsyncWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ApiResponse<AssessmentList>> GetAssessmentsAsyncWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null);
         /// <summary>
         /// 
         /// </summary>
@@ -388,7 +388,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Task of Assessment</returns>
-        System.Threading.Tasks.Task<Assessment> AssessmentsAssessmentIdAsync (string assessmentId);
+        System.Threading.Tasks.Task<Assessment> GetAssessmentsAssessmentIdAsync (string assessmentId);
 
         /// <summary>
         /// 
@@ -399,7 +399,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Task of ApiResponse (Assessment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Assessment>> AssessmentsAssessmentIdAsyncWithHttpInfo (string assessmentId);
+        System.Threading.Tasks.Task<ApiResponse<Assessment>> GetAssessmentsAssessmentIdAsyncWithHttpInfo (string assessmentId);
         /// <summary>
         /// 
         /// </summary>
@@ -409,7 +409,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Task of Gradeset</returns>
-        System.Threading.Tasks.Task<Gradeset> AssessmentsAssessmentIdGradeSetAsync (string assessmentId);
+        System.Threading.Tasks.Task<Gradeset> GetAssessmentsAssessmentIdGradeSetAsync (string assessmentId);
 
         /// <summary>
         /// 
@@ -420,7 +420,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Task of ApiResponse (Gradeset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Gradeset>> AssessmentsAssessmentIdGradeSetAsyncWithHttpInfo (string assessmentId);
+        System.Threading.Tasks.Task<ApiResponse<Gradeset>> GetAssessmentsAssessmentIdGradeSetAsyncWithHttpInfo (string assessmentId);
         /// <summary>
         /// 
         /// </summary>
@@ -431,7 +431,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <returns>Task of Result</returns>
-        System.Threading.Tasks.Task<Result> AssessmentsAssessmentIdResultsAsync (string assessmentId, string students = null);
+        System.Threading.Tasks.Task<Result> GetAssessmentsAssessmentIdResultsAsync (string assessmentId, string students = null);
 
         /// <summary>
         /// 
@@ -443,7 +443,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <returns>Task of ApiResponse (Result)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Result>> AssessmentsAssessmentIdResultsAsyncWithHttpInfo (string assessmentId, string students = null);
+        System.Threading.Tasks.Task<ApiResponse<Result>> GetAssessmentsAssessmentIdResultsAsyncWithHttpInfo (string assessmentId, string students = null);
         /// <summary>
         /// 
         /// </summary>
@@ -453,7 +453,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="facetId">ID of the facet as an Integer.</param>
         /// <returns>Task of Facet</returns>
-        System.Threading.Tasks.Task<Facet> FacetFacetIdAsync (string facetId);
+        System.Threading.Tasks.Task<Facet> GetFacetFacetIdAsync (string facetId);
 
         /// <summary>
         /// 
@@ -464,7 +464,7 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="facetId">ID of the facet as an Integer.</param>
         /// <returns>Task of ApiResponse (Facet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Facet>> FacetFacetIdAsyncWithHttpInfo (string facetId);
+        System.Threading.Tasks.Task<ApiResponse<Facet>> GetFacetFacetIdAsyncWithHttpInfo (string facetId);
         /// <summary>
         /// 
         /// </summary>
@@ -475,7 +475,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of FacetList</returns>
-        System.Threading.Tasks.Task<FacetList> FacetsAsync (int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<FacetList> GetFacetsAsync (int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -487,7 +487,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (FacetList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FacetList>> FacetsAsyncWithHttpInfo (int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ApiResponse<FacetList>> GetFacetsAsyncWithHttpInfo (int? page = null, int? perPage = null);
         /// <summary>
         /// 
         /// </summary>
@@ -641,9 +641,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>AssessmentPointList</returns>
-        public AssessmentPointList AssessmentPoints (string yearCode = null, string type = null, int? page = null, int? perPage = null)
+        public AssessmentPointList GetAssessmentPoints (string yearCode = null, string type = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<AssessmentPointList> localVarResponse = AssessmentPointsWithHttpInfo(yearCode, type, page, perPage);
+             ApiResponse<AssessmentPointList> localVarResponse = GetAssessmentPointsWithHttpInfo(yearCode, type, page, perPage);
              return localVarResponse.Data;
         }
 
@@ -656,7 +656,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of AssessmentPointList</returns>
-        public ApiResponse< AssessmentPointList > AssessmentPointsWithHttpInfo (string yearCode = null, string type = null, int? page = null, int? perPage = null)
+        public ApiResponse< AssessmentPointList > GetAssessmentPointsWithHttpInfo (string yearCode = null, string type = null, int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/assessment_points";
@@ -702,7 +702,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentPoints", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentPoints", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -720,9 +720,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of AssessmentPointList</returns>
-        public async System.Threading.Tasks.Task<AssessmentPointList> AssessmentPointsAsync (string yearCode = null, string type = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<AssessmentPointList> GetAssessmentPointsAsync (string yearCode = null, string type = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<AssessmentPointList> localVarResponse = await AssessmentPointsAsyncWithHttpInfo(yearCode, type, page, perPage);
+             ApiResponse<AssessmentPointList> localVarResponse = await GetAssessmentPointsAsyncWithHttpInfo(yearCode, type, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -736,7 +736,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (AssessmentPointList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AssessmentPointList>> AssessmentPointsAsyncWithHttpInfo (string yearCode = null, string type = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AssessmentPointList>> GetAssessmentPointsAsyncWithHttpInfo (string yearCode = null, string type = null, int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/assessment_points";
@@ -782,7 +782,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentPoints", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentPoints", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -797,9 +797,9 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentPointRank">The rank of the assessment point as an Integer</param>
         /// <returns>AssessmentPoint</returns>
-        public AssessmentPoint AssessmentPointsAssessmentPointRank (string assessmentPointRank)
+        public AssessmentPoint GetAssessmentPointsAssessmentPointRank (string assessmentPointRank)
         {
-             ApiResponse<AssessmentPoint> localVarResponse = AssessmentPointsAssessmentPointRankWithHttpInfo(assessmentPointRank);
+             ApiResponse<AssessmentPoint> localVarResponse = GetAssessmentPointsAssessmentPointRankWithHttpInfo(assessmentPointRank);
              return localVarResponse.Data;
         }
 
@@ -809,11 +809,11 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentPointRank">The rank of the assessment point as an Integer</param>
         /// <returns>ApiResponse of AssessmentPoint</returns>
-        public ApiResponse< AssessmentPoint > AssessmentPointsAssessmentPointRankWithHttpInfo (string assessmentPointRank)
+        public ApiResponse< AssessmentPoint > GetAssessmentPointsAssessmentPointRankWithHttpInfo (string assessmentPointRank)
         {
             // verify the required parameter 'assessmentPointRank' is set
             if (assessmentPointRank == null)
-                throw new ApiException(400, "Missing required parameter 'assessmentPointRank' when calling AssessmentsApi->AssessmentPointsAssessmentPointRank");
+                throw new ApiException(400, "Missing required parameter 'assessmentPointRank' when calling AssessmentsApi->GetAssessmentPointsAssessmentPointRank");
 
             var localVarPath = "/assessment_points/{assessment_point_rank}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -855,7 +855,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentPointsAssessmentPointRank", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentPointsAssessmentPointRank", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -870,9 +870,9 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentPointRank">The rank of the assessment point as an Integer</param>
         /// <returns>Task of AssessmentPoint</returns>
-        public async System.Threading.Tasks.Task<AssessmentPoint> AssessmentPointsAssessmentPointRankAsync (string assessmentPointRank)
+        public async System.Threading.Tasks.Task<AssessmentPoint> GetAssessmentPointsAssessmentPointRankAsync (string assessmentPointRank)
         {
-             ApiResponse<AssessmentPoint> localVarResponse = await AssessmentPointsAssessmentPointRankAsyncWithHttpInfo(assessmentPointRank);
+             ApiResponse<AssessmentPoint> localVarResponse = await GetAssessmentPointsAssessmentPointRankAsyncWithHttpInfo(assessmentPointRank);
              return localVarResponse.Data;
 
         }
@@ -883,11 +883,11 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentPointRank">The rank of the assessment point as an Integer</param>
         /// <returns>Task of ApiResponse (AssessmentPoint)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AssessmentPoint>> AssessmentPointsAssessmentPointRankAsyncWithHttpInfo (string assessmentPointRank)
+        public async System.Threading.Tasks.Task<ApiResponse<AssessmentPoint>> GetAssessmentPointsAssessmentPointRankAsyncWithHttpInfo (string assessmentPointRank)
         {
             // verify the required parameter 'assessmentPointRank' is set
             if (assessmentPointRank == null)
-                throw new ApiException(400, "Missing required parameter 'assessmentPointRank' when calling AssessmentsApi->AssessmentPointsAssessmentPointRank");
+                throw new ApiException(400, "Missing required parameter 'assessmentPointRank' when calling AssessmentsApi->GetAssessmentPointsAssessmentPointRank");
 
             var localVarPath = "/assessment_points/{assessment_point_rank}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -929,7 +929,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentPointsAssessmentPointRank", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentPointsAssessmentPointRank", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -947,9 +947,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ResultList</returns>
-        public ResultList AssessmentPointsAssessmentPointRankResults (string assessmentPointRank, string students = null, int? page = null, int? perPage = null)
+        public ResultList GetAssessmentPointsAssessmentPointRankResults (string assessmentPointRank, string students = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<ResultList> localVarResponse = AssessmentPointsAssessmentPointRankResultsWithHttpInfo(assessmentPointRank, students, page, perPage);
+             ApiResponse<ResultList> localVarResponse = GetAssessmentPointsAssessmentPointRankResultsWithHttpInfo(assessmentPointRank, students, page, perPage);
              return localVarResponse.Data;
         }
 
@@ -962,11 +962,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of ResultList</returns>
-        public ApiResponse< ResultList > AssessmentPointsAssessmentPointRankResultsWithHttpInfo (string assessmentPointRank, string students = null, int? page = null, int? perPage = null)
+        public ApiResponse< ResultList > GetAssessmentPointsAssessmentPointRankResultsWithHttpInfo (string assessmentPointRank, string students = null, int? page = null, int? perPage = null)
         {
             // verify the required parameter 'assessmentPointRank' is set
             if (assessmentPointRank == null)
-                throw new ApiException(400, "Missing required parameter 'assessmentPointRank' when calling AssessmentsApi->AssessmentPointsAssessmentPointRankResults");
+                throw new ApiException(400, "Missing required parameter 'assessmentPointRank' when calling AssessmentsApi->GetAssessmentPointsAssessmentPointRankResults");
 
             var localVarPath = "/assessment_points/{assessment_point_rank}/results";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1011,7 +1011,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentPointsAssessmentPointRankResults", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentPointsAssessmentPointRankResults", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1029,9 +1029,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ResultList</returns>
-        public async System.Threading.Tasks.Task<ResultList> AssessmentPointsAssessmentPointRankResultsAsync (string assessmentPointRank, string students = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ResultList> GetAssessmentPointsAssessmentPointRankResultsAsync (string assessmentPointRank, string students = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<ResultList> localVarResponse = await AssessmentPointsAssessmentPointRankResultsAsyncWithHttpInfo(assessmentPointRank, students, page, perPage);
+             ApiResponse<ResultList> localVarResponse = await GetAssessmentPointsAssessmentPointRankResultsAsyncWithHttpInfo(assessmentPointRank, students, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -1045,11 +1045,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (ResultList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResultList>> AssessmentPointsAssessmentPointRankResultsAsyncWithHttpInfo (string assessmentPointRank, string students = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResultList>> GetAssessmentPointsAssessmentPointRankResultsAsyncWithHttpInfo (string assessmentPointRank, string students = null, int? page = null, int? perPage = null)
         {
             // verify the required parameter 'assessmentPointRank' is set
             if (assessmentPointRank == null)
-                throw new ApiException(400, "Missing required parameter 'assessmentPointRank' when calling AssessmentsApi->AssessmentPointsAssessmentPointRankResults");
+                throw new ApiException(400, "Missing required parameter 'assessmentPointRank' when calling AssessmentsApi->GetAssessmentPointsAssessmentPointRankResults");
 
             var localVarPath = "/assessment_points/{assessment_point_rank}/results";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1094,7 +1094,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentPointsAssessmentPointRankResults", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentPointsAssessmentPointRankResults", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1111,9 +1111,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>AssessmentList</returns>
-        public AssessmentList Assessments (bool? misMappings = null, int? page = null, int? perPage = null)
+        public AssessmentList GetAssessments (bool? misMappings = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<AssessmentList> localVarResponse = AssessmentsWithHttpInfo(misMappings, page, perPage);
+             ApiResponse<AssessmentList> localVarResponse = GetAssessmentsWithHttpInfo(misMappings, page, perPage);
              return localVarResponse.Data;
         }
 
@@ -1125,7 +1125,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of AssessmentList</returns>
-        public ApiResponse< AssessmentList > AssessmentsWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null)
+        public ApiResponse< AssessmentList > GetAssessmentsWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/assessments";
@@ -1170,7 +1170,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Assessments", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessments", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1187,9 +1187,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of AssessmentList</returns>
-        public async System.Threading.Tasks.Task<AssessmentList> AssessmentsAsync (bool? misMappings = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<AssessmentList> GetAssessmentsAsync (bool? misMappings = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<AssessmentList> localVarResponse = await AssessmentsAsyncWithHttpInfo(misMappings, page, perPage);
+             ApiResponse<AssessmentList> localVarResponse = await GetAssessmentsAsyncWithHttpInfo(misMappings, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -1202,7 +1202,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (AssessmentList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AssessmentList>> AssessmentsAsyncWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AssessmentList>> GetAssessmentsAsyncWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/assessments";
@@ -1247,7 +1247,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Assessments", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessments", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1262,9 +1262,9 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Assessment</returns>
-        public Assessment AssessmentsAssessmentId (string assessmentId)
+        public Assessment GetAssessmentsAssessmentId (string assessmentId)
         {
-             ApiResponse<Assessment> localVarResponse = AssessmentsAssessmentIdWithHttpInfo(assessmentId);
+             ApiResponse<Assessment> localVarResponse = GetAssessmentsAssessmentIdWithHttpInfo(assessmentId);
              return localVarResponse.Data;
         }
 
@@ -1274,11 +1274,11 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>ApiResponse of Assessment</returns>
-        public ApiResponse< Assessment > AssessmentsAssessmentIdWithHttpInfo (string assessmentId)
+        public ApiResponse< Assessment > GetAssessmentsAssessmentIdWithHttpInfo (string assessmentId)
         {
             // verify the required parameter 'assessmentId' is set
             if (assessmentId == null)
-                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->AssessmentsAssessmentId");
+                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->GetAssessmentsAssessmentId");
 
             var localVarPath = "/assessments/{assessment_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1320,7 +1320,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentsAssessmentId", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentsAssessmentId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1335,9 +1335,9 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Task of Assessment</returns>
-        public async System.Threading.Tasks.Task<Assessment> AssessmentsAssessmentIdAsync (string assessmentId)
+        public async System.Threading.Tasks.Task<Assessment> GetAssessmentsAssessmentIdAsync (string assessmentId)
         {
-             ApiResponse<Assessment> localVarResponse = await AssessmentsAssessmentIdAsyncWithHttpInfo(assessmentId);
+             ApiResponse<Assessment> localVarResponse = await GetAssessmentsAssessmentIdAsyncWithHttpInfo(assessmentId);
              return localVarResponse.Data;
 
         }
@@ -1348,11 +1348,11 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Task of ApiResponse (Assessment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Assessment>> AssessmentsAssessmentIdAsyncWithHttpInfo (string assessmentId)
+        public async System.Threading.Tasks.Task<ApiResponse<Assessment>> GetAssessmentsAssessmentIdAsyncWithHttpInfo (string assessmentId)
         {
             // verify the required parameter 'assessmentId' is set
             if (assessmentId == null)
-                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->AssessmentsAssessmentId");
+                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->GetAssessmentsAssessmentId");
 
             var localVarPath = "/assessments/{assessment_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1394,7 +1394,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentsAssessmentId", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentsAssessmentId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1409,9 +1409,9 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Gradeset</returns>
-        public Gradeset AssessmentsAssessmentIdGradeSet (string assessmentId)
+        public Gradeset GetAssessmentsAssessmentIdGradeSet (string assessmentId)
         {
-             ApiResponse<Gradeset> localVarResponse = AssessmentsAssessmentIdGradeSetWithHttpInfo(assessmentId);
+             ApiResponse<Gradeset> localVarResponse = GetAssessmentsAssessmentIdGradeSetWithHttpInfo(assessmentId);
              return localVarResponse.Data;
         }
 
@@ -1421,11 +1421,11 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>ApiResponse of Gradeset</returns>
-        public ApiResponse< Gradeset > AssessmentsAssessmentIdGradeSetWithHttpInfo (string assessmentId)
+        public ApiResponse< Gradeset > GetAssessmentsAssessmentIdGradeSetWithHttpInfo (string assessmentId)
         {
             // verify the required parameter 'assessmentId' is set
             if (assessmentId == null)
-                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->AssessmentsAssessmentIdGradeSet");
+                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->GetAssessmentsAssessmentIdGradeSet");
 
             var localVarPath = "/assessments/{assessment_id}/grade_set";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1467,7 +1467,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentsAssessmentIdGradeSet", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentsAssessmentIdGradeSet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1482,9 +1482,9 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Task of Gradeset</returns>
-        public async System.Threading.Tasks.Task<Gradeset> AssessmentsAssessmentIdGradeSetAsync (string assessmentId)
+        public async System.Threading.Tasks.Task<Gradeset> GetAssessmentsAssessmentIdGradeSetAsync (string assessmentId)
         {
-             ApiResponse<Gradeset> localVarResponse = await AssessmentsAssessmentIdGradeSetAsyncWithHttpInfo(assessmentId);
+             ApiResponse<Gradeset> localVarResponse = await GetAssessmentsAssessmentIdGradeSetAsyncWithHttpInfo(assessmentId);
              return localVarResponse.Data;
 
         }
@@ -1495,11 +1495,11 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <returns>Task of ApiResponse (Gradeset)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Gradeset>> AssessmentsAssessmentIdGradeSetAsyncWithHttpInfo (string assessmentId)
+        public async System.Threading.Tasks.Task<ApiResponse<Gradeset>> GetAssessmentsAssessmentIdGradeSetAsyncWithHttpInfo (string assessmentId)
         {
             // verify the required parameter 'assessmentId' is set
             if (assessmentId == null)
-                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->AssessmentsAssessmentIdGradeSet");
+                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->GetAssessmentsAssessmentIdGradeSet");
 
             var localVarPath = "/assessments/{assessment_id}/grade_set";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1541,7 +1541,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentsAssessmentIdGradeSet", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentsAssessmentIdGradeSet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1557,9 +1557,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <returns>Result</returns>
-        public Result AssessmentsAssessmentIdResults (string assessmentId, string students = null)
+        public Result GetAssessmentsAssessmentIdResults (string assessmentId, string students = null)
         {
-             ApiResponse<Result> localVarResponse = AssessmentsAssessmentIdResultsWithHttpInfo(assessmentId, students);
+             ApiResponse<Result> localVarResponse = GetAssessmentsAssessmentIdResultsWithHttpInfo(assessmentId, students);
              return localVarResponse.Data;
         }
 
@@ -1570,11 +1570,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <returns>ApiResponse of Result</returns>
-        public ApiResponse< Result > AssessmentsAssessmentIdResultsWithHttpInfo (string assessmentId, string students = null)
+        public ApiResponse< Result > GetAssessmentsAssessmentIdResultsWithHttpInfo (string assessmentId, string students = null)
         {
             // verify the required parameter 'assessmentId' is set
             if (assessmentId == null)
-                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->AssessmentsAssessmentIdResults");
+                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->GetAssessmentsAssessmentIdResults");
 
             var localVarPath = "/assessments/{assessment_id}/results";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1617,7 +1617,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentsAssessmentIdResults", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentsAssessmentIdResults", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1633,9 +1633,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <returns>Task of Result</returns>
-        public async System.Threading.Tasks.Task<Result> AssessmentsAssessmentIdResultsAsync (string assessmentId, string students = null)
+        public async System.Threading.Tasks.Task<Result> GetAssessmentsAssessmentIdResultsAsync (string assessmentId, string students = null)
         {
-             ApiResponse<Result> localVarResponse = await AssessmentsAssessmentIdResultsAsyncWithHttpInfo(assessmentId, students);
+             ApiResponse<Result> localVarResponse = await GetAssessmentsAssessmentIdResultsAsyncWithHttpInfo(assessmentId, students);
              return localVarResponse.Data;
 
         }
@@ -1647,11 +1647,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="assessmentId">ID of the assessment as an Integer.</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <returns>Task of ApiResponse (Result)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Result>> AssessmentsAssessmentIdResultsAsyncWithHttpInfo (string assessmentId, string students = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Result>> GetAssessmentsAssessmentIdResultsAsyncWithHttpInfo (string assessmentId, string students = null)
         {
             // verify the required parameter 'assessmentId' is set
             if (assessmentId == null)
-                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->AssessmentsAssessmentIdResults");
+                throw new ApiException(400, "Missing required parameter 'assessmentId' when calling AssessmentsApi->GetAssessmentsAssessmentIdResults");
 
             var localVarPath = "/assessments/{assessment_id}/results";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1694,7 +1694,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AssessmentsAssessmentIdResults", localVarResponse);
+                Exception exception = ExceptionFactory("GetAssessmentsAssessmentIdResults", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1709,9 +1709,9 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="facetId">ID of the facet as an Integer.</param>
         /// <returns>Facet</returns>
-        public Facet FacetFacetId (string facetId)
+        public Facet GetFacetFacetId (string facetId)
         {
-             ApiResponse<Facet> localVarResponse = FacetFacetIdWithHttpInfo(facetId);
+             ApiResponse<Facet> localVarResponse = GetFacetFacetIdWithHttpInfo(facetId);
              return localVarResponse.Data;
         }
 
@@ -1721,11 +1721,11 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="facetId">ID of the facet as an Integer.</param>
         /// <returns>ApiResponse of Facet</returns>
-        public ApiResponse< Facet > FacetFacetIdWithHttpInfo (string facetId)
+        public ApiResponse< Facet > GetFacetFacetIdWithHttpInfo (string facetId)
         {
             // verify the required parameter 'facetId' is set
             if (facetId == null)
-                throw new ApiException(400, "Missing required parameter 'facetId' when calling AssessmentsApi->FacetFacetId");
+                throw new ApiException(400, "Missing required parameter 'facetId' when calling AssessmentsApi->GetFacetFacetId");
 
             var localVarPath = "/facet/{facet_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1767,7 +1767,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FacetFacetId", localVarResponse);
+                Exception exception = ExceptionFactory("GetFacetFacetId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1782,9 +1782,9 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="facetId">ID of the facet as an Integer.</param>
         /// <returns>Task of Facet</returns>
-        public async System.Threading.Tasks.Task<Facet> FacetFacetIdAsync (string facetId)
+        public async System.Threading.Tasks.Task<Facet> GetFacetFacetIdAsync (string facetId)
         {
-             ApiResponse<Facet> localVarResponse = await FacetFacetIdAsyncWithHttpInfo(facetId);
+             ApiResponse<Facet> localVarResponse = await GetFacetFacetIdAsyncWithHttpInfo(facetId);
              return localVarResponse.Data;
 
         }
@@ -1795,11 +1795,11 @@ namespace assembly-client-dotnet.Api
         /// <exception cref="assembly-client-dotnet.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="facetId">ID of the facet as an Integer.</param>
         /// <returns>Task of ApiResponse (Facet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Facet>> FacetFacetIdAsyncWithHttpInfo (string facetId)
+        public async System.Threading.Tasks.Task<ApiResponse<Facet>> GetFacetFacetIdAsyncWithHttpInfo (string facetId)
         {
             // verify the required parameter 'facetId' is set
             if (facetId == null)
-                throw new ApiException(400, "Missing required parameter 'facetId' when calling AssessmentsApi->FacetFacetId");
+                throw new ApiException(400, "Missing required parameter 'facetId' when calling AssessmentsApi->GetFacetFacetId");
 
             var localVarPath = "/facet/{facet_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1841,7 +1841,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("FacetFacetId", localVarResponse);
+                Exception exception = ExceptionFactory("GetFacetFacetId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1857,9 +1857,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>FacetList</returns>
-        public FacetList Facets (int? page = null, int? perPage = null)
+        public FacetList GetFacets (int? page = null, int? perPage = null)
         {
-             ApiResponse<FacetList> localVarResponse = FacetsWithHttpInfo(page, perPage);
+             ApiResponse<FacetList> localVarResponse = GetFacetsWithHttpInfo(page, perPage);
              return localVarResponse.Data;
         }
 
@@ -1870,7 +1870,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of FacetList</returns>
-        public ApiResponse< FacetList > FacetsWithHttpInfo (int? page = null, int? perPage = null)
+        public ApiResponse< FacetList > GetFacetsWithHttpInfo (int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/facets";
@@ -1914,7 +1914,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Facets", localVarResponse);
+                Exception exception = ExceptionFactory("GetFacets", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1930,9 +1930,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of FacetList</returns>
-        public async System.Threading.Tasks.Task<FacetList> FacetsAsync (int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<FacetList> GetFacetsAsync (int? page = null, int? perPage = null)
         {
-             ApiResponse<FacetList> localVarResponse = await FacetsAsyncWithHttpInfo(page, perPage);
+             ApiResponse<FacetList> localVarResponse = await GetFacetsAsyncWithHttpInfo(page, perPage);
              return localVarResponse.Data;
 
         }
@@ -1944,7 +1944,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (FacetList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FacetList>> FacetsAsyncWithHttpInfo (int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FacetList>> GetFacetsAsyncWithHttpInfo (int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/facets";
@@ -1988,7 +1988,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Facets", localVarResponse);
+                Exception exception = ExceptionFactory("GetFacets", localVarResponse);
                 if (exception != null) throw exception;
             }
 

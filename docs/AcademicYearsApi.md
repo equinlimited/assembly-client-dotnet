@@ -4,12 +4,12 @@ All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AcademicYears**](AcademicYearsApi.md#academicyears) | **GET** /academic_years | 
+[**GetAcademicYears**](AcademicYearsApi.md#getacademicyears) | **GET** /academic_years | 
 
 
-<a name="academicyears"></a>
-# **AcademicYears**
-> AcademicYearList AcademicYears (int? page = null, int? perPage = null)
+<a name="getacademicyears"></a>
+# **GetAcademicYears**
+> AcademicYearList GetAcademicYears (int? page = null, int? perPage = null)
 
 
 
@@ -25,7 +25,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class AcademicYearsExample
+    public class GetAcademicYearsExample
     {
         public void main()
         {
@@ -38,12 +38,12 @@ namespace Example
 
             try
             {
-                AcademicYearList result = apiInstance.AcademicYears(page, perPage);
+                AcademicYearList result = apiInstance.GetAcademicYears(page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AcademicYearsApi.AcademicYears: " + e.Message );
+                Debug.Print("Exception when calling AcademicYearsApi.GetAcademicYears: " + e.Message );
             }
         }
     }

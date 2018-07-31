@@ -35,7 +35,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>SubjectList</returns>
-        SubjectList Subjects (bool? misMappings = null, int? page = null, int? perPage = null);
+        SubjectList GetSubjects (bool? misMappings = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -48,7 +48,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of SubjectList</returns>
-        ApiResponse<SubjectList> SubjectsWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null);
+        ApiResponse<SubjectList> GetSubjectsWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -62,7 +62,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of SubjectList</returns>
-        System.Threading.Tasks.Task<SubjectList> SubjectsAsync (bool? misMappings = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<SubjectList> GetSubjectsAsync (bool? misMappings = null, int? page = null, int? perPage = null);
 
         /// <summary>
         /// 
@@ -75,7 +75,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (SubjectList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SubjectList>> SubjectsAsyncWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null);
+        System.Threading.Tasks.Task<ApiResponse<SubjectList>> GetSubjectsAsyncWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null);
         #endregion Asynchronous Operations
     }
 
@@ -184,9 +184,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>SubjectList</returns>
-        public SubjectList Subjects (bool? misMappings = null, int? page = null, int? perPage = null)
+        public SubjectList GetSubjects (bool? misMappings = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<SubjectList> localVarResponse = SubjectsWithHttpInfo(misMappings, page, perPage);
+             ApiResponse<SubjectList> localVarResponse = GetSubjectsWithHttpInfo(misMappings, page, perPage);
              return localVarResponse.Data;
         }
 
@@ -198,7 +198,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>ApiResponse of SubjectList</returns>
-        public ApiResponse< SubjectList > SubjectsWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null)
+        public ApiResponse< SubjectList > GetSubjectsWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/subjects";
@@ -243,7 +243,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Subjects", localVarResponse);
+                Exception exception = ExceptionFactory("GetSubjects", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -260,9 +260,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of SubjectList</returns>
-        public async System.Threading.Tasks.Task<SubjectList> SubjectsAsync (bool? misMappings = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<SubjectList> GetSubjectsAsync (bool? misMappings = null, int? page = null, int? perPage = null)
         {
-             ApiResponse<SubjectList> localVarResponse = await SubjectsAsyncWithHttpInfo(misMappings, page, perPage);
+             ApiResponse<SubjectList> localVarResponse = await GetSubjectsAsyncWithHttpInfo(misMappings, page, perPage);
              return localVarResponse.Data;
 
         }
@@ -275,7 +275,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <returns>Task of ApiResponse (SubjectList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SubjectList>> SubjectsAsyncWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SubjectList>> GetSubjectsAsyncWithHttpInfo (bool? misMappings = null, int? page = null, int? perPage = null)
         {
 
             var localVarPath = "/subjects";
@@ -320,7 +320,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("Subjects", localVarResponse);
+                Exception exception = ExceptionFactory("GetSubjects", localVarResponse);
                 if (exception != null) throw exception;
             }
 

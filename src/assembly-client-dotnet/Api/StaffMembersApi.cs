@@ -37,7 +37,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StaffAbsenceList</returns>
-        StaffAbsenceList StaffAbsences (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        StaffAbsenceList GetStaffAbsences (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -52,7 +52,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StaffAbsenceList</returns>
-        ApiResponse<StaffAbsenceList> StaffAbsencesWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        ApiResponse<StaffAbsenceList> GetStaffAbsencesWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -68,7 +68,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StaffContractList</returns>
-        StaffContractList StaffContracts (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        StaffContractList GetStaffContracts (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -85,7 +85,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StaffContractList</returns>
-        ApiResponse<StaffContractList> StaffContractsWithHttpInfo (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        ApiResponse<StaffContractList> GetStaffContractsWithHttpInfo (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -102,7 +102,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StaffContractList</returns>
-        StaffContractList StaffContractsStaffMemberId (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        StaffContractList GetStaffContractsStaffMemberId (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -120,7 +120,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StaffContractList</returns>
-        ApiResponse<StaffContractList> StaffContractsStaffMemberIdWithHttpInfo (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        ApiResponse<StaffContractList> GetStaffContractsStaffMemberIdWithHttpInfo (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -135,7 +135,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StaffMemberList</returns>
-        StaffMemberList StaffMembers (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        StaffMemberList GetStaffMembers (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -151,7 +151,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StaffMemberList</returns>
-        ApiResponse<StaffMemberList> StaffMembersWithHttpInfo (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        ApiResponse<StaffMemberList> GetStaffMembersWithHttpInfo (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -164,7 +164,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires appropriate scope) (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StaffMember</returns>
-        StaffMember StaffMembersStaffMemberId (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null);
+        StaffMember GetStaffMembersStaffMemberId (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -178,7 +178,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires appropriate scope) (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StaffMember</returns>
-        ApiResponse<StaffMember> StaffMembersStaffMemberIdWithHttpInfo (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null);
+        ApiResponse<StaffMember> GetStaffMembersStaffMemberIdWithHttpInfo (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -194,7 +194,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StaffAbsenceList</returns>
-        System.Threading.Tasks.Task<StaffAbsenceList> StaffAbsencesAsync (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<StaffAbsenceList> GetStaffAbsencesAsync (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -209,7 +209,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StaffAbsenceList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StaffAbsenceList>> StaffAbsencesAsyncWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<StaffAbsenceList>> GetStaffAbsencesAsyncWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -225,7 +225,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StaffContractList</returns>
-        System.Threading.Tasks.Task<StaffContractList> StaffContractsAsync (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<StaffContractList> GetStaffContractsAsync (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -242,7 +242,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StaffContractList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StaffContractList>> StaffContractsAsyncWithHttpInfo (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<StaffContractList>> GetStaffContractsAsyncWithHttpInfo (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -259,7 +259,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StaffContractList</returns>
-        System.Threading.Tasks.Task<StaffContractList> StaffContractsStaffMemberIdAsync (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<StaffContractList> GetStaffContractsStaffMemberIdAsync (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -277,7 +277,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StaffContractList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StaffContractList>> StaffContractsStaffMemberIdAsyncWithHttpInfo (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<StaffContractList>> GetStaffContractsStaffMemberIdAsyncWithHttpInfo (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -292,7 +292,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StaffMemberList</returns>
-        System.Threading.Tasks.Task<StaffMemberList> StaffMembersAsync (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<StaffMemberList> GetStaffMembersAsync (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -308,7 +308,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StaffMemberList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StaffMemberList>> StaffMembersAsyncWithHttpInfo (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<StaffMemberList>> GetStaffMembersAsyncWithHttpInfo (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -321,7 +321,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires appropriate scope) (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StaffMember</returns>
-        System.Threading.Tasks.Task<StaffMember> StaffMembersStaffMemberIdAsync (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<StaffMember> GetStaffMembersStaffMemberIdAsync (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -335,7 +335,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires appropriate scope) (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StaffMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StaffMember>> StaffMembersStaffMemberIdAsyncWithHttpInfo (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<StaffMember>> GetStaffMembersStaffMemberIdAsyncWithHttpInfo (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null);
         #endregion Asynchronous Operations
     }
 
@@ -446,9 +446,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StaffAbsenceList</returns>
-        public StaffAbsenceList StaffAbsences (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public StaffAbsenceList GetStaffAbsences (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StaffAbsenceList> localVarResponse = StaffAbsencesWithHttpInfo(startDate, endDate, page, perPage, ifModifiedSince);
+             ApiResponse<StaffAbsenceList> localVarResponse = GetStaffAbsencesWithHttpInfo(startDate, endDate, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -462,7 +462,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StaffAbsenceList</returns>
-        public ApiResponse< StaffAbsenceList > StaffAbsencesWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public ApiResponse< StaffAbsenceList > GetStaffAbsencesWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/staff_absences";
@@ -509,7 +509,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StaffAbsences", localVarResponse);
+                Exception exception = ExceptionFactory("GetStaffAbsences", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -528,9 +528,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StaffAbsenceList</returns>
-        public async System.Threading.Tasks.Task<StaffAbsenceList> StaffAbsencesAsync (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<StaffAbsenceList> GetStaffAbsencesAsync (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StaffAbsenceList> localVarResponse = await StaffAbsencesAsyncWithHttpInfo(startDate, endDate, page, perPage, ifModifiedSince);
+             ApiResponse<StaffAbsenceList> localVarResponse = await GetStaffAbsencesAsyncWithHttpInfo(startDate, endDate, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -545,7 +545,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StaffAbsenceList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StaffAbsenceList>> StaffAbsencesAsyncWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StaffAbsenceList>> GetStaffAbsencesAsyncWithHttpInfo (string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/staff_absences";
@@ -592,7 +592,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StaffAbsences", localVarResponse);
+                Exception exception = ExceptionFactory("GetStaffAbsences", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -613,9 +613,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StaffContractList</returns>
-        public StaffContractList StaffContracts (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public StaffContractList GetStaffContracts (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StaffContractList> localVarResponse = StaffContractsWithHttpInfo(date, roles, salaries, allowances, page, perPage, ifModifiedSince);
+             ApiResponse<StaffContractList> localVarResponse = GetStaffContractsWithHttpInfo(date, roles, salaries, allowances, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -631,7 +631,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StaffContractList</returns>
-        public ApiResponse< StaffContractList > StaffContractsWithHttpInfo (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public ApiResponse< StaffContractList > GetStaffContractsWithHttpInfo (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/staff_contracts";
@@ -680,7 +680,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StaffContracts", localVarResponse);
+                Exception exception = ExceptionFactory("GetStaffContracts", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -701,9 +701,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StaffContractList</returns>
-        public async System.Threading.Tasks.Task<StaffContractList> StaffContractsAsync (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<StaffContractList> GetStaffContractsAsync (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StaffContractList> localVarResponse = await StaffContractsAsyncWithHttpInfo(date, roles, salaries, allowances, page, perPage, ifModifiedSince);
+             ApiResponse<StaffContractList> localVarResponse = await GetStaffContractsAsyncWithHttpInfo(date, roles, salaries, allowances, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -720,7 +720,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StaffContractList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StaffContractList>> StaffContractsAsyncWithHttpInfo (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StaffContractList>> GetStaffContractsAsyncWithHttpInfo (string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/staff_contracts";
@@ -769,7 +769,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StaffContracts", localVarResponse);
+                Exception exception = ExceptionFactory("GetStaffContracts", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -791,9 +791,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StaffContractList</returns>
-        public StaffContractList StaffContractsStaffMemberId (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public StaffContractList GetStaffContractsStaffMemberId (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StaffContractList> localVarResponse = StaffContractsStaffMemberIdWithHttpInfo(staffMemberId, date, roles, salaries, allowances, page, perPage, ifModifiedSince);
+             ApiResponse<StaffContractList> localVarResponse = GetStaffContractsStaffMemberIdWithHttpInfo(staffMemberId, date, roles, salaries, allowances, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -810,11 +810,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StaffContractList</returns>
-        public ApiResponse< StaffContractList > StaffContractsStaffMemberIdWithHttpInfo (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public ApiResponse< StaffContractList > GetStaffContractsStaffMemberIdWithHttpInfo (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'staffMemberId' is set
             if (staffMemberId == null)
-                throw new ApiException(400, "Missing required parameter 'staffMemberId' when calling StaffMembersApi->StaffContractsStaffMemberId");
+                throw new ApiException(400, "Missing required parameter 'staffMemberId' when calling StaffMembersApi->GetStaffContractsStaffMemberId");
 
             var localVarPath = "/staff_contracts/{staff_member_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -863,7 +863,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StaffContractsStaffMemberId", localVarResponse);
+                Exception exception = ExceptionFactory("GetStaffContractsStaffMemberId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -885,9 +885,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StaffContractList</returns>
-        public async System.Threading.Tasks.Task<StaffContractList> StaffContractsStaffMemberIdAsync (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<StaffContractList> GetStaffContractsStaffMemberIdAsync (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StaffContractList> localVarResponse = await StaffContractsStaffMemberIdAsyncWithHttpInfo(staffMemberId, date, roles, salaries, allowances, page, perPage, ifModifiedSince);
+             ApiResponse<StaffContractList> localVarResponse = await GetStaffContractsStaffMemberIdAsyncWithHttpInfo(staffMemberId, date, roles, salaries, allowances, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -905,11 +905,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StaffContractList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StaffContractList>> StaffContractsStaffMemberIdAsyncWithHttpInfo (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StaffContractList>> GetStaffContractsStaffMemberIdAsyncWithHttpInfo (string staffMemberId, string date = null, bool? roles = null, bool? salaries = null, bool? allowances = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'staffMemberId' is set
             if (staffMemberId == null)
-                throw new ApiException(400, "Missing required parameter 'staffMemberId' when calling StaffMembersApi->StaffContractsStaffMemberId");
+                throw new ApiException(400, "Missing required parameter 'staffMemberId' when calling StaffMembersApi->GetStaffContractsStaffMemberId");
 
             var localVarPath = "/staff_contracts/{staff_member_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -958,7 +958,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StaffContractsStaffMemberId", localVarResponse);
+                Exception exception = ExceptionFactory("GetStaffContractsStaffMemberId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -978,9 +978,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StaffMemberList</returns>
-        public StaffMemberList StaffMembers (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public StaffMemberList GetStaffMembers (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StaffMemberList> localVarResponse = StaffMembersWithHttpInfo(teachersOnly, demographics, qualifications, page, perPage, ifModifiedSince);
+             ApiResponse<StaffMemberList> localVarResponse = GetStaffMembersWithHttpInfo(teachersOnly, demographics, qualifications, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -995,7 +995,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StaffMemberList</returns>
-        public ApiResponse< StaffMemberList > StaffMembersWithHttpInfo (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public ApiResponse< StaffMemberList > GetStaffMembersWithHttpInfo (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/staff_members";
@@ -1043,7 +1043,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StaffMembers", localVarResponse);
+                Exception exception = ExceptionFactory("GetStaffMembers", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1063,9 +1063,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StaffMemberList</returns>
-        public async System.Threading.Tasks.Task<StaffMemberList> StaffMembersAsync (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<StaffMemberList> GetStaffMembersAsync (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StaffMemberList> localVarResponse = await StaffMembersAsyncWithHttpInfo(teachersOnly, demographics, qualifications, page, perPage, ifModifiedSince);
+             ApiResponse<StaffMemberList> localVarResponse = await GetStaffMembersAsyncWithHttpInfo(teachersOnly, demographics, qualifications, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -1081,7 +1081,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StaffMemberList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StaffMemberList>> StaffMembersAsyncWithHttpInfo (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StaffMemberList>> GetStaffMembersAsyncWithHttpInfo (bool? teachersOnly = null, bool? demographics = null, bool? qualifications = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/staff_members";
@@ -1129,7 +1129,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StaffMembers", localVarResponse);
+                Exception exception = ExceptionFactory("GetStaffMembers", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1147,9 +1147,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires appropriate scope) (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StaffMember</returns>
-        public StaffMember StaffMembersStaffMemberId (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null)
+        public StaffMember GetStaffMembersStaffMemberId (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null)
         {
-             ApiResponse<StaffMember> localVarResponse = StaffMembersStaffMemberIdWithHttpInfo(staffMemberId, demographics, qualifications, ifModifiedSince);
+             ApiResponse<StaffMember> localVarResponse = GetStaffMembersStaffMemberIdWithHttpInfo(staffMemberId, demographics, qualifications, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -1162,11 +1162,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires appropriate scope) (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StaffMember</returns>
-        public ApiResponse< StaffMember > StaffMembersStaffMemberIdWithHttpInfo (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null)
+        public ApiResponse< StaffMember > GetStaffMembersStaffMemberIdWithHttpInfo (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'staffMemberId' is set
             if (staffMemberId == null)
-                throw new ApiException(400, "Missing required parameter 'staffMemberId' when calling StaffMembersApi->StaffMembersStaffMemberId");
+                throw new ApiException(400, "Missing required parameter 'staffMemberId' when calling StaffMembersApi->GetStaffMembersStaffMemberId");
 
             var localVarPath = "/staff_members/{staff_member_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1211,7 +1211,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StaffMembersStaffMemberId", localVarResponse);
+                Exception exception = ExceptionFactory("GetStaffMembersStaffMemberId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1229,9 +1229,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires appropriate scope) (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StaffMember</returns>
-        public async System.Threading.Tasks.Task<StaffMember> StaffMembersStaffMemberIdAsync (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<StaffMember> GetStaffMembersStaffMemberIdAsync (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null)
         {
-             ApiResponse<StaffMember> localVarResponse = await StaffMembersStaffMemberIdAsyncWithHttpInfo(staffMemberId, demographics, qualifications, ifModifiedSince);
+             ApiResponse<StaffMember> localVarResponse = await GetStaffMembersStaffMemberIdAsyncWithHttpInfo(staffMemberId, demographics, qualifications, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -1245,11 +1245,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires appropriate scope) (optional, default to false)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StaffMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StaffMember>> StaffMembersStaffMemberIdAsyncWithHttpInfo (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StaffMember>> GetStaffMembersStaffMemberIdAsyncWithHttpInfo (string staffMemberId, bool? demographics = null, bool? qualifications = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'staffMemberId' is set
             if (staffMemberId == null)
-                throw new ApiException(400, "Missing required parameter 'staffMemberId' when calling StaffMembersApi->StaffMembersStaffMemberId");
+                throw new ApiException(400, "Missing required parameter 'staffMemberId' when calling StaffMembersApi->GetStaffMembersStaffMemberId");
 
             var localVarPath = "/staff_members/{staff_member_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1294,7 +1294,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StaffMembersStaffMemberId", localVarResponse);
+                Exception exception = ExceptionFactory("GetStaffMembersStaffMemberId", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -65,13 +65,13 @@ namespace assembly-client-dotnet.Test
 
         
         /// <summary>
-        /// Test SchoolDetails
+        /// Test GetSchoolDetails
         /// </summary>
         [Test]
-        public void SchoolDetailsTest()
+        public void GetSchoolDetailsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SchoolDetails();
+            //var response = instance.GetSchoolDetails();
             //Assert.IsInstanceOf<SchoolDetails> (response, "response is SchoolDetails");
         }
         

@@ -4,12 +4,12 @@ All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Attendances**](AttendanceApi.md#attendances) | **GET** /attendances | 
+[**GetAttendances**](AttendanceApi.md#getattendances) | **GET** /attendances | 
 
 
-<a name="attendances"></a>
-# **Attendances**
-> AttendanceList Attendances (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="getattendances"></a>
+# **GetAttendances**
+> AttendanceList GetAttendances (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -25,7 +25,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class AttendancesExample
+    public class GetAttendancesExample
     {
         public void main()
         {
@@ -43,12 +43,12 @@ namespace Example
 
             try
             {
-                AttendanceList result = apiInstance.Attendances(studentId, registrationGroupId, startDate, endDate, page, perPage, ifModifiedSince);
+                AttendanceList result = apiInstance.GetAttendances(studentId, registrationGroupId, startDate, endDate, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AttendanceApi.Attendances: " + e.Message );
+                Debug.Print("Exception when calling AttendanceApi.GetAttendances: " + e.Message );
             }
         }
     }

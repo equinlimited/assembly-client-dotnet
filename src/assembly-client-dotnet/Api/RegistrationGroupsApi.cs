@@ -38,7 +38,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>RegistrationGroupList</returns>
-        RegistrationGroupList RegistrationGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        RegistrationGroupList GetRegistrationGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -54,7 +54,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of RegistrationGroupList</returns>
-        ApiResponse<RegistrationGroupList> RegistrationGroupsWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        ApiResponse<RegistrationGroupList> GetRegistrationGroupsWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -67,7 +67,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>RegistrationGroup</returns>
-        RegistrationGroup RegistrationGroupsGroupId (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null);
+        RegistrationGroup GetRegistrationGroupsGroupId (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -81,7 +81,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of RegistrationGroup</returns>
-        ApiResponse<RegistrationGroup> RegistrationGroupsGroupIdWithHttpInfo (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null);
+        ApiResponse<RegistrationGroup> GetRegistrationGroupsGroupIdWithHttpInfo (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -99,7 +99,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StudentList</returns>
-        StudentList RegistrationGroupsGroupIdStudents (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        StudentList GetRegistrationGroupsGroupIdStudents (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -118,7 +118,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StudentList</returns>
-        ApiResponse<StudentList> RegistrationGroupsGroupIdStudentsWithHttpInfo (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        ApiResponse<StudentList> GetRegistrationGroupsGroupIdStudentsWithHttpInfo (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -135,7 +135,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of RegistrationGroupList</returns>
-        System.Threading.Tasks.Task<RegistrationGroupList> RegistrationGroupsAsync (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<RegistrationGroupList> GetRegistrationGroupsAsync (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -151,7 +151,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (RegistrationGroupList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RegistrationGroupList>> RegistrationGroupsAsyncWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<RegistrationGroupList>> GetRegistrationGroupsAsyncWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -164,7 +164,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of RegistrationGroup</returns>
-        System.Threading.Tasks.Task<RegistrationGroup> RegistrationGroupsGroupIdAsync (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<RegistrationGroup> GetRegistrationGroupsGroupIdAsync (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -178,7 +178,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (RegistrationGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RegistrationGroup>> RegistrationGroupsGroupIdAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<RegistrationGroup>> GetRegistrationGroupsGroupIdAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -196,7 +196,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StudentList</returns>
-        System.Threading.Tasks.Task<StudentList> RegistrationGroupsGroupIdStudentsAsync (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<StudentList> GetRegistrationGroupsGroupIdStudentsAsync (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -215,7 +215,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StudentList>> RegistrationGroupsGroupIdStudentsAsyncWithHttpInfo (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<StudentList>> GetRegistrationGroupsGroupIdStudentsAsyncWithHttpInfo (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         #endregion Asynchronous Operations
     }
 
@@ -327,9 +327,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>RegistrationGroupList</returns>
-        public RegistrationGroupList RegistrationGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public RegistrationGroupList GetRegistrationGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<RegistrationGroupList> localVarResponse = RegistrationGroupsWithHttpInfo(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
+             ApiResponse<RegistrationGroupList> localVarResponse = GetRegistrationGroupsWithHttpInfo(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -344,7 +344,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of RegistrationGroupList</returns>
-        public ApiResponse< RegistrationGroupList > RegistrationGroupsWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public ApiResponse< RegistrationGroupList > GetRegistrationGroupsWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/registration_groups";
@@ -392,7 +392,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RegistrationGroups", localVarResponse);
+                Exception exception = ExceptionFactory("GetRegistrationGroups", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -412,9 +412,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of RegistrationGroupList</returns>
-        public async System.Threading.Tasks.Task<RegistrationGroupList> RegistrationGroupsAsync (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<RegistrationGroupList> GetRegistrationGroupsAsync (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<RegistrationGroupList> localVarResponse = await RegistrationGroupsAsyncWithHttpInfo(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
+             ApiResponse<RegistrationGroupList> localVarResponse = await GetRegistrationGroupsAsyncWithHttpInfo(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -430,7 +430,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (RegistrationGroupList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RegistrationGroupList>> RegistrationGroupsAsyncWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RegistrationGroupList>> GetRegistrationGroupsAsyncWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/registration_groups";
@@ -478,7 +478,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RegistrationGroups", localVarResponse);
+                Exception exception = ExceptionFactory("GetRegistrationGroups", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -496,9 +496,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>RegistrationGroup</returns>
-        public RegistrationGroup RegistrationGroupsGroupId (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null)
+        public RegistrationGroup GetRegistrationGroupsGroupId (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null)
         {
-             ApiResponse<RegistrationGroup> localVarResponse = RegistrationGroupsGroupIdWithHttpInfo(groupId, date, academicYearId, ifModifiedSince);
+             ApiResponse<RegistrationGroup> localVarResponse = GetRegistrationGroupsGroupIdWithHttpInfo(groupId, date, academicYearId, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -511,11 +511,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of RegistrationGroup</returns>
-        public ApiResponse< RegistrationGroup > RegistrationGroupsGroupIdWithHttpInfo (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null)
+        public ApiResponse< RegistrationGroup > GetRegistrationGroupsGroupIdWithHttpInfo (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling RegistrationGroupsApi->RegistrationGroupsGroupId");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling RegistrationGroupsApi->GetRegistrationGroupsGroupId");
 
             var localVarPath = "/registration_groups/{group_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -560,7 +560,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RegistrationGroupsGroupId", localVarResponse);
+                Exception exception = ExceptionFactory("GetRegistrationGroupsGroupId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -578,9 +578,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of RegistrationGroup</returns>
-        public async System.Threading.Tasks.Task<RegistrationGroup> RegistrationGroupsGroupIdAsync (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<RegistrationGroup> GetRegistrationGroupsGroupIdAsync (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null)
         {
-             ApiResponse<RegistrationGroup> localVarResponse = await RegistrationGroupsGroupIdAsyncWithHttpInfo(groupId, date, academicYearId, ifModifiedSince);
+             ApiResponse<RegistrationGroup> localVarResponse = await GetRegistrationGroupsGroupIdAsyncWithHttpInfo(groupId, date, academicYearId, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -594,11 +594,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (RegistrationGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RegistrationGroup>> RegistrationGroupsGroupIdAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RegistrationGroup>> GetRegistrationGroupsGroupIdAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling RegistrationGroupsApi->RegistrationGroupsGroupId");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling RegistrationGroupsApi->GetRegistrationGroupsGroupId");
 
             var localVarPath = "/registration_groups/{group_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -643,7 +643,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RegistrationGroupsGroupId", localVarResponse);
+                Exception exception = ExceptionFactory("GetRegistrationGroupsGroupId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -666,9 +666,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StudentList</returns>
-        public StudentList RegistrationGroupsGroupIdStudents (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public StudentList GetRegistrationGroupsGroupIdStudents (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StudentList> localVarResponse = RegistrationGroupsGroupIdStudentsWithHttpInfo(groupId, yearCode, date, academicYearId, demographics, care, page, perPage, ifModifiedSince);
+             ApiResponse<StudentList> localVarResponse = GetRegistrationGroupsGroupIdStudentsWithHttpInfo(groupId, yearCode, date, academicYearId, demographics, care, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -686,11 +686,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StudentList</returns>
-        public ApiResponse< StudentList > RegistrationGroupsGroupIdStudentsWithHttpInfo (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public ApiResponse< StudentList > GetRegistrationGroupsGroupIdStudentsWithHttpInfo (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling RegistrationGroupsApi->RegistrationGroupsGroupIdStudents");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling RegistrationGroupsApi->GetRegistrationGroupsGroupIdStudents");
 
             var localVarPath = "/registration_groups/{group_id}/students";
             var localVarPathParams = new Dictionary<String, String>();
@@ -740,7 +740,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RegistrationGroupsGroupIdStudents", localVarResponse);
+                Exception exception = ExceptionFactory("GetRegistrationGroupsGroupIdStudents", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -763,9 +763,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StudentList</returns>
-        public async System.Threading.Tasks.Task<StudentList> RegistrationGroupsGroupIdStudentsAsync (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<StudentList> GetRegistrationGroupsGroupIdStudentsAsync (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StudentList> localVarResponse = await RegistrationGroupsGroupIdStudentsAsyncWithHttpInfo(groupId, yearCode, date, academicYearId, demographics, care, page, perPage, ifModifiedSince);
+             ApiResponse<StudentList> localVarResponse = await GetRegistrationGroupsGroupIdStudentsAsyncWithHttpInfo(groupId, yearCode, date, academicYearId, demographics, care, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -784,11 +784,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StudentList>> RegistrationGroupsGroupIdStudentsAsyncWithHttpInfo (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StudentList>> GetRegistrationGroupsGroupIdStudentsAsyncWithHttpInfo (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling RegistrationGroupsApi->RegistrationGroupsGroupIdStudents");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling RegistrationGroupsApi->GetRegistrationGroupsGroupIdStudents");
 
             var localVarPath = "/registration_groups/{group_id}/students";
             var localVarPathParams = new Dictionary<String, String>();
@@ -838,7 +838,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RegistrationGroupsGroupIdStudents", localVarResponse);
+                Exception exception = ExceptionFactory("GetRegistrationGroupsGroupIdStudents", localVarResponse);
                 if (exception != null) throw exception;
             }
 

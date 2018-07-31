@@ -38,7 +38,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>YearGroupList</returns>
-        YearGroupList YearGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        YearGroupList GetYearGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -54,7 +54,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of YearGroupList</returns>
-        ApiResponse<YearGroupList> YearGroupsWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        ApiResponse<YearGroupList> GetYearGroupsWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -66,7 +66,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="date">Filter for a specific date (optional)</param>
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <returns>YearGroup</returns>
-        YearGroup YearGroupsGroupId (string groupId, string date = null, int? academicYearId = null);
+        YearGroup GetYearGroupsGroupId (string groupId, string date = null, int? academicYearId = null);
 
         /// <summary>
         /// 
@@ -79,7 +79,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="date">Filter for a specific date (optional)</param>
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <returns>ApiResponse of YearGroup</returns>
-        ApiResponse<YearGroup> YearGroupsGroupIdWithHttpInfo (string groupId, string date = null, int? academicYearId = null);
+        ApiResponse<YearGroup> GetYearGroupsGroupIdWithHttpInfo (string groupId, string date = null, int? academicYearId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -94,7 +94,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StudentList</returns>
-        StudentList YearGroupsGroupIdStudents (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        StudentList GetYearGroupsGroupIdStudents (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -110,7 +110,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StudentList</returns>
-        ApiResponse<StudentList> YearGroupsGroupIdStudentsWithHttpInfo (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        ApiResponse<StudentList> GetYearGroupsGroupIdStudentsWithHttpInfo (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -127,7 +127,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of YearGroupList</returns>
-        System.Threading.Tasks.Task<YearGroupList> YearGroupsAsync (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<YearGroupList> GetYearGroupsAsync (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -143,7 +143,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (YearGroupList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<YearGroupList>> YearGroupsAsyncWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<YearGroupList>> GetYearGroupsAsyncWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         /// <summary>
         /// 
         /// </summary>
@@ -155,7 +155,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="date">Filter for a specific date (optional)</param>
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <returns>Task of YearGroup</returns>
-        System.Threading.Tasks.Task<YearGroup> YearGroupsGroupIdAsync (string groupId, string date = null, int? academicYearId = null);
+        System.Threading.Tasks.Task<YearGroup> GetYearGroupsGroupIdAsync (string groupId, string date = null, int? academicYearId = null);
 
         /// <summary>
         /// 
@@ -168,7 +168,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="date">Filter for a specific date (optional)</param>
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <returns>Task of ApiResponse (YearGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<YearGroup>> YearGroupsGroupIdAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null);
+        System.Threading.Tasks.Task<ApiResponse<YearGroup>> GetYearGroupsGroupIdAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null);
         /// <summary>
         /// 
         /// </summary>
@@ -183,7 +183,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StudentList</returns>
-        System.Threading.Tasks.Task<StudentList> YearGroupsGroupIdStudentsAsync (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<StudentList> GetYearGroupsGroupIdStudentsAsync (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
 
         /// <summary>
         /// 
@@ -199,7 +199,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StudentList>> YearGroupsGroupIdStudentsAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
+        System.Threading.Tasks.Task<ApiResponse<StudentList>> GetYearGroupsGroupIdStudentsAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null);
         #endregion Asynchronous Operations
     }
 
@@ -311,9 +311,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>YearGroupList</returns>
-        public YearGroupList YearGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public YearGroupList GetYearGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<YearGroupList> localVarResponse = YearGroupsWithHttpInfo(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
+             ApiResponse<YearGroupList> localVarResponse = GetYearGroupsWithHttpInfo(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -328,7 +328,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of YearGroupList</returns>
-        public ApiResponse< YearGroupList > YearGroupsWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public ApiResponse< YearGroupList > GetYearGroupsWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/year_groups";
@@ -376,7 +376,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("YearGroups", localVarResponse);
+                Exception exception = ExceptionFactory("GetYearGroups", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -396,9 +396,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of YearGroupList</returns>
-        public async System.Threading.Tasks.Task<YearGroupList> YearGroupsAsync (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<YearGroupList> GetYearGroupsAsync (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<YearGroupList> localVarResponse = await YearGroupsAsyncWithHttpInfo(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
+             ApiResponse<YearGroupList> localVarResponse = await GetYearGroupsAsyncWithHttpInfo(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -414,7 +414,7 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (YearGroupList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<YearGroupList>> YearGroupsAsyncWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<YearGroupList>> GetYearGroupsAsyncWithHttpInfo (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
 
             var localVarPath = "/year_groups";
@@ -462,7 +462,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("YearGroups", localVarResponse);
+                Exception exception = ExceptionFactory("GetYearGroups", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -479,9 +479,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="date">Filter for a specific date (optional)</param>
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <returns>YearGroup</returns>
-        public YearGroup YearGroupsGroupId (string groupId, string date = null, int? academicYearId = null)
+        public YearGroup GetYearGroupsGroupId (string groupId, string date = null, int? academicYearId = null)
         {
-             ApiResponse<YearGroup> localVarResponse = YearGroupsGroupIdWithHttpInfo(groupId, date, academicYearId);
+             ApiResponse<YearGroup> localVarResponse = GetYearGroupsGroupIdWithHttpInfo(groupId, date, academicYearId);
              return localVarResponse.Data;
         }
 
@@ -493,11 +493,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="date">Filter for a specific date (optional)</param>
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <returns>ApiResponse of YearGroup</returns>
-        public ApiResponse< YearGroup > YearGroupsGroupIdWithHttpInfo (string groupId, string date = null, int? academicYearId = null)
+        public ApiResponse< YearGroup > GetYearGroupsGroupIdWithHttpInfo (string groupId, string date = null, int? academicYearId = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling YearGroupsApi->YearGroupsGroupId");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling YearGroupsApi->GetYearGroupsGroupId");
 
             var localVarPath = "/year_groups/{group_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -541,7 +541,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("YearGroupsGroupId", localVarResponse);
+                Exception exception = ExceptionFactory("GetYearGroupsGroupId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -558,9 +558,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="date">Filter for a specific date (optional)</param>
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <returns>Task of YearGroup</returns>
-        public async System.Threading.Tasks.Task<YearGroup> YearGroupsGroupIdAsync (string groupId, string date = null, int? academicYearId = null)
+        public async System.Threading.Tasks.Task<YearGroup> GetYearGroupsGroupIdAsync (string groupId, string date = null, int? academicYearId = null)
         {
-             ApiResponse<YearGroup> localVarResponse = await YearGroupsGroupIdAsyncWithHttpInfo(groupId, date, academicYearId);
+             ApiResponse<YearGroup> localVarResponse = await GetYearGroupsGroupIdAsyncWithHttpInfo(groupId, date, academicYearId);
              return localVarResponse.Data;
 
         }
@@ -573,11 +573,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="date">Filter for a specific date (optional)</param>
         /// <param name="academicYearId">Filter based on the specified academic year (optional)</param>
         /// <returns>Task of ApiResponse (YearGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<YearGroup>> YearGroupsGroupIdAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<YearGroup>> GetYearGroupsGroupIdAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling YearGroupsApi->YearGroupsGroupId");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling YearGroupsApi->GetYearGroupsGroupId");
 
             var localVarPath = "/year_groups/{group_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -621,7 +621,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("YearGroupsGroupId", localVarResponse);
+                Exception exception = ExceptionFactory("GetYearGroupsGroupId", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -641,9 +641,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>StudentList</returns>
-        public StudentList YearGroupsGroupIdStudents (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public StudentList GetYearGroupsGroupIdStudents (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StudentList> localVarResponse = YearGroupsGroupIdStudentsWithHttpInfo(groupId, date, academicYearId, page, perPage, ifModifiedSince);
+             ApiResponse<StudentList> localVarResponse = GetYearGroupsGroupIdStudentsWithHttpInfo(groupId, date, academicYearId, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
         }
 
@@ -658,11 +658,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>ApiResponse of StudentList</returns>
-        public ApiResponse< StudentList > YearGroupsGroupIdStudentsWithHttpInfo (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public ApiResponse< StudentList > GetYearGroupsGroupIdStudentsWithHttpInfo (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling YearGroupsApi->YearGroupsGroupIdStudents");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling YearGroupsApi->GetYearGroupsGroupIdStudents");
 
             var localVarPath = "/year_groups/{group_id}/students";
             var localVarPathParams = new Dictionary<String, String>();
@@ -709,7 +709,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("YearGroupsGroupIdStudents", localVarResponse);
+                Exception exception = ExceptionFactory("GetYearGroupsGroupIdStudents", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -729,9 +729,9 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of StudentList</returns>
-        public async System.Threading.Tasks.Task<StudentList> YearGroupsGroupIdStudentsAsync (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<StudentList> GetYearGroupsGroupIdStudentsAsync (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
-             ApiResponse<StudentList> localVarResponse = await YearGroupsGroupIdStudentsAsyncWithHttpInfo(groupId, date, academicYearId, page, perPage, ifModifiedSince);
+             ApiResponse<StudentList> localVarResponse = await GetYearGroupsGroupIdStudentsAsyncWithHttpInfo(groupId, date, academicYearId, page, perPage, ifModifiedSince);
              return localVarResponse.Data;
 
         }
@@ -747,11 +747,11 @@ namespace assembly-client-dotnet.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="ifModifiedSince">Timestamp of the last response. (optional)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StudentList>> YearGroupsGroupIdStudentsAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StudentList>> GetYearGroupsGroupIdStudentsAsyncWithHttpInfo (string groupId, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
         {
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling YearGroupsApi->YearGroupsGroupIdStudents");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling YearGroupsApi->GetYearGroupsGroupIdStudents");
 
             var localVarPath = "/year_groups/{group_id}/students";
             var localVarPathParams = new Dictionary<String, String>();
@@ -798,7 +798,7 @@ namespace assembly-client-dotnet.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("YearGroupsGroupIdStudents", localVarResponse);
+                Exception exception = ExceptionFactory("GetYearGroupsGroupIdStudents", localVarResponse);
                 if (exception != null) throw exception;
             }
 

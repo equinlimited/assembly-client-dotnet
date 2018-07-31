@@ -4,14 +4,14 @@ All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RegistrationGroups**](RegistrationGroupsApi.md#registrationgroups) | **GET** /registration_groups | 
-[**RegistrationGroupsGroupId**](RegistrationGroupsApi.md#registrationgroupsgroupid) | **GET** /registration_groups/{group_id} | 
-[**RegistrationGroupsGroupIdStudents**](RegistrationGroupsApi.md#registrationgroupsgroupidstudents) | **GET** /registration_groups/{group_id}/students | 
+[**GetRegistrationGroups**](RegistrationGroupsApi.md#getregistrationgroups) | **GET** /registration_groups | 
+[**GetRegistrationGroupsGroupId**](RegistrationGroupsApi.md#getregistrationgroupsgroupid) | **GET** /registration_groups/{group_id} | 
+[**GetRegistrationGroupsGroupIdStudents**](RegistrationGroupsApi.md#getregistrationgroupsgroupidstudents) | **GET** /registration_groups/{group_id}/students | 
 
 
-<a name="registrationgroups"></a>
-# **RegistrationGroups**
-> RegistrationGroupList RegistrationGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="getregistrationgroups"></a>
+# **GetRegistrationGroups**
+> RegistrationGroupList GetRegistrationGroups (string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -27,7 +27,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class RegistrationGroupsExample
+    public class GetRegistrationGroupsExample
     {
         public void main()
         {
@@ -44,12 +44,12 @@ namespace Example
 
             try
             {
-                RegistrationGroupList result = apiInstance.RegistrationGroups(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
+                RegistrationGroupList result = apiInstance.GetRegistrationGroups(yearCode, date, academicYearId, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RegistrationGroupsApi.RegistrationGroups: " + e.Message );
+                Debug.Print("Exception when calling RegistrationGroupsApi.GetRegistrationGroups: " + e.Message );
             }
         }
     }
@@ -82,9 +82,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="registrationgroupsgroupid"></a>
-# **RegistrationGroupsGroupId**
-> RegistrationGroup RegistrationGroupsGroupId (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null)
+<a name="getregistrationgroupsgroupid"></a>
+# **GetRegistrationGroupsGroupId**
+> RegistrationGroup GetRegistrationGroupsGroupId (string groupId, string date = null, int? academicYearId = null, string ifModifiedSince = null)
 
 
 
@@ -100,7 +100,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class RegistrationGroupsGroupIdExample
+    public class GetRegistrationGroupsGroupIdExample
     {
         public void main()
         {
@@ -115,12 +115,12 @@ namespace Example
 
             try
             {
-                RegistrationGroup result = apiInstance.RegistrationGroupsGroupId(groupId, date, academicYearId, ifModifiedSince);
+                RegistrationGroup result = apiInstance.GetRegistrationGroupsGroupId(groupId, date, academicYearId, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RegistrationGroupsApi.RegistrationGroupsGroupId: " + e.Message );
+                Debug.Print("Exception when calling RegistrationGroupsApi.GetRegistrationGroupsGroupId: " + e.Message );
             }
         }
     }
@@ -151,9 +151,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="registrationgroupsgroupidstudents"></a>
-# **RegistrationGroupsGroupIdStudents**
-> StudentList RegistrationGroupsGroupIdStudents (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="getregistrationgroupsgroupidstudents"></a>
+# **GetRegistrationGroupsGroupIdStudents**
+> StudentList GetRegistrationGroupsGroupIdStudents (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -169,7 +169,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class RegistrationGroupsGroupIdStudentsExample
+    public class GetRegistrationGroupsGroupIdStudentsExample
     {
         public void main()
         {
@@ -189,12 +189,12 @@ namespace Example
 
             try
             {
-                StudentList result = apiInstance.RegistrationGroupsGroupIdStudents(groupId, yearCode, date, academicYearId, demographics, care, page, perPage, ifModifiedSince);
+                StudentList result = apiInstance.GetRegistrationGroupsGroupIdStudents(groupId, yearCode, date, academicYearId, demographics, care, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RegistrationGroupsApi.RegistrationGroupsGroupIdStudents: " + e.Message );
+                Debug.Print("Exception when calling RegistrationGroupsApi.GetRegistrationGroupsGroupIdStudents: " + e.Message );
             }
         }
     }
