@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.ErrorData
+# AssemblyClient.Model.ErrorData
 ## Properties
 
 Name | Type | Description | Notes

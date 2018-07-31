@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.TeachingGroupListData
+# AssemblyClient.Model.TeachingGroupListData
 ## Properties
 
 Name | Type | Description | Notes

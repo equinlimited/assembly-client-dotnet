@@ -1,15 +1,15 @@
-# assembly-client-dotnet.Api.SchoolDetailsApi
+# AssemblyClient.Api.SchoolDetailsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetSchoolDetails**](SchoolDetailsApi.md#getschooldetails) | **GET** /school_details | 
+[**SchoolDetails**](SchoolDetailsApi.md#schooldetails) | **GET** /school_details | 
 
 
-<a name="getschooldetails"></a>
-# **GetSchoolDetails**
-> SchoolDetails GetSchoolDetails ()
+<a name="schooldetails"></a>
+# **SchoolDetails**
+> SchoolDetails SchoolDetails ()
 
 
 
@@ -19,13 +19,13 @@ Returns details for the school associated with the provided access_token.
 ```csharp
 using System;
 using System.Diagnostics;
-using assembly-client-dotnet.Api;
-using assembly-client-dotnet.Client;
-using assembly-client-dotnet.Model;
+using AssemblyClient.Api;
+using AssemblyClient.Client;
+using AssemblyClient.Model;
 
 namespace Example
 {
-    public class GetSchoolDetailsExample
+    public class SchoolDetailsExample
     {
         public void main()
         {
@@ -36,12 +36,12 @@ namespace Example
 
             try
             {
-                SchoolDetails result = apiInstance.GetSchoolDetails();
+                SchoolDetails result = apiInstance.SchoolDetails();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling SchoolDetailsApi.GetSchoolDetails: " + e.Message );
+                Debug.Print("Exception when calling SchoolDetailsApi.SchoolDetails: " + e.Message );
             }
         }
     }

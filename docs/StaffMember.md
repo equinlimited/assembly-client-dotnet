@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.StaffMember
+# AssemblyClient.Model.StaffMember
 ## Properties
 
 Name | Type | Description | Notes

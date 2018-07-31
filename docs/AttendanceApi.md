@@ -1,15 +1,15 @@
-# assembly-client-dotnet.Api.AttendanceApi
+# AssemblyClient.Api.AttendanceApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAttendances**](AttendanceApi.md#getattendances) | **GET** /attendances | 
+[**Attendances**](AttendanceApi.md#attendances) | **GET** /attendances | 
 
 
-<a name="getattendances"></a>
-# **GetAttendances**
-> AttendanceList GetAttendances (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="attendances"></a>
+# **Attendances**
+> AttendanceList Attendances (int? studentId = null, int? registrationGroupId = null, string startDate = null, string endDate = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -19,13 +19,13 @@ Returns a list of attendances, filtered by date, student, or registration group.
 ```csharp
 using System;
 using System.Diagnostics;
-using assembly-client-dotnet.Api;
-using assembly-client-dotnet.Client;
-using assembly-client-dotnet.Model;
+using AssemblyClient.Api;
+using AssemblyClient.Client;
+using AssemblyClient.Model;
 
 namespace Example
 {
-    public class GetAttendancesExample
+    public class AttendancesExample
     {
         public void main()
         {
@@ -43,12 +43,12 @@ namespace Example
 
             try
             {
-                AttendanceList result = apiInstance.GetAttendances(studentId, registrationGroupId, startDate, endDate, page, perPage, ifModifiedSince);
+                AttendanceList result = apiInstance.Attendances(studentId, registrationGroupId, startDate, endDate, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AttendanceApi.GetAttendances: " + e.Message );
+                Debug.Print("Exception when calling AttendanceApi.Attendances: " + e.Message );
             }
         }
     }

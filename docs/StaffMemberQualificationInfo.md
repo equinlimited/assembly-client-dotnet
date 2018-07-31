@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.StaffMemberQualificationInfo
+# AssemblyClient.Model.StaffMemberQualificationInfo
 ## Properties
 
 Name | Type | Description | Notes

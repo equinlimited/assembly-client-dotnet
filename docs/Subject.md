@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.Subject
+# AssemblyClient.Model.Subject
 ## Properties
 
 Name | Type | Description | Notes

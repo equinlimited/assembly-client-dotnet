@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.UpdateMultipleResultPayloadListData
+# AssemblyClient.Model.UpdateMultipleResultPayloadListData
 ## Properties
 
 Name | Type | Description | Notes

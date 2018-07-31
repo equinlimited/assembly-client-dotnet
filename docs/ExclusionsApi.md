@@ -1,16 +1,16 @@
-# assembly-client-dotnet.Api.ExclusionsApi
+# AssemblyClient.Api.ExclusionsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetExclusions**](ExclusionsApi.md#getexclusions) | **GET** /exclusions | 
-[**GetExclusionsStudentId**](ExclusionsApi.md#getexclusionsstudentid) | **GET** /exclusions/{student_id} | 
+[**Exclusions**](ExclusionsApi.md#exclusions) | **GET** /exclusions | 
+[**ExclusionsStudentId**](ExclusionsApi.md#exclusionsstudentid) | **GET** /exclusions/{student_id} | 
 
 
-<a name="getexclusions"></a>
-# **GetExclusions**
-> ExclusionList GetExclusions (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+<a name="exclusions"></a>
+# **Exclusions**
+> ExclusionList Exclusions (string startDate = null, string endDate = null, int? page = null, int? perPage = null)
 
 
 
@@ -20,13 +20,13 @@ Returns a list of exclusions. By default, exclusions are returned that occurred 
 ```csharp
 using System;
 using System.Diagnostics;
-using assembly-client-dotnet.Api;
-using assembly-client-dotnet.Client;
-using assembly-client-dotnet.Model;
+using AssemblyClient.Api;
+using AssemblyClient.Client;
+using AssemblyClient.Model;
 
 namespace Example
 {
-    public class GetExclusionsExample
+    public class ExclusionsExample
     {
         public void main()
         {
@@ -41,12 +41,12 @@ namespace Example
 
             try
             {
-                ExclusionList result = apiInstance.GetExclusions(startDate, endDate, page, perPage);
+                ExclusionList result = apiInstance.Exclusions(startDate, endDate, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ExclusionsApi.GetExclusions: " + e.Message );
+                Debug.Print("Exception when calling ExclusionsApi.Exclusions: " + e.Message );
             }
         }
     }
@@ -77,9 +77,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getexclusionsstudentid"></a>
-# **GetExclusionsStudentId**
-> ExclusionList GetExclusionsStudentId (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
+<a name="exclusionsstudentid"></a>
+# **ExclusionsStudentId**
+> ExclusionList ExclusionsStudentId (string studentId, string startDate = null, string endDate = null, int? page = null, int? perPage = null)
 
 
 
@@ -89,13 +89,13 @@ Returns a list of exclusions for a given student. By default, exclusions are ret
 ```csharp
 using System;
 using System.Diagnostics;
-using assembly-client-dotnet.Api;
-using assembly-client-dotnet.Client;
-using assembly-client-dotnet.Model;
+using AssemblyClient.Api;
+using AssemblyClient.Client;
+using AssemblyClient.Model;
 
 namespace Example
 {
-    public class GetExclusionsStudentIdExample
+    public class ExclusionsStudentIdExample
     {
         public void main()
         {
@@ -111,12 +111,12 @@ namespace Example
 
             try
             {
-                ExclusionList result = apiInstance.GetExclusionsStudentId(studentId, startDate, endDate, page, perPage);
+                ExclusionList result = apiInstance.ExclusionsStudentId(studentId, startDate, endDate, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ExclusionsApi.GetExclusionsStudentId: " + e.Message );
+                Debug.Print("Exception when calling ExclusionsApi.ExclusionsStudentId: " + e.Message );
             }
         }
     }

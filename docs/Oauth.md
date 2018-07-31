@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.Oauth
+# AssemblyClient.Model.Oauth
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.AcademicYearListData
+# AssemblyClient.Model.AcademicYearListData
 ## Properties
 
 Name | Type | Description | Notes

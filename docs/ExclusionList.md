@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.ExclusionList
+# AssemblyClient.Model.ExclusionList
 ## Properties
 
 Name | Type | Description | Notes

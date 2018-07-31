@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.CalendarEventMisType
+# AssemblyClient.Model.CalendarEventMisType
 ## Properties
 
 Name | Type | Description | Notes

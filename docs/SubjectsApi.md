@@ -1,15 +1,15 @@
-# assembly-client-dotnet.Api.SubjectsApi
+# AssemblyClient.Api.SubjectsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetSubjects**](SubjectsApi.md#getsubjects) | **GET** /subjects | 
+[**Subjects**](SubjectsApi.md#subjects) | **GET** /subjects | 
 
 
-<a name="getsubjects"></a>
-# **GetSubjects**
-> SubjectList GetSubjects (bool? misMappings = null, int? page = null, int? perPage = null)
+<a name="subjects"></a>
+# **Subjects**
+> SubjectList Subjects (bool? misMappings = null, int? page = null, int? perPage = null)
 
 
 
@@ -19,13 +19,13 @@ Returns a list of the Assembly Platform's subjects.
 ```csharp
 using System;
 using System.Diagnostics;
-using assembly-client-dotnet.Api;
-using assembly-client-dotnet.Client;
-using assembly-client-dotnet.Model;
+using AssemblyClient.Api;
+using AssemblyClient.Client;
+using AssemblyClient.Model;
 
 namespace Example
 {
-    public class GetSubjectsExample
+    public class SubjectsExample
     {
         public void main()
         {
@@ -39,12 +39,12 @@ namespace Example
 
             try
             {
-                SubjectList result = apiInstance.GetSubjects(misMappings, page, perPage);
+                SubjectList result = apiInstance.Subjects(misMappings, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling SubjectsApi.GetSubjects: " + e.Message );
+                Debug.Print("Exception when calling SubjectsApi.Subjects: " + e.Message );
             }
         }
     }

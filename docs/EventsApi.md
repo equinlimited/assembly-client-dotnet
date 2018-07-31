@@ -1,15 +1,15 @@
-# assembly-client-dotnet.Api.EventsApi
+# AssemblyClient.Api.EventsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetCalendarEvents**](EventsApi.md#getcalendarevents) | **GET** /calendar_events | 
+[**CalendarEvents**](EventsApi.md#calendarevents) | **GET** /calendar_events | 
 
 
-<a name="getcalendarevents"></a>
-# **GetCalendarEvents**
-> CalendarEventList GetCalendarEvents (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="calendarevents"></a>
+# **CalendarEvents**
+> CalendarEventList CalendarEvents (string eventType = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -19,13 +19,13 @@ Returns a list of calendar events from the school calendar. We strongly recommen
 ```csharp
 using System;
 using System.Diagnostics;
-using assembly-client-dotnet.Api;
-using assembly-client-dotnet.Client;
-using assembly-client-dotnet.Model;
+using AssemblyClient.Api;
+using AssemblyClient.Client;
+using AssemblyClient.Model;
 
 namespace Example
 {
-    public class GetCalendarEventsExample
+    public class CalendarEventsExample
     {
         public void main()
         {
@@ -40,12 +40,12 @@ namespace Example
 
             try
             {
-                CalendarEventList result = apiInstance.GetCalendarEvents(eventType, page, perPage, ifModifiedSince);
+                CalendarEventList result = apiInstance.CalendarEvents(eventType, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling EventsApi.GetCalendarEvents: " + e.Message );
+                Debug.Print("Exception when calling EventsApi.CalendarEvents: " + e.Message );
             }
         }
     }

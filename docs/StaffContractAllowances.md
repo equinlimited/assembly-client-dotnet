@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.StaffContractAllowances
+# AssemblyClient.Model.StaffContractAllowances
 ## Properties
 
 Name | Type | Description | Notes

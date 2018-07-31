@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.StaffContractRoles
+# AssemblyClient.Model.StaffContractRoles
 ## Properties
 
 Name | Type | Description | Notes

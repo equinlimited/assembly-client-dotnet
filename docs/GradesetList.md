@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.GradesetList
+# AssemblyClient.Model.GradesetList
 ## Properties
 
 Name | Type | Description | Notes

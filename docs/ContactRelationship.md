@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.ContactRelationship
+# AssemblyClient.Model.ContactRelationship
 ## Properties
 
 Name | Type | Description | Notes

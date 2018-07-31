@@ -1,15 +1,15 @@
-# assembly-client-dotnet.Api.AcademicYearsApi
+# AssemblyClient.Api.AcademicYearsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAcademicYears**](AcademicYearsApi.md#getacademicyears) | **GET** /academic_years | 
+[**AcademicYears**](AcademicYearsApi.md#academicyears) | **GET** /academic_years | 
 
 
-<a name="getacademicyears"></a>
-# **GetAcademicYears**
-> AcademicYearList GetAcademicYears (int? page = null, int? perPage = null)
+<a name="academicyears"></a>
+# **AcademicYears**
+> AcademicYearList AcademicYears (int? page = null, int? perPage = null)
 
 
 
@@ -19,13 +19,13 @@ Returns a list of academic years for the school associated with the provided acc
 ```csharp
 using System;
 using System.Diagnostics;
-using assembly-client-dotnet.Api;
-using assembly-client-dotnet.Client;
-using assembly-client-dotnet.Model;
+using AssemblyClient.Api;
+using AssemblyClient.Client;
+using AssemblyClient.Model;
 
 namespace Example
 {
-    public class GetAcademicYearsExample
+    public class AcademicYearsExample
     {
         public void main()
         {
@@ -38,12 +38,12 @@ namespace Example
 
             try
             {
-                AcademicYearList result = apiInstance.GetAcademicYears(page, perPage);
+                AcademicYearList result = apiInstance.AcademicYears(page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AcademicYearsApi.GetAcademicYears: " + e.Message );
+                Debug.Print("Exception when calling AcademicYearsApi.AcademicYears: " + e.Message );
             }
         }
     }

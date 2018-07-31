@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.SubjectListData
+# AssemblyClient.Model.SubjectListData
 ## Properties
 
 Name | Type | Description | Notes

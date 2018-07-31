@@ -1,4 +1,4 @@
-# assembly-client-dotnet.Model.Assessment
+# AssemblyClient.Model.Assessment
 ## Properties
 
 Name | Type | Description | Notes

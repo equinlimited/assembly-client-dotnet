@@ -1,15 +1,15 @@
-# assembly-client-dotnet.Api.ContactsApi
+# AssemblyClient.Api.ContactsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetContacts**](ContactsApi.md#getcontacts) | **GET** /contacts | 
+[**Contacts**](ContactsApi.md#contacts) | **GET** /contacts | 
 
 
-<a name="getcontacts"></a>
-# **GetContacts**
-> ContactList GetContacts (int? studentId = null, int? page = null, int? perPage = null)
+<a name="contacts"></a>
+# **Contacts**
+> ContactList Contacts (int? studentId = null, int? page = null, int? perPage = null)
 
 
 
@@ -19,13 +19,13 @@ Returns a list of contacts that match the given set of filters.
 ```csharp
 using System;
 using System.Diagnostics;
-using assembly-client-dotnet.Api;
-using assembly-client-dotnet.Client;
-using assembly-client-dotnet.Model;
+using AssemblyClient.Api;
+using AssemblyClient.Client;
+using AssemblyClient.Model;
 
 namespace Example
 {
-    public class GetContactsExample
+    public class ContactsExample
     {
         public void main()
         {
@@ -39,12 +39,12 @@ namespace Example
 
             try
             {
-                ContactList result = apiInstance.GetContacts(studentId, page, perPage);
+                ContactList result = apiInstance.Contacts(studentId, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ContactsApi.GetContacts: " + e.Message );
+                Debug.Print("Exception when calling ContactsApi.Contacts: " + e.Message );
             }
         }
     }

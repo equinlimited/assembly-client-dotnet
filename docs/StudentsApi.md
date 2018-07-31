@@ -1,16 +1,16 @@
-# assembly-client-dotnet.Api.StudentsApi
+# AssemblyClient.Api.StudentsApi
 
 All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetStudents**](StudentsApi.md#getstudents) | **GET** /students | 
-[**GetStudentsStudentId**](StudentsApi.md#getstudentsstudentid) | **GET** /students/{student_id} | 
+[**Students**](StudentsApi.md#students) | **GET** /students | 
+[**StudentsStudentId**](StudentsApi.md#studentsstudentid) | **GET** /students/{student_id} | 
 
 
-<a name="getstudents"></a>
-# **GetStudents**
-> StudentList GetStudents (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="students"></a>
+# **Students**
+> StudentList Students (string yearCode = null, string students = null, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -20,13 +20,13 @@ Returns a list of students for the school associated with the provided access_to
 ```csharp
 using System;
 using System.Diagnostics;
-using assembly-client-dotnet.Api;
-using assembly-client-dotnet.Client;
-using assembly-client-dotnet.Model;
+using AssemblyClient.Api;
+using AssemblyClient.Client;
+using AssemblyClient.Model;
 
 namespace Example
 {
-    public class GetStudentsExample
+    public class StudentsExample
     {
         public void main()
         {
@@ -49,12 +49,12 @@ namespace Example
 
             try
             {
-                StudentList result = apiInstance.GetStudents(yearCode, students, date, demographics, contacts, senNeeds, addresses, care, languages, page, perPage, ifModifiedSince);
+                StudentList result = apiInstance.Students(yearCode, students, date, demographics, contacts, senNeeds, addresses, care, languages, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StudentsApi.GetStudents: " + e.Message );
+                Debug.Print("Exception when calling StudentsApi.Students: " + e.Message );
             }
         }
     }
@@ -93,9 +93,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getstudentsstudentid"></a>
-# **GetStudentsStudentId**
-> Student GetStudentsStudentId (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null)
+<a name="studentsstudentid"></a>
+# **StudentsStudentId**
+> Student StudentsStudentId (string studentId, string date = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? languages = null, string ifModifiedSince = null)
 
 
 
@@ -105,13 +105,13 @@ Returns an individual student record for the given ID. Note: the response shown 
 ```csharp
 using System;
 using System.Diagnostics;
-using assembly-client-dotnet.Api;
-using assembly-client-dotnet.Client;
-using assembly-client-dotnet.Model;
+using AssemblyClient.Api;
+using AssemblyClient.Client;
+using AssemblyClient.Model;
 
 namespace Example
 {
-    public class GetStudentsStudentIdExample
+    public class StudentsStudentIdExample
     {
         public void main()
         {
@@ -131,12 +131,12 @@ namespace Example
 
             try
             {
-                Student result = apiInstance.GetStudentsStudentId(studentId, date, demographics, contacts, senNeeds, addresses, care, languages, ifModifiedSince);
+                Student result = apiInstance.StudentsStudentId(studentId, date, demographics, contacts, senNeeds, addresses, care, languages, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StudentsApi.GetStudentsStudentId: " + e.Message );
+                Debug.Print("Exception when calling StudentsApi.StudentsStudentId: " + e.Message );
             }
         }
     }
