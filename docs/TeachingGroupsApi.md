@@ -4,14 +4,14 @@ All URIs are relative to *https://api-sandbox.assembly.education*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetTeachingGroups**](TeachingGroupsApi.md#getteachinggroups) | **GET** /teaching_groups | 
-[**GetTeachingGroupsGroupId**](TeachingGroupsApi.md#getteachinggroupsgroupid) | **GET** /teaching_groups/{group_id} | 
-[**GetTeachingGroupsGroupIdStudents**](TeachingGroupsApi.md#getteachinggroupsgroupidstudents) | **GET** /teaching_groups/{group_id}/students | 
+[**TeachingGroups**](TeachingGroupsApi.md#teachinggroups) | **GET** /teaching_groups | 
+[**TeachingGroupsGroupId**](TeachingGroupsApi.md#teachinggroupsgroupid) | **GET** /teaching_groups/{group_id} | 
+[**TeachingGroupsGroupIdStudents**](TeachingGroupsApi.md#teachinggroupsgroupidstudents) | **GET** /teaching_groups/{group_id}/students | 
 
 
-<a name="getteachinggroups"></a>
-# **GetTeachingGroups**
-> TeachingGroupList GetTeachingGroups (string subjectCode = null, string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null)
+<a name="teachinggroups"></a>
+# **TeachingGroups**
+> TeachingGroupList TeachingGroups (string subjectCode = null, string yearCode = null, string date = null, int? academicYearId = null, int? page = null, int? perPage = null)
 
 
 
@@ -27,7 +27,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class GetTeachingGroupsExample
+    public class TeachingGroupsExample
     {
         public void main()
         {
@@ -44,12 +44,12 @@ namespace Example
 
             try
             {
-                TeachingGroupList result = apiInstance.GetTeachingGroups(subjectCode, yearCode, date, academicYearId, page, perPage);
+                TeachingGroupList result = apiInstance.TeachingGroups(subjectCode, yearCode, date, academicYearId, page, perPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TeachingGroupsApi.GetTeachingGroups: " + e.Message );
+                Debug.Print("Exception when calling TeachingGroupsApi.TeachingGroups: " + e.Message );
             }
         }
     }
@@ -82,9 +82,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getteachinggroupsgroupid"></a>
-# **GetTeachingGroupsGroupId**
-> TeachingGroup GetTeachingGroupsGroupId (string groupId, string date = null, int? academicYearId = null)
+<a name="teachinggroupsgroupid"></a>
+# **TeachingGroupsGroupId**
+> TeachingGroup TeachingGroupsGroupId (string groupId, string date = null, int? academicYearId = null)
 
 
 
@@ -100,7 +100,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class GetTeachingGroupsGroupIdExample
+    public class TeachingGroupsGroupIdExample
     {
         public void main()
         {
@@ -114,12 +114,12 @@ namespace Example
 
             try
             {
-                TeachingGroup result = apiInstance.GetTeachingGroupsGroupId(groupId, date, academicYearId);
+                TeachingGroup result = apiInstance.TeachingGroupsGroupId(groupId, date, academicYearId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TeachingGroupsApi.GetTeachingGroupsGroupId: " + e.Message );
+                Debug.Print("Exception when calling TeachingGroupsApi.TeachingGroupsGroupId: " + e.Message );
             }
         }
     }
@@ -149,9 +149,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getteachinggroupsgroupidstudents"></a>
-# **GetTeachingGroupsGroupIdStudents**
-> StudentList GetTeachingGroupsGroupIdStudents (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
+<a name="teachinggroupsgroupidstudents"></a>
+# **TeachingGroupsGroupIdStudents**
+> StudentList TeachingGroupsGroupIdStudents (string groupId, string yearCode = null, string date = null, int? academicYearId = null, bool? demographics = null, bool? care = null, int? page = null, int? perPage = null, string ifModifiedSince = null)
 
 
 
@@ -167,7 +167,7 @@ using assembly-client-dotnet.Model;
 
 namespace Example
 {
-    public class GetTeachingGroupsGroupIdStudentsExample
+    public class TeachingGroupsGroupIdStudentsExample
     {
         public void main()
         {
@@ -187,12 +187,12 @@ namespace Example
 
             try
             {
-                StudentList result = apiInstance.GetTeachingGroupsGroupIdStudents(groupId, yearCode, date, academicYearId, demographics, care, page, perPage, ifModifiedSince);
+                StudentList result = apiInstance.TeachingGroupsGroupIdStudents(groupId, yearCode, date, academicYearId, demographics, care, page, perPage, ifModifiedSince);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TeachingGroupsApi.GetTeachingGroupsGroupIdStudents: " + e.Message );
+                Debug.Print("Exception when calling TeachingGroupsApi.TeachingGroupsGroupIdStudents: " + e.Message );
             }
         }
     }
