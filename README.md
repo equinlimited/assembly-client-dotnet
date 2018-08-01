@@ -113,6 +113,7 @@ Class | Method | HTTP request | Description
  - [Model.AcademicYearList](docs/AcademicYearList.md)
  - [Model.AcademicYearTerms](docs/AcademicYearTerms.md)
  - [Model.Assessment](docs/Assessment.md)
+ - [Model.AssessmentList](docs/AssessmentList.md)
 
 
 <a name="documentation-for-authorization"></a>
