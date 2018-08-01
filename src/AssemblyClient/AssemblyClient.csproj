@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-assembly.education
+Assembly Developer API
 
-Developer API for assembly.education.
+The Assembly API is built around the REST and a collection of open standards/protocols in order to comply with as many consumers as possible.
 
 OpenAPI spec version: 1.0.0
 Contact: help@assembly.education
@@ -12,7 +12,7 @@ Contact: help@assembly.education
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9114AA58-E2C9-4074-ABD8-308FEF0251C0}</ProjectGuid>
+    <ProjectGuid>{E5B8247E-F40C-4D7E-8B27-E7D4FBFFD496}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AssemblyClient</RootNamespace>
