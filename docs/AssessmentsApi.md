@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 <a name="assessmentresults"></a>
 # **AssessmentResults**
-> ResultList AssessmentResults (int? id, string students, int? perPage = null, int? page = null)
+> ResultList AssessmentResults (int? id, List<int?> students, int? perPage = null, int? page = null)
 
 View Results for an Assessment
 
@@ -172,7 +172,7 @@ namespace Example
 
             var apiInstance = new AssessmentsApi();
             var id = 56;  // int? | id of the Assessment
-            var students = students_example;  // string | ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).
+            var students = new List<int?>(); // List<int?> | ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).
             var perPage = 56;  // int? | Number of results to return (optional)  (default to 100)
             var page = 56;  // int? | Page number to return (optional)  (default to 1)
 
@@ -196,7 +196,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| id of the Assessment | 
- **students** | **string**| ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). | 
+ **students** | [**List&lt;int?&gt;**](int?.md)| ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). | 
  **perPage** | **int?**| Number of results to return | [optional] [default to 100]
  **page** | **int?**| Page number to return | [optional] [default to 1]
 

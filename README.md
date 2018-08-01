@@ -112,6 +112,7 @@ Class | Method | HTTP request | Description
 *AssessmentsApi* | [**Assessments**](docs/AssessmentsApi.md#assessments) | **GET** /assessments | List Assessments
 *FacetsApi* | [**Facet**](docs/FacetsApi.md#facet) | **GET** /facets/{id} | View a Facet
 *FacetsApi* | [**Facets**](docs/FacetsApi.md#facets) | **GET** /facets | List Facets
+*ResultsApi* | [**Results**](docs/ResultsApi.md#results) | **GET** /results | List Results
 
 
 <a name="documentation-for-models"></a>

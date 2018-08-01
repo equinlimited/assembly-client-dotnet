@@ -98,7 +98,7 @@ namespace AssemblyClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? id = null;
-            //string students = null;
+            //List<int?> students = null;
             //int? perPage = null;
             //int? page = null;
             //var response = instance.AssessmentResults(id, students, perPage, page);

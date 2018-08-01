@@ -57,7 +57,7 @@ namespace AssemblyClient.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ResultList</returns>
-        ResultList AssessmentPointResults (int? assessmentPointRank, string students, int? perPage = null, int? page = null);
+        ResultList AssessmentPointResults (int? assessmentPointRank, List<int?> students, int? perPage = null, int? page = null);
 
         /// <summary>
         /// View Results for an Assessment Point
@@ -71,7 +71,7 @@ namespace AssemblyClient.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ApiResponse of ResultList</returns>
-        ApiResponse<ResultList> AssessmentPointResultsWithHttpInfo (int? assessmentPointRank, string students, int? perPage = null, int? page = null);
+        ApiResponse<ResultList> AssessmentPointResultsWithHttpInfo (int? assessmentPointRank, List<int?> students, int? perPage = null, int? page = null);
         /// <summary>
         /// List Assessment Points
         /// </summary>
@@ -130,7 +130,7 @@ namespace AssemblyClient.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ResultList</returns>
-        System.Threading.Tasks.Task<ResultList> AssessmentPointResultsAsync (int? assessmentPointRank, string students, int? perPage = null, int? page = null);
+        System.Threading.Tasks.Task<ResultList> AssessmentPointResultsAsync (int? assessmentPointRank, List<int?> students, int? perPage = null, int? page = null);
 
         /// <summary>
         /// View Results for an Assessment Point
@@ -144,7 +144,7 @@ namespace AssemblyClient.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ResultList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResultList>> AssessmentPointResultsAsyncWithHttpInfo (int? assessmentPointRank, string students, int? perPage = null, int? page = null);
+        System.Threading.Tasks.Task<ApiResponse<ResultList>> AssessmentPointResultsAsyncWithHttpInfo (int? assessmentPointRank, List<int?> students, int? perPage = null, int? page = null);
         /// <summary>
         /// List Assessment Points
         /// </summary>
@@ -422,7 +422,7 @@ namespace AssemblyClient.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ResultList</returns>
-        public ResultList AssessmentPointResults (int? assessmentPointRank, string students, int? perPage = null, int? page = null)
+        public ResultList AssessmentPointResults (int? assessmentPointRank, List<int?> students, int? perPage = null, int? page = null)
         {
              ApiResponse<ResultList> localVarResponse = AssessmentPointResultsWithHttpInfo(assessmentPointRank, students, perPage, page);
              return localVarResponse.Data;
@@ -437,7 +437,7 @@ namespace AssemblyClient.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ApiResponse of ResultList</returns>
-        public ApiResponse< ResultList > AssessmentPointResultsWithHttpInfo (int? assessmentPointRank, string students, int? perPage = null, int? page = null)
+        public ApiResponse< ResultList > AssessmentPointResultsWithHttpInfo (int? assessmentPointRank, List<int?> students, int? perPage = null, int? page = null)
         {
             // verify the required parameter 'assessmentPointRank' is set
             if (assessmentPointRank == null)
@@ -468,7 +468,7 @@ namespace AssemblyClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (assessmentPointRank != null) localVarPathParams.Add("assessment_point_rank", this.Configuration.ApiClient.ParameterToString(assessmentPointRank)); // path parameter
-            if (students != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "students", students)); // query parameter
+            if (students != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "students", students)); // query parameter
             if (perPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "per_page", perPage)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
 
@@ -506,7 +506,7 @@ namespace AssemblyClient.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ResultList</returns>
-        public async System.Threading.Tasks.Task<ResultList> AssessmentPointResultsAsync (int? assessmentPointRank, string students, int? perPage = null, int? page = null)
+        public async System.Threading.Tasks.Task<ResultList> AssessmentPointResultsAsync (int? assessmentPointRank, List<int?> students, int? perPage = null, int? page = null)
         {
              ApiResponse<ResultList> localVarResponse = await AssessmentPointResultsAsyncWithHttpInfo(assessmentPointRank, students, perPage, page);
              return localVarResponse.Data;
@@ -522,7 +522,7 @@ namespace AssemblyClient.Api
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ResultList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResultList>> AssessmentPointResultsAsyncWithHttpInfo (int? assessmentPointRank, string students, int? perPage = null, int? page = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResultList>> AssessmentPointResultsAsyncWithHttpInfo (int? assessmentPointRank, List<int?> students, int? perPage = null, int? page = null)
         {
             // verify the required parameter 'assessmentPointRank' is set
             if (assessmentPointRank == null)
@@ -553,7 +553,7 @@ namespace AssemblyClient.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (assessmentPointRank != null) localVarPathParams.Add("assessment_point_rank", this.Configuration.ApiClient.ParameterToString(assessmentPointRank)); // path parameter
-            if (students != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "students", students)); // query parameter
+            if (students != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "students", students)); // query parameter
             if (perPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "per_page", perPage)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
 
