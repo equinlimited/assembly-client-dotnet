@@ -21,114 +21,114 @@ namespace AssemblyClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IAcademicYearsApi : IApiAccessor
+    public interface IFacetsApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// View an Academic Year
+        /// View a Facet
         /// </summary>
         /// <remarks>
-        /// Returns a single academic year for the school associated with the provided access_token.
+        /// Returns a single facet for the given id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
-        /// <returns>AcademicYear</returns>
-        AcademicYear AcademicYear (int? id);
+        /// <param name="id">id of the Facet</param>
+        /// <returns>Facet</returns>
+        Facet Facet (int? id);
 
         /// <summary>
-        /// View an Academic Year
+        /// View a Facet
         /// </summary>
         /// <remarks>
-        /// Returns a single academic year for the school associated with the provided access_token.
+        /// Returns a single facet for the given id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
-        /// <returns>ApiResponse of AcademicYear</returns>
-        ApiResponse<AcademicYear> AcademicYearWithHttpInfo (int? id);
+        /// <param name="id">id of the Facet</param>
+        /// <returns>ApiResponse of Facet</returns>
+        ApiResponse<Facet> FacetWithHttpInfo (int? id);
         /// <summary>
-        /// List Academic Years
+        /// List Facets
         /// </summary>
         /// <remarks>
-        /// Returns a list of academic years for the school associated with the provided access_token. The dates of these academic years can be used to filter data in other API endpoints.
+        /// Returns a list of facets. The facet is used to reflect a different type of grade and allows 2 grades of the same assessment to be compared.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>AcademicYearList</returns>
-        AcademicYearList AcademicYears (int? perPage = null, int? page = null);
+        /// <returns>FacetList</returns>
+        FacetList Facets (int? perPage = null, int? page = null);
 
         /// <summary>
-        /// List Academic Years
+        /// List Facets
         /// </summary>
         /// <remarks>
-        /// Returns a list of academic years for the school associated with the provided access_token. The dates of these academic years can be used to filter data in other API endpoints.
+        /// Returns a list of facets. The facet is used to reflect a different type of grade and allows 2 grades of the same assessment to be compared.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>ApiResponse of AcademicYearList</returns>
-        ApiResponse<AcademicYearList> AcademicYearsWithHttpInfo (int? perPage = null, int? page = null);
+        /// <returns>ApiResponse of FacetList</returns>
+        ApiResponse<FacetList> FacetsWithHttpInfo (int? perPage = null, int? page = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// View an Academic Year
+        /// View a Facet
         /// </summary>
         /// <remarks>
-        /// Returns a single academic year for the school associated with the provided access_token.
+        /// Returns a single facet for the given id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
-        /// <returns>Task of AcademicYear</returns>
-        System.Threading.Tasks.Task<AcademicYear> AcademicYearAsync (int? id);
+        /// <param name="id">id of the Facet</param>
+        /// <returns>Task of Facet</returns>
+        System.Threading.Tasks.Task<Facet> FacetAsync (int? id);
 
         /// <summary>
-        /// View an Academic Year
+        /// View a Facet
         /// </summary>
         /// <remarks>
-        /// Returns a single academic year for the school associated with the provided access_token.
+        /// Returns a single facet for the given id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
-        /// <returns>Task of ApiResponse (AcademicYear)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AcademicYear>> AcademicYearAsyncWithHttpInfo (int? id);
+        /// <param name="id">id of the Facet</param>
+        /// <returns>Task of ApiResponse (Facet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Facet>> FacetAsyncWithHttpInfo (int? id);
         /// <summary>
-        /// List Academic Years
+        /// List Facets
         /// </summary>
         /// <remarks>
-        /// Returns a list of academic years for the school associated with the provided access_token. The dates of these academic years can be used to filter data in other API endpoints.
+        /// Returns a list of facets. The facet is used to reflect a different type of grade and allows 2 grades of the same assessment to be compared.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>Task of AcademicYearList</returns>
-        System.Threading.Tasks.Task<AcademicYearList> AcademicYearsAsync (int? perPage = null, int? page = null);
+        /// <returns>Task of FacetList</returns>
+        System.Threading.Tasks.Task<FacetList> FacetsAsync (int? perPage = null, int? page = null);
 
         /// <summary>
-        /// List Academic Years
+        /// List Facets
         /// </summary>
         /// <remarks>
-        /// Returns a list of academic years for the school associated with the provided access_token. The dates of these academic years can be used to filter data in other API endpoints.
+        /// Returns a list of facets. The facet is used to reflect a different type of grade and allows 2 grades of the same assessment to be compared.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (AcademicYearList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AcademicYearList>> AcademicYearsAsyncWithHttpInfo (int? perPage = null, int? page = null);
+        /// <returns>Task of ApiResponse (FacetList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FacetList>> FacetsAsyncWithHttpInfo (int? perPage = null, int? page = null);
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class AcademicYearsApi : IAcademicYearsApi
+    public partial class FacetsApi : IFacetsApi
     {
         private AssemblyClient.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AcademicYearsApi"/> class.
+        /// Initializes a new instance of the <see cref="FacetsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public AcademicYearsApi(String basePath)
+        public FacetsApi(String basePath)
         {
             this.Configuration = new AssemblyClient.Client.Configuration { BasePath = basePath };
 
@@ -136,12 +136,12 @@ namespace AssemblyClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AcademicYearsApi"/> class
+        /// Initializes a new instance of the <see cref="FacetsApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AcademicYearsApi(AssemblyClient.Client.Configuration configuration = null)
+        public FacetsApi(AssemblyClient.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = AssemblyClient.Client.Configuration.Default;
@@ -215,30 +215,30 @@ namespace AssemblyClient.Api
         }
 
         /// <summary>
-        /// View an Academic Year Returns a single academic year for the school associated with the provided access_token.
+        /// View a Facet Returns a single facet for the given id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
-        /// <returns>AcademicYear</returns>
-        public AcademicYear AcademicYear (int? id)
+        /// <param name="id">id of the Facet</param>
+        /// <returns>Facet</returns>
+        public Facet Facet (int? id)
         {
-             ApiResponse<AcademicYear> localVarResponse = AcademicYearWithHttpInfo(id);
+             ApiResponse<Facet> localVarResponse = FacetWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// View an Academic Year Returns a single academic year for the school associated with the provided access_token.
+        /// View a Facet Returns a single facet for the given id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
-        /// <returns>ApiResponse of AcademicYear</returns>
-        public ApiResponse< AcademicYear > AcademicYearWithHttpInfo (int? id)
+        /// <param name="id">id of the Facet</param>
+        /// <returns>ApiResponse of Facet</returns>
+        public ApiResponse< Facet > FacetWithHttpInfo (int? id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AcademicYearsApi->AcademicYear");
+                throw new ApiException(400, "Missing required parameter 'id' when calling FacetsApi->Facet");
 
-            var localVarPath = "/academic_years/{id}";
+            var localVarPath = "/facets/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -277,41 +277,41 @@ namespace AssemblyClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AcademicYear", localVarResponse);
+                Exception exception = ExceptionFactory("Facet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AcademicYear>(localVarStatusCode,
+            return new ApiResponse<Facet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AcademicYear) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AcademicYear)));
+                (Facet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Facet)));
         }
 
         /// <summary>
-        /// View an Academic Year Returns a single academic year for the school associated with the provided access_token.
+        /// View a Facet Returns a single facet for the given id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
-        /// <returns>Task of AcademicYear</returns>
-        public async System.Threading.Tasks.Task<AcademicYear> AcademicYearAsync (int? id)
+        /// <param name="id">id of the Facet</param>
+        /// <returns>Task of Facet</returns>
+        public async System.Threading.Tasks.Task<Facet> FacetAsync (int? id)
         {
-             ApiResponse<AcademicYear> localVarResponse = await AcademicYearAsyncWithHttpInfo(id);
+             ApiResponse<Facet> localVarResponse = await FacetAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// View an Academic Year Returns a single academic year for the school associated with the provided access_token.
+        /// View a Facet Returns a single facet for the given id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
-        /// <returns>Task of ApiResponse (AcademicYear)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AcademicYear>> AcademicYearAsyncWithHttpInfo (int? id)
+        /// <param name="id">id of the Facet</param>
+        /// <returns>Task of ApiResponse (Facet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Facet>> FacetAsyncWithHttpInfo (int? id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AcademicYearsApi->AcademicYear");
+                throw new ApiException(400, "Missing required parameter 'id' when calling FacetsApi->Facet");
 
-            var localVarPath = "/academic_years/{id}";
+            var localVarPath = "/facets/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -350,39 +350,39 @@ namespace AssemblyClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AcademicYear", localVarResponse);
+                Exception exception = ExceptionFactory("Facet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AcademicYear>(localVarStatusCode,
+            return new ApiResponse<Facet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AcademicYear) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AcademicYear)));
+                (Facet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Facet)));
         }
 
         /// <summary>
-        /// List Academic Years Returns a list of academic years for the school associated with the provided access_token. The dates of these academic years can be used to filter data in other API endpoints.
+        /// List Facets Returns a list of facets. The facet is used to reflect a different type of grade and allows 2 grades of the same assessment to be compared.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>AcademicYearList</returns>
-        public AcademicYearList AcademicYears (int? perPage = null, int? page = null)
+        /// <returns>FacetList</returns>
+        public FacetList Facets (int? perPage = null, int? page = null)
         {
-             ApiResponse<AcademicYearList> localVarResponse = AcademicYearsWithHttpInfo(perPage, page);
+             ApiResponse<FacetList> localVarResponse = FacetsWithHttpInfo(perPage, page);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Academic Years Returns a list of academic years for the school associated with the provided access_token. The dates of these academic years can be used to filter data in other API endpoints.
+        /// List Facets Returns a list of facets. The facet is used to reflect a different type of grade and allows 2 grades of the same assessment to be compared.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>ApiResponse of AcademicYearList</returns>
-        public ApiResponse< AcademicYearList > AcademicYearsWithHttpInfo (int? perPage = null, int? page = null)
+        /// <returns>ApiResponse of FacetList</returns>
+        public ApiResponse< FacetList > FacetsWithHttpInfo (int? perPage = null, int? page = null)
         {
 
-            var localVarPath = "/academic_years";
+            var localVarPath = "/facets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -422,40 +422,40 @@ namespace AssemblyClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AcademicYears", localVarResponse);
+                Exception exception = ExceptionFactory("Facets", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AcademicYearList>(localVarStatusCode,
+            return new ApiResponse<FacetList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AcademicYearList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AcademicYearList)));
+                (FacetList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FacetList)));
         }
 
         /// <summary>
-        /// List Academic Years Returns a list of academic years for the school associated with the provided access_token. The dates of these academic years can be used to filter data in other API endpoints.
+        /// List Facets Returns a list of facets. The facet is used to reflect a different type of grade and allows 2 grades of the same assessment to be compared.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>Task of AcademicYearList</returns>
-        public async System.Threading.Tasks.Task<AcademicYearList> AcademicYearsAsync (int? perPage = null, int? page = null)
+        /// <returns>Task of FacetList</returns>
+        public async System.Threading.Tasks.Task<FacetList> FacetsAsync (int? perPage = null, int? page = null)
         {
-             ApiResponse<AcademicYearList> localVarResponse = await AcademicYearsAsyncWithHttpInfo(perPage, page);
+             ApiResponse<FacetList> localVarResponse = await FacetsAsyncWithHttpInfo(perPage, page);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// List Academic Years Returns a list of academic years for the school associated with the provided access_token. The dates of these academic years can be used to filter data in other API endpoints.
+        /// List Facets Returns a list of facets. The facet is used to reflect a different type of grade and allows 2 grades of the same assessment to be compared.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (AcademicYearList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AcademicYearList>> AcademicYearsAsyncWithHttpInfo (int? perPage = null, int? page = null)
+        /// <returns>Task of ApiResponse (FacetList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FacetList>> FacetsAsyncWithHttpInfo (int? perPage = null, int? page = null)
         {
 
-            var localVarPath = "/academic_years";
+            var localVarPath = "/facets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -495,13 +495,13 @@ namespace AssemblyClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AcademicYears", localVarResponse);
+                Exception exception = ExceptionFactory("Facets", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AcademicYearList>(localVarStatusCode,
+            return new ApiResponse<FacetList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AcademicYearList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AcademicYearList)));
+                (FacetList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FacetList)));
         }
 
     }

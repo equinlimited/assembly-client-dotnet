@@ -65,6 +65,47 @@ namespace AssemblyClient.Test
 
         
         /// <summary>
+        /// Test Assessment
+        /// </summary>
+        [Test]
+        public void AssessmentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? id = null;
+            //var response = instance.Assessment(id);
+            //Assert.IsInstanceOf<Assessment> (response, "response is Assessment");
+        }
+        
+        /// <summary>
+        /// Test AssessmentGradeSets
+        /// </summary>
+        [Test]
+        public void AssessmentGradeSetsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? id = null;
+            //int? perPage = null;
+            //int? page = null;
+            //var response = instance.AssessmentGradeSets(id, perPage, page);
+            //Assert.IsInstanceOf<GradeSet> (response, "response is GradeSet");
+        }
+        
+        /// <summary>
+        /// Test AssessmentResults
+        /// </summary>
+        [Test]
+        public void AssessmentResultsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? id = null;
+            //string students = null;
+            //int? perPage = null;
+            //int? page = null;
+            //var response = instance.AssessmentResults(id, students, perPage, page);
+            //Assert.IsInstanceOf<ResultList> (response, "response is ResultList");
+        }
+        
+        /// <summary>
         /// Test Assessments
         /// </summary>
         [Test]

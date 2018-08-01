@@ -25,10 +25,83 @@ namespace AssemblyClient.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// View an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a single assessment for the given id.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <returns>Assessment</returns>
+        Assessment Assessment (int? id);
+
+        /// <summary>
+        /// View an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a single assessment for the given id.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <returns>ApiResponse of Assessment</returns>
+        ApiResponse<Assessment> AssessmentWithHttpInfo (int? id);
+        /// <summary>
+        /// View Grade Set for an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>GradeSet</returns>
+        GradeSet AssessmentGradeSets (int? id, int? perPage = null, int? page = null);
+
+        /// <summary>
+        /// View Grade Set for an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>ApiResponse of GradeSet</returns>
+        ApiResponse<GradeSet> AssessmentGradeSetsWithHttpInfo (int? id, int? perPage = null, int? page = null);
+        /// <summary>
+        /// View Results for an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>ResultList</returns>
+        ResultList AssessmentResults (int? id, string students, int? perPage = null, int? page = null);
+
+        /// <summary>
+        /// View Results for an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>ApiResponse of ResultList</returns>
+        ApiResponse<ResultList> AssessmentResultsWithHttpInfo (int? id, string students, int? perPage = null, int? page = null);
+        /// <summary>
         /// List Assessments
         /// </summary>
         /// <remarks>
-        /// Returns a list of assessment objects. The assessment is the grouping that knits togethera range of concepts. The name of the assessment also refers to the source of the result.
+        /// Returns a list of assessment objects. The assessment is the grouping that knits together a range of concepts. The name of the assessment also refers to the source of the result.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="misMappings">includes the names of any MIS assessments (e.g. SIMS Aspects) that have been mapped to the assessment (optional)</param>
@@ -41,7 +114,7 @@ namespace AssemblyClient.Api
         /// List Assessments
         /// </summary>
         /// <remarks>
-        /// Returns a list of assessment objects. The assessment is the grouping that knits togethera range of concepts. The name of the assessment also refers to the source of the result.
+        /// Returns a list of assessment objects. The assessment is the grouping that knits together a range of concepts. The name of the assessment also refers to the source of the result.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="misMappings">includes the names of any MIS assessments (e.g. SIMS Aspects) that have been mapped to the assessment (optional)</param>
@@ -52,10 +125,83 @@ namespace AssemblyClient.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
+        /// View an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a single assessment for the given id.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <returns>Task of Assessment</returns>
+        System.Threading.Tasks.Task<Assessment> AssessmentAsync (int? id);
+
+        /// <summary>
+        /// View an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a single assessment for the given id.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <returns>Task of ApiResponse (Assessment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Assessment>> AssessmentAsyncWithHttpInfo (int? id);
+        /// <summary>
+        /// View Grade Set for an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>Task of GradeSet</returns>
+        System.Threading.Tasks.Task<GradeSet> AssessmentGradeSetsAsync (int? id, int? perPage = null, int? page = null);
+
+        /// <summary>
+        /// View Grade Set for an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (GradeSet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GradeSet>> AssessmentGradeSetsAsyncWithHttpInfo (int? id, int? perPage = null, int? page = null);
+        /// <summary>
+        /// View Results for an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>Task of ResultList</returns>
+        System.Threading.Tasks.Task<ResultList> AssessmentResultsAsync (int? id, string students, int? perPage = null, int? page = null);
+
+        /// <summary>
+        /// View Results for an Assessment
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
+        /// </remarks>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ResultList)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResultList>> AssessmentResultsAsyncWithHttpInfo (int? id, string students, int? perPage = null, int? page = null);
+        /// <summary>
         /// List Assessments
         /// </summary>
         /// <remarks>
-        /// Returns a list of assessment objects. The assessment is the grouping that knits togethera range of concepts. The name of the assessment also refers to the source of the result.
+        /// Returns a list of assessment objects. The assessment is the grouping that knits together a range of concepts. The name of the assessment also refers to the source of the result.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="misMappings">includes the names of any MIS assessments (e.g. SIMS Aspects) that have been mapped to the assessment (optional)</param>
@@ -68,7 +214,7 @@ namespace AssemblyClient.Api
         /// List Assessments
         /// </summary>
         /// <remarks>
-        /// Returns a list of assessment objects. The assessment is the grouping that knits togethera range of concepts. The name of the assessment also refers to the source of the result.
+        /// Returns a list of assessment objects. The assessment is the grouping that knits together a range of concepts. The name of the assessment also refers to the source of the result.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="misMappings">includes the names of any MIS assessments (e.g. SIMS Aspects) that have been mapped to the assessment (optional)</param>
@@ -177,7 +323,478 @@ namespace AssemblyClient.Api
         }
 
         /// <summary>
-        /// List Assessments Returns a list of assessment objects. The assessment is the grouping that knits togethera range of concepts. The name of the assessment also refers to the source of the result.
+        /// View an Assessment Returns a single assessment for the given id.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <returns>Assessment</returns>
+        public Assessment Assessment (int? id)
+        {
+             ApiResponse<Assessment> localVarResponse = AssessmentWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// View an Assessment Returns a single assessment for the given id.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <returns>ApiResponse of Assessment</returns>
+        public ApiResponse< Assessment > AssessmentWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AssessmentsApi->Assessment");
+
+            var localVarPath = "/assessments/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.assembly+json; version=1"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (bearerAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("Assessment", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Assessment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Assessment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Assessment)));
+        }
+
+        /// <summary>
+        /// View an Assessment Returns a single assessment for the given id.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <returns>Task of Assessment</returns>
+        public async System.Threading.Tasks.Task<Assessment> AssessmentAsync (int? id)
+        {
+             ApiResponse<Assessment> localVarResponse = await AssessmentAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// View an Assessment Returns a single assessment for the given id.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <returns>Task of ApiResponse (Assessment)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Assessment>> AssessmentAsyncWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AssessmentsApi->Assessment");
+
+            var localVarPath = "/assessments/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.assembly+json; version=1"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (bearerAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("Assessment", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Assessment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Assessment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Assessment)));
+        }
+
+        /// <summary>
+        /// View Grade Set for an Assessment Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>GradeSet</returns>
+        public GradeSet AssessmentGradeSets (int? id, int? perPage = null, int? page = null)
+        {
+             ApiResponse<GradeSet> localVarResponse = AssessmentGradeSetsWithHttpInfo(id, perPage, page);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// View Grade Set for an Assessment Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>ApiResponse of GradeSet</returns>
+        public ApiResponse< GradeSet > AssessmentGradeSetsWithHttpInfo (int? id, int? perPage = null, int? page = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AssessmentsApi->AssessmentGradeSets");
+
+            var localVarPath = "/assessments/{id}/grade_set";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.assembly+json; version=1"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (perPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "per_page", perPage)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+
+            // authentication (bearerAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AssessmentGradeSets", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GradeSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GradeSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GradeSet)));
+        }
+
+        /// <summary>
+        /// View Grade Set for an Assessment Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>Task of GradeSet</returns>
+        public async System.Threading.Tasks.Task<GradeSet> AssessmentGradeSetsAsync (int? id, int? perPage = null, int? page = null)
+        {
+             ApiResponse<GradeSet> localVarResponse = await AssessmentGradeSetsAsyncWithHttpInfo(id, perPage, page);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// View Grade Set for an Assessment Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (GradeSet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GradeSet>> AssessmentGradeSetsAsyncWithHttpInfo (int? id, int? perPage = null, int? page = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AssessmentsApi->AssessmentGradeSets");
+
+            var localVarPath = "/assessments/{id}/grade_set";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.assembly+json; version=1"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (perPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "per_page", perPage)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+
+            // authentication (bearerAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AssessmentGradeSets", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<GradeSet>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GradeSet) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GradeSet)));
+        }
+
+        /// <summary>
+        /// View Results for an Assessment Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>ResultList</returns>
+        public ResultList AssessmentResults (int? id, string students, int? perPage = null, int? page = null)
+        {
+             ApiResponse<ResultList> localVarResponse = AssessmentResultsWithHttpInfo(id, students, perPage, page);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// View Results for an Assessment Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>ApiResponse of ResultList</returns>
+        public ApiResponse< ResultList > AssessmentResultsWithHttpInfo (int? id, string students, int? perPage = null, int? page = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AssessmentsApi->AssessmentResults");
+            // verify the required parameter 'students' is set
+            if (students == null)
+                throw new ApiException(400, "Missing required parameter 'students' when calling AssessmentsApi->AssessmentResults");
+
+            var localVarPath = "/assessments/{id}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.assembly+json; version=1"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (students != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "students", students)); // query parameter
+            if (perPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "per_page", perPage)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+
+            // authentication (bearerAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AssessmentResults", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResultList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResultList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResultList)));
+        }
+
+        /// <summary>
+        /// View Results for an Assessment Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>Task of ResultList</returns>
+        public async System.Threading.Tasks.Task<ResultList> AssessmentResultsAsync (int? id, string students, int? perPage = null, int? page = null)
+        {
+             ApiResponse<ResultList> localVarResponse = await AssessmentResultsAsyncWithHttpInfo(id, students, perPage, page);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// View Results for an Assessment Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
+        /// </summary>
+        /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Assessment</param>
+        /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+        /// <param name="page">Page number to return (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ResultList)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResultList>> AssessmentResultsAsyncWithHttpInfo (int? id, string students, int? perPage = null, int? page = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AssessmentsApi->AssessmentResults");
+            // verify the required parameter 'students' is set
+            if (students == null)
+                throw new ApiException(400, "Missing required parameter 'students' when calling AssessmentsApi->AssessmentResults");
+
+            var localVarPath = "/assessments/{id}/results";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.assembly+json; version=1"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (students != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "students", students)); // query parameter
+            if (perPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "per_page", perPage)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+
+            // authentication (bearerAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(this.Configuration.Username) || !String.IsNullOrEmpty(this.Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password);
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AssessmentResults", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ResultList>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResultList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResultList)));
+        }
+
+        /// <summary>
+        /// List Assessments Returns a list of assessment objects. The assessment is the grouping that knits together a range of concepts. The name of the assessment also refers to the source of the result.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="misMappings">includes the names of any MIS assessments (e.g. SIMS Aspects) that have been mapped to the assessment (optional)</param>
@@ -191,7 +808,7 @@ namespace AssemblyClient.Api
         }
 
         /// <summary>
-        /// List Assessments Returns a list of assessment objects. The assessment is the grouping that knits togethera range of concepts. The name of the assessment also refers to the source of the result.
+        /// List Assessments Returns a list of assessment objects. The assessment is the grouping that knits together a range of concepts. The name of the assessment also refers to the source of the result.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="misMappings">includes the names of any MIS assessments (e.g. SIMS Aspects) that have been mapped to the assessment (optional)</param>
@@ -252,7 +869,7 @@ namespace AssemblyClient.Api
         }
 
         /// <summary>
-        /// List Assessments Returns a list of assessment objects. The assessment is the grouping that knits togethera range of concepts. The name of the assessment also refers to the source of the result.
+        /// List Assessments Returns a list of assessment objects. The assessment is the grouping that knits together a range of concepts. The name of the assessment also refers to the source of the result.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="misMappings">includes the names of any MIS assessments (e.g. SIMS Aspects) that have been mapped to the assessment (optional)</param>
@@ -267,7 +884,7 @@ namespace AssemblyClient.Api
         }
 
         /// <summary>
-        /// List Assessments Returns a list of assessment objects. The assessment is the grouping that knits togethera range of concepts. The name of the assessment also refers to the source of the result.
+        /// List Assessments Returns a list of assessment objects. The assessment is the grouping that knits together a range of concepts. The name of the assessment also refers to the source of the result.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="misMappings">includes the names of any MIS assessments (e.g. SIMS Aspects) that have been mapped to the assessment (optional)</param>

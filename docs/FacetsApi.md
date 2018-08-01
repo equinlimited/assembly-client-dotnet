@@ -1,20 +1,20 @@
-# AssemblyClient.Api.AcademicYearsApi
+# AssemblyClient.Api.FacetsApi
 
 All URIs are relative to *http://api-sandbox.lvh.me:3020*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AcademicYear**](AcademicYearsApi.md#academicyear) | **GET** /academic_years/{id} | View an Academic Year
-[**AcademicYears**](AcademicYearsApi.md#academicyears) | **GET** /academic_years | List Academic Years
+[**Facet**](FacetsApi.md#facet) | **GET** /facets/{id} | View a Facet
+[**Facets**](FacetsApi.md#facets) | **GET** /facets | List Facets
 
 
-<a name="academicyear"></a>
-# **AcademicYear**
-> AcademicYear AcademicYear (int? id)
+<a name="facet"></a>
+# **Facet**
+> Facet Facet (int? id)
 
-View an Academic Year
+View a Facet
 
-Returns a single academic year for the school associated with the provided access_token.
+Returns a single facet for the given id.
 
 ### Example
 ```csharp
@@ -26,7 +26,7 @@ using AssemblyClient.Model;
 
 namespace Example
 {
-    public class AcademicYearExample
+    public class FacetExample
     {
         public void main()
         {
@@ -34,18 +34,18 @@ namespace Example
             Configuration.Default.Username = "YOUR_USERNAME";
             Configuration.Default.Password = "YOUR_PASSWORD";
 
-            var apiInstance = new AcademicYearsApi();
-            var id = 56;  // int? | id of the Academic Year
+            var apiInstance = new FacetsApi();
+            var id = 56;  // int? | id of the Facet
 
             try
             {
-                // View an Academic Year
-                AcademicYear result = apiInstance.AcademicYear(id);
+                // View a Facet
+                Facet result = apiInstance.Facet(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AcademicYearsApi.AcademicYear: " + e.Message );
+                Debug.Print("Exception when calling FacetsApi.Facet: " + e.Message );
             }
         }
     }
@@ -56,11 +56,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| id of the Academic Year | 
+ **id** | **int?**| id of the Facet | 
 
 ### Return type
 
-[**AcademicYear**](AcademicYear.md)
+[**Facet**](Facet.md)
 
 ### Authorization
 
@@ -73,13 +73,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="academicyears"></a>
-# **AcademicYears**
-> AcademicYearList AcademicYears (int? perPage = null, int? page = null)
+<a name="facets"></a>
+# **Facets**
+> FacetList Facets (int? perPage = null, int? page = null)
 
-List Academic Years
+List Facets
 
-Returns a list of academic years for the school associated with the provided access_token. The dates of these academic years can be used to filter data in other API endpoints.
+Returns a list of facets. The facet is used to reflect a different type of grade and allows 2 grades of the same assessment to be compared.
 
 ### Example
 ```csharp
@@ -91,7 +91,7 @@ using AssemblyClient.Model;
 
 namespace Example
 {
-    public class AcademicYearsExample
+    public class FacetsExample
     {
         public void main()
         {
@@ -99,19 +99,19 @@ namespace Example
             Configuration.Default.Username = "YOUR_USERNAME";
             Configuration.Default.Password = "YOUR_PASSWORD";
 
-            var apiInstance = new AcademicYearsApi();
+            var apiInstance = new FacetsApi();
             var perPage = 56;  // int? | Number of results to return (optional)  (default to 100)
             var page = 56;  // int? | Page number to return (optional)  (default to 1)
 
             try
             {
-                // List Academic Years
-                AcademicYearList result = apiInstance.AcademicYears(perPage, page);
+                // List Facets
+                FacetList result = apiInstance.Facets(perPage, page);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AcademicYearsApi.AcademicYears: " + e.Message );
+                Debug.Print("Exception when calling FacetsApi.Facets: " + e.Message );
             }
         }
     }
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AcademicYearList**](AcademicYearList.md)
+[**FacetList**](FacetList.md)
 
 ### Authorization
 

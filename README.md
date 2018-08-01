@@ -76,11 +76,11 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AcademicYearsApi();
-            var id = 56;  // int? | Id of the Academic Year
+            var id = 56;  // int? | id of the Academic Year
 
             try
             {
-                // Show Academic Year
+                // View an Academic Year
                 AcademicYear result = apiInstance.AcademicYear(id);
                 Debug.WriteLine(result);
             }
@@ -101,9 +101,14 @@ All URIs are relative to *http://api-sandbox.lvh.me:3020*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AcademicYearsApi* | [**AcademicYear**](docs/AcademicYearsApi.md#academicyear) | **GET** /academic_years/{id} | Show Academic Year
+*AcademicYearsApi* | [**AcademicYear**](docs/AcademicYearsApi.md#academicyear) | **GET** /academic_years/{id} | View an Academic Year
 *AcademicYearsApi* | [**AcademicYears**](docs/AcademicYearsApi.md#academicyears) | **GET** /academic_years | List Academic Years
+*AssessmentsApi* | [**Assessment**](docs/AssessmentsApi.md#assessment) | **GET** /assessments/{id} | View an Assessment
+*AssessmentsApi* | [**AssessmentGradeSets**](docs/AssessmentsApi.md#assessmentgradesets) | **GET** /assessments/{id}/grade_set | View Grade Set for an Assessment
+*AssessmentsApi* | [**AssessmentResults**](docs/AssessmentsApi.md#assessmentresults) | **GET** /assessments/{id}/results | View Results for an Assessment
 *AssessmentsApi* | [**Assessments**](docs/AssessmentsApi.md#assessments) | **GET** /assessments | List Assessments
+*FacetsApi* | [**Facet**](docs/FacetsApi.md#facet) | **GET** /facets/{id} | View a Facet
+*FacetsApi* | [**Facets**](docs/FacetsApi.md#facets) | **GET** /facets | List Facets
 
 
 <a name="documentation-for-models"></a>
@@ -114,6 +119,13 @@ Class | Method | HTTP request | Description
  - [Model.AcademicYearTerms](docs/AcademicYearTerms.md)
  - [Model.Assessment](docs/Assessment.md)
  - [Model.AssessmentList](docs/AssessmentList.md)
+ - [Model.Facet](docs/Facet.md)
+ - [Model.FacetList](docs/FacetList.md)
+ - [Model.Grade](docs/Grade.md)
+ - [Model.GradeSet](docs/GradeSet.md)
+ - [Model.GradeSetList](docs/GradeSetList.md)
+ - [Model.Result](docs/Result.md)
+ - [Model.ResultList](docs/ResultList.md)
 
 
 <a name="documentation-for-authorization"></a>
