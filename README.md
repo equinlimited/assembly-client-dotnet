@@ -127,6 +127,7 @@ Class | Method | HTTP request | Description
  - [Model.Facet](docs/Facet.md)
  - [Model.FacetList](docs/FacetList.md)
  - [Model.Grade](docs/Grade.md)
+ - [Model.GradeList](docs/GradeList.md)
  - [Model.GradeSet](docs/GradeSet.md)
  - [Model.GradeSetList](docs/GradeSetList.md)
  - [Model.Result](docs/Result.md)

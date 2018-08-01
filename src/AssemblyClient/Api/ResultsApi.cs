@@ -32,10 +32,11 @@ namespace AssemblyClient.Api
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ResultList</returns>
-        ResultList Results (List<int?> students, int? perPage = null, int? page = null);
+        ResultList Results (List<int?> students, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null);
 
         /// <summary>
         /// List Results
@@ -45,10 +46,11 @@ namespace AssemblyClient.Api
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ApiResponse of ResultList</returns>
-        ApiResponse<ResultList> ResultsWithHttpInfo (List<int?> students, int? perPage = null, int? page = null);
+        ApiResponse<ResultList> ResultsWithHttpInfo (List<int?> students, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -59,10 +61,11 @@ namespace AssemblyClient.Api
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ResultList</returns>
-        System.Threading.Tasks.Task<ResultList> ResultsAsync (List<int?> students, int? perPage = null, int? page = null);
+        System.Threading.Tasks.Task<ResultList> ResultsAsync (List<int?> students, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null);
 
         /// <summary>
         /// List Results
@@ -72,10 +75,11 @@ namespace AssemblyClient.Api
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ResultList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResultList>> ResultsAsyncWithHttpInfo (List<int?> students, int? perPage = null, int? page = null);
+        System.Threading.Tasks.Task<ApiResponse<ResultList>> ResultsAsyncWithHttpInfo (List<int?> students, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null);
         #endregion Asynchronous Operations
     }
 
@@ -181,12 +185,13 @@ namespace AssemblyClient.Api
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ResultList</returns>
-        public ResultList Results (List<int?> students, int? perPage = null, int? page = null)
+        public ResultList Results (List<int?> students, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null)
         {
-             ApiResponse<ResultList> localVarResponse = ResultsWithHttpInfo(students, perPage, page);
+             ApiResponse<ResultList> localVarResponse = ResultsWithHttpInfo(students, ifModifiedSince, perPage, page);
              return localVarResponse.Data;
         }
 
@@ -195,10 +200,11 @@ namespace AssemblyClient.Api
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ApiResponse of ResultList</returns>
-        public ApiResponse< ResultList > ResultsWithHttpInfo (List<int?> students, int? perPage = null, int? page = null)
+        public ApiResponse< ResultList > ResultsWithHttpInfo (List<int?> students, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null)
         {
             // verify the required parameter 'students' is set
             if (students == null)
@@ -228,6 +234,7 @@ namespace AssemblyClient.Api
             if (students != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "students[]", students)); // query parameter
             if (perPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "per_page", perPage)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (ifModifiedSince != null) localVarHeaderParams.Add("If-Modified-Since", this.Configuration.ApiClient.ParameterToString(ifModifiedSince)); // header parameter
 
             // authentication (bearerAuth) required
             // http basic authentication required
@@ -259,12 +266,13 @@ namespace AssemblyClient.Api
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ResultList</returns>
-        public async System.Threading.Tasks.Task<ResultList> ResultsAsync (List<int?> students, int? perPage = null, int? page = null)
+        public async System.Threading.Tasks.Task<ResultList> ResultsAsync (List<int?> students, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null)
         {
-             ApiResponse<ResultList> localVarResponse = await ResultsAsyncWithHttpInfo(students, perPage, page);
+             ApiResponse<ResultList> localVarResponse = await ResultsAsyncWithHttpInfo(students, ifModifiedSince, perPage, page);
              return localVarResponse.Data;
 
         }
@@ -274,10 +282,11 @@ namespace AssemblyClient.Api
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ResultList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResultList>> ResultsAsyncWithHttpInfo (List<int?> students, int? perPage = null, int? page = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResultList>> ResultsAsyncWithHttpInfo (List<int?> students, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null)
         {
             // verify the required parameter 'students' is set
             if (students == null)
@@ -307,6 +316,7 @@ namespace AssemblyClient.Api
             if (students != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("multi", "students[]", students)); // query parameter
             if (perPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "per_page", perPage)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (ifModifiedSince != null) localVarHeaderParams.Add("If-Modified-Since", this.Configuration.ApiClient.ParameterToString(ifModifiedSince)); // header parameter
 
             // authentication (bearerAuth) required
             // http basic authentication required

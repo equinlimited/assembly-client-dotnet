@@ -72,9 +72,10 @@ namespace AssemblyClient.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //List<int?> students = null;
+            //DateTime? ifModifiedSince = null;
             //int? perPage = null;
             //int? page = null;
-            //var response = instance.Results(students, perPage, page);
+            //var response = instance.Results(students, ifModifiedSince, perPage, page);
             //Assert.IsInstanceOf<ResultList> (response, "response is ResultList");
         }
         

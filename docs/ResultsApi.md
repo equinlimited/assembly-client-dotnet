@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="results"></a>
 # **Results**
-> ResultList Results (List<int?> students, int? perPage = null, int? page = null)
+> ResultList Results (List<int?> students, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null)
 
 List Results
 
@@ -35,13 +35,14 @@ namespace Example
 
             var apiInstance = new ResultsApi();
             var students = new List<int?>(); // List<int?> | ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).
+            var ifModifiedSince = 2013-10-20T19:20:30+01:00;  // DateTime? | If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional) 
             var perPage = 56;  // int? | Number of results to return (optional)  (default to 100)
             var page = 56;  // int? | Page number to return (optional)  (default to 1)
 
             try
             {
                 // List Results
-                ResultList result = apiInstance.Results(students, perPage, page);
+                ResultList result = apiInstance.Results(students, ifModifiedSince, perPage, page);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -58,6 +59,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **students** | [**List&lt;int?&gt;**](int?.md)| ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). | 
+ **ifModifiedSince** | **DateTime?**| If-Modified-Since is optional (see the page on Conditional Requests for more details). | [optional] 
  **perPage** | **int?**| Number of results to return | [optional] [default to 100]
  **page** | **int?**| Page number to return | [optional] [default to 1]
 
