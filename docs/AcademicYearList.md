@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **CurrentPage** | **int?** |  | [optional] 
 **PrevPage** | **int?** |  | [optional] 
 **NextPage** | **int?** |  | [optional] 
-**Data** | **List** |  | [optional] 
+**Data** | [**List&lt;AcademicYear&gt;**](AcademicYear.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

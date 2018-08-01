@@ -39,7 +39,7 @@ namespace AssemblyClient.Model
         /// <param name="prevPage">prevPage.</param>
         /// <param name="nextPage">nextPage.</param>
         /// <param name="data">data.</param>
-        public AcademicYearList(int? totalCount = default(int?), int? totalPages = default(int?), int? currentPage = default(int?), int? prevPage = default(int?), int? nextPage = default(int?), List data = default(List))
+        public AcademicYearList(int? totalCount = default(int?), int? totalPages = default(int?), int? currentPage = default(int?), int? prevPage = default(int?), int? nextPage = default(int?), List<AcademicYear> data = default(List<AcademicYear>))
         {
             this.TotalCount = totalCount;
             this.TotalPages = totalPages;
@@ -83,7 +83,7 @@ namespace AssemblyClient.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public List Data { get; set; }
+        public List<AcademicYear> Data { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -160,8 +160,8 @@ namespace AssemblyClient.Model
                 ) && 
                 (
                     this.Data == input.Data ||
-                    (this.Data != null &&
-                    this.Data.Equals(input.Data))
+                    this.Data != null &&
+                    this.Data.SequenceEqual(input.Data)
                 );
         }
 
