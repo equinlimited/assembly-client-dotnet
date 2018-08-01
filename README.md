@@ -103,6 +103,9 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AcademicYearsApi* | [**AcademicYear**](docs/AcademicYearsApi.md#academicyear) | **GET** /academic_years/{id} | View an Academic Year
 *AcademicYearsApi* | [**AcademicYears**](docs/AcademicYearsApi.md#academicyears) | **GET** /academic_years | List Academic Years
+*AssessmentPointsApi* | [**AssessmentPoint**](docs/AssessmentPointsApi.md#assessmentpoint) | **GET** /assessment_points/{id} | View an Assessment Point
+*AssessmentPointsApi* | [**AssessmentPointResults**](docs/AssessmentPointsApi.md#assessmentpointresults) | **GET** /assessment_points/{id}/results | View Results for an Assessment Point
+*AssessmentPointsApi* | [**AssessmentPoints**](docs/AssessmentPointsApi.md#assessmentpoints) | **GET** /assessment_points | List Assessment Points
 *AssessmentsApi* | [**Assessment**](docs/AssessmentsApi.md#assessment) | **GET** /assessments/{id} | View an Assessment
 *AssessmentsApi* | [**AssessmentGradeSets**](docs/AssessmentsApi.md#assessmentgradesets) | **GET** /assessments/{id}/grade_set | View Grade Set for an Assessment
 *AssessmentsApi* | [**AssessmentResults**](docs/AssessmentsApi.md#assessmentresults) | **GET** /assessments/{id}/results | View Results for an Assessment
@@ -119,6 +122,7 @@ Class | Method | HTTP request | Description
  - [Model.AcademicYearTerms](docs/AcademicYearTerms.md)
  - [Model.Assessment](docs/Assessment.md)
  - [Model.AssessmentList](docs/AssessmentList.md)
+ - [Model.AssessmentPointList](docs/AssessmentPointList.md)
  - [Model.Facet](docs/Facet.md)
  - [Model.FacetList](docs/FacetList.md)
  - [Model.Grade](docs/Grade.md)
