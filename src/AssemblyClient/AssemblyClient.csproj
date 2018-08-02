@@ -12,7 +12,7 @@ Contact: help@assembly.education
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4506F5F5-764F-45C9-BF87-96B8491B2487}</ProjectGuid>
+    <ProjectGuid>{1C3F82E7-1CA7-4A4F-B8F5-70DAE59C76FA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AssemblyClient</RootNamespace>

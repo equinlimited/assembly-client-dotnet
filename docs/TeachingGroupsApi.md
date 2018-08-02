@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 <a name="teachinggroupstudents"></a>
 # **TeachingGroupStudents**
-> StudentList TeachingGroupStudents (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+> StudentList TeachingGroupStudents (int? id, DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
 
 List Students for Teaching Group
 
@@ -105,6 +105,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new TeachingGroupsApi();
+            var id = 56;  // int? | id of the entity
             var ifModifiedSince = 2013-10-20T19:20:30+01:00;  // DateTime? | If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional) 
             var demographics = new bool?(); // bool? | include demographics data (optional) 
             var contacts = new bool?(); // bool? | include contacts data (optional) 
@@ -118,7 +119,7 @@ namespace Example
             try
             {
                 // List Students for Teaching Group
-                StudentList result = apiInstance.TeachingGroupStudents(ifModifiedSince, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
+                StudentList result = apiInstance.TeachingGroupStudents(id, ifModifiedSince, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -134,6 +135,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **int?**| id of the entity | 
  **ifModifiedSince** | **DateTime?**| If-Modified-Since is optional (see the page on Conditional Requests for more details). | [optional] 
  **demographics** | [**bool?**](bool?.md)| include demographics data | [optional] 
  **contacts** | [**bool?**](bool?.md)| include contacts data | [optional] 

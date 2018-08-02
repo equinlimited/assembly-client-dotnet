@@ -81,7 +81,7 @@ Contact: help@assembly.education
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\AssemblyClient\AssemblyClient.csproj">
-          <Project>{4506F5F5-764F-45C9-BF87-96B8491B2487}</Project>
+          <Project>{1C3F82E7-1CA7-4A4F-B8F5-70DAE59C76FA}</Project>
           <Name>AssemblyClient</Name>
       </ProjectReference>
   </ItemGroup>

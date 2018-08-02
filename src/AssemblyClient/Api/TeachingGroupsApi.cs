@@ -56,6 +56,7 @@ namespace AssemblyClient.Api
         /// Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
@@ -66,7 +67,7 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>StudentList</returns>
-        StudentList TeachingGroupStudents (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        StudentList TeachingGroupStudents (int? id, DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
 
         /// <summary>
         /// List Students for Teaching Group
@@ -75,6 +76,7 @@ namespace AssemblyClient.Api
         /// Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
@@ -85,7 +87,7 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>ApiResponse of StudentList</returns>
-        ApiResponse<StudentList> TeachingGroupStudentsWithHttpInfo (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        ApiResponse<StudentList> TeachingGroupStudentsWithHttpInfo (int? id, DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
         /// <summary>
         /// List Teaching Groups
         /// </summary>
@@ -153,6 +155,7 @@ namespace AssemblyClient.Api
         /// Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
@@ -163,7 +166,7 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>Task of StudentList</returns>
-        System.Threading.Tasks.Task<StudentList> TeachingGroupStudentsAsync (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        System.Threading.Tasks.Task<StudentList> TeachingGroupStudentsAsync (int? id, DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
 
         /// <summary>
         /// List Students for Teaching Group
@@ -172,6 +175,7 @@ namespace AssemblyClient.Api
         /// Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
@@ -182,7 +186,7 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StudentList>> TeachingGroupStudentsAsyncWithHttpInfo (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        System.Threading.Tasks.Task<ApiResponse<StudentList>> TeachingGroupStudentsAsyncWithHttpInfo (int? id, DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
         /// <summary>
         /// List Teaching Groups
         /// </summary>
@@ -477,6 +481,7 @@ namespace AssemblyClient.Api
         /// List Students for Teaching Group Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
@@ -487,9 +492,9 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>StudentList</returns>
-        public StudentList TeachingGroupStudents (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public StudentList TeachingGroupStudents (int? id, DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
-             ApiResponse<StudentList> localVarResponse = TeachingGroupStudentsWithHttpInfo(ifModifiedSince, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
+             ApiResponse<StudentList> localVarResponse = TeachingGroupStudentsWithHttpInfo(id, ifModifiedSince, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
              return localVarResponse.Data;
         }
 
@@ -497,6 +502,7 @@ namespace AssemblyClient.Api
         /// List Students for Teaching Group Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
@@ -507,8 +513,11 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>ApiResponse of StudentList</returns>
-        public ApiResponse< StudentList > TeachingGroupStudentsWithHttpInfo (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public ApiResponse< StudentList > TeachingGroupStudentsWithHttpInfo (int? id, DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TeachingGroupsApi->TeachingGroupStudents");
 
             var localVarPath = "/teaching_groups/{id}/students";
             var localVarPathParams = new Dictionary<String, String>();
@@ -531,6 +540,7 @@ namespace AssemblyClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (demographics != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "demographics", demographics)); // query parameter
             if (contacts != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "contacts", contacts)); // query parameter
             if (senNeeds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sen_needs", senNeeds)); // query parameter
@@ -570,6 +580,7 @@ namespace AssemblyClient.Api
         /// List Students for Teaching Group Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
@@ -580,9 +591,9 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>Task of StudentList</returns>
-        public async System.Threading.Tasks.Task<StudentList> TeachingGroupStudentsAsync (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public async System.Threading.Tasks.Task<StudentList> TeachingGroupStudentsAsync (int? id, DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
-             ApiResponse<StudentList> localVarResponse = await TeachingGroupStudentsAsyncWithHttpInfo(ifModifiedSince, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
+             ApiResponse<StudentList> localVarResponse = await TeachingGroupStudentsAsyncWithHttpInfo(id, ifModifiedSince, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
              return localVarResponse.Data;
 
         }
@@ -591,6 +602,7 @@ namespace AssemblyClient.Api
         /// List Students for Teaching Group Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
@@ -601,8 +613,11 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StudentList>> TeachingGroupStudentsAsyncWithHttpInfo (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StudentList>> TeachingGroupStudentsAsyncWithHttpInfo (int? id, DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling TeachingGroupsApi->TeachingGroupStudents");
 
             var localVarPath = "/teaching_groups/{id}/students";
             var localVarPathParams = new Dictionary<String, String>();
@@ -625,6 +640,7 @@ namespace AssemblyClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (demographics != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "demographics", demographics)); // query parameter
             if (contacts != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "contacts", contacts)); // query parameter
             if (senNeeds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sen_needs", senNeeds)); // query parameter
