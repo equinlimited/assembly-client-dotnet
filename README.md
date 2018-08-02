@@ -120,6 +120,9 @@ Class | Method | HTTP request | Description
 *StudentsApi* | [**LeftStudents**](docs/StudentsApi.md#leftstudents) | **GET** /students/left | List Left Students
 *StudentsApi* | [**Student**](docs/StudentsApi.md#student) | **GET** /students/{id} | View a Student
 *StudentsApi* | [**Students**](docs/StudentsApi.md#students) | **GET** /students | List Students
+*TeachingGroupsApi* | [**TeachingGroup**](docs/TeachingGroupsApi.md#teachinggroup) | **GET** /teaching_groups/{id} | View a Teaching Group
+*TeachingGroupsApi* | [**TeachingGroupStudents**](docs/TeachingGroupsApi.md#teachinggroupstudents) | **GET** /teaching_groups/{id}/students | List Students for Teaching Group
+*TeachingGroupsApi* | [**TeachingGroups**](docs/TeachingGroupsApi.md#teachinggroups) | **GET** /teaching_groups | List Teaching Groups
 
 
 <a name="documentation-for-models"></a>
@@ -158,6 +161,10 @@ Class | Method | HTTP request | Description
  - [Model.StaffSalaryList](docs/StaffSalaryList.md)
  - [Model.Student](docs/Student.md)
  - [Model.StudentList](docs/StudentList.md)
+ - [Model.Subject](docs/Subject.md)
+ - [Model.SubjectList](docs/SubjectList.md)
+ - [Model.TeachingGroup](docs/TeachingGroup.md)
+ - [Model.TeachingGroupList](docs/TeachingGroupList.md)
 
 
 <a name="documentation-for-authorization"></a>
