@@ -113,7 +113,6 @@ Class | Method | HTTP request | Description
 *FacetsApi* | [**Facet**](docs/FacetsApi.md#facet) | **GET** /facets/{id} | View a Facet
 *FacetsApi* | [**Facets**](docs/FacetsApi.md#facets) | **GET** /facets | List Facets
 *ResultsApi* | [**Results**](docs/ResultsApi.md#results) | **GET** /results | List Results
-*ResultsApi* | [**SaveResults**](docs/ResultsApi.md#saveresults) | **POST** /results | Write Results
 *StudentsApi* | [**LeftStudents**](docs/StudentsApi.md#leftstudents) | **GET** /students/left | List Left Students
 *StudentsApi* | [**Student**](docs/StudentsApi.md#student) | **GET** /students/{id} | View a Student
 *StudentsApi* | [**Students**](docs/StudentsApi.md#students) | **GET** /students | List Students

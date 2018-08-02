@@ -5,7 +5,6 @@ All URIs are relative to *http://api-sandbox.lvh.me:3020*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**Results**](ResultsApi.md#results) | **GET** /results | List Results
-[**SaveResults**](ResultsApi.md#saveresults) | **POST** /results | Write Results
 
 
 <a name="results"></a>
@@ -75,71 +74,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.assembly+json; version=1
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="saveresults"></a>
-# **SaveResults**
-> ResultResult SaveResults (UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE)
-
-Write Results
-
-Given a `subject_id`, `facet_id`, `assessment_point_rank` and `assessment_id` results can be sent to the Platform, along with a `student_id`, the `grade_id` and (optionally) the `result_date`.
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using AssemblyClient.Api;
-using AssemblyClient.Client;
-using AssemblyClient.Model;
-
-namespace Example
-{
-    public class SaveResultsExample
-    {
-        public void main()
-        {
-            // Configure HTTP basic authorization: bearerAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
-
-            var apiInstance = new ResultsApi();
-            var UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | 
-
-            try
-            {
-                // Write Results
-                ResultResult result = apiInstance.SaveResults(UNKNOWN_BASE_TYPE);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ResultsApi.SaveResults: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)|  | 
-
-### Return type
-
-[**ResultResult**](ResultResult.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/vnd.assembly+json; version=1
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
