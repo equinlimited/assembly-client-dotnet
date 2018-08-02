@@ -31,7 +31,7 @@ namespace AssemblyClient.Api
         /// Returns a single assessment for the given id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>Assessment</returns>
         Assessment Assessment (int? id);
 
@@ -42,7 +42,7 @@ namespace AssemblyClient.Api
         /// Returns a single assessment for the given id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>ApiResponse of Assessment</returns>
         ApiResponse<Assessment> AssessmentWithHttpInfo (int? id);
         /// <summary>
@@ -52,7 +52,7 @@ namespace AssemblyClient.Api
         /// Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>GradeSet</returns>
@@ -65,7 +65,7 @@ namespace AssemblyClient.Api
         /// Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ApiResponse of GradeSet</returns>
@@ -77,7 +77,7 @@ namespace AssemblyClient.Api
         /// Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
@@ -91,7 +91,7 @@ namespace AssemblyClient.Api
         /// Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
@@ -131,7 +131,7 @@ namespace AssemblyClient.Api
         /// Returns a single assessment for the given id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>Task of Assessment</returns>
         System.Threading.Tasks.Task<Assessment> AssessmentAsync (int? id);
 
@@ -142,7 +142,7 @@ namespace AssemblyClient.Api
         /// Returns a single assessment for the given id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>Task of ApiResponse (Assessment)</returns>
         System.Threading.Tasks.Task<ApiResponse<Assessment>> AssessmentAsyncWithHttpInfo (int? id);
         /// <summary>
@@ -152,7 +152,7 @@ namespace AssemblyClient.Api
         /// Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of GradeSet</returns>
@@ -165,7 +165,7 @@ namespace AssemblyClient.Api
         /// Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (GradeSet)</returns>
@@ -177,7 +177,7 @@ namespace AssemblyClient.Api
         /// Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
@@ -191,7 +191,7 @@ namespace AssemblyClient.Api
         /// Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
@@ -326,7 +326,7 @@ namespace AssemblyClient.Api
         /// View an Assessment Returns a single assessment for the given id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>Assessment</returns>
         public Assessment Assessment (int? id)
         {
@@ -338,7 +338,7 @@ namespace AssemblyClient.Api
         /// View an Assessment Returns a single assessment for the given id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>ApiResponse of Assessment</returns>
         public ApiResponse< Assessment > AssessmentWithHttpInfo (int? id)
         {
@@ -398,7 +398,7 @@ namespace AssemblyClient.Api
         /// View an Assessment Returns a single assessment for the given id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>Task of Assessment</returns>
         public async System.Threading.Tasks.Task<Assessment> AssessmentAsync (int? id)
         {
@@ -411,7 +411,7 @@ namespace AssemblyClient.Api
         /// View an Assessment Returns a single assessment for the given id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>Task of ApiResponse (Assessment)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Assessment>> AssessmentAsyncWithHttpInfo (int? id)
         {
@@ -471,7 +471,7 @@ namespace AssemblyClient.Api
         /// View Grade Set for an Assessment Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>GradeSet</returns>
@@ -485,7 +485,7 @@ namespace AssemblyClient.Api
         /// View Grade Set for an Assessment Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ApiResponse of GradeSet</returns>
@@ -549,7 +549,7 @@ namespace AssemblyClient.Api
         /// View Grade Set for an Assessment Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of GradeSet</returns>
@@ -564,7 +564,7 @@ namespace AssemblyClient.Api
         /// View Grade Set for an Assessment Returns a grade_set (an acceptable list of values) for the assessment identified by the assessment_id. Grades should be written back to the Platform using the grade_id.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (GradeSet)</returns>
@@ -628,7 +628,7 @@ namespace AssemblyClient.Api
         /// View Results for an Assessment Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
@@ -643,7 +643,7 @@ namespace AssemblyClient.Api
         /// View Results for an Assessment Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
@@ -712,7 +712,7 @@ namespace AssemblyClient.Api
         /// View Results for an Assessment Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
@@ -728,7 +728,7 @@ namespace AssemblyClient.Api
         /// View Results for an Assessment Returns a list of results for the given assessment_id and students. For a full list of national assessment data (Key stage 1 and 2 SATs results) available on the Platform, please see this support article.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Assessment</param>
+        /// <param name="id">id of the entity</param>
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>

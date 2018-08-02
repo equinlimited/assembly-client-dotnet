@@ -76,7 +76,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AcademicYearsApi();
-            var id = 56;  // int? | id of the AcademicYear
+            var id = 56;  // int? | id of the entity
 
             try
             {
@@ -113,6 +113,10 @@ Class | Method | HTTP request | Description
 *FacetsApi* | [**Facet**](docs/FacetsApi.md#facet) | **GET** /facets/{id} | View a Facet
 *FacetsApi* | [**Facets**](docs/FacetsApi.md#facets) | **GET** /facets | List Facets
 *ResultsApi* | [**Results**](docs/ResultsApi.md#results) | **GET** /results | List Results
+*StaffAbsencesApi* | [**StaffAbscences**](docs/StaffAbsencesApi.md#staffabscences) | **GET** /staff_absences | List Staff Absences
+*StaffContractsApi* | [**StaffContracts**](docs/StaffContractsApi.md#staffcontracts) | **GET** /staff_contracts | List Staff Contracts
+*StaffMembersApi* | [**StaffMember**](docs/StaffMembersApi.md#staffmember) | **GET** /staff_members/{id} | View a Staff Member
+*StaffMembersApi* | [**StaffMembers**](docs/StaffMembersApi.md#staffmembers) | **GET** /staff_members | List Staff Members
 *StudentsApi* | [**LeftStudents**](docs/StudentsApi.md#leftstudents) | **GET** /students/left | List Left Students
 *StudentsApi* | [**Student**](docs/StudentsApi.md#student) | **GET** /students/{id} | View a Student
 *StudentsApi* | [**Students**](docs/StudentsApi.md#students) | **GET** /students | List Students
@@ -136,6 +140,22 @@ Class | Method | HTTP request | Description
  - [Model.Result](docs/Result.md)
  - [Model.ResultList](docs/ResultList.md)
  - [Model.ResultResult](docs/ResultResult.md)
+ - [Model.StaffAbsence](docs/StaffAbsence.md)
+ - [Model.StaffAbsenceList](docs/StaffAbsenceList.md)
+ - [Model.StaffAllowance](docs/StaffAllowance.md)
+ - [Model.StaffAllowanceList](docs/StaffAllowanceList.md)
+ - [Model.StaffContract](docs/StaffContract.md)
+ - [Model.StaffContractList](docs/StaffContractList.md)
+ - [Model.StaffMember](docs/StaffMember.md)
+ - [Model.StaffMemberDemographics](docs/StaffMemberDemographics.md)
+ - [Model.StaffMemberList](docs/StaffMemberList.md)
+ - [Model.StaffMemberQualificationInfo](docs/StaffMemberQualificationInfo.md)
+ - [Model.StaffQualification](docs/StaffQualification.md)
+ - [Model.StaffQualificationList](docs/StaffQualificationList.md)
+ - [Model.StaffRole](docs/StaffRole.md)
+ - [Model.StaffRoleList](docs/StaffRoleList.md)
+ - [Model.StaffSalary](docs/StaffSalary.md)
+ - [Model.StaffSalaryList](docs/StaffSalaryList.md)
  - [Model.Student](docs/Student.md)
  - [Model.StudentList](docs/StudentList.md)
 

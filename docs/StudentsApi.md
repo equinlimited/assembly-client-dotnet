@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 List Left Students
 
-Returns a list of students who have left the school.<br><br>**Note:** This will include any students who have left the school during the current academic year. If the school has been connected to Assembly for more than one academic year, all left students will be returned. The `If-Modified-Since` header is optional (see the page on [Conditional Requests](https://developers.assembly.education/api#conditional-requests) for more details).
+Returns a list of students who have left the school.<br><br>**Note:** This will include any students who have left the school during the current academic year. If the school has been connected to Assembly for more than one academic year, all left students will be returned. The `If-Modified-Since` header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details).
 
 ### Example
 ```csharp
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 View a Student
 
-Returns an individual student record for the given ID.  **Note:** the response shown includes student demographics, contacts, student SEN needs, student addresses, photo and student care data but these will only be present if you have permission to access it and pass `demographics`, `contacts`, `sen_needs`, `addresses`, `photo`, `care` and `ever_in_care` respectively  **Note:** Note the `If-Modified-Since` header is optional (see the page on [Conditional Requests](https://developers.assembly.education/api#conditional-requests) for more details).  ### Photo Notes When requesting photo information the response includes a `photo.url` property, this URL should be treated as confidential and used to download the students photo to your storage system of choice. The URL is *not designed for hotlinking directly in the browser* for end users. URLs are signed and only valid for 1 hour after which time you will receive a 400 error.  Once downloaded to avoid repeatedly syncing unchanged photos you should code your application to compare the `photo.hash` property to detect changes in student photos since your last sync, it is guaranteed that changes in a photo will change the hash, however the hash is only intended to be used to detect photo changes and is not guaranteed to match a checksum of the files contents.  Photos are currently provided on an \"as is\" basis straight from the source MIS, this means the format, quality, metadata and dimensions are not guaranteed. We reserve the right to normalise this data in the future but your application should be resistant to differing photo formats. 
+Returns an individual student record for the given ID.  **Note:** the response shown includes student demographics, contacts, student SEN needs, student addresses, photo and student care data but these will only be present if you have permission to access it and pass `demographics`, `contacts`, `sen_needs`, `addresses`, `photo`, `care` and `ever_in_care` respectively  **Note:** Note the `If-Modified-Since` header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details).  ### Photo Notes When requesting photo information the response includes a `photo.url` property, this URL should be treated as confidential and used to download the students photo to your storage system of choice. The URL is *not designed for hotlinking directly in the browser* for end users. URLs are signed and only valid for 1 hour after which time you will receive a 400 error.  Once downloaded to avoid repeatedly syncing unchanged photos you should code your application to compare the `photo.hash` property to detect changes in student photos since your last sync, it is guaranteed that changes in a photo will change the hash, however the hash is only intended to be used to detect photo changes and is not guaranteed to match a checksum of the files contents.  Photos are currently provided on an \"as is\" basis straight from the source MIS, this means the format, quality, metadata and dimensions are not guaranteed. We reserve the right to normalise this data in the future but your application should be resistant to differing photo formats. 
 
 ### Example
 ```csharp
@@ -105,7 +105,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new StudentsApi();
-            var id = 56;  // int? | id of the Student
+            var id = 56;  // int? | id of the entity
             var demographics = new bool?(); // bool? | include demographics data (optional) 
             var contacts = new bool?(); // bool? | include contacts data (optional) 
             var senNeeds = new bool?(); // bool? | include SEN needs data (optional) 
@@ -134,7 +134,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| id of the Student | 
+ **id** | **int?**| id of the entity | 
  **demographics** | [**bool?**](bool?.md)| include demographics data | [optional] 
  **contacts** | [**bool?**](bool?.md)| include contacts data | [optional] 
  **senNeeds** | [**bool?**](bool?.md)| include SEN needs data | [optional] 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 List Students
 
-Returns a list of students for the school associated with the provided `access_token.` **Note:** the `If-Modified-Since` header is optional (see the page on [Conditional Requests](https://developers.assembly.education/api#conditional-requests) for more details). 
+Returns a list of students for the school associated with the provided `access_token.` **Note:** the `If-Modified-Since` header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
 
 ### Example
 ```csharp
@@ -188,7 +188,7 @@ namespace Example
             var apiInstance = new StudentsApi();
             var ifModifiedSince = 2013-10-20T19:20:30+01:00;  // DateTime? | If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional) 
             var students = new List<int?>(); // List<int?> | ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional) 
-            var date = 2013-10-20T19:20:30+01:00;  // DateTime? | returns students for a specific date (optional) 
+            var date = 2013-10-20T19:20:30+01:00;  // DateTime? | returns results for a specific date (optional) 
             var yearCode = 56;  // int? | filter by school year (cannot be supplied at the same time as the students parameter) (optional) 
             var demographics = new bool?(); // bool? | include demographics data (optional) 
             var contacts = new bool?(); // bool? | include contacts data (optional) 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ifModifiedSince** | **DateTime?**| If-Modified-Since is optional (see the page on Conditional Requests for more details). | [optional] 
  **students** | [**List&lt;int?&gt;**](int?.md)| ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). | [optional] 
- **date** | **DateTime?**| returns students for a specific date | [optional] 
+ **date** | **DateTime?**| returns results for a specific date | [optional] 
  **yearCode** | **int?**| filter by school year (cannot be supplied at the same time as the students parameter) | [optional] 
  **demographics** | [**bool?**](bool?.md)| include demographics data | [optional] 
  **contacts** | [**bool?**](bool?.md)| include contacts data | [optional] 

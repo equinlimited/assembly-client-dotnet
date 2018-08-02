@@ -36,7 +36,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AssessmentPointsApi();
-            var id = 56;  // int? | id of the AssessmentPoint
+            var id = 56;  // int? | id of the entity
 
             try
             {
@@ -57,7 +57,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| id of the AssessmentPoint | 
+ **id** | **int?**| id of the entity | 
 
 ### Return type
 

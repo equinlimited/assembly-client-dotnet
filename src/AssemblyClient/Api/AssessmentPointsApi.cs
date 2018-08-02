@@ -31,7 +31,7 @@ namespace AssemblyClient.Api
         /// Returns a single assessment point for the given rank.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the AssessmentPoint</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>string</returns>
         string AssessmentPoint (int? id);
 
@@ -42,7 +42,7 @@ namespace AssemblyClient.Api
         /// Returns a single assessment point for the given rank.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the AssessmentPoint</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AssessmentPointWithHttpInfo (int? id);
         /// <summary>
@@ -104,7 +104,7 @@ namespace AssemblyClient.Api
         /// Returns a single assessment point for the given rank.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the AssessmentPoint</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>Task of string</returns>
         System.Threading.Tasks.Task<string> AssessmentPointAsync (int? id);
 
@@ -115,7 +115,7 @@ namespace AssemblyClient.Api
         /// Returns a single assessment point for the given rank.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the AssessmentPoint</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AssessmentPointAsyncWithHttpInfo (int? id);
         /// <summary>
@@ -272,7 +272,7 @@ namespace AssemblyClient.Api
         /// View an Assessment Point Returns a single assessment point for the given rank.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the AssessmentPoint</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>string</returns>
         public string AssessmentPoint (int? id)
         {
@@ -284,7 +284,7 @@ namespace AssemblyClient.Api
         /// View an Assessment Point Returns a single assessment point for the given rank.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the AssessmentPoint</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>ApiResponse of string</returns>
         public ApiResponse< string > AssessmentPointWithHttpInfo (int? id)
         {
@@ -344,7 +344,7 @@ namespace AssemblyClient.Api
         /// View an Assessment Point Returns a single assessment point for the given rank.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the AssessmentPoint</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>Task of string</returns>
         public async System.Threading.Tasks.Task<string> AssessmentPointAsync (int? id)
         {
@@ -357,7 +357,7 @@ namespace AssemblyClient.Api
         /// View an Assessment Point Returns a single assessment point for the given rank.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the AssessmentPoint</param>
+        /// <param name="id">id of the entity</param>
         /// <returns>Task of ApiResponse (string)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<string>> AssessmentPointAsyncWithHttpInfo (int? id)
         {
