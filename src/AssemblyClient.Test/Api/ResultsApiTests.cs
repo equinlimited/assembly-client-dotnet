@@ -79,6 +79,18 @@ namespace AssemblyClient.Test
             //Assert.IsInstanceOf<ResultList> (response, "response is ResultList");
         }
         
+        /// <summary>
+        /// Test SaveResults
+        /// </summary>
+        [Test]
+        public void SaveResultsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
+            //var response = instance.SaveResults(UNKNOWN_BASE_TYPE);
+            //Assert.IsInstanceOf<ResultResult> (response, "response is ResultResult");
+        }
+        
     }
 
 }

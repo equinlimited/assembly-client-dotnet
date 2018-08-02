@@ -31,7 +31,7 @@ namespace AssemblyClient.Api
         /// Returns a single academic year for the school associated with the provided access_token.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
+        /// <param name="id">id of the AcademicYear</param>
         /// <returns>AcademicYear</returns>
         AcademicYear AcademicYear (int? id);
 
@@ -42,7 +42,7 @@ namespace AssemblyClient.Api
         /// Returns a single academic year for the school associated with the provided access_token.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
+        /// <param name="id">id of the AcademicYear</param>
         /// <returns>ApiResponse of AcademicYear</returns>
         ApiResponse<AcademicYear> AcademicYearWithHttpInfo (int? id);
         /// <summary>
@@ -77,7 +77,7 @@ namespace AssemblyClient.Api
         /// Returns a single academic year for the school associated with the provided access_token.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
+        /// <param name="id">id of the AcademicYear</param>
         /// <returns>Task of AcademicYear</returns>
         System.Threading.Tasks.Task<AcademicYear> AcademicYearAsync (int? id);
 
@@ -88,7 +88,7 @@ namespace AssemblyClient.Api
         /// Returns a single academic year for the school associated with the provided access_token.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
+        /// <param name="id">id of the AcademicYear</param>
         /// <returns>Task of ApiResponse (AcademicYear)</returns>
         System.Threading.Tasks.Task<ApiResponse<AcademicYear>> AcademicYearAsyncWithHttpInfo (int? id);
         /// <summary>
@@ -218,7 +218,7 @@ namespace AssemblyClient.Api
         /// View an Academic Year Returns a single academic year for the school associated with the provided access_token.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
+        /// <param name="id">id of the AcademicYear</param>
         /// <returns>AcademicYear</returns>
         public AcademicYear AcademicYear (int? id)
         {
@@ -230,7 +230,7 @@ namespace AssemblyClient.Api
         /// View an Academic Year Returns a single academic year for the school associated with the provided access_token.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
+        /// <param name="id">id of the AcademicYear</param>
         /// <returns>ApiResponse of AcademicYear</returns>
         public ApiResponse< AcademicYear > AcademicYearWithHttpInfo (int? id)
         {
@@ -290,7 +290,7 @@ namespace AssemblyClient.Api
         /// View an Academic Year Returns a single academic year for the school associated with the provided access_token.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
+        /// <param name="id">id of the AcademicYear</param>
         /// <returns>Task of AcademicYear</returns>
         public async System.Threading.Tasks.Task<AcademicYear> AcademicYearAsync (int? id)
         {
@@ -303,7 +303,7 @@ namespace AssemblyClient.Api
         /// View an Academic Year Returns a single academic year for the school associated with the provided access_token.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id of the Academic Year</param>
+        /// <param name="id">id of the AcademicYear</param>
         /// <returns>Task of ApiResponse (AcademicYear)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AcademicYear>> AcademicYearAsyncWithHttpInfo (int? id)
         {

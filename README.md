@@ -76,7 +76,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AcademicYearsApi();
-            var id = 56;  // int? | id of the Academic Year
+            var id = 56;  // int? | id of the AcademicYear
 
             try
             {
@@ -113,6 +113,10 @@ Class | Method | HTTP request | Description
 *FacetsApi* | [**Facet**](docs/FacetsApi.md#facet) | **GET** /facets/{id} | View a Facet
 *FacetsApi* | [**Facets**](docs/FacetsApi.md#facets) | **GET** /facets | List Facets
 *ResultsApi* | [**Results**](docs/ResultsApi.md#results) | **GET** /results | List Results
+*ResultsApi* | [**SaveResults**](docs/ResultsApi.md#saveresults) | **POST** /results | Write Results
+*StudentsApi* | [**LeftStudents**](docs/StudentsApi.md#leftstudents) | **GET** /students/left | List Left Students
+*StudentsApi* | [**Student**](docs/StudentsApi.md#student) | **GET** /students/{id} | View a Student
+*StudentsApi* | [**Students**](docs/StudentsApi.md#students) | **GET** /students | List Students
 
 
 <a name="documentation-for-models"></a>
@@ -132,6 +136,9 @@ Class | Method | HTTP request | Description
  - [Model.GradeSetList](docs/GradeSetList.md)
  - [Model.Result](docs/Result.md)
  - [Model.ResultList](docs/ResultList.md)
+ - [Model.ResultResult](docs/ResultResult.md)
+ - [Model.Student](docs/Student.md)
+ - [Model.StudentList](docs/StudentList.md)
 
 
 <a name="documentation-for-authorization"></a>

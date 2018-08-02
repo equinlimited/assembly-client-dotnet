@@ -35,7 +35,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new AcademicYearsApi();
-            var id = 56;  // int? | id of the Academic Year
+            var id = 56;  // int? | id of the AcademicYear
 
             try
             {
@@ -56,7 +56,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int?**| id of the Academic Year | 
+ **id** | **int?**| id of the AcademicYear | 
 
 ### Return type
 
