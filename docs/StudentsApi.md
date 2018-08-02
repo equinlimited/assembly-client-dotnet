@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 <a name="student"></a>
 # **Student**
-> Student Student (bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+> Student Student (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
 
 View a Student
 
@@ -105,6 +105,7 @@ namespace Example
             Configuration.Default.Password = "YOUR_PASSWORD";
 
             var apiInstance = new StudentsApi();
+            var id = 56;  // int? | id of the Student
             var demographics = new bool?(); // bool? | include demographics data (optional) 
             var contacts = new bool?(); // bool? | include contacts data (optional) 
             var senNeeds = new bool?(); // bool? | include SEN needs data (optional) 
@@ -117,7 +118,7 @@ namespace Example
             try
             {
                 // View a Student
-                Student result = apiInstance.Student(demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
+                Student result = apiInstance.Student(id, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -133,6 +134,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **int?**| id of the Student | 
  **demographics** | [**bool?**](bool?.md)| include demographics data | [optional] 
  **contacts** | [**bool?**](bool?.md)| include contacts data | [optional] 
  **senNeeds** | [**bool?**](bool?.md)| include SEN needs data | [optional] 

@@ -56,6 +56,7 @@ namespace AssemblyClient.Api
         /// Returns an individual student record for the given ID.  **Note:** the response shown includes student demographics, contacts, student SEN needs, student addresses, photo and student care data but these will only be present if you have permission to access it and pass &#x60;demographics&#x60;, &#x60;contacts&#x60;, &#x60;sen_needs&#x60;, &#x60;addresses&#x60;, &#x60;photo&#x60;, &#x60;care&#x60; and &#x60;ever_in_care&#x60; respectively  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](https://developers.assembly.education/api#conditional-requests) for more details).  ### Photo Notes When requesting photo information the response includes a &#x60;photo.url&#x60; property, this URL should be treated as confidential and used to download the students photo to your storage system of choice. The URL is *not designed for hotlinking directly in the browser* for end users. URLs are signed and only valid for 1 hour after which time you will receive a 400 error.  Once downloaded to avoid repeatedly syncing unchanged photos you should code your application to compare the &#x60;photo.hash&#x60; property to detect changes in student photos since your last sync, it is guaranteed that changes in a photo will change the hash, however the hash is only intended to be used to detect photo changes and is not guaranteed to match a checksum of the files contents.  Photos are currently provided on an \&quot;as is\&quot; basis straight from the source MIS, this means the format, quality, metadata and dimensions are not guaranteed. We reserve the right to normalise this data in the future but your application should be resistant to differing photo formats. 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Student</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
         /// <param name="senNeeds">include SEN needs data (optional)</param>
@@ -65,7 +66,7 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>Student</returns>
-        Student Student (bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        Student Student (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
 
         /// <summary>
         /// View a Student
@@ -74,6 +75,7 @@ namespace AssemblyClient.Api
         /// Returns an individual student record for the given ID.  **Note:** the response shown includes student demographics, contacts, student SEN needs, student addresses, photo and student care data but these will only be present if you have permission to access it and pass &#x60;demographics&#x60;, &#x60;contacts&#x60;, &#x60;sen_needs&#x60;, &#x60;addresses&#x60;, &#x60;photo&#x60;, &#x60;care&#x60; and &#x60;ever_in_care&#x60; respectively  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](https://developers.assembly.education/api#conditional-requests) for more details).  ### Photo Notes When requesting photo information the response includes a &#x60;photo.url&#x60; property, this URL should be treated as confidential and used to download the students photo to your storage system of choice. The URL is *not designed for hotlinking directly in the browser* for end users. URLs are signed and only valid for 1 hour after which time you will receive a 400 error.  Once downloaded to avoid repeatedly syncing unchanged photos you should code your application to compare the &#x60;photo.hash&#x60; property to detect changes in student photos since your last sync, it is guaranteed that changes in a photo will change the hash, however the hash is only intended to be used to detect photo changes and is not guaranteed to match a checksum of the files contents.  Photos are currently provided on an \&quot;as is\&quot; basis straight from the source MIS, this means the format, quality, metadata and dimensions are not guaranteed. We reserve the right to normalise this data in the future but your application should be resistant to differing photo formats. 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Student</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
         /// <param name="senNeeds">include SEN needs data (optional)</param>
@@ -83,7 +85,7 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>ApiResponse of Student</returns>
-        ApiResponse<Student> StudentWithHttpInfo (bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        ApiResponse<Student> StudentWithHttpInfo (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
         /// <summary>
         /// List Students
         /// </summary>
@@ -165,6 +167,7 @@ namespace AssemblyClient.Api
         /// Returns an individual student record for the given ID.  **Note:** the response shown includes student demographics, contacts, student SEN needs, student addresses, photo and student care data but these will only be present if you have permission to access it and pass &#x60;demographics&#x60;, &#x60;contacts&#x60;, &#x60;sen_needs&#x60;, &#x60;addresses&#x60;, &#x60;photo&#x60;, &#x60;care&#x60; and &#x60;ever_in_care&#x60; respectively  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](https://developers.assembly.education/api#conditional-requests) for more details).  ### Photo Notes When requesting photo information the response includes a &#x60;photo.url&#x60; property, this URL should be treated as confidential and used to download the students photo to your storage system of choice. The URL is *not designed for hotlinking directly in the browser* for end users. URLs are signed and only valid for 1 hour after which time you will receive a 400 error.  Once downloaded to avoid repeatedly syncing unchanged photos you should code your application to compare the &#x60;photo.hash&#x60; property to detect changes in student photos since your last sync, it is guaranteed that changes in a photo will change the hash, however the hash is only intended to be used to detect photo changes and is not guaranteed to match a checksum of the files contents.  Photos are currently provided on an \&quot;as is\&quot; basis straight from the source MIS, this means the format, quality, metadata and dimensions are not guaranteed. We reserve the right to normalise this data in the future but your application should be resistant to differing photo formats. 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Student</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
         /// <param name="senNeeds">include SEN needs data (optional)</param>
@@ -174,7 +177,7 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>Task of Student</returns>
-        System.Threading.Tasks.Task<Student> StudentAsync (bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        System.Threading.Tasks.Task<Student> StudentAsync (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
 
         /// <summary>
         /// View a Student
@@ -183,6 +186,7 @@ namespace AssemblyClient.Api
         /// Returns an individual student record for the given ID.  **Note:** the response shown includes student demographics, contacts, student SEN needs, student addresses, photo and student care data but these will only be present if you have permission to access it and pass &#x60;demographics&#x60;, &#x60;contacts&#x60;, &#x60;sen_needs&#x60;, &#x60;addresses&#x60;, &#x60;photo&#x60;, &#x60;care&#x60; and &#x60;ever_in_care&#x60; respectively  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](https://developers.assembly.education/api#conditional-requests) for more details).  ### Photo Notes When requesting photo information the response includes a &#x60;photo.url&#x60; property, this URL should be treated as confidential and used to download the students photo to your storage system of choice. The URL is *not designed for hotlinking directly in the browser* for end users. URLs are signed and only valid for 1 hour after which time you will receive a 400 error.  Once downloaded to avoid repeatedly syncing unchanged photos you should code your application to compare the &#x60;photo.hash&#x60; property to detect changes in student photos since your last sync, it is guaranteed that changes in a photo will change the hash, however the hash is only intended to be used to detect photo changes and is not guaranteed to match a checksum of the files contents.  Photos are currently provided on an \&quot;as is\&quot; basis straight from the source MIS, this means the format, quality, metadata and dimensions are not guaranteed. We reserve the right to normalise this data in the future but your application should be resistant to differing photo formats. 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Student</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
         /// <param name="senNeeds">include SEN needs data (optional)</param>
@@ -192,7 +196,7 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>Task of ApiResponse (Student)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Student>> StudentAsyncWithHttpInfo (bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        System.Threading.Tasks.Task<ApiResponse<Student>> StudentAsyncWithHttpInfo (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
         /// <summary>
         /// List Students
         /// </summary>
@@ -495,6 +499,7 @@ namespace AssemblyClient.Api
         /// View a Student Returns an individual student record for the given ID.  **Note:** the response shown includes student demographics, contacts, student SEN needs, student addresses, photo and student care data but these will only be present if you have permission to access it and pass &#x60;demographics&#x60;, &#x60;contacts&#x60;, &#x60;sen_needs&#x60;, &#x60;addresses&#x60;, &#x60;photo&#x60;, &#x60;care&#x60; and &#x60;ever_in_care&#x60; respectively  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](https://developers.assembly.education/api#conditional-requests) for more details).  ### Photo Notes When requesting photo information the response includes a &#x60;photo.url&#x60; property, this URL should be treated as confidential and used to download the students photo to your storage system of choice. The URL is *not designed for hotlinking directly in the browser* for end users. URLs are signed and only valid for 1 hour after which time you will receive a 400 error.  Once downloaded to avoid repeatedly syncing unchanged photos you should code your application to compare the &#x60;photo.hash&#x60; property to detect changes in student photos since your last sync, it is guaranteed that changes in a photo will change the hash, however the hash is only intended to be used to detect photo changes and is not guaranteed to match a checksum of the files contents.  Photos are currently provided on an \&quot;as is\&quot; basis straight from the source MIS, this means the format, quality, metadata and dimensions are not guaranteed. We reserve the right to normalise this data in the future but your application should be resistant to differing photo formats. 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Student</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
         /// <param name="senNeeds">include SEN needs data (optional)</param>
@@ -504,9 +509,9 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>Student</returns>
-        public Student Student (bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public Student Student (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
-             ApiResponse<Student> localVarResponse = StudentWithHttpInfo(demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
+             ApiResponse<Student> localVarResponse = StudentWithHttpInfo(id, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
              return localVarResponse.Data;
         }
 
@@ -514,6 +519,7 @@ namespace AssemblyClient.Api
         /// View a Student Returns an individual student record for the given ID.  **Note:** the response shown includes student demographics, contacts, student SEN needs, student addresses, photo and student care data but these will only be present if you have permission to access it and pass &#x60;demographics&#x60;, &#x60;contacts&#x60;, &#x60;sen_needs&#x60;, &#x60;addresses&#x60;, &#x60;photo&#x60;, &#x60;care&#x60; and &#x60;ever_in_care&#x60; respectively  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](https://developers.assembly.education/api#conditional-requests) for more details).  ### Photo Notes When requesting photo information the response includes a &#x60;photo.url&#x60; property, this URL should be treated as confidential and used to download the students photo to your storage system of choice. The URL is *not designed for hotlinking directly in the browser* for end users. URLs are signed and only valid for 1 hour after which time you will receive a 400 error.  Once downloaded to avoid repeatedly syncing unchanged photos you should code your application to compare the &#x60;photo.hash&#x60; property to detect changes in student photos since your last sync, it is guaranteed that changes in a photo will change the hash, however the hash is only intended to be used to detect photo changes and is not guaranteed to match a checksum of the files contents.  Photos are currently provided on an \&quot;as is\&quot; basis straight from the source MIS, this means the format, quality, metadata and dimensions are not guaranteed. We reserve the right to normalise this data in the future but your application should be resistant to differing photo formats. 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Student</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
         /// <param name="senNeeds">include SEN needs data (optional)</param>
@@ -523,8 +529,11 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>ApiResponse of Student</returns>
-        public ApiResponse< Student > StudentWithHttpInfo (bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public ApiResponse< Student > StudentWithHttpInfo (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling StudentsApi->Student");
 
             var localVarPath = "/students/{id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -547,6 +556,7 @@ namespace AssemblyClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (demographics != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "demographics", demographics)); // query parameter
             if (contacts != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "contacts", contacts)); // query parameter
             if (senNeeds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sen_needs", senNeeds)); // query parameter
@@ -585,6 +595,7 @@ namespace AssemblyClient.Api
         /// View a Student Returns an individual student record for the given ID.  **Note:** the response shown includes student demographics, contacts, student SEN needs, student addresses, photo and student care data but these will only be present if you have permission to access it and pass &#x60;demographics&#x60;, &#x60;contacts&#x60;, &#x60;sen_needs&#x60;, &#x60;addresses&#x60;, &#x60;photo&#x60;, &#x60;care&#x60; and &#x60;ever_in_care&#x60; respectively  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](https://developers.assembly.education/api#conditional-requests) for more details).  ### Photo Notes When requesting photo information the response includes a &#x60;photo.url&#x60; property, this URL should be treated as confidential and used to download the students photo to your storage system of choice. The URL is *not designed for hotlinking directly in the browser* for end users. URLs are signed and only valid for 1 hour after which time you will receive a 400 error.  Once downloaded to avoid repeatedly syncing unchanged photos you should code your application to compare the &#x60;photo.hash&#x60; property to detect changes in student photos since your last sync, it is guaranteed that changes in a photo will change the hash, however the hash is only intended to be used to detect photo changes and is not guaranteed to match a checksum of the files contents.  Photos are currently provided on an \&quot;as is\&quot; basis straight from the source MIS, this means the format, quality, metadata and dimensions are not guaranteed. We reserve the right to normalise this data in the future but your application should be resistant to differing photo formats. 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Student</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
         /// <param name="senNeeds">include SEN needs data (optional)</param>
@@ -594,9 +605,9 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>Task of Student</returns>
-        public async System.Threading.Tasks.Task<Student> StudentAsync (bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public async System.Threading.Tasks.Task<Student> StudentAsync (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
-             ApiResponse<Student> localVarResponse = await StudentAsyncWithHttpInfo(demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
+             ApiResponse<Student> localVarResponse = await StudentAsyncWithHttpInfo(id, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
              return localVarResponse.Data;
 
         }
@@ -605,6 +616,7 @@ namespace AssemblyClient.Api
         /// View a Student Returns an individual student record for the given ID.  **Note:** the response shown includes student demographics, contacts, student SEN needs, student addresses, photo and student care data but these will only be present if you have permission to access it and pass &#x60;demographics&#x60;, &#x60;contacts&#x60;, &#x60;sen_needs&#x60;, &#x60;addresses&#x60;, &#x60;photo&#x60;, &#x60;care&#x60; and &#x60;ever_in_care&#x60; respectively  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](https://developers.assembly.education/api#conditional-requests) for more details).  ### Photo Notes When requesting photo information the response includes a &#x60;photo.url&#x60; property, this URL should be treated as confidential and used to download the students photo to your storage system of choice. The URL is *not designed for hotlinking directly in the browser* for end users. URLs are signed and only valid for 1 hour after which time you will receive a 400 error.  Once downloaded to avoid repeatedly syncing unchanged photos you should code your application to compare the &#x60;photo.hash&#x60; property to detect changes in student photos since your last sync, it is guaranteed that changes in a photo will change the hash, however the hash is only intended to be used to detect photo changes and is not guaranteed to match a checksum of the files contents.  Photos are currently provided on an \&quot;as is\&quot; basis straight from the source MIS, this means the format, quality, metadata and dimensions are not guaranteed. We reserve the right to normalise this data in the future but your application should be resistant to differing photo formats. 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the Student</param>
         /// <param name="demographics">include demographics data (optional)</param>
         /// <param name="contacts">include contacts data (optional)</param>
         /// <param name="senNeeds">include SEN needs data (optional)</param>
@@ -614,8 +626,11 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional)</param>
         /// <param name="photo">include student photo data (optional)</param>
         /// <returns>Task of ApiResponse (Student)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Student>> StudentAsyncWithHttpInfo (bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Student>> StudentAsyncWithHttpInfo (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling StudentsApi->Student");
 
             var localVarPath = "/students/{id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -638,6 +653,7 @@ namespace AssemblyClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (demographics != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "demographics", demographics)); // query parameter
             if (contacts != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "contacts", contacts)); // query parameter
             if (senNeeds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sen_needs", senNeeds)); // query parameter

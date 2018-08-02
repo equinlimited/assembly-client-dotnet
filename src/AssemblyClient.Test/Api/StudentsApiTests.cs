@@ -85,6 +85,7 @@ namespace AssemblyClient.Test
         public void StudentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int? id = null;
             //bool? demographics = null;
             //bool? contacts = null;
             //bool? senNeeds = null;
@@ -93,7 +94,7 @@ namespace AssemblyClient.Test
             //bool? everInCare = null;
             //bool? languages = null;
             //bool? photo = null;
-            //var response = instance.Student(demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
+            //var response = instance.Student(id, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
             //Assert.IsInstanceOf<Student> (response, "response is Student");
         }
         
