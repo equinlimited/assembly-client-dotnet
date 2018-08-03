@@ -112,6 +112,9 @@ Class | Method | HTTP request | Description
 *AssessmentsApi* | [**Assessments**](docs/AssessmentsApi.md#assessments) | **GET** /assessments | List Assessments
 *FacetsApi* | [**Facet**](docs/FacetsApi.md#facet) | **GET** /facets/{id} | View a Facet
 *FacetsApi* | [**Facets**](docs/FacetsApi.md#facets) | **GET** /facets | List Facets
+*RegistrationGroupsApi* | [**RegistrationGroup**](docs/RegistrationGroupsApi.md#registrationgroup) | **GET** /registration_groups/{id} | View a Registration Group
+*RegistrationGroupsApi* | [**RegistrationGroupStudents**](docs/RegistrationGroupsApi.md#registrationgroupstudents) | **GET** /registration_groups/{id}/students | List Students for Registration Group
+*RegistrationGroupsApi* | [**RegistrationGroups**](docs/RegistrationGroupsApi.md#registrationgroups) | **GET** /registration_groups | List Registration Group
 *ResultsApi* | [**Results**](docs/ResultsApi.md#results) | **GET** /results | List Results
 *StaffAbsencesApi* | [**StaffAbscences**](docs/StaffAbsencesApi.md#staffabscences) | **GET** /staff_absences | List Staff Absences
 *StaffContractsApi* | [**StaffContracts**](docs/StaffContractsApi.md#staffcontracts) | **GET** /staff_contracts | List Staff Contracts
@@ -123,6 +126,9 @@ Class | Method | HTTP request | Description
 *TeachingGroupsApi* | [**TeachingGroup**](docs/TeachingGroupsApi.md#teachinggroup) | **GET** /teaching_groups/{id} | View a Teaching Group
 *TeachingGroupsApi* | [**TeachingGroupStudents**](docs/TeachingGroupsApi.md#teachinggroupstudents) | **GET** /teaching_groups/{id}/students | List Students for Teaching Group
 *TeachingGroupsApi* | [**TeachingGroups**](docs/TeachingGroupsApi.md#teachinggroups) | **GET** /teaching_groups | List Teaching Groups
+*YearGroupsApi* | [**YearGroup**](docs/YearGroupsApi.md#yeargroup) | **GET** /year_groups/{id} | View a Year Group
+*YearGroupsApi* | [**YearGroupStudents**](docs/YearGroupsApi.md#yeargroupstudents) | **GET** /year_groups/{id}/students | List Students for Year Group
+*YearGroupsApi* | [**YearGroups**](docs/YearGroupsApi.md#yeargroups) | **GET** /year_groups | List Year Groups
 
 
 <a name="documentation-for-models"></a>
@@ -140,6 +146,8 @@ Class | Method | HTTP request | Description
  - [Model.GradeList](docs/GradeList.md)
  - [Model.GradeSet](docs/GradeSet.md)
  - [Model.GradeSetList](docs/GradeSetList.md)
+ - [Model.RegistrationGroup](docs/RegistrationGroup.md)
+ - [Model.RegistrationGroupList](docs/RegistrationGroupList.md)
  - [Model.Result](docs/Result.md)
  - [Model.ResultList](docs/ResultList.md)
  - [Model.ResultResult](docs/ResultResult.md)
@@ -165,6 +173,8 @@ Class | Method | HTTP request | Description
  - [Model.SubjectList](docs/SubjectList.md)
  - [Model.TeachingGroup](docs/TeachingGroup.md)
  - [Model.TeachingGroupList](docs/TeachingGroupList.md)
+ - [Model.YearGroup](docs/YearGroup.md)
+ - [Model.YearGroupList](docs/YearGroupList.md)
 
 
 <a name="documentation-for-authorization"></a>

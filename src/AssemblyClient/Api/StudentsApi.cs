@@ -57,14 +57,14 @@ namespace AssemblyClient.Api
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>Student</returns>
         Student Student (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
 
@@ -76,14 +76,14 @@ namespace AssemblyClient.Api
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>ApiResponse of Student</returns>
         ApiResponse<Student> StudentWithHttpInfo (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
         /// <summary>
@@ -97,14 +97,14 @@ namespace AssemblyClient.Api
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>StudentList</returns>
@@ -121,14 +121,14 @@ namespace AssemblyClient.Api
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ApiResponse of StudentList</returns>
@@ -168,14 +168,14 @@ namespace AssemblyClient.Api
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>Task of Student</returns>
         System.Threading.Tasks.Task<Student> StudentAsync (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
 
@@ -187,14 +187,14 @@ namespace AssemblyClient.Api
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Student)</returns>
         System.Threading.Tasks.Task<ApiResponse<Student>> StudentAsyncWithHttpInfo (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
         /// <summary>
@@ -208,14 +208,14 @@ namespace AssemblyClient.Api
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of StudentList</returns>
@@ -232,14 +232,14 @@ namespace AssemblyClient.Api
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>
@@ -500,14 +500,14 @@ namespace AssemblyClient.Api
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>Student</returns>
         public Student Student (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
@@ -520,14 +520,14 @@ namespace AssemblyClient.Api
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>ApiResponse of Student</returns>
         public ApiResponse< Student > StudentWithHttpInfo (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
@@ -596,14 +596,14 @@ namespace AssemblyClient.Api
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>Task of Student</returns>
         public async System.Threading.Tasks.Task<Student> StudentAsync (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
@@ -617,14 +617,14 @@ namespace AssemblyClient.Api
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Student)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Student>> StudentAsyncWithHttpInfo (int? id, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
@@ -696,14 +696,14 @@ namespace AssemblyClient.Api
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>StudentList</returns>
@@ -721,14 +721,14 @@ namespace AssemblyClient.Api
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>ApiResponse of StudentList</returns>
@@ -804,14 +804,14 @@ namespace AssemblyClient.Api
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of StudentList</returns>
@@ -830,14 +830,14 @@ namespace AssemblyClient.Api
         /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
-        /// <param name="demographics">include demographics data (optional)</param>
-        /// <param name="contacts">include contacts data (optional)</param>
-        /// <param name="senNeeds">include SEN needs data (optional)</param>
-        /// <param name="addresses">include student address data (optional)</param>
-        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-        /// <param name="languages">include student language data (optional)</param>
-        /// <param name="photo">include student photo data (optional)</param>
+        /// <param name="demographics">include demographics data (optional, default to false)</param>
+        /// <param name="contacts">include contacts data (optional, default to false)</param>
+        /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
+        /// <param name="addresses">include student address data (optional, default to false)</param>
+        /// <param name="care">include student care data (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional, default to false)</param>
+        /// <param name="languages">include student language data (optional, default to false)</param>
+        /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>

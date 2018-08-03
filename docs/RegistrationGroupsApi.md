@@ -1,21 +1,21 @@
-# AssemblyClient.Api.TeachingGroupsApi
+# AssemblyClient.Api.RegistrationGroupsApi
 
 All URIs are relative to *http://api-sandbox.lvh.me:3020*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**TeachingGroup**](TeachingGroupsApi.md#teachinggroup) | **GET** /teaching_groups/{id} | View a Teaching Group
-[**TeachingGroupStudents**](TeachingGroupsApi.md#teachinggroupstudents) | **GET** /teaching_groups/{id}/students | List Students for Teaching Group
-[**TeachingGroups**](TeachingGroupsApi.md#teachinggroups) | **GET** /teaching_groups | List Teaching Groups
+[**RegistrationGroup**](RegistrationGroupsApi.md#registrationgroup) | **GET** /registration_groups/{id} | View a Registration Group
+[**RegistrationGroupStudents**](RegistrationGroupsApi.md#registrationgroupstudents) | **GET** /registration_groups/{id}/students | List Students for Registration Group
+[**RegistrationGroups**](RegistrationGroupsApi.md#registrationgroups) | **GET** /registration_groups | List Registration Group
 
 
-<a name="teachinggroup"></a>
-# **TeachingGroup**
-> TeachingGroup TeachingGroup (int? id, DateTime? date = null, int? academicYearId = null, int? groupId = null)
+<a name="registrationgroup"></a>
+# **RegistrationGroup**
+> RegistrationGroup RegistrationGroup (int? id, DateTime? date = null, int? academicYearId = null)
 
-View a Teaching Group
+View a Registration Group
 
-Returns a list of teaching groups that match the given set of filters.
+Returns a list of registration groups that match the given set of filters.
 
 ### Example
 ```csharp
@@ -27,7 +27,7 @@ using AssemblyClient.Model;
 
 namespace Example
 {
-    public class TeachingGroupExample
+    public class RegistrationGroupExample
     {
         public void main()
         {
@@ -35,21 +35,20 @@ namespace Example
             Configuration.Default.Username = "YOUR_USERNAME";
             Configuration.Default.Password = "YOUR_PASSWORD";
 
-            var apiInstance = new TeachingGroupsApi();
+            var apiInstance = new RegistrationGroupsApi();
             var id = 56;  // int? | id of the entity
             var date = 2013-10-20T19:20:30+01:00;  // DateTime? | returns results for a specific date (optional) 
             var academicYearId = 56;  // int? | returns all groups and group memberships from the specified academic year (optional) 
-            var groupId = 56;  // int? | translation missing: en.api.params.group_id (optional) 
 
             try
             {
-                // View a Teaching Group
-                TeachingGroup result = apiInstance.TeachingGroup(id, date, academicYearId, groupId);
+                // View a Registration Group
+                RegistrationGroup result = apiInstance.RegistrationGroup(id, date, academicYearId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TeachingGroupsApi.TeachingGroup: " + e.Message );
+                Debug.Print("Exception when calling RegistrationGroupsApi.RegistrationGroup: " + e.Message );
             }
         }
     }
@@ -63,11 +62,10 @@ Name | Type | Description  | Notes
  **id** | **int?**| id of the entity | 
  **date** | **DateTime?**| returns results for a specific date | [optional] 
  **academicYearId** | **int?**| returns all groups and group memberships from the specified academic year | [optional] 
- **groupId** | **int?**| translation missing: en.api.params.group_id | [optional] 
 
 ### Return type
 
-[**TeachingGroup**](TeachingGroup.md)
+[**RegistrationGroup**](RegistrationGroup.md)
 
 ### Authorization
 
@@ -80,13 +78,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="teachinggroupstudents"></a>
-# **TeachingGroupStudents**
-> StudentList TeachingGroupStudents (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+<a name="registrationgroupstudents"></a>
+# **RegistrationGroupStudents**
+> StudentList RegistrationGroupStudents (int? id, DateTime? ifModifiedSince = null, DateTime? date = null, int? academicYearId = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
 
-List Students for Teaching Group
+List Students for Registration Group
 
-Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the `If-Modified-Since` header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+Returns a list of all the students that are present in the registration group identified by group_id.  **Note:** Note the `If-Modified-Since` header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
 
 ### Example
 ```csharp
@@ -98,7 +96,7 @@ using AssemblyClient.Model;
 
 namespace Example
 {
-    public class TeachingGroupStudentsExample
+    public class RegistrationGroupStudentsExample
     {
         public void main()
         {
@@ -106,8 +104,11 @@ namespace Example
             Configuration.Default.Username = "YOUR_USERNAME";
             Configuration.Default.Password = "YOUR_PASSWORD";
 
-            var apiInstance = new TeachingGroupsApi();
+            var apiInstance = new RegistrationGroupsApi();
+            var id = 56;  // int? | id of the entity
             var ifModifiedSince = 2013-10-20T19:20:30+01:00;  // DateTime? | If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional) 
+            var date = 2013-10-20T19:20:30+01:00;  // DateTime? | returns results for a specific date (optional) 
+            var academicYearId = 56;  // int? | returns all groups and group memberships from the specified academic year (optional) 
             var demographics = true;  // bool? | include demographics data (optional)  (default to false)
             var contacts = true;  // bool? | include contacts data (optional)  (default to false)
             var senNeeds = true;  // bool? | include SEN needs data (optional)  (default to false)
@@ -119,13 +120,13 @@ namespace Example
 
             try
             {
-                // List Students for Teaching Group
-                StudentList result = apiInstance.TeachingGroupStudents(ifModifiedSince, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
+                // List Students for Registration Group
+                StudentList result = apiInstance.RegistrationGroupStudents(id, ifModifiedSince, date, academicYearId, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TeachingGroupsApi.TeachingGroupStudents: " + e.Message );
+                Debug.Print("Exception when calling RegistrationGroupsApi.RegistrationGroupStudents: " + e.Message );
             }
         }
     }
@@ -136,7 +137,10 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **int?**| id of the entity | 
  **ifModifiedSince** | **DateTime?**| If-Modified-Since is optional (see the page on Conditional Requests for more details). | [optional] 
+ **date** | **DateTime?**| returns results for a specific date | [optional] 
+ **academicYearId** | **int?**| returns all groups and group memberships from the specified academic year | [optional] 
  **demographics** | **bool?**| include demographics data | [optional] [default to false]
  **contacts** | **bool?**| include contacts data | [optional] [default to false]
  **senNeeds** | **bool?**| include SEN needs data | [optional] [default to false]
@@ -161,13 +165,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="teachinggroups"></a>
-# **TeachingGroups**
-> TeachingGroupList TeachingGroups (string subjectCode = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null)
+<a name="registrationgroups"></a>
+# **RegistrationGroups**
+> RegistrationGroup RegistrationGroups (DateTime? ifModifiedSince = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, int? perPage = null, int? page = null)
 
-List Teaching Groups
+List Registration Group
 
-Returns a list of teaching groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the `If-Modified-Since` header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+Returns a list of registration groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the `If-Modified-Since` header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
 
 ### Example
 ```csharp
@@ -179,7 +183,7 @@ using AssemblyClient.Model;
 
 namespace Example
 {
-    public class TeachingGroupsExample
+    public class RegistrationGroupsExample
     {
         public void main()
         {
@@ -187,24 +191,23 @@ namespace Example
             Configuration.Default.Username = "YOUR_USERNAME";
             Configuration.Default.Password = "YOUR_PASSWORD";
 
-            var apiInstance = new TeachingGroupsApi();
-            var subjectCode = subjectCode_example;  // string | filter by subject (optional) 
+            var apiInstance = new RegistrationGroupsApi();
+            var ifModifiedSince = 2013-10-20T19:20:30+01:00;  // DateTime? | If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional) 
             var yearCode = 56;  // int? | filter by school year (cannot be supplied at the same time as the students parameter) (optional) 
             var date = 2013-10-20T19:20:30+01:00;  // DateTime? | returns results for a specific date (optional) 
             var academicYearId = 56;  // int? | returns all groups and group memberships from the specified academic year (optional) 
-            var ifModifiedSince = 2013-10-20T19:20:30+01:00;  // DateTime? | If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional) 
             var perPage = 56;  // int? | Number of results to return (optional)  (default to 100)
             var page = 56;  // int? | Page number to return (optional)  (default to 1)
 
             try
             {
-                // List Teaching Groups
-                TeachingGroupList result = apiInstance.TeachingGroups(subjectCode, yearCode, date, academicYearId, ifModifiedSince, perPage, page);
+                // List Registration Group
+                RegistrationGroup result = apiInstance.RegistrationGroups(ifModifiedSince, yearCode, date, academicYearId, perPage, page);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TeachingGroupsApi.TeachingGroups: " + e.Message );
+                Debug.Print("Exception when calling RegistrationGroupsApi.RegistrationGroups: " + e.Message );
             }
         }
     }
@@ -215,17 +218,16 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subjectCode** | **string**| filter by subject | [optional] 
+ **ifModifiedSince** | **DateTime?**| If-Modified-Since is optional (see the page on Conditional Requests for more details). | [optional] 
  **yearCode** | **int?**| filter by school year (cannot be supplied at the same time as the students parameter) | [optional] 
  **date** | **DateTime?**| returns results for a specific date | [optional] 
  **academicYearId** | **int?**| returns all groups and group memberships from the specified academic year | [optional] 
- **ifModifiedSince** | **DateTime?**| If-Modified-Since is optional (see the page on Conditional Requests for more details). | [optional] 
  **perPage** | **int?**| Number of results to return | [optional] [default to 100]
  **page** | **int?**| Page number to return | [optional] [default to 1]
 
 ### Return type
 
-[**TeachingGroupList**](TeachingGroupList.md)
+[**RegistrationGroup**](RegistrationGroup.md)
 
 ### Authorization
 

@@ -106,14 +106,14 @@ namespace Example
 
             var apiInstance = new StudentsApi();
             var id = 56;  // int? | id of the entity
-            var demographics = new bool?(); // bool? | include demographics data (optional) 
-            var contacts = new bool?(); // bool? | include contacts data (optional) 
-            var senNeeds = new bool?(); // bool? | include SEN needs data (optional) 
-            var addresses = new bool?(); // bool? | include student address data (optional) 
-            var care = new bool?(); // bool? | include student care data (you must also supply the demographics parameter) (optional) 
-            var everInCare = new bool?(); // bool? | include whether the student has ever been in care (you must also supply the demographics parameter) (optional) 
-            var languages = new bool?(); // bool? | include student language data (optional) 
-            var photo = new bool?(); // bool? | include student photo data (optional) 
+            var demographics = true;  // bool? | include demographics data (optional)  (default to false)
+            var contacts = true;  // bool? | include contacts data (optional)  (default to false)
+            var senNeeds = true;  // bool? | include SEN needs data (optional)  (default to false)
+            var addresses = true;  // bool? | include student address data (optional)  (default to false)
+            var care = true;  // bool? | include student care data (you must also supply the demographics parameter) (optional)  (default to false)
+            var everInCare = true;  // bool? | include whether the student has ever been in care (you must also supply the demographics parameter) (optional)  (default to false)
+            var languages = true;  // bool? | include student language data (optional)  (default to false)
+            var photo = true;  // bool? | include student photo data (optional)  (default to false)
 
             try
             {
@@ -135,14 +135,14 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int?**| id of the entity | 
- **demographics** | [**bool?**](bool?.md)| include demographics data | [optional] 
- **contacts** | [**bool?**](bool?.md)| include contacts data | [optional] 
- **senNeeds** | [**bool?**](bool?.md)| include SEN needs data | [optional] 
- **addresses** | [**bool?**](bool?.md)| include student address data | [optional] 
- **care** | [**bool?**](bool?.md)| include student care data (you must also supply the demographics parameter) | [optional] 
- **everInCare** | [**bool?**](bool?.md)| include whether the student has ever been in care (you must also supply the demographics parameter) | [optional] 
- **languages** | [**bool?**](bool?.md)| include student language data | [optional] 
- **photo** | [**bool?**](bool?.md)| include student photo data | [optional] 
+ **demographics** | **bool?**| include demographics data | [optional] [default to false]
+ **contacts** | **bool?**| include contacts data | [optional] [default to false]
+ **senNeeds** | **bool?**| include SEN needs data | [optional] [default to false]
+ **addresses** | **bool?**| include student address data | [optional] [default to false]
+ **care** | **bool?**| include student care data (you must also supply the demographics parameter) | [optional] [default to false]
+ **everInCare** | **bool?**| include whether the student has ever been in care (you must also supply the demographics parameter) | [optional] [default to false]
+ **languages** | **bool?**| include student language data | [optional] [default to false]
+ **photo** | **bool?**| include student photo data | [optional] [default to false]
 
 ### Return type
 
@@ -190,14 +190,14 @@ namespace Example
             var students = new List<int?>(); // List<int?> | ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). (optional) 
             var date = 2013-10-20T19:20:30+01:00;  // DateTime? | returns results for a specific date (optional) 
             var yearCode = 56;  // int? | filter by school year (cannot be supplied at the same time as the students parameter) (optional) 
-            var demographics = new bool?(); // bool? | include demographics data (optional) 
-            var contacts = new bool?(); // bool? | include contacts data (optional) 
-            var senNeeds = new bool?(); // bool? | include SEN needs data (optional) 
-            var addresses = new bool?(); // bool? | include student address data (optional) 
-            var care = new bool?(); // bool? | include student care data (you must also supply the demographics parameter) (optional) 
-            var everInCare = new bool?(); // bool? | include whether the student has ever been in care (you must also supply the demographics parameter) (optional) 
-            var languages = new bool?(); // bool? | include student language data (optional) 
-            var photo = new bool?(); // bool? | include student photo data (optional) 
+            var demographics = true;  // bool? | include demographics data (optional)  (default to false)
+            var contacts = true;  // bool? | include contacts data (optional)  (default to false)
+            var senNeeds = true;  // bool? | include SEN needs data (optional)  (default to false)
+            var addresses = true;  // bool? | include student address data (optional)  (default to false)
+            var care = true;  // bool? | include student care data (you must also supply the demographics parameter) (optional)  (default to false)
+            var everInCare = true;  // bool? | include whether the student has ever been in care (you must also supply the demographics parameter) (optional)  (default to false)
+            var languages = true;  // bool? | include student language data (optional)  (default to false)
+            var photo = true;  // bool? | include student photo data (optional)  (default to false)
             var perPage = 56;  // int? | Number of results to return (optional)  (default to 100)
             var page = 56;  // int? | Page number to return (optional)  (default to 1)
 
@@ -224,14 +224,14 @@ Name | Type | Description  | Notes
  **students** | [**List&lt;int?&gt;**](int?.md)| ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded). | [optional] 
  **date** | **DateTime?**| returns results for a specific date | [optional] 
  **yearCode** | **int?**| filter by school year (cannot be supplied at the same time as the students parameter) | [optional] 
- **demographics** | [**bool?**](bool?.md)| include demographics data | [optional] 
- **contacts** | [**bool?**](bool?.md)| include contacts data | [optional] 
- **senNeeds** | [**bool?**](bool?.md)| include SEN needs data | [optional] 
- **addresses** | [**bool?**](bool?.md)| include student address data | [optional] 
- **care** | [**bool?**](bool?.md)| include student care data (you must also supply the demographics parameter) | [optional] 
- **everInCare** | [**bool?**](bool?.md)| include whether the student has ever been in care (you must also supply the demographics parameter) | [optional] 
- **languages** | [**bool?**](bool?.md)| include student language data | [optional] 
- **photo** | [**bool?**](bool?.md)| include student photo data | [optional] 
+ **demographics** | **bool?**| include demographics data | [optional] [default to false]
+ **contacts** | **bool?**| include contacts data | [optional] [default to false]
+ **senNeeds** | **bool?**| include SEN needs data | [optional] [default to false]
+ **addresses** | **bool?**| include student address data | [optional] [default to false]
+ **care** | **bool?**| include student care data (you must also supply the demographics parameter) | [optional] [default to false]
+ **everInCare** | **bool?**| include whether the student has ever been in care (you must also supply the demographics parameter) | [optional] [default to false]
+ **languages** | **bool?**| include student language data | [optional] [default to false]
+ **photo** | **bool?**| include student photo data | [optional] [default to false]
  **perPage** | **int?**| Number of results to return | [optional] [default to 100]
  **page** | **int?**| Page number to return | [optional] [default to 1]
 

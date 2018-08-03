@@ -21,44 +21,45 @@ namespace AssemblyClient.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ITeachingGroupsApi : IApiAccessor
+    public interface IRegistrationGroupsApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// View a Teaching Group
+        /// View a Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of teaching groups that match the given set of filters.
+        /// Returns a list of registration groups that match the given set of filters.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="groupId">translation missing: en.api.params.group_id (optional)</param>
-        /// <returns>TeachingGroup</returns>
-        TeachingGroup TeachingGroup (int? id, DateTime? date = null, int? academicYearId = null, int? groupId = null);
+        /// <returns>RegistrationGroup</returns>
+        RegistrationGroup RegistrationGroup (int? id, DateTime? date = null, int? academicYearId = null);
 
         /// <summary>
-        /// View a Teaching Group
+        /// View a Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of teaching groups that match the given set of filters.
+        /// Returns a list of registration groups that match the given set of filters.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="groupId">translation missing: en.api.params.group_id (optional)</param>
-        /// <returns>ApiResponse of TeachingGroup</returns>
-        ApiResponse<TeachingGroup> TeachingGroupWithHttpInfo (int? id, DateTime? date = null, int? academicYearId = null, int? groupId = null);
+        /// <returns>ApiResponse of RegistrationGroup</returns>
+        ApiResponse<RegistrationGroup> RegistrationGroupWithHttpInfo (int? id, DateTime? date = null, int? academicYearId = null);
         /// <summary>
-        /// List Students for Teaching Group
+        /// List Students for Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// Returns a list of all the students that are present in the registration group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
+        /// <param name="date">returns results for a specific date (optional)</param>
+        /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
         /// <param name="demographics">include demographics data (optional, default to false)</param>
         /// <param name="contacts">include contacts data (optional, default to false)</param>
         /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
@@ -68,16 +69,19 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional, default to false)</param>
         /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>StudentList</returns>
-        StudentList TeachingGroupStudents (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        StudentList RegistrationGroupStudents (int? id, DateTime? ifModifiedSince = null, DateTime? date = null, int? academicYearId = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
 
         /// <summary>
-        /// List Students for Teaching Group
+        /// List Students for Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// Returns a list of all the students that are present in the registration group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
+        /// <param name="date">returns results for a specific date (optional)</param>
+        /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
         /// <param name="demographics">include demographics data (optional, default to false)</param>
         /// <param name="contacts">include contacts data (optional, default to false)</param>
         /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
@@ -87,77 +91,76 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional, default to false)</param>
         /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>ApiResponse of StudentList</returns>
-        ApiResponse<StudentList> TeachingGroupStudentsWithHttpInfo (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        ApiResponse<StudentList> RegistrationGroupStudentsWithHttpInfo (int? id, DateTime? ifModifiedSince = null, DateTime? date = null, int? academicYearId = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
         /// <summary>
-        /// List Teaching Groups
+        /// List Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of teaching groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// Returns a list of registration groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subjectCode">filter by subject (optional)</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>TeachingGroupList</returns>
-        TeachingGroupList TeachingGroups (string subjectCode = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null);
+        /// <returns>RegistrationGroup</returns>
+        RegistrationGroup RegistrationGroups (DateTime? ifModifiedSince = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, int? perPage = null, int? page = null);
 
         /// <summary>
-        /// List Teaching Groups
+        /// List Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of teaching groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// Returns a list of registration groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subjectCode">filter by subject (optional)</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>ApiResponse of TeachingGroupList</returns>
-        ApiResponse<TeachingGroupList> TeachingGroupsWithHttpInfo (string subjectCode = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null);
+        /// <returns>ApiResponse of RegistrationGroup</returns>
+        ApiResponse<RegistrationGroup> RegistrationGroupsWithHttpInfo (DateTime? ifModifiedSince = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, int? perPage = null, int? page = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// View a Teaching Group
+        /// View a Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of teaching groups that match the given set of filters.
+        /// Returns a list of registration groups that match the given set of filters.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="groupId">translation missing: en.api.params.group_id (optional)</param>
-        /// <returns>Task of TeachingGroup</returns>
-        System.Threading.Tasks.Task<TeachingGroup> TeachingGroupAsync (int? id, DateTime? date = null, int? academicYearId = null, int? groupId = null);
+        /// <returns>Task of RegistrationGroup</returns>
+        System.Threading.Tasks.Task<RegistrationGroup> RegistrationGroupAsync (int? id, DateTime? date = null, int? academicYearId = null);
 
         /// <summary>
-        /// View a Teaching Group
+        /// View a Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of teaching groups that match the given set of filters.
+        /// Returns a list of registration groups that match the given set of filters.
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="groupId">translation missing: en.api.params.group_id (optional)</param>
-        /// <returns>Task of ApiResponse (TeachingGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TeachingGroup>> TeachingGroupAsyncWithHttpInfo (int? id, DateTime? date = null, int? academicYearId = null, int? groupId = null);
+        /// <returns>Task of ApiResponse (RegistrationGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RegistrationGroup>> RegistrationGroupAsyncWithHttpInfo (int? id, DateTime? date = null, int? academicYearId = null);
         /// <summary>
-        /// List Students for Teaching Group
+        /// List Students for Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// Returns a list of all the students that are present in the registration group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
+        /// <param name="date">returns results for a specific date (optional)</param>
+        /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
         /// <param name="demographics">include demographics data (optional, default to false)</param>
         /// <param name="contacts">include contacts data (optional, default to false)</param>
         /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
@@ -167,16 +170,19 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional, default to false)</param>
         /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>Task of StudentList</returns>
-        System.Threading.Tasks.Task<StudentList> TeachingGroupStudentsAsync (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        System.Threading.Tasks.Task<StudentList> RegistrationGroupStudentsAsync (int? id, DateTime? ifModifiedSince = null, DateTime? date = null, int? academicYearId = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
 
         /// <summary>
-        /// List Students for Teaching Group
+        /// List Students for Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// Returns a list of all the students that are present in the registration group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
+        /// <param name="date">returns results for a specific date (optional)</param>
+        /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
         /// <param name="demographics">include demographics data (optional, default to false)</param>
         /// <param name="contacts">include contacts data (optional, default to false)</param>
         /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
@@ -186,55 +192,53 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional, default to false)</param>
         /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StudentList>> TeachingGroupStudentsAsyncWithHttpInfo (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
+        System.Threading.Tasks.Task<ApiResponse<StudentList>> RegistrationGroupStudentsAsyncWithHttpInfo (int? id, DateTime? ifModifiedSince = null, DateTime? date = null, int? academicYearId = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null);
         /// <summary>
-        /// List Teaching Groups
+        /// List Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of teaching groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// Returns a list of registration groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subjectCode">filter by subject (optional)</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>Task of TeachingGroupList</returns>
-        System.Threading.Tasks.Task<TeachingGroupList> TeachingGroupsAsync (string subjectCode = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null);
+        /// <returns>Task of RegistrationGroup</returns>
+        System.Threading.Tasks.Task<RegistrationGroup> RegistrationGroupsAsync (DateTime? ifModifiedSince = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, int? perPage = null, int? page = null);
 
         /// <summary>
-        /// List Teaching Groups
+        /// List Registration Group
         /// </summary>
         /// <remarks>
-        /// Returns a list of teaching groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// Returns a list of registration groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </remarks>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subjectCode">filter by subject (optional)</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (TeachingGroupList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TeachingGroupList>> TeachingGroupsAsyncWithHttpInfo (string subjectCode = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null);
+        /// <returns>Task of ApiResponse (RegistrationGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RegistrationGroup>> RegistrationGroupsAsyncWithHttpInfo (DateTime? ifModifiedSince = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, int? perPage = null, int? page = null);
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class TeachingGroupsApi : ITeachingGroupsApi
+    public partial class RegistrationGroupsApi : IRegistrationGroupsApi
     {
         private AssemblyClient.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeachingGroupsApi"/> class.
+        /// Initializes a new instance of the <see cref="RegistrationGroupsApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public TeachingGroupsApi(String basePath)
+        public RegistrationGroupsApi(String basePath)
         {
             this.Configuration = new AssemblyClient.Client.Configuration { BasePath = basePath };
 
@@ -242,12 +246,12 @@ namespace AssemblyClient.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TeachingGroupsApi"/> class
+        /// Initializes a new instance of the <see cref="RegistrationGroupsApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public TeachingGroupsApi(AssemblyClient.Client.Configuration configuration = null)
+        public RegistrationGroupsApi(AssemblyClient.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = AssemblyClient.Client.Configuration.Default;
@@ -321,36 +325,34 @@ namespace AssemblyClient.Api
         }
 
         /// <summary>
-        /// View a Teaching Group Returns a list of teaching groups that match the given set of filters.
+        /// View a Registration Group Returns a list of registration groups that match the given set of filters.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="groupId">translation missing: en.api.params.group_id (optional)</param>
-        /// <returns>TeachingGroup</returns>
-        public TeachingGroup TeachingGroup (int? id, DateTime? date = null, int? academicYearId = null, int? groupId = null)
+        /// <returns>RegistrationGroup</returns>
+        public RegistrationGroup RegistrationGroup (int? id, DateTime? date = null, int? academicYearId = null)
         {
-             ApiResponse<TeachingGroup> localVarResponse = TeachingGroupWithHttpInfo(id, date, academicYearId, groupId);
+             ApiResponse<RegistrationGroup> localVarResponse = RegistrationGroupWithHttpInfo(id, date, academicYearId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// View a Teaching Group Returns a list of teaching groups that match the given set of filters.
+        /// View a Registration Group Returns a list of registration groups that match the given set of filters.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="groupId">translation missing: en.api.params.group_id (optional)</param>
-        /// <returns>ApiResponse of TeachingGroup</returns>
-        public ApiResponse< TeachingGroup > TeachingGroupWithHttpInfo (int? id, DateTime? date = null, int? academicYearId = null, int? groupId = null)
+        /// <returns>ApiResponse of RegistrationGroup</returns>
+        public ApiResponse< RegistrationGroup > RegistrationGroupWithHttpInfo (int? id, DateTime? date = null, int? academicYearId = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling TeachingGroupsApi->TeachingGroup");
+                throw new ApiException(400, "Missing required parameter 'id' when calling RegistrationGroupsApi->RegistrationGroup");
 
-            var localVarPath = "/teaching_groups/{id}";
+            var localVarPath = "/registration_groups/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -374,7 +376,6 @@ namespace AssemblyClient.Api
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (date != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
             if (academicYearId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "academic_year_id", academicYearId)); // query parameter
-            if (groupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "group_id", groupId)); // query parameter
 
             // authentication (bearerAuth) required
             // http basic authentication required
@@ -392,47 +393,45 @@ namespace AssemblyClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TeachingGroup", localVarResponse);
+                Exception exception = ExceptionFactory("RegistrationGroup", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TeachingGroup>(localVarStatusCode,
+            return new ApiResponse<RegistrationGroup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TeachingGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeachingGroup)));
+                (RegistrationGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RegistrationGroup)));
         }
 
         /// <summary>
-        /// View a Teaching Group Returns a list of teaching groups that match the given set of filters.
+        /// View a Registration Group Returns a list of registration groups that match the given set of filters.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="groupId">translation missing: en.api.params.group_id (optional)</param>
-        /// <returns>Task of TeachingGroup</returns>
-        public async System.Threading.Tasks.Task<TeachingGroup> TeachingGroupAsync (int? id, DateTime? date = null, int? academicYearId = null, int? groupId = null)
+        /// <returns>Task of RegistrationGroup</returns>
+        public async System.Threading.Tasks.Task<RegistrationGroup> RegistrationGroupAsync (int? id, DateTime? date = null, int? academicYearId = null)
         {
-             ApiResponse<TeachingGroup> localVarResponse = await TeachingGroupAsyncWithHttpInfo(id, date, academicYearId, groupId);
+             ApiResponse<RegistrationGroup> localVarResponse = await RegistrationGroupAsyncWithHttpInfo(id, date, academicYearId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// View a Teaching Group Returns a list of teaching groups that match the given set of filters.
+        /// View a Registration Group Returns a list of registration groups that match the given set of filters.
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id of the entity</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="groupId">translation missing: en.api.params.group_id (optional)</param>
-        /// <returns>Task of ApiResponse (TeachingGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TeachingGroup>> TeachingGroupAsyncWithHttpInfo (int? id, DateTime? date = null, int? academicYearId = null, int? groupId = null)
+        /// <returns>Task of ApiResponse (RegistrationGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RegistrationGroup>> RegistrationGroupAsyncWithHttpInfo (int? id, DateTime? date = null, int? academicYearId = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling TeachingGroupsApi->TeachingGroup");
+                throw new ApiException(400, "Missing required parameter 'id' when calling RegistrationGroupsApi->RegistrationGroup");
 
-            var localVarPath = "/teaching_groups/{id}";
+            var localVarPath = "/registration_groups/{id}";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -456,7 +455,6 @@ namespace AssemblyClient.Api
             if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (date != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
             if (academicYearId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "academic_year_id", academicYearId)); // query parameter
-            if (groupId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "group_id", groupId)); // query parameter
 
             // authentication (bearerAuth) required
             // http basic authentication required
@@ -474,20 +472,23 @@ namespace AssemblyClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TeachingGroup", localVarResponse);
+                Exception exception = ExceptionFactory("RegistrationGroup", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TeachingGroup>(localVarStatusCode,
+            return new ApiResponse<RegistrationGroup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TeachingGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeachingGroup)));
+                (RegistrationGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RegistrationGroup)));
         }
 
         /// <summary>
-        /// List Students for Teaching Group Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// List Students for Registration Group Returns a list of all the students that are present in the registration group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
+        /// <param name="date">returns results for a specific date (optional)</param>
+        /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
         /// <param name="demographics">include demographics data (optional, default to false)</param>
         /// <param name="contacts">include contacts data (optional, default to false)</param>
         /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
@@ -497,17 +498,20 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional, default to false)</param>
         /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>StudentList</returns>
-        public StudentList TeachingGroupStudents (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public StudentList RegistrationGroupStudents (int? id, DateTime? ifModifiedSince = null, DateTime? date = null, int? academicYearId = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
-             ApiResponse<StudentList> localVarResponse = TeachingGroupStudentsWithHttpInfo(ifModifiedSince, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
+             ApiResponse<StudentList> localVarResponse = RegistrationGroupStudentsWithHttpInfo(id, ifModifiedSince, date, academicYearId, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Students for Teaching Group Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// List Students for Registration Group Returns a list of all the students that are present in the registration group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
+        /// <param name="date">returns results for a specific date (optional)</param>
+        /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
         /// <param name="demographics">include demographics data (optional, default to false)</param>
         /// <param name="contacts">include contacts data (optional, default to false)</param>
         /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
@@ -517,10 +521,13 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional, default to false)</param>
         /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>ApiResponse of StudentList</returns>
-        public ApiResponse< StudentList > TeachingGroupStudentsWithHttpInfo (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public ApiResponse< StudentList > RegistrationGroupStudentsWithHttpInfo (int? id, DateTime? ifModifiedSince = null, DateTime? date = null, int? academicYearId = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling RegistrationGroupsApi->RegistrationGroupStudents");
 
-            var localVarPath = "/teaching_groups/{id}/students";
+            var localVarPath = "/registration_groups/{id}/students";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -541,6 +548,9 @@ namespace AssemblyClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (date != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (academicYearId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "academic_year_id", academicYearId)); // query parameter
             if (demographics != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "demographics", demographics)); // query parameter
             if (contacts != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "contacts", contacts)); // query parameter
             if (senNeeds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sen_needs", senNeeds)); // query parameter
@@ -567,7 +577,7 @@ namespace AssemblyClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TeachingGroupStudents", localVarResponse);
+                Exception exception = ExceptionFactory("RegistrationGroupStudents", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -577,10 +587,13 @@ namespace AssemblyClient.Api
         }
 
         /// <summary>
-        /// List Students for Teaching Group Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// List Students for Registration Group Returns a list of all the students that are present in the registration group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
+        /// <param name="date">returns results for a specific date (optional)</param>
+        /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
         /// <param name="demographics">include demographics data (optional, default to false)</param>
         /// <param name="contacts">include contacts data (optional, default to false)</param>
         /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
@@ -590,18 +603,21 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional, default to false)</param>
         /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>Task of StudentList</returns>
-        public async System.Threading.Tasks.Task<StudentList> TeachingGroupStudentsAsync (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public async System.Threading.Tasks.Task<StudentList> RegistrationGroupStudentsAsync (int? id, DateTime? ifModifiedSince = null, DateTime? date = null, int? academicYearId = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
-             ApiResponse<StudentList> localVarResponse = await TeachingGroupStudentsAsyncWithHttpInfo(ifModifiedSince, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
+             ApiResponse<StudentList> localVarResponse = await RegistrationGroupStudentsAsyncWithHttpInfo(id, ifModifiedSince, date, academicYearId, demographics, contacts, senNeeds, addresses, care, everInCare, languages, photo);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// List Students for Teaching Group Returns a list of all the students that are present in the teaching group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// List Students for Registration Group Returns a list of all the students that are present in the registration group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id of the entity</param>
         /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
+        /// <param name="date">returns results for a specific date (optional)</param>
+        /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
         /// <param name="demographics">include demographics data (optional, default to false)</param>
         /// <param name="contacts">include contacts data (optional, default to false)</param>
         /// <param name="senNeeds">include SEN needs data (optional, default to false)</param>
@@ -611,10 +627,13 @@ namespace AssemblyClient.Api
         /// <param name="languages">include student language data (optional, default to false)</param>
         /// <param name="photo">include student photo data (optional, default to false)</param>
         /// <returns>Task of ApiResponse (StudentList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StudentList>> TeachingGroupStudentsAsyncWithHttpInfo (DateTime? ifModifiedSince = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StudentList>> RegistrationGroupStudentsAsyncWithHttpInfo (int? id, DateTime? ifModifiedSince = null, DateTime? date = null, int? academicYearId = null, bool? demographics = null, bool? contacts = null, bool? senNeeds = null, bool? addresses = null, bool? care = null, bool? everInCare = null, bool? languages = null, bool? photo = null)
         {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling RegistrationGroupsApi->RegistrationGroupStudents");
 
-            var localVarPath = "/teaching_groups/{id}/students";
+            var localVarPath = "/registration_groups/{id}/students";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -635,6 +654,9 @@ namespace AssemblyClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (id != null) localVarPathParams.Add("id", this.Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (date != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
+            if (academicYearId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "academic_year_id", academicYearId)); // query parameter
             if (demographics != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "demographics", demographics)); // query parameter
             if (contacts != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "contacts", contacts)); // query parameter
             if (senNeeds != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "sen_needs", senNeeds)); // query parameter
@@ -661,7 +683,7 @@ namespace AssemblyClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TeachingGroupStudents", localVarResponse);
+                Exception exception = ExceptionFactory("RegistrationGroupStudents", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -671,39 +693,37 @@ namespace AssemblyClient.Api
         }
 
         /// <summary>
-        /// List Teaching Groups Returns a list of teaching groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// List Registration Group Returns a list of registration groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subjectCode">filter by subject (optional)</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>TeachingGroupList</returns>
-        public TeachingGroupList TeachingGroups (string subjectCode = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null)
+        /// <returns>RegistrationGroup</returns>
+        public RegistrationGroup RegistrationGroups (DateTime? ifModifiedSince = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, int? perPage = null, int? page = null)
         {
-             ApiResponse<TeachingGroupList> localVarResponse = TeachingGroupsWithHttpInfo(subjectCode, yearCode, date, academicYearId, ifModifiedSince, perPage, page);
+             ApiResponse<RegistrationGroup> localVarResponse = RegistrationGroupsWithHttpInfo(ifModifiedSince, yearCode, date, academicYearId, perPage, page);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List Teaching Groups Returns a list of teaching groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// List Registration Group Returns a list of registration groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subjectCode">filter by subject (optional)</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>ApiResponse of TeachingGroupList</returns>
-        public ApiResponse< TeachingGroupList > TeachingGroupsWithHttpInfo (string subjectCode = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null)
+        /// <returns>ApiResponse of RegistrationGroup</returns>
+        public ApiResponse< RegistrationGroup > RegistrationGroupsWithHttpInfo (DateTime? ifModifiedSince = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, int? perPage = null, int? page = null)
         {
 
-            var localVarPath = "/teaching_groups";
+            var localVarPath = "/registration_groups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -724,7 +744,6 @@ namespace AssemblyClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (subjectCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "subject_code", subjectCode)); // query parameter
             if (yearCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "year_code", yearCode)); // query parameter
             if (date != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
             if (academicYearId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "academic_year_id", academicYearId)); // query parameter
@@ -748,50 +767,48 @@ namespace AssemblyClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TeachingGroups", localVarResponse);
+                Exception exception = ExceptionFactory("RegistrationGroups", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TeachingGroupList>(localVarStatusCode,
+            return new ApiResponse<RegistrationGroup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TeachingGroupList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeachingGroupList)));
+                (RegistrationGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RegistrationGroup)));
         }
 
         /// <summary>
-        /// List Teaching Groups Returns a list of teaching groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// List Registration Group Returns a list of registration groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subjectCode">filter by subject (optional)</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>Task of TeachingGroupList</returns>
-        public async System.Threading.Tasks.Task<TeachingGroupList> TeachingGroupsAsync (string subjectCode = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null)
+        /// <returns>Task of RegistrationGroup</returns>
+        public async System.Threading.Tasks.Task<RegistrationGroup> RegistrationGroupsAsync (DateTime? ifModifiedSince = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, int? perPage = null, int? page = null)
         {
-             ApiResponse<TeachingGroupList> localVarResponse = await TeachingGroupsAsyncWithHttpInfo(subjectCode, yearCode, date, academicYearId, ifModifiedSince, perPage, page);
+             ApiResponse<RegistrationGroup> localVarResponse = await RegistrationGroupsAsyncWithHttpInfo(ifModifiedSince, yearCode, date, academicYearId, perPage, page);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// List Teaching Groups Returns a list of teaching groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+        /// List Registration Group Returns a list of registration groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
         /// </summary>
         /// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="subjectCode">filter by subject (optional)</param>
+        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
         /// <param name="date">returns results for a specific date (optional)</param>
         /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-        /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
         /// <param name="perPage">Number of results to return (optional, default to 100)</param>
         /// <param name="page">Page number to return (optional, default to 1)</param>
-        /// <returns>Task of ApiResponse (TeachingGroupList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TeachingGroupList>> TeachingGroupsAsyncWithHttpInfo (string subjectCode = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, DateTime? ifModifiedSince = null, int? perPage = null, int? page = null)
+        /// <returns>Task of ApiResponse (RegistrationGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RegistrationGroup>> RegistrationGroupsAsyncWithHttpInfo (DateTime? ifModifiedSince = null, int? yearCode = null, DateTime? date = null, int? academicYearId = null, int? perPage = null, int? page = null)
         {
 
-            var localVarPath = "/teaching_groups";
+            var localVarPath = "/registration_groups";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -812,7 +829,6 @@ namespace AssemblyClient.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (subjectCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "subject_code", subjectCode)); // query parameter
             if (yearCode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "year_code", yearCode)); // query parameter
             if (date != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "date", date)); // query parameter
             if (academicYearId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "academic_year_id", academicYearId)); // query parameter
@@ -836,13 +852,13 @@ namespace AssemblyClient.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TeachingGroups", localVarResponse);
+                Exception exception = ExceptionFactory("RegistrationGroups", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TeachingGroupList>(localVarStatusCode,
+            return new ApiResponse<RegistrationGroup>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TeachingGroupList) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TeachingGroupList)));
+                (RegistrationGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RegistrationGroup)));
         }
 
     }
