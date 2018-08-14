@@ -12,12 +12,12 @@ Contact: help@assembly.education
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C3647734-B36F-4851-8C79-BE74F9CC8417}</ProjectGuid>
+    <ProjectGuid></ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AssemblyClient</RootNamespace>
     <AssemblyName>AssemblyClient</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion></TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -47,23 +47,29 @@ Contact: help@assembly.education
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Net.Http">
+      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\System.Net.Http.4.3.3\lib\net45\System.Net.Http.dll</HintPath>
+      <HintPath Condition="Exists('..\packages')">..\packages\System.Net.Http.4.3.3\lib\net45\System.Net.Http.dll</HintPath>
+      <HintPath Condition="Exists('..\..\packages')">..\..\packages\System.Net.Http.4.3.3\lib\net45\System.Net.Http.dll</HintPath>
+      <HintPath Condition="Exists('')">\System.Net.Http.4.3.3\lib\net45\System.Net.Http.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <HintPath Condition="Exists('..\packages')">..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <HintPath Condition="Exists('..\..\packages')">..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath Condition="Exists('')">\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="JsonSubTypes">
       <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
       <HintPath Condition="Exists('..\packages')">..\packages\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
       <HintPath Condition="Exists('..\..\packages')">..\..\packages\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
+      <HintPath Condition="Exists('')">\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp">
         <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
         <HintPath Condition="Exists('..\packages')">..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
         <HintPath Condition="Exists('..\..\packages')">..\..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
+      <HintPath Condition="Exists('')">\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -75,4 +81,3 @@ Contact: help@assembly.education
   </ItemGroup>
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
-
