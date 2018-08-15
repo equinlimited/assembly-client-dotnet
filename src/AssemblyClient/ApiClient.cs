@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AssemblyClient
 {
-	public class ApiClient
+	public partial class ApiClient
 	{
 		private readonly Api api;
 

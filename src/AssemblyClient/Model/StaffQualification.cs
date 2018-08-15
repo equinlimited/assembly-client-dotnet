@@ -3,7 +3,6 @@ using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
 
-
 	public class StaffQualification
 	{
 

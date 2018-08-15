@@ -8,6 +8,8 @@ namespace AssemblyClient
 {
 	public class AssessmentPoints : Resource
 	{
+		public static string ResourceName => "";
+
 		public AssessmentPoints(ApiClient client)
 			: base(client)
 		{
@@ -15,33 +17,56 @@ namespace AssemblyClient
 		}
 
 
-		public async Task<AssessmentPointList> All(
-		  int? perPage, 
-		  int? page
-		)
-		{
-		 	return default(AssessmentPointList);
-		}
-
-
 		public async Task<string> Find(
 		  int? id
 		)
 		{
-		 	return default(string);
+			dynamic args = new ExpandoObject();
+
+			var resource = $"{ResourceName}/{id}";
+			var result = await Client.GetObject<string>(resource, args);
+
+			return result;
 		}
 
 
-		public async Task<ResultList> Results(
+		public async Task<List<string>> List(
+		  int? perPage = null, 
+		  int? page = null
+		)
+		{
+			dynamic args = new ExpandoObject();
+			args.perPage = perPage;
+			args.page = page;
+
+			var results = await Client.GetList<string>(ResourceName, args);
+
+			return results;
+		}
+
+
+		public async Task<List<Result>> Results(
 		  int? id, 
 		  int? assessmentPointRank, 
 		  List<int?> students, 
-		  int? perPage, 
-		  int? page
+		  int? perPage = null, 
+		  int? page = null
 		)
 		{
-		 	return default(ResultList);
+			dynamic args = new ExpandoObject();
+			args.students = students;
+			args.perPage = perPage;
+			args.page = page;
+
+			var results = await Client.GetList<Result>(ResourceName, args);
+
+			return results;
 		}
 
+	}
+
+	public partial class ApiClient
+	{
+		public AssessmentPoints AssessmentPoints => new AssessmentPoints(this);
 	}
 }

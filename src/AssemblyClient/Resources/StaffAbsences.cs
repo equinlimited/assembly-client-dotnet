@@ -8,6 +8,8 @@ namespace AssemblyClient
 {
 	public class StaffAbsences : Resource
 	{
+		public static string ResourceName => "";
+
 		public StaffAbsences(ApiClient client)
 			: base(client)
 		{
@@ -15,17 +17,32 @@ namespace AssemblyClient
 		}
 
 
-		public async Task<StaffAbsenceList> StaffAbscences(
-		  int? staffMemberId, 
-		  string startDate, 
-		  string qualifications, 
-		  DateTime? ifModifiedSince, 
-		  int? perPage, 
-		  int? page
+		public async Task<List<StaffAbsence>> List(
+		  int? staffMemberId = null, 
+		  string startDate = null, 
+		  string qualifications = null, 
+		  DateTime? ifModifiedSince = null, 
+		  int? perPage = null, 
+		  int? page = null
 		)
 		{
-		 	return default(StaffAbsenceList);
+			dynamic args = new ExpandoObject();
+			args.staffMemberId = staffMemberId;
+			args.startDate = startDate;
+			args.qualifications = qualifications;
+			args.ifModifiedSince = ifModifiedSince;
+			args.perPage = perPage;
+			args.page = page;
+
+			var results = await Client.GetList<StaffAbsence>(ResourceName, args);
+
+			return results;
 		}
 
+	}
+
+	public partial class ApiClient
+	{
+		public StaffAbsences StaffAbsences => new StaffAbsences(this);
 	}
 }

@@ -8,6 +8,8 @@ namespace AssemblyClient
 {
 	public class StaffContracts : Resource
 	{
+		public static string ResourceName => "";
+
 		public StaffContracts(ApiClient client)
 			: base(client)
 		{
@@ -15,19 +17,36 @@ namespace AssemblyClient
 		}
 
 
-		public async Task<StaffMemberList> StaffContracts(
-		  int? staffMemberId, 
-		  bool? date, 
-		  bool? roles, 
-		  bool? salaries, 
-		  bool? allowances, 
-		  DateTime? ifModifiedSince, 
-		  int? perPage, 
-		  int? page
+		public async Task<List<StaffMember>> List(
+		  int? staffMemberId = null, 
+		  bool? date = null, 
+		  bool? roles = null, 
+		  bool? salaries = null, 
+		  bool? allowances = null, 
+		  DateTime? ifModifiedSince = null, 
+		  int? perPage = null, 
+		  int? page = null
 		)
 		{
-		 	return default(StaffMemberList);
+			dynamic args = new ExpandoObject();
+			args.staffMemberId = staffMemberId;
+			args.date = date;
+			args.roles = roles;
+			args.salaries = salaries;
+			args.allowances = allowances;
+			args.ifModifiedSince = ifModifiedSince;
+			args.perPage = perPage;
+			args.page = page;
+
+			var results = await Client.GetList<StaffMember>(ResourceName, args);
+
+			return results;
 		}
 
+	}
+
+	public partial class ApiClient
+	{
+		public StaffContracts StaffContracts => new StaffContracts(this);
 	}
 }

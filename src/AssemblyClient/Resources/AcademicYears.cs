@@ -8,6 +8,8 @@ namespace AssemblyClient
 {
 	public class AcademicYears : Resource
 	{
+		public static string ResourceName => "";
+
 		public AcademicYears(ApiClient client)
 			: base(client)
 		{
@@ -15,21 +17,37 @@ namespace AssemblyClient
 		}
 
 
-		public async Task<AcademicYear> All(
+		public async Task<AcademicYear> Find(
 		  int? id
 		)
 		{
-		 	return default(AcademicYear);
+			dynamic args = new ExpandoObject();
+
+			var resource = $"{ResourceName}/{id}";
+			var result = await Client.GetObject<AcademicYear>(resource, args);
+
+			return result;
 		}
 
 
-		public async Task<AcademicYearList> List(
-		  int? perPage, 
-		  int? page
+		public async Task<List<AcademicYear>> List(
+		  int? perPage = null, 
+		  int? page = null
 		)
 		{
-		 	return default(AcademicYearList);
+			dynamic args = new ExpandoObject();
+			args.perPage = perPage;
+			args.page = page;
+
+			var results = await Client.GetList<AcademicYear>(ResourceName, args);
+
+			return results;
 		}
 
+	}
+
+	public partial class ApiClient
+	{
+		public AcademicYears AcademicYears => new AcademicYears(this);
 	}
 }

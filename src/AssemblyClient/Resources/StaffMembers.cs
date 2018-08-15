@@ -8,6 +8,8 @@ namespace AssemblyClient
 {
 	public class StaffMembers : Resource
 	{
+		public static string ResourceName => "";
+
 		public StaffMembers(ApiClient client)
 			: base(client)
 		{
@@ -15,27 +17,49 @@ namespace AssemblyClient
 		}
 
 
-		public async Task<StaffMember> StaffMember(
+		public async Task<StaffMember> Find(
 		  int? id, 
-		  bool? demographics, 
-		  bool? qualifications
+		  bool? demographics = null, 
+		  bool? qualifications = null
 		)
 		{
-		 	return default(StaffMember);
+			dynamic args = new ExpandoObject();
+			args.demographics = demographics;
+			args.qualifications = qualifications;
+
+			var resource = $"{ResourceName}/{id}";
+			var result = await Client.GetObject<StaffMember>(resource, args);
+
+			return result;
 		}
 
 
-		public async Task<StaffMemberList> StaffMembers(
-		  bool? teachersOnly, 
-		  bool? demographics, 
-		  bool? qualifications, 
-		  DateTime? ifModifiedSince, 
-		  int? perPage, 
-		  int? page
+		public async Task<List<StaffMember>> List(
+		  bool? teachersOnly = null, 
+		  bool? demographics = null, 
+		  bool? qualifications = null, 
+		  DateTime? ifModifiedSince = null, 
+		  int? perPage = null, 
+		  int? page = null
 		)
 		{
-		 	return default(StaffMemberList);
+			dynamic args = new ExpandoObject();
+			args.teachersOnly = teachersOnly;
+			args.demographics = demographics;
+			args.qualifications = qualifications;
+			args.ifModifiedSince = ifModifiedSince;
+			args.perPage = perPage;
+			args.page = page;
+
+			var results = await Client.GetList<StaffMember>(ResourceName, args);
+
+			return results;
 		}
 
+	}
+
+	public partial class ApiClient
+	{
+		public StaffMembers StaffMembers => new StaffMembers(this);
 	}
 }

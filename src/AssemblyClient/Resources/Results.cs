@@ -8,6 +8,8 @@ namespace AssemblyClient
 {
 	public class Results : Resource
 	{
+		public static string ResourceName => "";
+
 		public Results(ApiClient client)
 			: base(client)
 		{
@@ -15,15 +17,28 @@ namespace AssemblyClient
 		}
 
 
-		public async Task<ResultList> Results(
+		public async Task<List<Result>> List(
 		  List<int?> students, 
-		  DateTime? ifModifiedSince, 
-		  int? perPage, 
-		  int? page
+		  DateTime? ifModifiedSince = null, 
+		  int? perPage = null, 
+		  int? page = null
 		)
 		{
-		 	return default(ResultList);
+			dynamic args = new ExpandoObject();
+			args.students = students;
+			args.ifModifiedSince = ifModifiedSince;
+			args.perPage = perPage;
+			args.page = page;
+
+			var results = await Client.GetList<Result>(ResourceName, args);
+
+			return results;
 		}
 
+	}
+
+	public partial class ApiClient
+	{
+		public Results Results => new Results(this);
 	}
 }

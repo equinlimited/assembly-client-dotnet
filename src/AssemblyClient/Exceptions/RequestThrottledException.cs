@@ -7,6 +7,7 @@ namespace AssemblyClient
         public RequestThrottledException(string message)
             : base(message)
         {
+
         }
     }
 }

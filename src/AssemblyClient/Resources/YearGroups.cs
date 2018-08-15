@@ -8,6 +8,8 @@ namespace AssemblyClient
 {
 	public class YearGroups : Resource
 	{
+		public static string ResourceName => "";
+
 		public YearGroups(ApiClient client)
 			: base(client)
 		{
@@ -15,46 +17,83 @@ namespace AssemblyClient
 		}
 
 
-		public async Task<YearGroup> YearGroup(
+		public async Task<YearGroup> Find(
 		  int? id, 
-		  DateTime? date, 
-		  int? academicYearId
+		  DateTime? date = null, 
+		  int? academicYearId = null
 		)
 		{
-		 	return default(YearGroup);
+			dynamic args = new ExpandoObject();
+			args.date = date;
+			args.academicYearId = academicYearId;
+
+			var resource = $"{ResourceName}/{id}";
+			var result = await Client.GetObject<YearGroup>(resource, args);
+
+			return result;
 		}
 
 
-		public async Task<StudentList> YearGroupStudents(
+		public async Task<List<YearGroup>> List(
+		  DateTime? ifModifiedSince = null, 
+		  int? yearCode = null, 
+		  DateTime? date = null, 
+		  int? academicYearId = null, 
+		  int? perPage = null, 
+		  int? page = null
+		)
+		{
+			dynamic args = new ExpandoObject();
+			args.ifModifiedSince = ifModifiedSince;
+			args.yearCode = yearCode;
+			args.date = date;
+			args.academicYearId = academicYearId;
+			args.perPage = perPage;
+			args.page = page;
+
+			var results = await Client.GetList<YearGroup>(ResourceName, args);
+
+			return results;
+		}
+
+
+		public async Task<List<Student>> Students(
 		  int? id, 
-		  DateTime? ifModifiedSince, 
-		  DateTime? date, 
-		  int? academicYearId, 
-		  bool? demographics, 
-		  bool? contacts, 
-		  bool? senNeeds, 
-		  bool? addresses, 
-		  bool? care, 
-		  bool? everInCare, 
-		  bool? languages, 
-		  bool? photo
+		  DateTime? ifModifiedSince = null, 
+		  DateTime? date = null, 
+		  int? academicYearId = null, 
+		  bool? demographics = null, 
+		  bool? contacts = null, 
+		  bool? senNeeds = null, 
+		  bool? addresses = null, 
+		  bool? care = null, 
+		  bool? everInCare = null, 
+		  bool? languages = null, 
+		  bool? photo = null
 		)
 		{
-		 	return default(StudentList);
+			dynamic args = new ExpandoObject();
+			args.ifModifiedSince = ifModifiedSince;
+			args.date = date;
+			args.academicYearId = academicYearId;
+			args.demographics = demographics;
+			args.contacts = contacts;
+			args.senNeeds = senNeeds;
+			args.addresses = addresses;
+			args.care = care;
+			args.everInCare = everInCare;
+			args.languages = languages;
+			args.photo = photo;
+
+			var results = await Client.GetList<Student>(ResourceName, args);
+
+			return results;
 		}
 
+	}
 
-		public async Task<YearGroup> YearGroups(
-		  DateTime? ifModifiedSince, 
-		  int? yearCode, 
-		  DateTime? date, 
-		  int? academicYearId, 
-		  int? perPage, 
-		  int? page
-		)
-		{
-		 	return default(YearGroup);
-		}
-
+	public partial class ApiClient
+	{
+		public YearGroups YearGroups => new YearGroups(this);
 	}
 }
