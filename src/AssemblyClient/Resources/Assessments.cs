@@ -14,7 +14,6 @@ namespace AssemblyClient
 
 		}
 
-
 		public async Task<Assessment> Find(
 		  int? id
 		)
@@ -25,7 +24,6 @@ namespace AssemblyClient
 
 			return result;
 		}
-
 
 		public async Task<GradeSet> GradeSets(
 		  int? id, 
@@ -42,7 +40,6 @@ namespace AssemblyClient
 			return result;
 		}
 
-
 		public async Task<List<Assessment>> List(
 		  int? misMappings = null, 
 		  int? perPage = null, 
@@ -58,7 +55,6 @@ namespace AssemblyClient
 
 			return results;
 		}
-
 
 		public async Task<List<Result>> Results(
 		  int? id, 

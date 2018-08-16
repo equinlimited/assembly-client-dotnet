@@ -14,7 +14,6 @@ namespace AssemblyClient
 
 		}
 
-
 		public async Task<List<Result>> List(
 		  List<int?> students, 
 		  DateTime? ifModifiedSince = null, 

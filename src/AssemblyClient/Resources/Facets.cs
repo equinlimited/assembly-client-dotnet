@@ -14,7 +14,6 @@ namespace AssemblyClient
 
 		}
 
-
 		public async Task<Facet> Find(
 		  int? id
 		)
@@ -25,7 +24,6 @@ namespace AssemblyClient
 
 			return result;
 		}
-
 
 		public async Task<List<Facet>> List(
 		  int? perPage = null, 

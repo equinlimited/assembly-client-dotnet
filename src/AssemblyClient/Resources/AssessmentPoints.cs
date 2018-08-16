@@ -14,7 +14,6 @@ namespace AssemblyClient
 
 		}
 
-
 		public async Task<string> Find(
 		  int? id
 		)
@@ -25,7 +24,6 @@ namespace AssemblyClient
 
 			return result;
 		}
-
 
 		public async Task<List<string>> List(
 		  int? perPage = null, 
@@ -40,7 +38,6 @@ namespace AssemblyClient
 
 			return results;
 		}
-
 
 		public async Task<List<Result>> Results(
 		  int? id, 

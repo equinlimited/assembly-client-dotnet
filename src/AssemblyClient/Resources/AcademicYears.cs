@@ -14,7 +14,6 @@ namespace AssemblyClient
 
 		}
 
-
 		public async Task<AcademicYear> Find(
 		  int? id
 		)
@@ -25,7 +24,6 @@ namespace AssemblyClient
 
 			return result;
 		}
-
 
 		public async Task<List<AcademicYear>> List(
 		  int? perPage = null, 

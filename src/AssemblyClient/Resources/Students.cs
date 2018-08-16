@@ -14,7 +14,6 @@ namespace AssemblyClient
 
 		}
 
-
 		public async Task<Student> Find(
 		  int? id, 
 		  bool? demographics = null, 
@@ -42,7 +41,6 @@ namespace AssemblyClient
 			return result;
 		}
 
-
 		public async Task<List<Student>> Left(
 		  DateTime? ifModifiedSince = null, 
 		  int? perPage = null, 
@@ -58,7 +56,6 @@ namespace AssemblyClient
 
 			return results;
 		}
-
 
 		public async Task<List<Student>> List(
 		  DateTime? ifModifiedSince = null, 

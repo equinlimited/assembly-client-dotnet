@@ -14,7 +14,6 @@ namespace AssemblyClient
 
 		}
 
-
 		public async Task<StaffMember> Find(
 		  int? id, 
 		  bool? demographics = null, 
@@ -29,7 +28,6 @@ namespace AssemblyClient
 
 			return result;
 		}
-
 
 		public async Task<List<StaffMember>> List(
 		  bool? teachersOnly = null, 

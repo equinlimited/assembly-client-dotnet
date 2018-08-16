@@ -14,7 +14,6 @@ namespace AssemblyClient
 
 		}
 
-
 		public async Task<List<StaffMember>> List(
 		  int? staffMemberId = null, 
 		  bool? date = null, 

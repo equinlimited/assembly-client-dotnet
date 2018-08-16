@@ -14,7 +14,6 @@ namespace AssemblyClient
 
 		}
 
-
 		public async Task<RegistrationGroup> Find(
 		  int? id, 
 		  DateTime? date = null, 
@@ -29,7 +28,6 @@ namespace AssemblyClient
 
 			return result;
 		}
-
 
 		public async Task<List<RegistrationGroup>> List(
 		  DateTime? ifModifiedSince = null, 
@@ -52,7 +50,6 @@ namespace AssemblyClient
 
 			return results;
 		}
-
 
 		public async Task<List<Student>> Studens(
 		  int? id, 
