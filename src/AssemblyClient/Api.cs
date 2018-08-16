@@ -1,6 +1,7 @@
 using System;
 using System.Dynamic;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -30,7 +31,7 @@ namespace AssemblyClient
         public Api(HttpClient client)
         {
             this.client = client;
-            this.client.DefaultRequestHeaders.Add("Accept", "application/vnd.assembly+json; version=1");
+            this.client.DefaultRequestHeaders.Add("Accept", "application/vnd.assembly+json; version=1.1");
         }
 
         public virtual async Task<T> PostData<T>(string uri, object data)
@@ -57,7 +58,7 @@ namespace AssemblyClient
             return result;
         }
 
-        public virtual async Task<string> Load(string resource)
+        public virtual async Task<HttpResponseMessage> Load(string resource)
         {
             var result = await Load(resource, new ExpandoObject());
             return result;
@@ -76,7 +77,7 @@ namespace AssemblyClient
             return refreshedToken.access_token;
         }
 
-        public virtual async Task<string> Load(string resource, ExpandoObject args)
+        public virtual async Task<HttpResponseMessage> Load(string resource, ExpandoObject args)
         {
             var query = args.ToParams();
             var resourceWithQuery = $"{resource}";
@@ -104,8 +105,7 @@ namespace AssemblyClient
                 response.EnsurePlatformSuccess();
             }
 
-            var result = response.Content.ReadAsStringAsync().Result;
-            return result;
+            return response;
         }
 
         private ExpandoObject FormatData(IDictionary<string, object> me)
@@ -137,13 +137,26 @@ namespace AssemblyClient
             {
                 pagedArgs.page = currentPage;
 
-                var data = await Load(resource, pagedArgs);
+                var response = await Load(resource, pagedArgs);
 
-                var list = JsonConvert.DeserializeObject<ApiList<T>>(data);
+                var data = await response.Content.ReadAsStringAsync();
 
-                results.AddRange(list.Data);
+                var list = JsonConvert.DeserializeObject<List<T>>(data);
 
-                currentPage = list.NextPage;
+                results.AddRange(list);
+
+                var nextPage = response
+                    .Headers
+                    .GetValues("Next-Page")[0];
+
+                if (string.IsNullOrEmpty(nextPage))
+                {
+                    currentPage = null;
+                }
+                else
+                {
+                    currentPage = int.Parse(nextPage);
+                }
             }
 
             return results;
@@ -152,7 +165,8 @@ namespace AssemblyClient
         public virtual async Task<T> GetObject<T>(string resource, ExpandoObject args)
         {
             var data = await Load(resource, args);
-            var obj = JsonConvert.DeserializeObject<T>(data);
+            var rawData = await data.Content.ReadAsStringAsync();
+            var obj = JsonConvert.DeserializeObject<T>(rawData);
             return obj;
         }
     }

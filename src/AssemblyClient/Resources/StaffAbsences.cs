@@ -8,8 +8,6 @@ namespace AssemblyClient
 {
 	public class StaffAbsences : Resource
 	{
-		public static string ResourceName => "";
-
 		public StaffAbsences(ApiClient client)
 			: base(client)
 		{
@@ -34,7 +32,7 @@ namespace AssemblyClient
 			args.perPage = perPage;
 			args.page = page;
 
-			var results = await Client.GetList<StaffAbsence>(ResourceName, args);
+			var results = await Client.GetList<StaffAbsence>("/staff_absences", args);
 
 			return results;
 		}

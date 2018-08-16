@@ -8,8 +8,6 @@ namespace AssemblyClient
 {
 	public class Results : Resource
 	{
-		public static string ResourceName => "";
-
 		public Results(ApiClient client)
 			: base(client)
 		{
@@ -30,7 +28,7 @@ namespace AssemblyClient
 			args.perPage = perPage;
 			args.page = page;
 
-			var results = await Client.GetList<Result>(ResourceName, args);
+			var results = await Client.GetList<Result>("/results", args);
 
 			return results;
 		}

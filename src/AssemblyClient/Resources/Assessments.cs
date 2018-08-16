@@ -8,8 +8,6 @@ namespace AssemblyClient
 {
 	public class Assessments : Resource
 	{
-		public static string ResourceName => "";
-
 		public Assessments(ApiClient client)
 			: base(client)
 		{
@@ -23,8 +21,7 @@ namespace AssemblyClient
 		{
 			dynamic args = new ExpandoObject();
 
-			var resource = $"{ResourceName}/{id}";
-			var result = await Client.GetObject<Assessment>(resource, args);
+			var result = await Client.GetObject<Assessment>($"/assessments/{id}", args);
 
 			return result;
 		}
@@ -40,8 +37,7 @@ namespace AssemblyClient
 			args.perPage = perPage;
 			args.page = page;
 
-			var resource = $"{ResourceName}/{id}";
-			var result = await Client.GetObject<GradeSet>(resource, args);
+			var result = await Client.GetObject<GradeSet>($"/assessments/{id}/grade_set", args);
 
 			return result;
 		}
@@ -58,7 +54,7 @@ namespace AssemblyClient
 			args.perPage = perPage;
 			args.page = page;
 
-			var results = await Client.GetList<Assessment>(ResourceName, args);
+			var results = await Client.GetList<Assessment>("/assessments", args);
 
 			return results;
 		}
@@ -76,7 +72,7 @@ namespace AssemblyClient
 			args.perPage = perPage;
 			args.page = page;
 
-			var results = await Client.GetList<Result>(ResourceName, args);
+			var results = await Client.GetList<Result>("/assessments/{id}/results", args);
 
 			return results;
 		}

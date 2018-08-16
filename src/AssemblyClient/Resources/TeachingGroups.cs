@@ -8,8 +8,6 @@ namespace AssemblyClient
 {
 	public class TeachingGroups : Resource
 	{
-		public static string ResourceName => "";
-
 		public TeachingGroups(ApiClient client)
 			: base(client)
 		{
@@ -29,8 +27,7 @@ namespace AssemblyClient
 			args.academicYearId = academicYearId;
 			args.groupId = groupId;
 
-			var resource = $"{ResourceName}/{id}";
-			var result = await Client.GetObject<TeachingGroup>(resource, args);
+			var result = await Client.GetObject<TeachingGroup>($"/teaching_groups/{id}", args);
 
 			return result;
 		}
@@ -55,7 +52,7 @@ namespace AssemblyClient
 			args.perPage = perPage;
 			args.page = page;
 
-			var results = await Client.GetList<TeachingGroup>(ResourceName, args);
+			var results = await Client.GetList<TeachingGroup>("/teaching_groups", args);
 
 			return results;
 		}
@@ -85,7 +82,7 @@ namespace AssemblyClient
 			args.languages = languages;
 			args.photo = photo;
 
-			var results = await Client.GetList<Student>(ResourceName, args);
+			var results = await Client.GetList<Student>("/teaching_groups/{id}/students", args);
 
 			return results;
 		}

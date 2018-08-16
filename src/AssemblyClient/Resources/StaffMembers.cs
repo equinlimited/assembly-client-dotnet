@@ -8,8 +8,6 @@ namespace AssemblyClient
 {
 	public class StaffMembers : Resource
 	{
-		public static string ResourceName => "";
-
 		public StaffMembers(ApiClient client)
 			: base(client)
 		{
@@ -27,8 +25,7 @@ namespace AssemblyClient
 			args.demographics = demographics;
 			args.qualifications = qualifications;
 
-			var resource = $"{ResourceName}/{id}";
-			var result = await Client.GetObject<StaffMember>(resource, args);
+			var result = await Client.GetObject<StaffMember>($"/staff_members/{id}", args);
 
 			return result;
 		}
@@ -51,7 +48,7 @@ namespace AssemblyClient
 			args.perPage = perPage;
 			args.page = page;
 
-			var results = await Client.GetList<StaffMember>(ResourceName, args);
+			var results = await Client.GetList<StaffMember>("/staff_members", args);
 
 			return results;
 		}

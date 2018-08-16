@@ -8,8 +8,6 @@ namespace AssemblyClient
 {
 	public class AcademicYears : Resource
 	{
-		public static string ResourceName => "";
-
 		public AcademicYears(ApiClient client)
 			: base(client)
 		{
@@ -23,8 +21,7 @@ namespace AssemblyClient
 		{
 			dynamic args = new ExpandoObject();
 
-			var resource = $"{ResourceName}/{id}";
-			var result = await Client.GetObject<AcademicYear>(resource, args);
+			var result = await Client.GetObject<AcademicYear>($"/academic_years/{id}", args);
 
 			return result;
 		}
@@ -39,7 +36,7 @@ namespace AssemblyClient
 			args.perPage = perPage;
 			args.page = page;
 
-			var results = await Client.GetList<AcademicYear>(ResourceName, args);
+			var results = await Client.GetList<AcademicYear>("/academic_years", args);
 
 			return results;
 		}

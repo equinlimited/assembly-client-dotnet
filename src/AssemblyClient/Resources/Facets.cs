@@ -8,8 +8,6 @@ namespace AssemblyClient
 {
 	public class Facets : Resource
 	{
-		public static string ResourceName => "";
-
 		public Facets(ApiClient client)
 			: base(client)
 		{
@@ -23,8 +21,7 @@ namespace AssemblyClient
 		{
 			dynamic args = new ExpandoObject();
 
-			var resource = $"{ResourceName}/{id}";
-			var result = await Client.GetObject<Facet>(resource, args);
+			var result = await Client.GetObject<Facet>($"/facets/{id}", args);
 
 			return result;
 		}
@@ -39,7 +36,7 @@ namespace AssemblyClient
 			args.perPage = perPage;
 			args.page = page;
 
-			var results = await Client.GetList<Facet>(ResourceName, args);
+			var results = await Client.GetList<Facet>("/facets", args);
 
 			return results;
 		}

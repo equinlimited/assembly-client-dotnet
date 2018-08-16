@@ -8,8 +8,6 @@ namespace AssemblyClient
 {
 	public class StaffContracts : Resource
 	{
-		public static string ResourceName => "";
-
 		public StaffContracts(ApiClient client)
 			: base(client)
 		{
@@ -38,7 +36,7 @@ namespace AssemblyClient
 			args.perPage = perPage;
 			args.page = page;
 
-			var results = await Client.GetList<StaffMember>(ResourceName, args);
+			var results = await Client.GetList<StaffMember>("/staff_contracts", args);
 
 			return results;
 		}
