@@ -1,35 +1,22 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <!-- The identifier that must be unique within the hosting gallery -->
-        <id>$id$</id>
-        <title>Assembly API Client</title>
+    	<id>assembly-client-dotnet</id>
+	    <title>Assembly Client</title>
+	    <authors>assembly-client-dotnet</authors>
+	    <owners>assembly-client-dotnet</owners>
+	    <projectUrl>https://github.com/assembly-edu/assembly-client-dotnet</projectUrl>
+	    <iconUrl>http://assembly.education/images/logo-animation/icon-71e948ce.svg</iconUrl>
+	    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	    <description>assembly-client-dotnet</description>
+	    <summary>A .NET client for the Assembly Platform http://developers.assembly.education</summary>
+	    <copyright>Assembly Education</copyright>
+	    <tags></tags>
 
-        <!-- The package version number that is used when resolving dependencies -->
-        <version>$version$</version>
-
-        <!-- Authors contain text that appears directly on the gallery -->
-        <authors>$author$</authors>
-
-        <!-- Owners are typically nuget.org identities that allow gallery
-             users to earily find other packages by the same owners.  -->
-        <owners>$author$</owners>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <developmentDependency>false</developmentDependency>
-
-        <!-- The description can be used in package manager UI. Note that the
-             nuget.org gallery uses information you add in the portal. -->
-        <description>Assembly API Client</description>
-        <copyright>http://assembly.education/terms/</copyright>
-        <licenseUrl>https://spdx.org/licenses/MIT.html</licenseUrl>
-
-        <!-- Dependencies are automatically installed when the package is installed -->
         <dependencies>
-
             <dependency id="NewtonSoft.Json" version="10.0.3" />
             <dependency id="JsonSubTypes" version="1.2.0" />
             <dependency id="RestSharp" version="105.1.0" />
-
         </dependencies>
     </metadata>
     <files>
