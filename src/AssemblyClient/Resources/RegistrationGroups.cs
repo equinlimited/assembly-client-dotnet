@@ -14,22 +14,7 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<RegistrationGroup> Find(
-		  int? id, 
-		  DateTime? date = null, 
-		  int? academicYearId = null
-		)
-		{
-			dynamic args = new ExpandoObject();
-			args.date = date;
-			args.academicYearId = academicYearId;
-
-			var result = await Client.GetObject<RegistrationGroup>($"/registration_groups/{id}", args);
-
-			return result;
-		}
-
-		public async Task<List<RegistrationGroup>> List(
+		public async Task<List<RegistrationGroup>> Index(
 		  DateTime? ifModifiedSince = null, 
 		  int? yearCode = null, 
 		  DateTime? date = null, 
@@ -51,7 +36,22 @@ namespace AssemblyClient
 			return results;
 		}
 
-		public async Task<List<Student>> Studens(
+		public async Task<RegistrationGroup> Show(
+		  int? id, 
+		  DateTime? date = null, 
+		  int? academicYearId = null
+		)
+		{
+			dynamic args = new ExpandoObject();
+			args.date = date;
+			args.academicYearId = academicYearId;
+
+			var result = await Client.GetObject<RegistrationGroup>($"/registration_groups/{id}", args);
+
+			return result;
+		}
+
+		public async Task<List<Student>> Students(
 		  int? id, 
 		  DateTime? ifModifiedSince = null, 
 		  DateTime? date = null, 

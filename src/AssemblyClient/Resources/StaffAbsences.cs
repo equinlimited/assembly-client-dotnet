@@ -14,7 +14,7 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<List<StaffAbsence>> List(
+		public async Task<List<StaffAbsence>> Index(
 		  int? staffMemberId = null, 
 		  string startDate = null, 
 		  string qualifications = null, 

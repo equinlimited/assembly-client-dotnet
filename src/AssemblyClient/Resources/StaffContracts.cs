@@ -14,7 +14,7 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<List<StaffMember>> List(
+		public async Task<List<StaffContract>> Index(
 		  int? staffMemberId = null, 
 		  bool? date = null, 
 		  bool? roles = null, 
@@ -35,7 +35,7 @@ namespace AssemblyClient
 			args.perPage = perPage;
 			args.page = page;
 
-			var results = await Client.GetList<StaffMember>("/staff_contracts", args);
+			var results = await Client.GetList<StaffContract>("/staff_contracts", args);
 
 			return results;
 		}

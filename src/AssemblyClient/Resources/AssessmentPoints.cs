@@ -14,18 +14,7 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<string> Find(
-		  int? id
-		)
-		{
-			dynamic args = new ExpandoObject();
-
-			var result = await Client.GetObject<string>($"/assessment_points/{id}", args);
-
-			return result;
-		}
-
-		public async Task<List<string>> List(
+		public async Task<List<string>> Index(
 		  int? perPage = null, 
 		  int? page = null
 		)
@@ -42,19 +31,26 @@ namespace AssemblyClient
 		public async Task<List<Result>> Results(
 		  int? id, 
 		  int? assessmentPointRank, 
-		  List<int?> students, 
-		  int? perPage = null, 
-		  int? page = null
+		  List<int?> students
 		)
 		{
 			dynamic args = new ExpandoObject();
 			args.students = students;
-			args.perPage = perPage;
-			args.page = page;
 
 			var results = await Client.GetList<Result>("/assessment_points/{id}/results", args);
 
 			return results;
+		}
+
+		public async Task<string> Show(
+		  int? id
+		)
+		{
+			dynamic args = new ExpandoObject();
+
+			var result = await Client.GetObject<string>($"/assessment_points/{id}", args);
+
+			return result;
 		}
 
 	}

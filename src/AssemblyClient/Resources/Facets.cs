@@ -14,18 +14,7 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<Facet> Find(
-		  int? id
-		)
-		{
-			dynamic args = new ExpandoObject();
-
-			var result = await Client.GetObject<Facet>($"/facets/{id}", args);
-
-			return result;
-		}
-
-		public async Task<List<Facet>> List(
+		public async Task<List<Facet>> Index(
 		  int? perPage = null, 
 		  int? page = null
 		)
@@ -37,6 +26,17 @@ namespace AssemblyClient
 			var results = await Client.GetList<Facet>("/facets", args);
 
 			return results;
+		}
+
+		public async Task<Facet> Show(
+		  int? id
+		)
+		{
+			dynamic args = new ExpandoObject();
+
+			var result = await Client.GetObject<Facet>($"/facets/{id}", args);
+
+			return result;
 		}
 
 	}
