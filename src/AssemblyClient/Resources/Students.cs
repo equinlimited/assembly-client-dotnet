@@ -52,16 +52,16 @@ namespace AssemblyClient
 			return results;
 		}
 
-		public async Task<List<Student>> Left(
+		public async void Left(
 		  DateTime? ifModifiedSince = null
 		)
 		{
 			dynamic args = new ExpandoObject();
 			args.ifModifiedSince = ifModifiedSince;
 
-			var results = await Client.GetList<Student>("/students/left", args);
+			var result = await Client.GetObject<>($"/students/left", args);
 
-			return results;
+			return result;
 		}
 
 		public async Task<Student> Show(
