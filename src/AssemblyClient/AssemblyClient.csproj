@@ -3,12 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid></ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AssemblyClient</RootNamespace>
     <AssemblyName>AssemblyClient</AssemblyName>
-    <ProjectGuid>a37ac35e-0857-4a12-b748-b8c1d8e7d0c2</ProjectGuid>
+    <ProjectGuid>{6A68C6A2-758D-4D73-AF25-F5C51CEC5566}</ProjectGuid>
 	<TargetFrameworkVersion></TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
