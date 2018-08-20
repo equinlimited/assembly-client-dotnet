@@ -14,7 +14,7 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<List<Result>> Index(
+		public async Task<List<Result>> List(
 		  List<int?> students, 
 		  DateTime? ifModifiedSince = null, 
 		  int? perPage = null, 

@@ -14,7 +14,7 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<List<Subject>> Index(
+		public async Task<List<Subject>> List(
 		  int? perPage = null, 
 		  int? page = null
 		)

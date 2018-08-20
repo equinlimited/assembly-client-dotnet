@@ -14,7 +14,7 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<List<StaffContract>> Index(
+		public async Task<List<StaffContract>> List(
 		  int? staffMemberId = null, 
 		  bool? date = null, 
 		  bool? roles = null, 

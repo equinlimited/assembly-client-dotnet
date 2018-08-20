@@ -14,6 +14,17 @@ namespace AssemblyClient
 
 		}
 
+		public async Task<Assessment> Find(
+		  int? id
+		)
+		{
+			dynamic args = new ExpandoObject();
+
+			var result = await Client.GetObject<Assessment>($"/assessments/{id}", args);
+
+			return result;
+		}
+
 		public async Task<GradeSet> GradeSet(
 		  int? id
 		)
@@ -25,7 +36,7 @@ namespace AssemblyClient
 			return result;
 		}
 
-		public async Task<List<Assessment>> Index(
+		public async Task<List<Assessment>> List(
 		  int? perPage = null, 
 		  int? page = null
 		)
@@ -50,17 +61,6 @@ namespace AssemblyClient
 			var results = await Client.GetList<Result>("/assessments/{id}/results", args);
 
 			return results;
-		}
-
-		public async Task<Assessment> Show(
-		  int? id
-		)
-		{
-			dynamic args = new ExpandoObject();
-
-			var result = await Client.GetObject<Assessment>($"/assessments/{id}", args);
-
-			return result;
 		}
 
 	}

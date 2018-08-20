@@ -14,7 +14,22 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<List<StaffMember>> Index(
+		public async Task<StaffMember> Find(
+		  int? id, 
+		  bool? demographics = null, 
+		  bool? qualifications = null
+		)
+		{
+			dynamic args = new ExpandoObject();
+			args.demographics = demographics;
+			args.qualifications = qualifications;
+
+			var result = await Client.GetObject<StaffMember>($"/staff_members/{id}", args);
+
+			return result;
+		}
+
+		public async Task<List<StaffMember>> List(
 		  bool? teachersOnly = null, 
 		  bool? demographics = null, 
 		  bool? qualifications = null, 
@@ -34,21 +49,6 @@ namespace AssemblyClient
 			var results = await Client.GetList<StaffMember>("/staff_members", args);
 
 			return results;
-		}
-
-		public async Task<StaffMember> Show(
-		  int? id, 
-		  bool? demographics = null, 
-		  bool? qualifications = null
-		)
-		{
-			dynamic args = new ExpandoObject();
-			args.demographics = demographics;
-			args.qualifications = qualifications;
-
-			var result = await Client.GetObject<StaffMember>($"/staff_members/{id}", args);
-
-			return result;
 		}
 
 	}

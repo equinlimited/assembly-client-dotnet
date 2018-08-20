@@ -14,7 +14,18 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<List<AcademicYear>> Index(
+		public async Task<AcademicYear> Find(
+		  int? id
+		)
+		{
+			dynamic args = new ExpandoObject();
+
+			var result = await Client.GetObject<AcademicYear>($"/academic_years/{id}", args);
+
+			return result;
+		}
+
+		public async Task<List<AcademicYear>> List(
 		  int? perPage = null, 
 		  int? page = null
 		)
@@ -26,17 +37,6 @@ namespace AssemblyClient
 			var results = await Client.GetList<AcademicYear>("/academic_years", args);
 
 			return results;
-		}
-
-		public async Task<AcademicYear> Show(
-		  int? id
-		)
-		{
-			dynamic args = new ExpandoObject();
-
-			var result = await Client.GetObject<AcademicYear>($"/academic_years/{id}", args);
-
-			return result;
 		}
 
 	}

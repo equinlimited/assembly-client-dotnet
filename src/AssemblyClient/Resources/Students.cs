@@ -14,7 +14,46 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<List<Student>> Index(
+		public async Task<Student> Find(
+		  int? id, 
+		  bool? demographics = null, 
+		  bool? contacts = null, 
+		  bool? senNeeds = null, 
+		  bool? addresses = null, 
+		  bool? care = null, 
+		  bool? everInCare = null, 
+		  bool? languages = null, 
+		  bool? photo = null
+		)
+		{
+			dynamic args = new ExpandoObject();
+			args.demographics = demographics;
+			args.contacts = contacts;
+			args.senNeeds = senNeeds;
+			args.addresses = addresses;
+			args.care = care;
+			args.everInCare = everInCare;
+			args.languages = languages;
+			args.photo = photo;
+
+			var result = await Client.GetObject<Student>($"/students/{id}", args);
+
+			return result;
+		}
+
+		public async Task<List<Student>> Left(
+		  DateTime? ifModifiedSince = null
+		)
+		{
+			dynamic args = new ExpandoObject();
+			args.ifModifiedSince = ifModifiedSince;
+
+			var results = await Client.GetList<Student>("/students/left", args);
+
+			return results;
+		}
+
+		public async Task<List<Student>> List(
 		  DateTime? ifModifiedSince = null, 
 		  List<int?> students = null, 
 		  DateTime? date = null, 
@@ -50,45 +89,6 @@ namespace AssemblyClient
 			var results = await Client.GetList<Student>("/students", args);
 
 			return results;
-		}
-
-		public async Task<List<Student>> Left(
-		  DateTime? ifModifiedSince = null
-		)
-		{
-			dynamic args = new ExpandoObject();
-			args.ifModifiedSince = ifModifiedSince;
-
-			var results = await Client.GetList<Student>("/students/left", args);
-
-			return results;
-		}
-
-		public async Task<Student> Show(
-		  int? id, 
-		  bool? demographics = null, 
-		  bool? contacts = null, 
-		  bool? senNeeds = null, 
-		  bool? addresses = null, 
-		  bool? care = null, 
-		  bool? everInCare = null, 
-		  bool? languages = null, 
-		  bool? photo = null
-		)
-		{
-			dynamic args = new ExpandoObject();
-			args.demographics = demographics;
-			args.contacts = contacts;
-			args.senNeeds = senNeeds;
-			args.addresses = addresses;
-			args.care = care;
-			args.everInCare = everInCare;
-			args.languages = languages;
-			args.photo = photo;
-
-			var result = await Client.GetObject<Student>($"/students/{id}", args);
-
-			return result;
 		}
 
 	}
