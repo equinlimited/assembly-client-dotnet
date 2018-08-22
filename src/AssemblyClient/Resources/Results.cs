@@ -32,6 +32,18 @@ namespace AssemblyClient
 			return results;
 		}
 
+		public async Task<Result> Write(
+		  ResultsBatch resultsBatch
+		)
+		{
+			dynamic args = new ExpandoObject();
+			args.resultsBatch = resultsBatch;
+
+			var result = await Client.GetObject<Result>($"/results", args);
+
+			return result;
+		}
+
 	}
 
 	public partial class ApiClient
