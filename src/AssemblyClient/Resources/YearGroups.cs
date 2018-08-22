@@ -23,9 +23,7 @@ namespace AssemblyClient
 			dynamic args = new ExpandoObject();
 			args.date = date;
 			args.academicYearId = academicYearId;
-
 			var result = await Client.GetObject<YearGroup>($"/year_groups/{id}", args);
-
 			return result;
 		}
 
@@ -45,9 +43,7 @@ namespace AssemblyClient
 			args.academicYearId = academicYearId;
 			args.perPage = perPage;
 			args.page = page;
-
 			var results = await Client.GetList<YearGroup>("/year_groups", args);
-
 			return results;
 		}
 
@@ -78,9 +74,7 @@ namespace AssemblyClient
 			args.everInCare = everInCare;
 			args.languages = languages;
 			args.photo = photo;
-
 			var results = await Client.GetList<Student>("/year_groups/{id}/students", args);
-
 			return results;
 		}
 

@@ -24,9 +24,7 @@ namespace AssemblyClient
 			args.studentId = studentId;
 			args.perPage = perPage;
 			args.page = page;
-
 			var results = await Client.GetList<Contact>("/contacts", args);
-
 			return results;
 		}
 

@@ -26,9 +26,7 @@ namespace AssemblyClient
 			args.ifModifiedSince = ifModifiedSince;
 			args.perPage = perPage;
 			args.page = page;
-
 			var results = await Client.GetList<Result>("/results", args);
-
 			return results;
 		}
 
@@ -36,11 +34,7 @@ namespace AssemblyClient
 		  ResultsBatch resultsBatch
 		)
 		{
-			dynamic args = new ExpandoObject();
-			args.resultsBatch = resultsBatch;
-
-			var result = await Client.GetObject<Result>($"/results", args);
-
+			var result = await Client.PostData<Result>("/results", resultsBatch);
 			return result;
 		}
 

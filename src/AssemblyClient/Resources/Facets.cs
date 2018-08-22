@@ -19,9 +19,7 @@ namespace AssemblyClient
 		)
 		{
 			dynamic args = new ExpandoObject();
-
 			var result = await Client.GetObject<Facet>($"/facets/{id}", args);
-
 			return result;
 		}
 
@@ -33,9 +31,7 @@ namespace AssemblyClient
 			dynamic args = new ExpandoObject();
 			args.perPage = perPage;
 			args.page = page;
-
 			var results = await Client.GetList<Facet>("/facets", args);
-
 			return results;
 		}
 

@@ -28,9 +28,7 @@ namespace AssemblyClient
 			args.qualifications = qualifications;
 			args.perPage = perPage;
 			args.page = page;
-
 			var results = await Client.GetList<Exclusion>("/exclusions", args);
-
 			return results;
 		}
 

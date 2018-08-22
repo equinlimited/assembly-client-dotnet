@@ -25,9 +25,7 @@ namespace AssemblyClient
 			args.date = date;
 			args.academicYearId = academicYearId;
 			args.groupId = groupId;
-
 			var result = await Client.GetObject<TeachingGroup>($"/teaching_groups/{id}", args);
-
 			return result;
 		}
 
@@ -49,9 +47,7 @@ namespace AssemblyClient
 			args.ifModifiedSince = ifModifiedSince;
 			args.perPage = perPage;
 			args.page = page;
-
 			var results = await Client.GetList<TeachingGroup>("/teaching_groups", args);
-
 			return results;
 		}
 
@@ -78,9 +74,7 @@ namespace AssemblyClient
 			args.everInCare = everInCare;
 			args.languages = languages;
 			args.photo = photo;
-
 			var results = await Client.GetList<Student>("/teaching_groups/{id}/students", args);
-
 			return results;
 		}
 

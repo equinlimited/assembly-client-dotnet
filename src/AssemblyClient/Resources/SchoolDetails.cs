@@ -18,9 +18,7 @@ namespace AssemblyClient
 		)
 		{
 			dynamic args = new ExpandoObject();
-
 			var result = await Client.GetObject<School>($"/school_details", args);
-
 			return result;
 		}
 

@@ -35,9 +35,7 @@ namespace AssemblyClient
 			args.everInCare = everInCare;
 			args.languages = languages;
 			args.photo = photo;
-
 			var result = await Client.GetObject<Student>($"/students/{id}", args);
-
 			return result;
 		}
 
@@ -47,9 +45,7 @@ namespace AssemblyClient
 		{
 			dynamic args = new ExpandoObject();
 			args.ifModifiedSince = ifModifiedSince;
-
 			var results = await Client.GetList<Student>("/students/left", args);
-
 			return results;
 		}
 
@@ -85,9 +81,7 @@ namespace AssemblyClient
 			args.photo = photo;
 			args.perPage = perPage;
 			args.page = page;
-
 			var results = await Client.GetList<Student>("/students", args);
-
 			return results;
 		}
 

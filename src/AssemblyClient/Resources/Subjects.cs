@@ -22,9 +22,7 @@ namespace AssemblyClient
 			dynamic args = new ExpandoObject();
 			args.perPage = perPage;
 			args.page = page;
-
 			var results = await Client.GetList<Subject>("/subjects", args);
-
 			return results;
 		}
 
