@@ -32,6 +32,7 @@ namespace AssemblyClient
         {
             this.client = client;
             this.client.DefaultRequestHeaders.Add("Accept", "application/vnd.assembly+json; version=1.1");
+            this.TokenRefreshed += (sender, args) => { };
         }
 
         public virtual async Task<T> PostData<T>(string uri, object data)
