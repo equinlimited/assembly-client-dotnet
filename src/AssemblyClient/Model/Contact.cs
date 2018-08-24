@@ -37,5 +37,12 @@ namespace AssemblyClient {
 		[JsonProperty("students")]
 		public List<Student> Students { get; set; }
 
+
+		public Contact()
+		{
+			this.Emails = new List<Email>();
+			this.TelephoneNumbers = new List<TelephoneNumber>();
+			this.Students = new List<Student>();
+		}
 	}
 }

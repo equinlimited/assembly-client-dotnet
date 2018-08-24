@@ -43,5 +43,9 @@ namespace AssemblyClient {
 		[JsonProperty("assessment_id")]
 		public int? AssessmentId { get; set; }
 
+
+		public TeachingGroup()
+		{
+		}
 	}
 }

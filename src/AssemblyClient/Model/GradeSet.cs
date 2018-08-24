@@ -16,5 +16,10 @@ namespace AssemblyClient {
 		[JsonProperty("grades")]
 		public List<Grade> Grades { get; set; }
 
+
+		public GradeSet()
+		{
+			this.Grades = new List<Grade>();
+		}
 	}
 }

@@ -61,5 +61,9 @@ namespace AssemblyClient {
 		[JsonProperty("qualification_info")]
 		public StaffMemberQualificationInfo QualificationInfo { get; set; }
 
+
+		public StaffMember()
+		{
+		}
 	}
 }

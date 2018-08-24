@@ -34,5 +34,9 @@ namespace AssemblyClient {
 		[JsonProperty("exclusion_length")]
 		public int? ExclusionLength { get; set; }
 
+
+		public Exclusion()
+		{
+		}
 	}
 }

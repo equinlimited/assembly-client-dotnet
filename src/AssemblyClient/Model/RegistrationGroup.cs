@@ -28,5 +28,11 @@ namespace AssemblyClient {
 		[JsonProperty("subject")]
 		public Subject Subject { get; set; }
 
+
+		public RegistrationGroup()
+		{
+			this.SupervisorIds = new List<int?>();
+			this.StudentIds = new List<int?>();
+		}
 	}
 }

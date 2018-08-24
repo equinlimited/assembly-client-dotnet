@@ -28,5 +28,9 @@ namespace AssemblyClient {
 		[JsonProperty("second_subject_name")]
 		public string SecondSubjectName { get; set; }
 
+
+		public StaffQualification()
+		{
+		}
 	}
 }

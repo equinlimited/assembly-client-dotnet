@@ -19,5 +19,9 @@ namespace AssemblyClient {
 		[JsonProperty("disability")]
 		public string Disability { get; set; }
 
+
+		public StaffMemberDemographics()
+		{
+		}
 	}
 }

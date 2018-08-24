@@ -31,5 +31,9 @@ namespace AssemblyClient {
 		[JsonProperty("mis_type")]
 		public CalendarEventMisType MisType { get; set; }
 
+
+		public CalendarEvent()
+		{
+		}
 	}
 }

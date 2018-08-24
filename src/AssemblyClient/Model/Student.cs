@@ -55,5 +55,9 @@ namespace AssemblyClient {
 		[JsonProperty("enrolment_status")]
 		public string EnrolmentStatus { get; set; }
 
+
+		public Student()
+		{
+		}
 	}
 }

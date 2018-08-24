@@ -16,5 +16,9 @@ namespace AssemblyClient {
 		[JsonProperty("is_primary")]
 		public bool? IsPrimary { get; set; }
 
+
+		public Email()
+		{
+		}
 	}
 }

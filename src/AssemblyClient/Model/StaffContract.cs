@@ -52,5 +52,12 @@ namespace AssemblyClient {
 		[JsonProperty("allowances")]
 		public List<StaffAllowance> Allowances { get; set; }
 
+
+		public StaffContract()
+		{
+			this.Roles = new List<StaffRole>();
+			this.Salaries = new List<StaffSalary>();
+			this.Allowances = new List<StaffAllowance>();
+		}
 	}
 }

@@ -40,5 +40,9 @@ namespace AssemblyClient {
 		[JsonProperty("safeguarded_salary")]
 		public bool? SafeguardedSalary { get; set; }
 
+
+		public StaffSalary()
+		{
+		}
 	}
 }

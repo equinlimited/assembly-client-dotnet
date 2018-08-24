@@ -16,5 +16,9 @@ namespace AssemblyClient {
 		[JsonProperty("end_date")]
 		public DateTime? EndDate { get; set; }
 
+
+		public StaffRole()
+		{
+		}
 	}
 }

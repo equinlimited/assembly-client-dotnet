@@ -13,5 +13,9 @@ namespace AssemblyClient {
 		[JsonProperty("description")]
 		public string Description { get; set; }
 
+
+		public CalendarEventMisType()
+		{
+		}
 	}
 }

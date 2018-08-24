@@ -16,5 +16,9 @@ namespace AssemblyClient {
 		[JsonProperty("value")]
 		public int? Value { get; set; }
 
+
+		public Grade()
+		{
+		}
 	}
 }

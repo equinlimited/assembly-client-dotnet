@@ -31,5 +31,9 @@ namespace AssemblyClient {
 		[JsonProperty("pay_rate")]
 		public string PayRate { get; set; }
 
+
+		public StaffAbsence()
+		{
+		}
 	}
 }

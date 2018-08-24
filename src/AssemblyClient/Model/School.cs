@@ -40,5 +40,9 @@ namespace AssemblyClient {
 		[JsonProperty("head_teacher")]
 		public string HeadTeacher { get; set; }
 
+
+		public School()
+		{
+		}
 	}
 }

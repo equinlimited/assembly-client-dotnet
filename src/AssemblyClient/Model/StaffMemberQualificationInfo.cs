@@ -22,5 +22,10 @@ namespace AssemblyClient {
 		[JsonProperty("qualifications")]
 		public List<StaffQualification> Qualifications { get; set; }
 
+
+		public StaffMemberQualificationInfo()
+		{
+			this.Qualifications = new List<StaffQualification>();
+		}
 	}
 }

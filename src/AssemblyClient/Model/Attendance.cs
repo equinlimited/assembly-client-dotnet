@@ -31,5 +31,9 @@ namespace AssemblyClient {
 		[JsonProperty("comments")]
 		public string Comments { get; set; }
 
+
+		public Attendance()
+		{
+		}
 	}
 }
