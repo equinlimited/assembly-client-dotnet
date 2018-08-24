@@ -15,7 +15,7 @@ namespace AssemblyClient
 		}
 
 		public async Task<List<StaffContract>> List(
-		  int? staffMemberId = null, 
+		  DateTime? staffMemberId = null, 
 		  bool? date = null, 
 		  bool? roles = null, 
 		  bool? salaries = null, 

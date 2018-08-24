@@ -16,8 +16,8 @@ namespace AssemblyClient
 
 		public async Task<List<Exclusion>> List(
 		  int? studentId = null, 
-		  string startDate = null, 
-		  string qualifications = null, 
+		  DateTime? startDate = null, 
+		  DateTime? endDate = null, 
 		  int? perPage = null, 
 		  int? page = null
 		)
@@ -25,7 +25,7 @@ namespace AssemblyClient
 			dynamic args = new ExpandoObject();
 			args.studentId = studentId;
 			args.startDate = startDate;
-			args.qualifications = qualifications;
+			args.endDate = endDate;
 			args.perPage = perPage;
 			args.page = page;
 			var results = await Client.GetList<Exclusion>("/exclusions", args);

@@ -37,12 +37,13 @@ namespace AssemblyClient
 
 		public async Task<List<Result>> Results(
 		  int? id, 
-		  int? assessmentPointRank, 
-		  List<int?> students
+		  List<int?> students, 
+		  DateTime? assessmentPointRank = null
 		)
 		{
 			dynamic args = new ExpandoObject();
 			args.students = students;
+			args.assessmentPointRank = assessmentPointRank;
 			var results = await Client.GetList<Result>("/assessment_points/{id}/results", args);
 			return results;
 		}

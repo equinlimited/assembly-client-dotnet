@@ -53,7 +53,7 @@ namespace AssemblyClient
 		  DateTime? ifModifiedSince = null, 
 		  List<int?> students = null, 
 		  DateTime? date = null, 
-		  int? yearCode = null, 
+		  DateTime? yearCode = null, 
 		  bool? demographics = null, 
 		  bool? contacts = null, 
 		  bool? senNeeds = null, 

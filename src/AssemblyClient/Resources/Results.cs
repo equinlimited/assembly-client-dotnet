@@ -30,14 +30,6 @@ namespace AssemblyClient
 			return results;
 		}
 
-		public async Task<Result> Write(
-		  ResultsBatch resultsBatch
-		)
-		{
-			var result = await Client.PostData<Result>("/results", resultsBatch);
-			return result;
-		}
-
 	}
 
 	public partial class ApiClient
