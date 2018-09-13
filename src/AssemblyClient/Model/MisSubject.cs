@@ -5,24 +5,20 @@ using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
 
-	public class Subject
+	public class MisSubject
 	{
 		[JsonProperty("id")]
 		public int? Id { get; set; }
 
-		[JsonProperty("code")]
-		public string Code { get; set; }
-
 		[JsonProperty("name")]
 		public string Name { get; set; }
 
-		[JsonProperty("mis_subjects")]
-		public List<MisSubject> MisSubjects { get; set; }
+		[JsonProperty("code")]
+		public string Code { get; set; }
 
 
-		public Subject()
+		public MisSubject()
 		{
-			this.MisSubjects = new List<MisSubject>();
 		}
 	}
 }

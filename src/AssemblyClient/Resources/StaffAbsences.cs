@@ -15,19 +15,19 @@ namespace AssemblyClient
 		}
 
 		public async Task<List<StaffAbsence>> List(
+		  DateTime? ifModifiedSince = null, 
 		  DateTime? staffMemberId = null, 
 		  DateTime? startDate = null, 
 		  DateTime? qualifications = null, 
-		  DateTime? ifModifiedSince = null, 
 		  int? perPage = null, 
 		  int? page = null
 		)
 		{
 			dynamic args = new ExpandoObject();
+			args.ifModifiedSince = ifModifiedSince;
 			args.staffMemberId = staffMemberId;
 			args.startDate = startDate;
 			args.qualifications = qualifications;
-			args.ifModifiedSince = ifModifiedSince;
 			args.perPage = perPage;
 			args.page = page;
 			var results = await Client.GetList<StaffAbsence>("/staff_absences", args);

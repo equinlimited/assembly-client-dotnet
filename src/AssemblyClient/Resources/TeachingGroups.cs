@@ -30,21 +30,21 @@ namespace AssemblyClient
 		}
 
 		public async Task<List<TeachingGroup>> List(
+		  DateTime? ifModifiedSince = null, 
 		  DateTime? subjectCode = null, 
 		  DateTime? yearCode = null, 
 		  DateTime? date = null, 
 		  DateTime? academicYearId = null, 
-		  DateTime? ifModifiedSince = null, 
 		  int? perPage = null, 
 		  int? page = null
 		)
 		{
 			dynamic args = new ExpandoObject();
+			args.ifModifiedSince = ifModifiedSince;
 			args.subjectCode = subjectCode;
 			args.yearCode = yearCode;
 			args.date = date;
 			args.academicYearId = academicYearId;
-			args.ifModifiedSince = ifModifiedSince;
 			args.perPage = perPage;
 			args.page = page;
 			var results = await Client.GetList<TeachingGroup>("/teaching_groups", args);

@@ -55,9 +55,28 @@ namespace AssemblyClient {
 		[JsonProperty("enrolment_status")]
 		public string EnrolmentStatus { get; set; }
 
+		[JsonProperty("demographics")]
+		public StudentDemographics Demographics { get; set; }
+
+		[JsonProperty("medical")]
+		public StudentMedical Medical { get; set; }
+
+		[JsonProperty("contacts")]
+		public List<Contact> Contacts { get; set; }
+
+		[JsonProperty("address")]
+		public Address Address { get; set; }
+
+		[JsonProperty("languages")]
+		public StudentLanguages Languages { get; set; }
+
+		[JsonProperty("photo")]
+		public StudentPhoto Photo { get; set; }
+
 
 		public Student()
 		{
+			this.Contacts = new List<Contact>();
 		}
 	}
 }

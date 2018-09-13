@@ -28,19 +28,19 @@ namespace AssemblyClient
 		}
 
 		public async Task<List<StaffMember>> List(
+		  DateTime? ifModifiedSince = null, 
 		  bool? teachersOnly = null, 
 		  bool? demographics = null, 
 		  bool? qualifications = null, 
-		  DateTime? ifModifiedSince = null, 
 		  int? perPage = null, 
 		  int? page = null
 		)
 		{
 			dynamic args = new ExpandoObject();
+			args.ifModifiedSince = ifModifiedSince;
 			args.teachersOnly = teachersOnly;
 			args.demographics = demographics;
 			args.qualifications = qualifications;
-			args.ifModifiedSince = ifModifiedSince;
 			args.perPage = perPage;
 			args.page = page;
 			var results = await Client.GetList<StaffMember>("/staff_members", args);
