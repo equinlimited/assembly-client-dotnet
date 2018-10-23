@@ -14,10 +14,10 @@ namespace AssemblyClient {
 		public string Name { get; set; }
 
 		[JsonProperty("start_date")]
-		public string StartDate { get; set; }
+		public DateTime? StartDate { get; set; }
 
 		[JsonProperty("end_date")]
-		public string EndDate { get; set; }
+		public DateTime? EndDate { get; set; }
 
 		[JsonProperty("terms")]
 		public List<AcademicYearTerms> Terms { get; set; }

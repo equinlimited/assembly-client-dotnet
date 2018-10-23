@@ -16,9 +16,9 @@ namespace AssemblyClient
 
 		public async Task<List<StaffAbsence>> List(
 		  DateTime? ifModifiedSince = null, 
-		  DateTime? staffMemberId = null, 
+		  int? staffMemberId = null, 
 		  DateTime? startDate = null, 
-		  DateTime? qualifications = null, 
+		  int? qualifications = null, 
 		  int? perPage = null, 
 		  int? page = null
 		)

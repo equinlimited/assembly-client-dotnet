@@ -17,8 +17,8 @@ namespace AssemblyClient
 		public async Task<TeachingGroup> Find(
 		  int? id, 
 		  DateTime? date = null, 
-		  DateTime? academicYearId = null, 
-		  DateTime? groupId = null
+		  int? academicYearId = null, 
+		  int? groupId = null
 		)
 		{
 			dynamic args = new ExpandoObject();
@@ -31,10 +31,10 @@ namespace AssemblyClient
 
 		public async Task<List<TeachingGroup>> List(
 		  DateTime? ifModifiedSince = null, 
-		  DateTime? subjectCode = null, 
-		  DateTime? yearCode = null, 
+		  string subjectCode = null, 
+		  int? yearCode = null, 
 		  DateTime? date = null, 
-		  DateTime? academicYearId = null, 
+		  int? academicYearId = null, 
 		  int? perPage = null, 
 		  int? page = null
 		)

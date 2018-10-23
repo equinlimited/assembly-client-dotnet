@@ -16,7 +16,7 @@ namespace AssemblyClient
 
 		public async Task<List<Attendance>> List(
 		  int? studentId = null, 
-		  DateTime? registrationGroupId = null, 
+		  int? registrationGroupId = null, 
 		  DateTime? startDate = null, 
 		  DateTime? endDate = null, 
 		  int? perPage = null, 

@@ -65,7 +65,7 @@ namespace AssemblyClient {
 		public List<Contact> Contacts { get; set; }
 
 		[JsonProperty("address")]
-		public Address Address { get; set; }
+		public StudentAddress Address { get; set; }
 
 		[JsonProperty("languages")]
 		public StudentLanguages Languages { get; set; }

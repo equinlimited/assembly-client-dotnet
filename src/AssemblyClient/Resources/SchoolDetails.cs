@@ -14,11 +14,11 @@ namespace AssemblyClient
 
 		}
 
-		public async Task<School> Show(
+		public async Task<SchoolDetails> Show(
 		)
 		{
 			dynamic args = new ExpandoObject();
-			var result = await Client.GetObject<School>($"/school_details", args);
+			var result = await Client.GetObject<SchoolDetails>($"/school_details", args);
 			return result;
 		}
 

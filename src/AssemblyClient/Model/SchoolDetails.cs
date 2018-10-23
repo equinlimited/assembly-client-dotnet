@@ -5,7 +5,7 @@ using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
 
-	public class School
+	public class SchoolDetails
 	{
 		[JsonProperty("name")]
 		public string Name { get; set; }
@@ -41,7 +41,7 @@ namespace AssemblyClient {
 		public string HeadTeacher { get; set; }
 
 
-		public School()
+		public SchoolDetails()
 		{
 		}
 	}

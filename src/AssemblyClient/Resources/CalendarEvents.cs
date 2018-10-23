@@ -15,7 +15,7 @@ namespace AssemblyClient
 		}
 
 		public async Task<List<CalendarEvent>> List(
-		  DateTime? eventType = null, 
+		  string eventType = null, 
 		  int? perPage = null, 
 		  int? page = null
 		)

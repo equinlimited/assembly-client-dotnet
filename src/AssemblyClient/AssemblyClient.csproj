@@ -8,7 +8,7 @@
     <RootNamespace>AssemblyClient</RootNamespace>
     <AssemblyName>AssemblyClient</AssemblyName>
     <ProjectGuid>{6A68C6A2-758D-4D73-AF25-F5C51CEC5566}</ProjectGuid>
-	<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+	<TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
