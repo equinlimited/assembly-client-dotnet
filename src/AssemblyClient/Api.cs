@@ -72,7 +72,7 @@ namespace AssemblyClient
             var refreshRequest = new ApiGrant(refreshToken);
             var response = await client.PostData("/oauth/token", Configuration.Token, refreshRequest);
 
-            response.EnsurePlatformSuccess();
+            await response.EnsurePlatformSuccess();
 
             var refreshedToken = await response.Deserialize();
             return refreshedToken.access_token;
