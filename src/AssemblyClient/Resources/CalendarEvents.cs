@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AssemblyClient
 {
-	public class CalendarEvents : Resource
+	public class CalendarEventsResource : Resource
 	{
-		public CalendarEvents(ApiClient client)
+		public CalendarEventsResource(ApiClient client)
 			: base(client)
 		{
 

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AssemblyClient
 {
-	public class Facets : Resource
+	public class FacetsResource : Resource
 	{
-		public Facets(ApiClient client)
+		public FacetsResource(ApiClient client)
 			: base(client)
 		{
 

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AssemblyClient
 {
-	public class Subjects : Resource
+	public class SubjectsResource : Resource
 	{
-		public Subjects(ApiClient client)
+		public SubjectsResource(ApiClient client)
 			: base(client)
 		{
 

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AssemblyClient
 {
-	public class YearGroups : Resource
+	public class YearGroupsResource : Resource
 	{
-		public YearGroups(ApiClient client)
+		public YearGroupsResource(ApiClient client)
 			: base(client)
 		{
 

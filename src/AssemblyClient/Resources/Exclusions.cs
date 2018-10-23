@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AssemblyClient
 {
-	public class Exclusions : Resource
+	public class ExclusionsResource : Resource
 	{
-		public Exclusions(ApiClient client)
+		public ExclusionsResource(ApiClient client)
 			: base(client)
 		{
 
