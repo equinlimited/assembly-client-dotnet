@@ -36,6 +36,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public Exclusions Exclusions => new Exclusions(this);
+		public ExclusionsResource Exclusions => new ExclusionsResource(this);
 	}
 }

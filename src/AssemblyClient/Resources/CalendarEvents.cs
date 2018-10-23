@@ -32,6 +32,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public CalendarEvents CalendarEvents => new CalendarEvents(this);
+		public CalendarEventsResource CalendarEvents => new CalendarEventsResource(this);
 	}
 }

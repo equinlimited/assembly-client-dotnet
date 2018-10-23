@@ -38,6 +38,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public StaffAbsences StaffAbsences => new StaffAbsences(this);
+		public StaffAbsencesResource StaffAbsences => new StaffAbsencesResource(this);
 	}
 }

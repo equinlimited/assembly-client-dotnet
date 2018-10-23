@@ -26,6 +26,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public SchoolDetails SchoolDetails => new SchoolDetails(this);
+		public SchoolDetailsResource SchoolDetails => new SchoolDetailsResource(this);
 	}
 }

@@ -39,6 +39,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public AcademicYears AcademicYears => new AcademicYears(this);
+		public AcademicYearsResource AcademicYears => new AcademicYearsResource(this);
 	}
 }

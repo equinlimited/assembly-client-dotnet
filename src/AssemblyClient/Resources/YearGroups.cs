@@ -82,6 +82,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public YearGroups YearGroups => new YearGroups(this);
+		public YearGroupsResource YearGroups => new YearGroupsResource(this);
 	}
 }

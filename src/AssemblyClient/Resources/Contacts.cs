@@ -32,6 +32,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public Contacts Contacts => new Contacts(this);
+		public ContactsResource Contacts => new ContactsResource(this);
 	}
 }

@@ -42,6 +42,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public StaffContracts StaffContracts => new StaffContracts(this);
+		public StaffContractsResource StaffContracts => new StaffContractsResource(this);
 	}
 }

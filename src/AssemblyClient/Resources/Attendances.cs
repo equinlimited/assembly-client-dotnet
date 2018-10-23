@@ -38,6 +38,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public Attendances Attendances => new Attendances(this);
+		public AttendancesResource Attendances => new AttendancesResource(this);
 	}
 }

@@ -82,6 +82,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public RegistrationGroups RegistrationGroups => new RegistrationGroups(this);
+		public RegistrationGroupsResource RegistrationGroups => new RegistrationGroupsResource(this);
 	}
 }

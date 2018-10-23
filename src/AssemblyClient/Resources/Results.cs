@@ -34,6 +34,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public Results Results => new Results(this);
+		public ResultsResource Results => new ResultsResource(this);
 	}
 }

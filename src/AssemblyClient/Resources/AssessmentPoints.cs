@@ -52,6 +52,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public AssessmentPoints AssessmentPoints => new AssessmentPoints(this);
+		public AssessmentPointsResource AssessmentPoints => new AssessmentPointsResource(this);
 	}
 }

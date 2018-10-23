@@ -39,6 +39,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public Facets Facets => new Facets(this);
+		public FacetsResource Facets => new FacetsResource(this);
 	}
 }

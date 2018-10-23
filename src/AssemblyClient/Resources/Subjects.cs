@@ -30,6 +30,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public Subjects Subjects => new Subjects(this);
+		public SubjectsResource Subjects => new SubjectsResource(this);
 	}
 }

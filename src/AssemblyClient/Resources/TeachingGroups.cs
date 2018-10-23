@@ -82,6 +82,6 @@ namespace AssemblyClient
 
 	public partial class ApiClient
 	{
-		public TeachingGroups TeachingGroups => new TeachingGroups(this);
+		public TeachingGroupsResource TeachingGroups => new TeachingGroupsResource(this);
 	}
 }
