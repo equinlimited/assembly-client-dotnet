@@ -55,7 +55,7 @@ namespace AssemblyClient
                 await response.EnsurePlatformSuccess();
             }
 
-            var result = response.Deserialize<T>();
+            var result = await response.Deserialize<T>();
             return result;
         }
 
@@ -70,7 +70,7 @@ namespace AssemblyClient
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Configuration.BasicAuth);
 
             var refreshRequest = new ApiGrant(refreshToken);
-            var response = await client.PostData("/oauth/token", Configuration.Token, refreshRequest).Result;
+            var response = await client.PostData("/oauth/token", Configuration.Token, refreshRequest);
 
             response.EnsurePlatformSuccess();
 
