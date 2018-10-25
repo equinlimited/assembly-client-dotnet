@@ -4,7 +4,7 @@ using System.Text;
 namespace AssemblyClient
 {
     /// <summary>
-    /// Provides all configuration options for the Api
+    /// Provides all configuration required for communicating with the api
     /// </summary>
     public class ApiConfiguration
     {
