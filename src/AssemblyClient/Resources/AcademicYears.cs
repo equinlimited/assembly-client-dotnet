@@ -14,6 +14,15 @@ namespace AssemblyClient
 
 		}
 
+		/// <summary>
+		/// View an Academic Year
+		/// </summary>
+		/// <remarks>
+		/// Returns a single academic year for the school associated with the provided access_token.
+		/// </remarks>
+		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="id">id of the entity</param>
+		/// <returns>AcademicYear</returns>
 		public async Task<AcademicYear> Find(
 		  int? id
 		)
@@ -23,6 +32,16 @@ namespace AssemblyClient
 			return result;
 		}
 
+		/// <summary>
+		/// List Academic Years
+		/// </summary>
+		/// <remarks>
+		/// Returns a list of academic years for the school associated with the provided access_token. The dates of these academic years can be used to filter data in other API endpoints.
+		/// </remarks>
+		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="perPage">Number of results to return (optional, default to 100)</param>
+		/// <param name="page">Page number to return (optional, default to 1)</param>
+		/// <returns>List&lt;AcademicYear&gt;</returns>
 		public async Task<List<AcademicYear>> List(
 		  int? perPage = null, 
 		  int? page = null
