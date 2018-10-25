@@ -43,6 +43,9 @@ namespace AssemblyClient {
 		[JsonProperty("ever_in_care")]
 		public bool? EverInCare { get; set; }
 
+		[JsonProperty("service_child")]
+		public bool? ServiceChild { get; set; }
+
 		[JsonProperty("sen_needs")]
 		public List<SenNeed> SenNeeds { get; set; }
 
