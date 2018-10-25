@@ -20,7 +20,6 @@ namespace AssemblyClient
 		/// <remarks>
 		/// Returns a list of contacts that match the given set of filters.
 		/// </remarks>
-		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="studentId">a student_id to filter by (optional)</param>
 		/// <param name="perPage">Number of results to return (optional, default to 100)</param>
 		/// <param name="page">Page number to return (optional, default to 1)</param>

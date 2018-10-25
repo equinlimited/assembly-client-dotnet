@@ -20,7 +20,6 @@ namespace AssemblyClient
 		/// <remarks>
 		/// Returns an individual staff member record for the given ID.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
 		/// </remarks>
-		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="id">id of the entity</param>
 		/// <param name="demographics">include demographics data (optional)</param>
 		/// <param name="qualifications">include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
@@ -44,7 +43,6 @@ namespace AssemblyClient
 		/// <remarks>
 		/// Returns a list of staff members for the school accociated with the provided &#x60;access_token&#x60;.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
 		/// </remarks>
-		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
 		/// <param name="teachersOnly">return only staff who are teachers (optional)</param>
 		/// <param name="demographics">include demographics data (optional)</param>

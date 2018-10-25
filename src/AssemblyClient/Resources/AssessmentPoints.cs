@@ -20,7 +20,6 @@ namespace AssemblyClient
 		/// <remarks>
 		/// Returns a single assessment point for the given rank.
 		/// </remarks>
-		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="id">id of the entity</param>
 		/// <returns>AssessmentPoint</returns>
 		public async Task<AssessmentPoint> Find(
@@ -38,7 +37,6 @@ namespace AssemblyClient
 		/// <remarks>
 		/// Returns a list of assessment points. An assessment_point object represents a point in the school key stage, year, term or half-term that results can be attached to. When sending results back to the Platform, the assessment_point_rank should be used - this will remain constant across all environments.
 		/// </remarks>
-		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="perPage">Number of results to return (optional, default to 100)</param>
 		/// <param name="page">Page number to return (optional, default to 1)</param>
 		/// <returns>List&lt;AssessmentPoint&gt;</returns>
@@ -60,7 +58,6 @@ namespace AssemblyClient
 		/// <remarks>
 		/// Returns a list of results for the given assessment_point_rank and students.
 		/// </remarks>
-		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="id">id of the entity</param>
 		/// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
 		/// <param name="assessmentPointRank">the Assessment Point rank (optional)</param>

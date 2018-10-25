@@ -20,7 +20,6 @@ namespace AssemblyClient
 		/// <remarks>
 		/// Returns a list of attendances. By default, attendances are returned from the start to the end of the current week.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
 		/// </remarks>
-		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="studentId">a student_id to filter by (optional)</param>
 		/// <param name="registrationGroupId">id of a registration group (optional)</param>
 		/// <param name="startDate">the start date of the period to query (optional)</param>

@@ -20,7 +20,6 @@ namespace AssemblyClient
 		/// <remarks>
 		/// Returns details for the school associated with the provided access_token.
 		/// </remarks>
-		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>SchoolDetails</returns>
 		public async Task<SchoolDetails> Show(
 		)

@@ -20,7 +20,6 @@ namespace AssemblyClient
 		/// <remarks>
 		/// Returns a list of the Assembly Platform&#39;s subjects.
 		/// </remarks>
-		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="perPage">Number of results to return (optional, default to 100)</param>
 		/// <param name="page">Page number to return (optional, default to 1)</param>
 		/// <returns>List&lt;Subject&gt;</returns>

@@ -20,7 +20,6 @@ namespace AssemblyClient
 		/// <remarks>
 		/// Returns a list of exclusions. *By default, exclusions are returned that occurred during the current academic year.*
 		/// </remarks>
-		/// <exception cref="AssemblyClient.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="studentId">a student_id to filter by (optional)</param>
 		/// <param name="startDate">the start date of the period to query (optional)</param>
 		/// <param name="endDate">the end date of the period to query (optional)</param>
