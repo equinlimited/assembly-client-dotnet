@@ -43,7 +43,7 @@ namespace AssemblyClient
 			args.qualifications = qualifications;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<StaffMember>("/staff_members", args);
+			var results = await Client.GetList<StaffMember>($"/staff_members", args);
 			return results;
 		}
 

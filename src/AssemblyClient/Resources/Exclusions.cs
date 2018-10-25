@@ -28,7 +28,7 @@ namespace AssemblyClient
 			args.endDate = endDate;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<Exclusion>("/exclusions", args);
+			var results = await Client.GetList<Exclusion>($"/exclusions", args);
 			return results;
 		}
 

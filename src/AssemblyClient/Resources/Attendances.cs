@@ -30,7 +30,7 @@ namespace AssemblyClient
 			args.endDate = endDate;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<Attendance>("/attendances", args);
+			var results = await Client.GetList<Attendance>($"/attendances", args);
 			return results;
 		}
 

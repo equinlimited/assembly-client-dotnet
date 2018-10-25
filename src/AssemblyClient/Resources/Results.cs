@@ -26,7 +26,7 @@ namespace AssemblyClient
 			args.ifModifiedSince = ifModifiedSince;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<Result>("/results", args);
+			var results = await Client.GetList<Result>($"/results", args);
 			return results;
 		}
 

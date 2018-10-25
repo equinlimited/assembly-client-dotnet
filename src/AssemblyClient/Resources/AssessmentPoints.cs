@@ -31,7 +31,7 @@ namespace AssemblyClient
 			dynamic args = new ExpandoObject();
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<AssessmentPoint>("/assessment_points", args);
+			var results = await Client.GetList<AssessmentPoint>($"/assessment_points", args);
 			return results;
 		}
 
@@ -44,7 +44,7 @@ namespace AssemblyClient
 			dynamic args = new ExpandoObject();
 			args.students = students;
 			args.assessmentPointRank = assessmentPointRank;
-			var results = await Client.GetList<Result>("/assessment_points/{id}/results", args);
+			var results = await Client.GetList<Result>($"/assessment_points/{id}/results", args);
 			return results;
 		}
 

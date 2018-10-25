@@ -31,7 +31,7 @@ namespace AssemblyClient
 			dynamic args = new ExpandoObject();
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<AcademicYear>("/academic_years", args);
+			var results = await Client.GetList<AcademicYear>($"/academic_years", args);
 			return results;
 		}
 
