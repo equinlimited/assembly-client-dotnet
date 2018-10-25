@@ -34,6 +34,7 @@ namespace AssemblyClient {
 
 		public CalendarEvent()
 		{
+			this.MisType = new CalendarEventMisType();
 		}
 	}
 

@@ -33,6 +33,7 @@ namespace AssemblyClient {
 		{
 			this.SupervisorIds = new List<int?>();
 			this.StudentIds = new List<int?>();
+			this.Subject = new Subject();
 		}
 	}
 

@@ -23,6 +23,7 @@ namespace AssemblyClient {
 		public Subject()
 		{
 			this.MisSubjects = new List<MisSubject>();
+			this.MisSubjects = new List<MisSubject>();
 		}
 	}
 

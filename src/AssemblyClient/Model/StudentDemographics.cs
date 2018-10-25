@@ -51,6 +51,7 @@ namespace AssemblyClient {
 		{
 			this.Nationalities = new List<string>();
 			this.SenNeeds = new List<SenNeed>();
+			this.SenNeeds = new List<SenNeed>();
 		}
 	}
 

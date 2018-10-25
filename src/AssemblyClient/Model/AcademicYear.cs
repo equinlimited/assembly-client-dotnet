@@ -26,6 +26,7 @@ namespace AssemblyClient {
 		public AcademicYear()
 		{
 			this.Terms = new List<AcademicYearTerms>();
+			this.Terms = new List<AcademicYearTerms>();
 		}
 	}
 

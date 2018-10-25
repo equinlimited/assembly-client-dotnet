@@ -20,6 +20,7 @@ namespace AssemblyClient {
 		public GradeSet()
 		{
 			this.Grades = new List<Grade>();
+			this.Grades = new List<Grade>();
 		}
 	}
 
