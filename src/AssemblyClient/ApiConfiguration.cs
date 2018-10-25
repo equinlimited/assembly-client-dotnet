@@ -3,6 +3,9 @@ using System.Text;
 
 namespace AssemblyClient
 {
+    /// <summary>
+    /// Provides all configuration options for the Api
+    /// </summary>
     public class ApiConfiguration
     {
         /// <summary>
@@ -25,6 +28,9 @@ namespace AssemblyClient
         /// </summary>
         public string ClientSecret { get; set; }
 
+        /// <summary>
+        /// Print some useful debug information to the console
+        /// </summary>
         public bool Debug { get; set; }
 
         internal string BasicAuth
