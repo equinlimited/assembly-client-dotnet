@@ -35,4 +35,5 @@ namespace AssemblyClient {
 			this.StudentIds = new List<int?>();
 		}
 	}
+
 }

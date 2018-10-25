@@ -68,4 +68,5 @@ namespace AssemblyClient {
 			this.QualificationInfo = new List<StaffMemberQualificationInfo>();
 		}
 	}
+
 }

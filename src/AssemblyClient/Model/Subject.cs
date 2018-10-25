@@ -25,4 +25,5 @@ namespace AssemblyClient {
 			this.MisSubjects = new List<MisSubject>();
 		}
 	}
+
 }

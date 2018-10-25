@@ -22,4 +22,5 @@ namespace AssemblyClient {
 			this.Grades = new List<Grade>();
 		}
 	}
+
 }

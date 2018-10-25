@@ -60,4 +60,5 @@ namespace AssemblyClient {
 			this.Allowances = new List<StaffAllowance>();
 		}
 	}
+
 }

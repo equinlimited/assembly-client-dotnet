@@ -45,4 +45,5 @@ namespace AssemblyClient {
 			this.Students = new List<Student>();
 		}
 	}
+
 }

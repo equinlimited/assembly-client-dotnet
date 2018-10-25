@@ -16,4 +16,5 @@ namespace AssemblyClient {
 			this.DietaryNeeds = new List<string>();
 		}
 	}
+
 }

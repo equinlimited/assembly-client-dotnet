@@ -28,4 +28,5 @@ namespace AssemblyClient {
 			this.Qualifications = new List<StaffQualification>();
 		}
 	}
+
 }

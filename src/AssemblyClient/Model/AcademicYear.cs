@@ -28,4 +28,5 @@ namespace AssemblyClient {
 			this.Terms = new List<AcademicYearTerms>();
 		}
 	}
+
 }

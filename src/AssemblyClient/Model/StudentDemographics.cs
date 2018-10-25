@@ -53,4 +53,5 @@ namespace AssemblyClient {
 			this.SenNeeds = new List<SenNeed>();
 		}
 	}
+
 }

@@ -79,4 +79,5 @@ namespace AssemblyClient {
 			this.Contacts = new List<Contact>();
 		}
 	}
+
 }
