@@ -13,6 +13,8 @@ namespace AssemblyClient
 
         public string ClientSecret { get; set; }
 
+        public bool Debug { get; set; }
+
         internal string BasicAuth
         {
             get

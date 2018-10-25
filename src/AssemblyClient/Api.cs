@@ -88,6 +88,11 @@ namespace AssemblyClient
                 resourceWithQuery = $"{resourceWithQuery}?{query}";
             }
 
+            if (Configuration.Debug)
+            {
+                Console.WriteLine(resourceWithQuery);
+            }
+
             var response = await client.MakeRequest(resourceWithQuery, Configuration.Token);
             var isTokenValid = await response.IsValidToken();
 
