@@ -40,6 +40,11 @@ namespace AssemblyClient
             var response = await client.PostData(uri, Configuration.Token, data);
             var isTokenValid = await response.IsValidToken();
 
+            if (Configuration.Debug)
+            {
+                Console.WriteLine($"Assembly API POST: {uri}");
+            }
+
             if (!isTokenValid)
             {
                 var newToken = await RefreshToken(Configuration.RefreshToken);
@@ -72,6 +77,11 @@ namespace AssemblyClient
             var refreshRequest = new ApiGrant(refreshToken);
             var response = await client.PostData("/oauth/token", Configuration.Token, refreshRequest);
 
+            if (Configuration.Debug)
+            {
+                Console.WriteLine($"Assembly API Token Refresh");
+            }
+
             await response.EnsurePlatformSuccess();
 
             var refreshedToken = await response.Deserialize();
@@ -90,7 +100,7 @@ namespace AssemblyClient
 
             if (Configuration.Debug)
             {
-                Console.WriteLine(resourceWithQuery);
+                Console.WriteLine($"Assembly API GET: {resourceWithQuery}");
             }
 
             var response = await client.MakeRequest(resourceWithQuery, Configuration.Token);
