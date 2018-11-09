@@ -23,6 +23,11 @@ namespace AssemblyClient
                 var boolValue = kvp.Value as bool?;
                 result += boolValue.HasValue && boolValue.Value ? "1" : "0";
             }
+            else if (kvp.Value is IList) 
+            {
+                var ids = string.Join(",", kvp.Value)
+                result += $"{ids}";
+            }
             else
             {
                 result += $"{kvp.Value}";
