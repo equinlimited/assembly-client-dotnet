@@ -25,7 +25,7 @@ namespace AssemblyClient
             }
             else if (kvp.Value is IList) 
             {
-                var ids = string.Join(",", kvp.Value)
+                var ids = string.Join(",", kvp.Value);
                 result += $"{ids}";
             }
             else
