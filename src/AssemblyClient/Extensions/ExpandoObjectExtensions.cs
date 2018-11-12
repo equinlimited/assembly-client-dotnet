@@ -24,9 +24,14 @@ namespace AssemblyClient
                 var boolValue = kvp.Value as bool?;
                 result += boolValue.HasValue && boolValue.Value ? "1" : "0";
             }
-            else if (kvp.Value is IList) 
+            else if (kvp.Value is List<int?>) 
             {
-                var ids = string.Join(",", kvp.Value);
+                var ids = string.Join(",", ((List<int?>) kvp.Value).Where(x => x != null).Select(i => i.ToString()).ToArray());
+                result += $"{ids}";
+            }
+            else if (kvp.Value is List<int>) 
+            {
+                var ids = string.Join(",", ((List<int>) kvp.Value).Select(i => i.ToString()).ToArray());
                 result += $"{ids}";
             }
             else
