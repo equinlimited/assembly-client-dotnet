@@ -26,12 +26,12 @@ namespace AssemblyClient
             }
             else if (kvp.Value is List<int?>) 
             {
-                var ids = string.Join(",", ((List<int?>) kvp.Value).Where(x => x != null).Select(i => i.ToString()).ToArray());
+                var ids = string.Join("+", ((List<int?>) kvp.Value).Where(x => x != null).Select(i => i.ToString()).ToArray());
                 result += $"{ids}";
             }
             else if (kvp.Value is List<int>) 
             {
-                var ids = string.Join(",", ((List<int>) kvp.Value).Select(i => i.ToString()).ToArray());
+                var ids = string.Join("+", ((List<int>) kvp.Value).Select(i => i.ToString()).ToArray());
                 result += $"{ids}";
             }
             else
