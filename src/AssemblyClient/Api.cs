@@ -170,9 +170,7 @@ namespace AssemblyClient
             {
                 try
                 {
-                    pagedArgs.page = currentPage;
-
-                    var response = await Load(resource, pagedArgs);
+                    var response = await Load(resource, queryArgs);
 
                     var data = await response.Content.ReadAsStringAsync();
 
