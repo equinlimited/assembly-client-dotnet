@@ -10,7 +10,6 @@ Install the NuGet package into your Project:
 
 ```powershell
 Install-Package assembly-client-dotnet
-Install-Package Newtonsoft.Json
 ```
 
 ## Usage
@@ -179,11 +178,3 @@ var results = await client.Results.List(studentIds);
 var schoolDetails = await client.School.Details();
 
 ```
-
-## Development
-
-Build and Release are automatically run on commits to master (and accepted Pull Requests).
-
-Branch commits and pull requests are automatically released under pre release versions to: https://www.myget.org/F/assembly-client-dotnet/api/v3/index.json
-
-If you want to test before releasing then you can use this feed to access development versions.

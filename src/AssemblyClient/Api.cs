@@ -90,6 +90,16 @@ namespace AssemblyClient
 
         public virtual async Task<HttpResponseMessage> Load(string resource, ExpandoObject args)
         {
+            var parsedArgs = (IDictionary<String, Object>) args;
+
+            if (parsedArgs.ContainsKey("ifModifiedSince") && parsedArgs["ifModifiedSince"] != null)
+            {
+                this.client.DefaultRequestHeaders.Add("If-Modified-Since", ((DateTime)parsedArgs["ifModifiedSince"]).ToString("r"));
+                parsedArgs.Remove("ifModifiedSince");
+            }
+
+            args = (ExpandoObject) parsedArgs;
+
             var query = args.ToParams();
             var resourceWithQuery = $"{resource}";
 
@@ -144,36 +154,60 @@ namespace AssemblyClient
         public virtual async Task<IList<T>> GetList<T>(string resource, ExpandoObject args)
         {
             var results = new List<T>();
+            bool allPages = true;
+            dynamic queryArgs = args;       
 
-            dynamic pagedArgs = args;
-
-            int? currentPage = 1;
-
-            while (currentPage.HasValue)
+            if (((IDictionary<String, Object>) queryArgs).ContainsKey("page"))
             {
-                pagedArgs.page = currentPage;
-
-                var response = await Load(resource, pagedArgs);
-
-                var data = await response.Content.ReadAsStringAsync();
-
-                var list = JsonConvert.DeserializeObject<List<T>>(data);
-
-                results.AddRange(list);
-
-                var nextPage = response
-                    .Headers
-                    .GetValues("Next-Page")[0];
-
-                if (string.IsNullOrEmpty(nextPage))
-                {
-                    currentPage = null;
-                }
-                else
-                {
-                    currentPage = int.Parse(nextPage);
-                }
+                allPages = false;
             }
+            else
+            {
+                queryArgs.page = 1;
+            }
+
+            do
+            {
+                try
+                {
+                    pagedArgs.page = currentPage;
+
+                    var response = await Load(resource, pagedArgs);
+
+                    var data = await response.Content.ReadAsStringAsync();
+
+                    var list = JsonConvert.DeserializeObject<List<T>>(data);
+
+                    results.AddRange(list);
+
+                    var nextPage = response
+                        .Headers
+                        .GetValues("Next-Page")[0];
+
+                    if (string.IsNullOrEmpty(nextPage) || !allPages)
+                    {
+                        queryArgs.page = null;
+                    }
+                    else
+                    {
+                        queryArgs.page = int.Parse(nextPage);
+                    }
+                }
+                catch (RequestThrottledException ex)
+                {
+                    var waitingPeriod = ex.Period * 1000;
+                    if (Configuration.Debug) 
+                    {
+                        Console.WriteLine($"Assembly API rate limit hit at {DateTime.Now} due to reaching {ex.Count} requests in {ex.Period} seconds when limit is {ex.Limit} waiting {ex.Period} second before retrying");
+                    }
+                    await Task.Delay(waitingPeriod);
+                    if (Configuration.Debug) 
+                    {
+                        Console.WriteLine($"Assembly API rate limit hit waited period of {ex.Period} seconds finished at {DateTime.Now} now retrying");
+                    }
+                }
+
+            } while (queryArgs.page != null);
 
             return results;
         }

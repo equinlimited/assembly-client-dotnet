@@ -12,7 +12,11 @@ namespace AssemblyClient
         {
             if (me.StatusCode == (HttpStatusCode)429)
             {
-                throw new RequestThrottledException("Request throttled");
+                dynamic error = me.Deserialize();
+                var message = error.Result.error;
+                var data = error.Result.data;
+
+                throw new RequestThrottledException(message, (int)data.count, (int)data.period, (int)data.limit);
             }
 
             return me.EnsureSuccessfulStatusCode();
@@ -30,10 +34,6 @@ namespace AssemblyClient
             if (response.Content != null)
             {
                 content = await response.Content.ReadAsStringAsync();
-            }
-
-            if (response.Content != null)
-            {
                 response.Content.Dispose();
             }
 
