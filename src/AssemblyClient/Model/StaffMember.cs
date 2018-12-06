@@ -56,18 +56,16 @@ namespace AssemblyClient {
 		public string EndDate { get; set; }
 
 		[JsonProperty("demographics")]
-		public List<StaffMemberDemographics> Demographics { get; set; }
+		public StaffMemberDemographics Demographics { get; set; }
 
 		[JsonProperty("qualification_info")]
-		public List<StaffMemberQualificationInfo> QualificationInfo { get; set; }
+		public StaffMemberQualificationInfo QualificationInfo { get; set; }
 
 
 		public StaffMember()
 		{
-			this.Demographics = new List<StaffMemberDemographics>();
-			this.Demographics = new List<StaffMemberDemographics>();
-			this.QualificationInfo = new List<StaffMemberQualificationInfo>();
-			this.QualificationInfo = new List<StaffMemberQualificationInfo>();
+			this.Demographics = new StaffMemberDemographics();
+			this.QualificationInfo = new StaffMemberQualificationInfo();
 		}
 	}
 

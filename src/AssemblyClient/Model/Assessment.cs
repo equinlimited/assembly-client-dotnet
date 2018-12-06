@@ -19,9 +19,14 @@ namespace AssemblyClient {
 		[JsonProperty("name")]
 		public string Name { get; set; }
 
+		[JsonProperty("mis_assessments")]
+		public List<AssessmentMisAssessments> MisAssessments { get; set; }
+
 
 		public Assessment()
 		{
+			this.MisAssessments = new List<AssessmentMisAssessments>();
+			this.MisAssessments = new List<AssessmentMisAssessments>();
 		}
 	}
 

@@ -40,6 +40,9 @@ namespace AssemblyClient {
 		[JsonProperty("looked_after")]
 		public bool? LookedAfter { get; set; }
 
+		[JsonProperty("in_care")]
+		public bool? InCare { get; set; }
+
 		[JsonProperty("ever_in_care")]
 		public bool? EverInCare { get; set; }
 

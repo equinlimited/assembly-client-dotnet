@@ -10,6 +10,9 @@ namespace AssemblyClient {
 		[JsonProperty("id")]
 		public int? Id { get; set; }
 
+		[JsonProperty("type")]
+		public string Type { get; set; }
+
 		[JsonProperty("telephone_number")]
 		public string _TelephoneNumber { get; set; }
 
