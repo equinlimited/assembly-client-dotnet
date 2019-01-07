@@ -155,9 +155,10 @@ namespace AssemblyClient
         {
             var results = new List<T>();
             bool allPages = true;
-            dynamic queryArgs = args;       
+            dynamic queryArgs = args;
+            var page;
 
-            if (((IDictionary<String, Object>) queryArgs).ContainsKey("page"))
+            if (((IDictionary<String, Object>) queryArgs).TryGetValue("page", out page) && page != null)
             {
                 allPages = false;
             }
@@ -194,12 +195,12 @@ namespace AssemblyClient
                 catch (RequestThrottledException ex)
                 {
                     var waitingPeriod = ex.Period * 1000;
-                    if (Configuration.Debug) 
+                    if (Configuration.Debug)
                     {
                         Console.WriteLine($"Assembly API rate limit hit at {DateTime.Now} due to reaching {ex.Count} requests in {ex.Period} seconds when limit is {ex.Limit} waiting {ex.Period} second before retrying");
                     }
                     await Task.Delay(waitingPeriod);
-                    if (Configuration.Debug) 
+                    if (Configuration.Debug)
                     {
                         Console.WriteLine($"Assembly API rate limit hit waited period of {ex.Period} seconds finished at {DateTime.Now} now retrying");
                     }
