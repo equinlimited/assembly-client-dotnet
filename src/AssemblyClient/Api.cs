@@ -156,7 +156,7 @@ namespace AssemblyClient
             var results = new List<T>();
             bool allPages = true;
             dynamic queryArgs = args;
-            int page;
+            object page;
 
             if (((IDictionary<String, Object>) queryArgs).TryGetValue("page", out page) && page != null)
             {
