@@ -59,7 +59,7 @@ namespace AssemblyClient
 		/// List Left Students
 		/// </summary>
 		/// <remarks>
-		/// Returns a list of students who have left the school.&lt;br&gt;&lt;br&gt;**Note:** This will include any students who have left the school during the current academic year. If the school has been connected to Assembly for more than one academic year, all left students will be returned. The &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details).
+		/// &#39;Returns a list of students who have left the school.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details).&#39; 
 		/// </remarks>
 		/// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
 		/// <returns>List&lt;Student&gt;</returns>

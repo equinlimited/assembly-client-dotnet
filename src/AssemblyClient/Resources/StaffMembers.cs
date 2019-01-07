@@ -38,6 +38,24 @@ namespace AssemblyClient
 		}
 
 		/// <summary>
+		/// List Left Staff Members
+		/// </summary>
+		/// <remarks>
+		/// Returns a list of staff members who have left the school.  **Note:** The &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details).&#39; 
+		/// </remarks>
+		/// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
+		/// <returns>List&lt;StaffMember&gt;</returns>
+		public async Task<List<StaffMember>> Left(
+		  DateTime? ifModifiedSince = null
+		)
+		{
+			dynamic args = new ExpandoObject();
+			args.ifModifiedSince = ifModifiedSince;
+			var results = await Client.GetList<StaffMember>($"/staff_members/left", args);
+			return results;
+		}
+
+		/// <summary>
 		/// List Staff Members
 		/// </summary>
 		/// <remarks>

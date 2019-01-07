@@ -47,6 +47,27 @@ namespace AssemblyClient
 			return results;
 		}
 
+		/// <summary>
+		/// List Attendance Summaries
+		/// </summary>
+		/// <remarks>
+		/// Returns a list of attendance summaries.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+		/// </remarks>
+		/// <param name="studentId">a student_id to filter by (optional)</param>
+		/// <param name="registrationGroupId">id of a registration group (optional)</param>
+		/// <returns>List&lt;AttendanceSummary&gt;</returns>
+		public async Task<List<AttendanceSummary>> List_0(
+		  int? studentId = null, 
+		  int? registrationGroupId = null
+		)
+		{
+			dynamic args = new ExpandoObject();
+			args.studentId = studentId;
+			args.registrationGroupId = registrationGroupId;
+			var results = await Client.GetList<AttendanceSummary>($"/attendances/summaries", args);
+			return results;
+		}
+
 	}
 
 	public partial class ApiClient
