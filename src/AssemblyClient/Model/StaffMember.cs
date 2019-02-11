@@ -43,6 +43,9 @@ namespace AssemblyClient {
 		[JsonProperty("email")]
 		public string Email { get; set; }
 
+		[JsonProperty("telephone_numbers")]
+		public List<TelephoneNumber> TelephoneNumbers { get; set; }
+
 		[JsonProperty("is_teaching_staff")]
 		public bool? IsTeachingStaff { get; set; }
 
@@ -64,6 +67,8 @@ namespace AssemblyClient {
 
 		public StaffMember()
 		{
+			this.TelephoneNumbers = new List<TelephoneNumber>();
+			this.TelephoneNumbers = new List<TelephoneNumber>();
 			this.Demographics = new StaffMemberDemographics();
 			this.QualificationInfo = new StaffMemberQualificationInfo();
 		}

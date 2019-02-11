@@ -22,7 +22,10 @@ namespace AssemblyClient
 
         public static async Task<HttpResponseMessage> PostData(this HttpClient me, string uri, string token, object data)
         {
-            me.SetAuthorizationHeader(token);
+            if (uri != "/oauth/token")
+            {
+                me.SetAuthorizationHeader(token);
+            }
             var serialized = JsonConvert.SerializeObject(data);
             var content = new StringContent(serialized, Encoding.UTF8, "application/json");
             var response = await me.PostAsync(uri, content);
