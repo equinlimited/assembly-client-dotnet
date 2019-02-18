@@ -56,7 +56,7 @@ namespace AssemblyClient
 		/// <param name="studentId">a student_id to filter by (optional)</param>
 		/// <param name="registrationGroupId">id of a registration group (optional)</param>
 		/// <returns>List&lt;AttendanceSummary&gt;</returns>
-		public async Task<List<AttendanceSummary>> List_0(
+		public async Task<List<AttendanceSummary>> Summaries(
 		  int? studentId = null, 
 		  int? registrationGroupId = null
 		)
