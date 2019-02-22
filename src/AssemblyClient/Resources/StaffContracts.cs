@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Dynamic;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace AssemblyClient
@@ -49,7 +50,7 @@ namespace AssemblyClient
 			args.allowances = allowances;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<StaffContract>($"/staff_contracts", args);
+			var results = await Client.GetList<List<StaffContract>>($"/staff_contracts", args);
 			return results;
 		}
 

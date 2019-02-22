@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Dynamic;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace AssemblyClient
@@ -69,7 +70,7 @@ namespace AssemblyClient
 		{
 			dynamic args = new ExpandoObject();
 			args.ifModifiedSince = ifModifiedSince;
-			var results = await Client.GetList<Student>($"/students/left", args);
+			var results = await Client.GetList<List<Student>>($"/students/left", args);
 			return results;
 		}
 
@@ -126,7 +127,7 @@ namespace AssemblyClient
 			args.photo = photo;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<Student>($"/students", args);
+			var results = await Client.GetList<List<Student>>($"/students", args);
 			return results;
 		}
 

@@ -35,9 +35,9 @@ namespace AssemblyClient
             this.TokenRefreshed += (sender, args) => { };
         }
 
-        public virtual async Task<T> PostData<T>(string uri, object data)
+        public virtual async Task<T> SendData<T>(HttpMethod method, string uri, object data)
         {
-            var response = await client.PostData(uri, Configuration.Token, data);
+            var response = await client.SendData(method, uri, Configuration.Token, data);
             var isTokenValid = await response.IsValidToken();
 
             if (Configuration.Debug)
@@ -52,7 +52,7 @@ namespace AssemblyClient
 
                 OnTokenRefreshed(newToken);
 
-                response = await client.PostData(uri, Configuration.Token, data);
+                response = await client.SendData(method, uri, Configuration.Token, data);
                 await response.EnsurePlatformSuccess();
             }
             else
@@ -75,7 +75,7 @@ namespace AssemblyClient
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Configuration.BasicAuth);
 
             var refreshRequest = new ApiGrant(refreshToken);
-            var response = await client.PostData("/oauth/token", Configuration.Token, refreshRequest);
+            var response = await client.SendData(HttpMethod.Post, "/oauth/token", Configuration.Token, refreshRequest);
 
             if (Configuration.Debug)
             {

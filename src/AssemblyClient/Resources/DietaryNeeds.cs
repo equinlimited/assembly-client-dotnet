@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Dynamic;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace AssemblyClient
@@ -48,7 +49,7 @@ namespace AssemblyClient
 			dynamic args = new ExpandoObject();
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<DietaryNeed>($"/school/dietary_needs", args);
+			var results = await Client.GetList<List<DietaryNeed>>($"/school/dietary_needs", args);
 			return results;
 		}
 

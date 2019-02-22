@@ -63,9 +63,9 @@ namespace AssemblyClient
 			this.api = api;
 		}
 
-		public virtual async Task<T> PostData<T>(string uri, object data)
+		public virtual async Task<T> SendData<T>(HttpMethod method, string uri, object data)
 		{
-			var result = await api.PostData<T>(uri, data);
+			var result = await api.SendData<T>(method, uri, data);
 			return result;
 		}
 

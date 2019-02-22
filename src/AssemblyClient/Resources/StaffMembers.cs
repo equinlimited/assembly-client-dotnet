@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Dynamic;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace AssemblyClient
@@ -60,7 +61,7 @@ namespace AssemblyClient
 			args.teachersOnly = teachersOnly;
 			args.demographics = demographics;
 			args.qualifications = qualifications;
-			var results = await Client.GetList<StaffMember>($"/staff_members/left", args);
+			var results = await Client.GetList<List<StaffMember>>($"/staff_members/left", args);
 			return results;
 		}
 
@@ -93,7 +94,7 @@ namespace AssemblyClient
 			args.qualifications = qualifications;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<StaffMember>($"/staff_members", args);
+			var results = await Client.GetList<List<StaffMember>>($"/staff_members", args);
 			return results;
 		}
 

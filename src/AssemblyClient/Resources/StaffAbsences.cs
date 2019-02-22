@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Dynamic;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace AssemblyClient
@@ -43,7 +44,7 @@ namespace AssemblyClient
 			args.qualifications = qualifications;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<StaffAbsence>($"/staff_absences", args);
+			var results = await Client.GetList<List<StaffAbsence>>($"/staff_absences", args);
 			return results;
 		}
 

@@ -20,15 +20,20 @@ namespace AssemblyClient
             return response;
         }
 
-        public static async Task<HttpResponseMessage> PostData(this HttpClient me, string uri, string token, object data)
+        public static async Task<HttpResponseMessage> SendData(this HttpClient me, HttpMethod method, string uri, string token, object data)
         {
             if (uri != "/oauth/token")
             {
                 me.SetAuthorizationHeader(token);
             }
+
             var serialized = JsonConvert.SerializeObject(data);
             var content = new StringContent(serialized, Encoding.UTF8, "application/json");
-            var response = await me.PostAsync(uri, content);
+            var response = await me.SendAsync(new HttpRequestMessage(method, uri)
+            {
+                Content = content
+            });
+
             return response;
         }
     }

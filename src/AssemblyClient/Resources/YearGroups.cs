@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Dynamic;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace AssemblyClient
@@ -66,7 +67,7 @@ namespace AssemblyClient
 			args.academicYearId = academicYearId;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<YearGroup>($"/year_groups", args);
+			var results = await Client.GetList<List<YearGroup>>($"/year_groups", args);
 			return results;
 		}
 
@@ -116,7 +117,7 @@ namespace AssemblyClient
 			args.everInCare = everInCare;
 			args.languages = languages;
 			args.photo = photo;
-			var results = await Client.GetList<Student>($"/year_groups/{id}/students", args);
+			var results = await Client.GetList<List<Student>>($"/year_groups/{id}/students", args);
 			return results;
 		}
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Dynamic;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace AssemblyClient
@@ -34,7 +35,7 @@ namespace AssemblyClient
 			args.eventType = eventType;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<CalendarEvent>($"/calendar_events", args);
+			var results = await Client.GetList<List<CalendarEvent>>($"/calendar_events", args);
 			return results;
 		}
 
