@@ -44,7 +44,7 @@ namespace AssemblyClient
 			args.endDate = endDate;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<List<Attendance>>($"/attendances", args);
+			var results = await Client.GetList<Attendance>($"/attendances", args);
 			return results;
 		}
 
@@ -65,7 +65,7 @@ namespace AssemblyClient
 			dynamic args = new ExpandoObject();
 			args.studentId = studentId;
 			args.registrationGroupId = registrationGroupId;
-			var results = await Client.GetList<List<AttendanceSummary>>($"/attendances/summaries", args);
+			var results = await Client.GetList<AttendanceSummary>($"/attendances/summaries", args);
 			return results;
 		}
 

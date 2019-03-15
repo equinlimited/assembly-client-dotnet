@@ -49,7 +49,7 @@ namespace AssemblyClient
 			dynamic args = new ExpandoObject();
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<List<DietaryNeed>>($"/school/dietary_needs", args);
+			var results = await Client.GetList<DietaryNeed>($"/school/dietary_needs", args);
 			return results;
 		}
 

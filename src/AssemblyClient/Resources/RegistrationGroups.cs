@@ -67,7 +67,7 @@ namespace AssemblyClient
 			args.academicYearId = academicYearId;
 			args.perPage = perPage;
 			args.page = page;
-			var results = await Client.GetList<List<RegistrationGroup>>($"/registration_groups", args);
+			var results = await Client.GetList<RegistrationGroup>($"/registration_groups", args);
 			return results;
 		}
 
@@ -117,7 +117,7 @@ namespace AssemblyClient
 			args.everInCare = everInCare;
 			args.languages = languages;
 			args.photo = photo;
-			var results = await Client.GetList<List<Student>>($"/registration_groups/{id}/students", args);
+			var results = await Client.GetList<Student>($"/registration_groups/{id}/students", args);
 			return results;
 		}
 
