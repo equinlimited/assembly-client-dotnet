@@ -23,7 +23,7 @@ namespace AssemblyClient
 		/// </remarks>
 		/// <param name="id">id of the entity</param>
 		/// <returns>School</returns>
-		public async Task<School> Find(
+		public async Task<School> Show(
 		  int? id
 		)
 		{
