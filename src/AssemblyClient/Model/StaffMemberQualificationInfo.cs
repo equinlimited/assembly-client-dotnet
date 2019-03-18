@@ -26,7 +26,6 @@ namespace AssemblyClient {
 		public StaffMemberQualificationInfo()
 		{
 			this.Qualifications = new List<StaffQualification>();
-			this.Qualifications = new List<StaffQualification>();
 		}
 	}
 

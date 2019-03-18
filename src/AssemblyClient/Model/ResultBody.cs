@@ -26,7 +26,6 @@ namespace AssemblyClient {
 		public ResultBody()
 		{
 			this.Results = new List<ResultEntry>();
-			this.Results = new List<ResultEntry>();
 		}
 	}
 

@@ -41,10 +41,7 @@ namespace AssemblyClient {
 		public Contact()
 		{
 			this.Emails = new List<Email>();
-			this.Emails = new List<Email>();
 			this.TelephoneNumbers = new List<TelephoneNumber>();
-			this.TelephoneNumbers = new List<TelephoneNumber>();
-			this.Students = new List<Student>();
 			this.Students = new List<Student>();
 		}
 	}

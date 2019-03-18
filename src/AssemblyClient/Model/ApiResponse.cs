@@ -20,7 +20,6 @@ namespace AssemblyClient {
 		public ApiResponse()
 		{
 			this.Data = new List<Result>();
-			this.Data = new List<Result>();
 			this.Errors = new List<string>();
 		}
 	}

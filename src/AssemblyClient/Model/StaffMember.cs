@@ -68,7 +68,6 @@ namespace AssemblyClient {
 		public StaffMember()
 		{
 			this.TelephoneNumbers = new List<TelephoneNumber>();
-			this.TelephoneNumbers = new List<TelephoneNumber>();
 			this.Demographics = new StaffMemberDemographics();
 			this.QualificationInfo = new StaffMemberQualificationInfo();
 		}

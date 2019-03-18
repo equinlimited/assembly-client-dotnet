@@ -79,7 +79,6 @@ namespace AssemblyClient {
 			this.Demographics = new StudentDemographics();
 			this.Medical = new StudentMedical();
 			this.Contacts = new List<Contact>();
-			this.Contacts = new List<Contact>();
 			this.Address = new StudentAddress();
 			this.Languages = new StudentLanguages();
 			this.Photo = new StudentPhoto();

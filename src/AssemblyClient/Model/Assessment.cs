@@ -26,7 +26,6 @@ namespace AssemblyClient {
 		public Assessment()
 		{
 			this.MisAssessments = new List<AssessmentMisAssessments>();
-			this.MisAssessments = new List<AssessmentMisAssessments>();
 		}
 	}
 

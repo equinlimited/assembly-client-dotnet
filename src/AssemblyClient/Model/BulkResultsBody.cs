@@ -14,7 +14,6 @@ namespace AssemblyClient {
 		public BulkResultsBody()
 		{
 			this.Results = new List<ResultEntry>();
-			this.Results = new List<ResultEntry>();
 		}
 	}
 
