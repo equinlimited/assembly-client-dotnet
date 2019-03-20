@@ -11,7 +11,7 @@ namespace AssemblyClient {
 		public string AdditionalPaymentType { get; set; }
 
 		[JsonProperty("additional_payment_amount")]
-		public string AdditionalPaymentAmount { get; set; }
+		public float? AdditionalPaymentAmount { get; set; }
 
 		[JsonProperty("start_date")]
 		public DateTime? StartDate { get; set; }

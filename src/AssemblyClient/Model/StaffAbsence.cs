@@ -20,7 +20,7 @@ namespace AssemblyClient {
 		public DateTime? EndDate { get; set; }
 
 		[JsonProperty("working_days_lost")]
-		public string WorkingDaysLost { get; set; }
+		public float? WorkingDaysLost { get; set; }
 
 		[JsonProperty("absence_category")]
 		public string AbsenceCategory { get; set; }

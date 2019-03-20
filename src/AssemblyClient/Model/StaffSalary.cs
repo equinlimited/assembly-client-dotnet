@@ -8,13 +8,13 @@ namespace AssemblyClient {
 	public class StaffSalary
 	{
 		[JsonProperty("hours_per_week")]
-		public string HoursPerWeek { get; set; }
+		public float? HoursPerWeek { get; set; }
 
 		[JsonProperty("fte")]
-		public string Fte { get; set; }
+		public float? Fte { get; set; }
 
 		[JsonProperty("weeks_per_year")]
-		public string WeeksPerYear { get; set; }
+		public float? WeeksPerYear { get; set; }
 
 		[JsonProperty("pay_range")]
 		public string PayRange { get; set; }
@@ -32,10 +32,10 @@ namespace AssemblyClient {
 		public string RegionalSpine { get; set; }
 
 		[JsonProperty("base_pay")]
-		public string BasePay { get; set; }
+		public float? BasePay { get; set; }
 
 		[JsonProperty("actual_pay")]
-		public string ActualPay { get; set; }
+		public float? ActualPay { get; set; }
 
 		[JsonProperty("safeguarded_salary")]
 		public bool? SafeguardedSalary { get; set; }

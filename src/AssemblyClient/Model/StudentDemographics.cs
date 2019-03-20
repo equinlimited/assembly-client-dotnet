@@ -37,6 +37,9 @@ namespace AssemblyClient {
 		[JsonProperty("is_fsm")]
 		public bool? IsFsm { get; set; }
 
+		[JsonProperty("is_fsm6")]
+		public bool? IsFsm6 { get; set; }
+
 		[JsonProperty("looked_after")]
 		public bool? LookedAfter { get; set; }
 

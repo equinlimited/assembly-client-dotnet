@@ -26,19 +26,19 @@ namespace AssemblyClient {
 		public DateTime? EndDate { get; set; }
 
 		[JsonProperty("possible_sessions")]
-		public string PossibleSessions { get; set; }
+		public float? PossibleSessions { get; set; }
 
 		[JsonProperty("attended_sessions")]
-		public string AttendedSessions { get; set; }
+		public float? AttendedSessions { get; set; }
 
 		[JsonProperty("late_sessions")]
-		public string LateSessions { get; set; }
+		public float? LateSessions { get; set; }
 
 		[JsonProperty("authorised_absence_sessions")]
-		public string AuthorisedAbsenceSessions { get; set; }
+		public float? AuthorisedAbsenceSessions { get; set; }
 
 		[JsonProperty("unauthorised_absence_sessions")]
-		public string UnauthorisedAbsenceSessions { get; set; }
+		public float? UnauthorisedAbsenceSessions { get; set; }
 
 
 		public AttendanceSummary()
