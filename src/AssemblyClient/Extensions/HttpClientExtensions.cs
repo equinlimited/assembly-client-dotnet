@@ -6,35 +6,35 @@ using Newtonsoft.Json;
 
 namespace AssemblyClient
 {
-    public static class HttpClientExtensions
+  public static class HttpClientExtensions
+  {
+    private static void SetAuthorizationHeader(this HttpClient me, string token)
     {
-        private static void SetAuthorizationHeader(this HttpClient me, string token)
-        {
-            me.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-        }
-
-        public static async Task<HttpResponseMessage> MakeRequest(this HttpClient me, string resourceWithQuery, string token)
-        {
-            me.SetAuthorizationHeader(token);
-            var response = await me.GetAsync(resourceWithQuery);
-            return response;
-        }
-
-        public static async Task<HttpResponseMessage> SendData(this HttpClient me, HttpMethod method, string uri, string token, object data)
-        {
-            if (uri != "/oauth/token")
-            {
-                me.SetAuthorizationHeader(token);
-            }
-
-            var serialized = JsonConvert.SerializeObject(data);
-            var content = new StringContent(serialized, Encoding.UTF8, "application/json");
-            var response = await me.SendAsync(new HttpRequestMessage(method, uri)
-            {
-                Content = content
-            });
-
-            return response;
-        }
+      me.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
     }
+
+    public static async Task<HttpResponseMessage> MakeRequest(this HttpClient me, string resourceWithQuery, string token)
+    {
+      me.SetAuthorizationHeader(token);
+      var response = await me.GetAsync(resourceWithQuery);
+      return response;
+    }
+
+    public static async Task<HttpResponseMessage> SendData(this HttpClient me, HttpMethod method, string uri, string token, object data)
+    {
+      if (uri != "/oauth/token")
+      {
+        me.SetAuthorizationHeader(token);
+      }
+
+      var serialized = JsonConvert.SerializeObject(data);
+      var content = new StringContent(serialized, Encoding.UTF8, "application/json");
+      var response = await me.SendAsync(new HttpRequestMessage(method, uri)
+      {
+        Content = content
+      });
+
+      return response;
+    }
+  }
 }

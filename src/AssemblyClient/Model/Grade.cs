@@ -4,22 +4,20 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
+  public class Grade
+  {
+    [JsonProperty("id")]
+    public int? Id { get; set; }
 
-	public class Grade
-	{
-		[JsonProperty("id")]
-		public int? Id { get; set; }
+    [JsonProperty("name")]
+    public string Name { get; set; }
 
-		[JsonProperty("name")]
-		public string Name { get; set; }
-
-		[JsonProperty("value")]
-		public int? Value { get; set; }
+    [JsonProperty("value")]
+    public int? Value { get; set; }
 
 
-		public Grade()
-		{
-		}
-	}
-
+    public Grade()
+    {
+    }
+  }
 }

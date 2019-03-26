@@ -19,10 +19,10 @@ Some examples of how to pull information from the Assembly Platform API using th
 ```c#
 var config = new ApiConfiguration()
 {
-	Token = "my_oauth_access_token",
-	RefreshToken = "my_oauth_refresh_token",
-	ClientId = "my_client_id",
-	ClientSecret = "my_client_secret"
+  Token = "my_oauth_access_token",
+  RefreshToken = "my_oauth_refresh_token",
+  ClientId = "my_client_id",
+  ClientSecret = "my_client_secret"
 };
 
 // To connect to the live Platform, rather than the Sandbox environment, use simply: new ApiClient();
@@ -39,7 +39,7 @@ var regGroups = await client.RegistrationGroups.List(yearCode: "7");
 
 foreach (var group in regGroups)
 {
-	Console.WriteLine($"Group Name: {group.Name}");
+  Console.WriteLine($"Group Name: {group.Name}");
 }
 
 // -----------------------------------------------------------------
@@ -51,7 +51,7 @@ var mathsGroups = await client.TeachingGroups.List(subjectCode: "MA");
 
 foreach (var group in mathsGroups)
 {
-	Console.WriteLine($"Group Name: {group.Name}");
+  Console.WriteLine($"Group Name: {group.Name}");
 }
 
 // You can also apply a date filter to get, say, teaching groups from last academic year or for another specific range of time.
@@ -62,7 +62,7 @@ var mathsStudents = await mathsGroups.First().Students();
 
 foreach (var student in mathsStudents)
 {
-	Console.WriteLine($"{student.LastName}, {student.FirstName} ({student.YearCode})");
+  Console.WriteLine($"{student.LastName}, {student.FirstName} ({student.YearCode})");
 }
 
 // -----------------------------------------------------------------
@@ -74,7 +74,7 @@ var year7Students = await client.Students.List(yearCode: "7", demographics: true
 
 foreach (var student in year7Students)
 {
-	Console.WriteLine($"{student.LastName}, {student.FirstName} ({student.YearCode})");
+  Console.WriteLine($"{student.LastName}, {student.FirstName} ({student.YearCode})");
 }
 
 // -----------------------------------------------------------------
@@ -86,7 +86,7 @@ var yearGroups = await client.YearGroups.List();
 
 foreach (var yearGroup in yearGroups)
 {
-	Console.WriteLine($"{yearGroup.Code} {yearGroup.Name}");
+  Console.WriteLine($"{yearGroup.Code} {yearGroup.Name}");
 }
 
 // Fetch the students for this particular year group.
@@ -110,7 +110,7 @@ var staffMembers = await client.StaffMembers.All();
 
 foreach (var staffMember in staffMembers)
 {
-	Console.WriteLine($"{staffMember.LastName}, {staffMember.FirstName} ({staffMember.IsTeachingStaff})");
+  Console.WriteLine($"{staffMember.LastName}, {staffMember.FirstName} ({staffMember.IsTeachingStaff})");
 }
 
 // -----------------------------------------------------------------
@@ -155,10 +155,10 @@ var gradeSets = await client.GradeSets.List();
 // Write a set of results in one batch (maximum of 50 results at one time)
 var resultsBatch = new ResultsBatch
 {
-	AspectId = 1,
-	AssessmentId = 1,
-	AssessmentPointRank = 1,
-	SubjectId = 1
+  AspectId = 1,
+  AssessmentId = 1,
+  AssessmentPointRank = 1,
+  SubjectId = 1
 };
 
 resultsBatch.AddResult(studentId: 1, gradeId: 1);
