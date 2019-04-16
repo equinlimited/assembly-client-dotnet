@@ -1,30 +1,39 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Dynamic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace AssemblyClient
 {
-  public class SchoolResource : Resource
+  public class SchoolsResource : Resource
   {
-    public SchoolResource(ApiClient client)
+    public SchoolsResource(ApiClient client)
       : base(client)
     {
-
     }
 
     /// <summary>
-    /// Get School Details
+    /// View School Details
     /// </summary>
     /// <remarks>
-    /// Returns details for the school associated with the provided access_token.
+    /// Returns details for the school associated with the provided &#x60;access_token&#x60;
     /// </remarks>
-    /// <param name="id">id of the entity</param>
     /// <returns>School</returns>
     public async Task<School> Show(
-      int? id
     )
     {
       dynamic args = new ExpandoObject();
@@ -33,10 +42,10 @@ namespace AssemblyClient
     }
 
     /// <summary>
-    /// Get School Sync Status
+    /// View School Sync Status
     /// </summary>
     /// <remarks>
-    /// Returns status for the school associated with the provided access_token.
+    /// Returns status for the school associated with the provided &#x60;access_token&#x60;
     /// </remarks>
     /// <returns>SchoolStatus</returns>
     public async Task<SchoolStatus> Status(
@@ -51,6 +60,6 @@ namespace AssemblyClient
 
   public partial class ApiClient
   {
-    public SchoolResource School => new SchoolResource(this);
+    public SchoolsResource Schools => new SchoolsResource(this);
   }
 }

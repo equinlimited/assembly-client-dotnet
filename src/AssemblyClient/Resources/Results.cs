@@ -1,6 +1,18 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Dynamic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,22 +24,21 @@ namespace AssemblyClient
     public ResultsResource(ApiClient client)
       : base(client)
     {
-
     }
 
     /// <summary>
     /// Update Multiple Results
     /// </summary>
     /// <remarks>
-    /// Multiple results can be updated simultaneously by providing the relevant result_ids in the body of your request. The response will tell you whether the batch of updates has either been successful or failed.
+    /// Multiple results can be updated simultaneously by providing the relevant &#x60;result_ids&#x60; in the body of your request. The response will tell you whether the batch of updates has either been successful or failed
     /// </remarks>
     /// <param name="bulkResultsBody"> (optional)</param>
-    /// <returns>ApiResponse</returns>
-    public async Task<ApiResponse> BulkUpdate(
+    /// <returns>BulkResultResponse</returns>
+    public async Task<BulkResultResponse> BulkUpdate(
       BulkResultsBody bulkResultsBody = null
     )
     {
-      var result = await Client.SendData<ApiResponse>(new HttpMethod("PATCH"), $"/results", bulkResultsBody);
+      var result = await Client.SendData<BulkResultResponse>(new HttpMethod("PATCH"), $"/results", bulkResultsBody);
       return result;
     }
 
@@ -35,7 +46,7 @@ namespace AssemblyClient
     /// Write Results
     /// </summary>
     /// <remarks>
-    /// Given a subject_id, facet_id, assessment_point_rank and assessment_id results can be sent to the Platform, along with a student_id, the grade_id and (optionally) the result_date.  **Permissions**: A school level access token with the assessments.write scope is needed to write results back to the Platform. 
+    /// Given a &#x60;subject_id&#x60;, &#x60;facet_id&#x60;, &#x60;assessment_point_rank&#x60; and &#x60;assessment_id&#x60; results can be sent to the Platform, along with a &#x60;student_id&#x60;, the &#x60;grade_id&#x60; and (optionally) the &#x60;result_date&#x60;
     /// </remarks>
     /// <param name="resultBody"> (optional)</param>
     /// <returns>List&lt;Result&gt;</returns>
@@ -51,10 +62,10 @@ namespace AssemblyClient
     /// List Results
     /// </summary>
     /// <remarks>
-    /// Returns a list of results for the student ID(s) specified by the students parameter.
+    /// Returns a list of results for the student ID(s) specified by the students parameter
     /// </remarks>
-    /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded).</param>
-    /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
+    /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;Result&gt;</returns>
@@ -78,9 +89,9 @@ namespace AssemblyClient
     /// Update a Single Result
     /// </summary>
     /// <remarks>
-    /// Once a result has been created, it can be updated on the Platform by passing the required field values in the request body. A list of the fields that were changed are returned in the response.
+    /// Once a result has been created, it can be updated on the Platform by passing the required field values in the request body. A list of the fields that were changed are returned in the response
     /// </remarks>
-    /// <param name="id">id of the entity</param>
+    /// <param name="id">Internal identifier of the entity</param>
     /// <param name="resultEntry"> (optional)</param>
     /// <returns>Result</returns>
     public async Task<Result> Update(

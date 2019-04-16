@@ -1,7 +1,19 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Dynamic;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -18,10 +30,7 @@ namespace AssemblyClient
 
     internal void OnTokenRefreshed(string newToken)
     {
-      if (TokenRefreshed != null)
-      {
-        TokenRefreshed(this, new TokenRefreshedEventArgs { Token = newToken });
-      }
+      TokenRefreshed?.Invoke(this, new TokenRefreshedEventArgs { Token = newToken });
     }
 
     public Api()
@@ -32,7 +41,8 @@ namespace AssemblyClient
     {
       this.client = client;
       this.client.DefaultRequestHeaders.Add("Accept", "application/vnd.assembly+json; version=1.1");
-      this.TokenRefreshed += (sender, args) => { };
+
+      TokenRefreshed += (sender, args) => { };
     }
 
     public virtual async Task<T> SendData<T>(HttpMethod method, string uri, object data)
@@ -90,11 +100,11 @@ namespace AssemblyClient
 
     public virtual async Task<HttpResponseMessage> Load(string resource, ExpandoObject args)
     {
-      var parsedArgs = (IDictionary<String, Object>) args;
+      var parsedArgs = (IDictionary<string, object>) args;
 
       if (parsedArgs.ContainsKey("ifModifiedSince") && parsedArgs["ifModifiedSince"] != null)
       {
-        this.client.DefaultRequestHeaders.Add("If-Modified-Since", ((DateTime)parsedArgs["ifModifiedSince"]).ToString("r"));
+        client.DefaultRequestHeaders.Add("If-Modified-Since", ((DateTime)parsedArgs["ifModifiedSince"]).ToString("r"));
         parsedArgs.Remove("ifModifiedSince");
       }
 
@@ -158,7 +168,7 @@ namespace AssemblyClient
       dynamic queryArgs = args;
       object page;
 
-      if (((IDictionary<String, Object>) queryArgs).TryGetValue("page", out page) && page != null)
+      if (((IDictionary<string, object>) queryArgs).TryGetValue("page", out page) && page != null)
       {
         allPages = false;
       }

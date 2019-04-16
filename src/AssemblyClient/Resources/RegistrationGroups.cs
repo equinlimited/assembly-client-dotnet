@@ -1,6 +1,18 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Dynamic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,42 +24,38 @@ namespace AssemblyClient
     public RegistrationGroupsResource(ApiClient client)
       : base(client)
     {
-
     }
 
     /// <summary>
     /// View a Registration Group
     /// </summary>
     /// <remarks>
-    /// Returns a list of registration groups that match the given set of filters.
+    /// Returns a list of registration groups that match the given set of filters
     /// </remarks>
-    /// <param name="id">id of the entity</param>
-    /// <param name="date">returns results for a specific date (optional)</param>
-    /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
+    /// <param name="id">Internal identifier of the entity</param>
+    /// <param name="date">Filter by a specific date, used as the &#x60;start_date&#x60; and &#x60;end_date&#x60; where applicable (optional)</param>
     /// <returns>RegistrationGroup</returns>
     public async Task<RegistrationGroup> Find(
       int? id, 
-      DateTime? date = null, 
-      int? academicYearId = null
+      DateTime? date = null
     )
     {
       dynamic args = new ExpandoObject();
       args.date = date;
-      args.academicYearId = academicYearId;
       var result = await Client.GetObject<RegistrationGroup>($"/registration_groups/{id}", args);
       return result;
     }
 
     /// <summary>
-    /// List Registration Group
+    /// List Registration Groups
     /// </summary>
     /// <remarks>
-    /// Returns a list of registration groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+    /// Returns a list of registration groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups &#x60;start_date&#x60; and &#x60;end_date&#x60;. Additionally when a date parameter is provided &#x60;student_ids&#x60; and &#x60;supervior_ids&#x60; are restricted to only those students who were enrolled in the group on the given date. 
     /// </remarks>
-    /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
-    /// <param name="yearCode">filter by school year (cannot be supplied at the same time as the students parameter) (optional)</param>
-    /// <param name="date">returns results for a specific date (optional)</param>
-    /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="yearCode">Filter by school year (optional)</param>
+    /// <param name="date">Filter by a specific date, used as the &#x60;start_date&#x60; and &#x60;end_date&#x60; where applicable (optional)</param>
+    /// <param name="academicYearId">Include all groups and group memberships from the specified academic year (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;RegistrationGroup&gt;</returns>
@@ -75,26 +83,26 @@ namespace AssemblyClient
     /// List Students for Registration Group
     /// </summary>
     /// <remarks>
-    /// Returns a list of all the students that are present in the registration group identified by group_id.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+    /// Returns a list of all the students that are present in the registration group identified by &#x60;group_id&#x60;
     /// </remarks>
-    /// <param name="id">id of the entity</param>
-    /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
-    /// <param name="date">returns results for a specific date (optional)</param>
-    /// <param name="academicYearId">returns all groups and group memberships from the specified academic year (optional)</param>
-    /// <param name="demographics">include demographics data (optional)</param>
-    /// <param name="contacts">include contacts data (optional)</param>
-    /// <param name="senNeeds">include SEN needs data (optional)</param>
-    /// <param name="addresses">include student address data (optional)</param>
-    /// <param name="care">include student care data (you must also supply the demographics parameter) (optional)</param>
-    /// <param name="everInCare">include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
-    /// <param name="languages">include student language data (optional)</param>
-    /// <param name="photo">include student photo data (optional)</param>
+    /// <param name="id">Internal identifier of the entity</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="date">Filter by a specific date, used as the &#x60;start_date&#x60; and &#x60;end_date&#x60; where applicable (optional)</param>
+    /// <param name="yearCode">Filter by school year (optional)</param>
+    /// <param name="demographics">Include demographics data (optional)</param>
+    /// <param name="contacts">Include contacts data (optional)</param>
+    /// <param name="senNeeds">Include SEN needs data (optional)</param>
+    /// <param name="addresses">Include student address data (optional)</param>
+    /// <param name="care">Include student care data (you must also supply the demographics parameter) (optional)</param>
+    /// <param name="everInCare">Include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
+    /// <param name="languages">Include student language data (optional)</param>
+    /// <param name="photo">Include student photo data (optional)</param>
     /// <returns>List&lt;Student&gt;</returns>
     public async Task<List<Student>> Students(
       int? id, 
       DateTime? ifModifiedSince = null, 
       DateTime? date = null, 
-      int? academicYearId = null, 
+      int? yearCode = null, 
       bool? demographics = null, 
       bool? contacts = null, 
       bool? senNeeds = null, 
@@ -108,7 +116,7 @@ namespace AssemblyClient
       dynamic args = new ExpandoObject();
       args.ifModifiedSince = ifModifiedSince;
       args.date = date;
-      args.academicYearId = academicYearId;
+      args.yearCode = yearCode;
       args.demographics = demographics;
       args.contacts = contacts;
       args.senNeeds = senNeeds;

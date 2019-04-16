@@ -1,6 +1,7 @@
-# Assembly Client
+# Assembly Developer API .NET Client
 
-Assembly .NET Client supports **.NET 4.5** and above.
+This library targets **.NET Standard 2.0** and can be used in *.Net Core 2.2* or *.NET 4.5* and above projects. 
+
 
 ## Installation
 

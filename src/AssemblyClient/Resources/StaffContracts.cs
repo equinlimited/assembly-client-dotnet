@@ -1,6 +1,18 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Dynamic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,28 +24,25 @@ namespace AssemblyClient
     public StaffContractsResource(ApiClient client)
       : base(client)
     {
-
     }
 
     /// <summary>
     /// List Staff Contracts
     /// </summary>
     /// <remarks>
-    /// Returns a list of staff member contracts for the school accociated with the provided &#x60;access_token&#x60;. A school level access token with the &#x60;staff_members.contracts&#x60; scope is required to access staff member contract information.
+    /// Returns a list of staff member contracts for the school accociated with the provided &#x60;access_token&#x60;. A school level access token with the &#x60;staff_members.contracts&#x60; scope is required to access staff member contract information
     /// </remarks>
-    /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
-    /// <param name="staffMemberId">show only absences fot the specified staff member (optional)</param>
-    /// <param name="date">returns results for a specific date (optional)</param>
-    /// <param name="roles">return roles information along with a staff contract (optional)</param>
-    /// <param name="salaries">return salaries information along with a staff contract (requires staff_members.salaries scope for full information - only the hours_per_week, fte and weeks_per_year fields are shown without it) (optional)</param>
-    /// <param name="allowances">return allowances information along with a staff contract (requires staff_members.salaries scope) (optional)</param>
+    /// <param name="staffMemberId">Filter to the specified staff member (optional)</param>
+    /// <param name="date">Filter by a specific date, used as the &#x60;start_date&#x60; and &#x60;end_date&#x60; where applicable (optional)</param>
+    /// <param name="roles">Include role information along with a staff contract (optional)</param>
+    /// <param name="salaries">Include salaries information along with a staff contract (requires &#x60;staff_members.salaries&#x60; scope for full information - only the &#x60;hours_per_week&#x60;, &#x60;fte&#x60; and &#x60;weeks_per_year&#x60; fields are shown without it) (optional)</param>
+    /// <param name="allowances">Include allowances information along with a staff contract (requires &#x60;staff_members.salaries&#x60; scope) (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;StaffContract&gt;</returns>
     public async Task<List<StaffContract>> List(
-      DateTime? ifModifiedSince = null, 
       int? staffMemberId = null, 
-      bool? date = null, 
+      string date = null, 
       bool? roles = null, 
       bool? salaries = null, 
       bool? allowances = null, 
@@ -42,7 +51,6 @@ namespace AssemblyClient
     )
     {
       dynamic args = new ExpandoObject();
-      args.ifModifiedSince = ifModifiedSince;
       args.staffMemberId = staffMemberId;
       args.date = date;
       args.roles = roles;

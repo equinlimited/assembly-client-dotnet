@@ -1,6 +1,18 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Dynamic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,16 +24,15 @@ namespace AssemblyClient
     public ContactsResource(ApiClient client)
       : base(client)
     {
-
     }
 
     /// <summary>
     /// List Contacts
     /// </summary>
     /// <remarks>
-    /// Returns a list of contacts that match the given set of filters.
+    /// Returns a list of contacts that match the given set of filters
     /// </remarks>
-    /// <param name="studentId">a student_id to filter by (optional)</param>
+    /// <param name="studentId">Filter to the specified student (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;Contact&gt;</returns>

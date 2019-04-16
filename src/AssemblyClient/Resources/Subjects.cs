@@ -1,6 +1,18 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Dynamic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,14 +24,13 @@ namespace AssemblyClient
     public SubjectsResource(ApiClient client)
       : base(client)
     {
-
     }
 
     /// <summary>
     /// List Subjects
     /// </summary>
     /// <remarks>
-    /// Returns a list of the Assembly Platform&#39;s subjects.
+    /// Returns a list of the Assembly Platform&#39;s subjects
     /// </remarks>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>

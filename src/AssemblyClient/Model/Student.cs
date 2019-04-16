@@ -1,3 +1,16 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -6,6 +19,9 @@ using Newtonsoft.Json.Serialization;
 namespace AssemblyClient {
   public class Student
   {
+    [JsonProperty("object")]
+    public string Object { get; set; }
+
     [JsonProperty("id")]
     public int? Id { get; set; }
 
@@ -61,7 +77,7 @@ namespace AssemblyClient {
     public StudentMedical Medical { get; set; }
 
     [JsonProperty("contacts")]
-    public List<Contact> Contacts { get; set; }
+    public List<StudentContacts> Contacts { get; set; }
 
     [JsonProperty("address")]
     public StudentAddress Address { get; set; }
@@ -75,12 +91,12 @@ namespace AssemblyClient {
 
     public Student()
     {
-      this.Demographics = new StudentDemographics();
-      this.Medical = new StudentMedical();
-      this.Contacts = new List<Contact>();
-      this.Address = new StudentAddress();
-      this.Languages = new StudentLanguages();
-      this.Photo = new StudentPhoto();
+      Demographics = new StudentDemographics();
+      Medical = new StudentMedical();
+      Contacts = new List<StudentContacts>();
+      Address = new StudentAddress();
+      Languages = new StudentLanguages();
+      Photo = new StudentPhoto();
     }
   }
 }

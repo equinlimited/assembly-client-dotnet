@@ -1,3 +1,16 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -6,6 +19,9 @@ using Newtonsoft.Json.Serialization;
 namespace AssemblyClient {
   public class StaffMember
   {
+    [JsonProperty("object")]
+    public string Object { get; set; }
+
     [JsonProperty("id")]
     public int? Id { get; set; }
 
@@ -42,8 +58,11 @@ namespace AssemblyClient {
     [JsonProperty("email")]
     public string Email { get; set; }
 
+    [JsonProperty("emails")]
+    public List<EmailInfo> Emails { get; set; }
+
     [JsonProperty("telephone_numbers")]
-    public List<TelephoneNumber> TelephoneNumbers { get; set; }
+    public List<TelephoneNumberInfo> TelephoneNumbers { get; set; }
 
     [JsonProperty("is_teaching_staff")]
     public bool? IsTeachingStaff { get; set; }
@@ -52,10 +71,10 @@ namespace AssemblyClient {
     public bool? IncludedInCensus { get; set; }
 
     [JsonProperty("start_date")]
-    public string StartDate { get; set; }
+    public DateTime? StartDate { get; set; }
 
     [JsonProperty("end_date")]
-    public string EndDate { get; set; }
+    public DateTime? EndDate { get; set; }
 
     [JsonProperty("demographics")]
     public StaffMemberDemographics Demographics { get; set; }
@@ -66,9 +85,10 @@ namespace AssemblyClient {
 
     public StaffMember()
     {
-      this.TelephoneNumbers = new List<TelephoneNumber>();
-      this.Demographics = new StaffMemberDemographics();
-      this.QualificationInfo = new StaffMemberQualificationInfo();
+      Emails = new List<EmailInfo>();
+      TelephoneNumbers = new List<TelephoneNumberInfo>();
+      Demographics = new StaffMemberDemographics();
+      QualificationInfo = new StaffMemberQualificationInfo();
     }
   }
 }

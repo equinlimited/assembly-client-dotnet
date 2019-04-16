@@ -1,6 +1,18 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Dynamic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,23 +24,24 @@ namespace AssemblyClient
     public AttendancesResource(ApiClient client)
       : base(client)
     {
-
     }
 
     /// <summary>
     /// List Attendances
     /// </summary>
     /// <remarks>
-    /// Returns a list of attendances. By default, attendances are returned from the start to the end of the current week.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+    /// Returns a list of attendances. By default, attendances are returned from the start to the end of the current week
     /// </remarks>
-    /// <param name="studentId">a student_id to filter by (optional)</param>
-    /// <param name="registrationGroupId">id of a registration group (optional)</param>
-    /// <param name="startDate">the start date of the period to query (optional)</param>
-    /// <param name="endDate">the end date of the period to query (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="studentId">Filter to the specified student (optional)</param>
+    /// <param name="registrationGroupId">ID of a registration group (optional)</param>
+    /// <param name="startDate">The start date of the period to filter by (optional)</param>
+    /// <param name="endDate">The end date of the period to filter by (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;Attendance&gt;</returns>
     public async Task<List<Attendance>> List(
+      DateTime? ifModifiedSince = null, 
       int? studentId = null, 
       int? registrationGroupId = null, 
       DateTime? startDate = null, 
@@ -38,6 +51,7 @@ namespace AssemblyClient
     )
     {
       dynamic args = new ExpandoObject();
+      args.ifModifiedSince = ifModifiedSince;
       args.studentId = studentId;
       args.registrationGroupId = registrationGroupId;
       args.startDate = startDate;
@@ -52,19 +66,25 @@ namespace AssemblyClient
     /// List Attendance Summaries
     /// </summary>
     /// <remarks>
-    /// Returns a list of attendance summaries.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+    /// Returns a list of attendance summaries
     /// </remarks>
-    /// <param name="studentId">a student_id to filter by (optional)</param>
-    /// <param name="registrationGroupId">id of a registration group (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="studentId">Filter to the specified student (optional)</param>
+    /// <param name="registrationGroupId">ID of a registration group (optional)</param>
+    /// <param name="academicYearId">Include all groups and group memberships from the specified academic year (optional)</param>
     /// <returns>List&lt;AttendanceSummary&gt;</returns>
     public async Task<List<AttendanceSummary>> Summaries(
+      DateTime? ifModifiedSince = null, 
       int? studentId = null, 
-      int? registrationGroupId = null
+      int? registrationGroupId = null, 
+      int? academicYearId = null
     )
     {
       dynamic args = new ExpandoObject();
+      args.ifModifiedSince = ifModifiedSince;
       args.studentId = studentId;
       args.registrationGroupId = registrationGroupId;
+      args.academicYearId = academicYearId;
       var results = await Client.GetList<AttendanceSummary>($"/attendances/summaries", args);
       return results;
     }

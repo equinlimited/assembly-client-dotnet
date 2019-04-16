@@ -1,6 +1,18 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Dynamic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,18 +24,17 @@ namespace AssemblyClient
     public StaffMembersResource(ApiClient client)
       : base(client)
     {
-
     }
 
     /// <summary>
     /// View a Staff Member
     /// </summary>
     /// <remarks>
-    /// Returns an individual staff member record for the given ID.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+    /// Returns an individual staff member record for the given ID
     /// </remarks>
-    /// <param name="id">id of the entity</param>
-    /// <param name="demographics">include demographics data (optional)</param>
-    /// <param name="qualifications">include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
+    /// <param name="id">Internal identifier of the entity</param>
+    /// <param name="demographics">Include demographics data (optional)</param>
+    /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
     /// <returns>StaffMember</returns>
     public async Task<StaffMember> Find(
       int? id, 
@@ -42,12 +53,12 @@ namespace AssemblyClient
     /// List Left Staff Members
     /// </summary>
     /// <remarks>
-    /// Returns a list of staff members who have left the school.  **Note:** The &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details).&#39; 
+    /// Returns a list of staff members who have left the school
     /// </remarks>
-    /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
-    /// <param name="teachersOnly">return only staff who are teachers (optional)</param>
-    /// <param name="demographics">include demographics data (optional)</param>
-    /// <param name="qualifications">include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="teachersOnly">Filter to staff who are teachers (optional)</param>
+    /// <param name="demographics">Include demographics data (optional)</param>
+    /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
     /// <returns>List&lt;StaffMember&gt;</returns>
     public async Task<List<StaffMember>> Left(
       DateTime? ifModifiedSince = null, 
@@ -69,12 +80,12 @@ namespace AssemblyClient
     /// List Staff Members
     /// </summary>
     /// <remarks>
-    /// Returns a list of staff members for the school accociated with the provided &#x60;access_token&#x60;.  **Note:** Note the &#x60;If-Modified-Since&#x60; header is optional (see the page on [Conditional Requests](/api#conditional-requests) for more details). 
+    /// Returns a list of staff members for the school accociated with the provided &#x60;access_token&#x60;
     /// </remarks>
-    /// <param name="ifModifiedSince">If-Modified-Since is optional (see the page on Conditional Requests for more details). (optional)</param>
-    /// <param name="teachersOnly">return only staff who are teachers (optional)</param>
-    /// <param name="demographics">include demographics data (optional)</param>
-    /// <param name="qualifications">include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="teachersOnly">Filter to staff who are teachers (optional)</param>
+    /// <param name="demographics">Include demographics data (optional)</param>
+    /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;StaffMember&gt;</returns>

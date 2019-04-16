@@ -1,5 +1,2 @@
-.swagger-codegen
-.swagger-codegen-ignore
 .openapi-generator
 .openapi-generator-ignore
-bash.sh

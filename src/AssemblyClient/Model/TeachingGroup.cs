@@ -1,3 +1,16 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -6,29 +19,14 @@ using Newtonsoft.Json.Serialization;
 namespace AssemblyClient {
   public class TeachingGroup
   {
+    [JsonProperty("object")]
+    public string Object { get; set; }
+
     [JsonProperty("id")]
     public int? Id { get; set; }
 
-    [JsonProperty("school_id")]
-    public int? SchoolId { get; set; }
-
-    [JsonProperty("source_id")]
-    public string SourceId { get; set; }
-
     [JsonProperty("name")]
     public string Name { get; set; }
-
-    [JsonProperty("created_at")]
-    public DateTime? CreatedAt { get; set; }
-
-    [JsonProperty("updated_at")]
-    public DateTime? UpdatedAt { get; set; }
-
-    [JsonProperty("academic_year_id")]
-    public int? AcademicYearId { get; set; }
-
-    [JsonProperty("subject_id")]
-    public int? SubjectId { get; set; }
 
     [JsonProperty("start_date")]
     public DateTime? StartDate { get; set; }
@@ -36,18 +34,31 @@ namespace AssemblyClient {
     [JsonProperty("end_date")]
     public DateTime? EndDate { get; set; }
 
-    [JsonProperty("level")]
-    public string Level { get; set; }
+    [JsonProperty("academic_year_id")]
+    public int? AcademicYearId { get; set; }
 
-    [JsonProperty("assessment_id")]
-    public int? AssessmentId { get; set; }
+    [JsonProperty("supervisor_ids")]
+    public List<int?> SupervisorIds { get; set; }
 
-    [JsonProperty("effective_at")]
-    public DateTime? EffectiveAt { get; set; }
+    [JsonProperty("student_ids")]
+    public List<int?> StudentIds { get; set; }
+
+    [JsonProperty("subject")]
+    public Subject Subject { get; set; }
+
+    [JsonProperty("mis_level")]
+    public string MisLevel { get; set; }
+
+    [JsonProperty("assessment")]
+    public Assessment Assessment { get; set; }
 
 
     public TeachingGroup()
     {
+      SupervisorIds = new List<int?>();
+      StudentIds = new List<int?>();
+      Subject = new Subject();
+      Assessment = new Assessment();
     }
   }
 }

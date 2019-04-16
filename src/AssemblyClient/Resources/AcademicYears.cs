@@ -1,6 +1,18 @@
+/**
+ * Assembly Developer API .NET Client
+ * Version 1.1.0
+ *
+ * Support
+ * Email: help@assembly.education
+ * URL:   http://developers.assembly.education
+ *
+ * Terms of Service: http://assembly.education/terms/
+ * License:          MIT, https://spdx.org/licenses/MIT.html
+ */
+
+
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Dynamic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,16 +24,15 @@ namespace AssemblyClient
     public AcademicYearsResource(ApiClient client)
       : base(client)
     {
-
     }
 
     /// <summary>
     /// View an Academic Year
     /// </summary>
     /// <remarks>
-    /// Returns a single academic year for the school associated with the provided access_token.
+    /// Returns a single academic year for the school associated with the provided &#x60;access_token&#x60;
     /// </remarks>
-    /// <param name="id">id of the entity</param>
+    /// <param name="id">Internal identifier of the entity</param>
     /// <returns>AcademicYear</returns>
     public async Task<AcademicYear> Find(
       int? id
@@ -36,7 +47,7 @@ namespace AssemblyClient
     /// List Academic Years
     /// </summary>
     /// <remarks>
-    /// Returns a list of academic years for the school associated with the provided access_token. The dates of these academic years can be used to filter data in other API endpoints.
+    /// Returns a list of academic years for the school associated with the provided &#x60;access_token&#x60;. The dates of these academic years can be used to filter data in other API endpoints
     /// </remarks>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
