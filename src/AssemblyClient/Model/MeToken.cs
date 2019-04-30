@@ -1,6 +1,7 @@
 /**
  * Assembly Developer API .NET Client
- * Version 1.1.0
+ * SDK Version 2.2.352
+ * API Version 1.1.0
  *
  * Support
  * Email: help@assembly.education

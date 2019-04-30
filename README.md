@@ -1,7 +1,6 @@
 # Assembly Developer API .NET Client
 
-This library targets **.NET Standard 2.0** and can be used in *.Net Core 2.2* or *.NET 4.5* and above projects. 
-
+This library targets **.NET Standard 2.0** and can be used in *.Net Core 2.2* or *.NET 4.5* and above projects.
 
 ## Installation
 
@@ -29,7 +28,6 @@ var config = new ApiConfiguration()
 // To connect to the live Platform, rather than the Sandbox environment, use simply: new ApiClient();
 var client = new ApiClient(AssemblyEnvironment.Sandbox);
 client.Configure(config);
-
 
 // -----------------------------------------------------------------
 

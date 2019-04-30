@@ -1,6 +1,7 @@
 /**
  * Assembly Developer API .NET Client
- * Version 1.1.0
+ * SDK Version 2.2.352
+ * API Version 1.1.0
  *
  * Support
  * Email: help@assembly.education
@@ -47,31 +48,36 @@ namespace AssemblyClient
 
     public virtual async Task<T> SendData<T>(HttpMethod method, string uri, object data)
     {
-      var response = await client.SendData(method, uri, Configuration.Token, data);
-      var isTokenValid = await response.IsValidToken();
+      try {
+        var response = await client.SendData(method, uri, Configuration.Token, data);
+        var isTokenValid = await response.IsValidToken();
 
-      if (Configuration.Debug)
-      {
-        Console.WriteLine($"Assembly API POST: {uri}");
+        if (Configuration.Debug)
+        {
+          Console.WriteLine($"Assembly API POST: {uri}");
+        }
+
+        if (!isTokenValid)
+        {
+          var newToken = await RefreshToken(Configuration.RefreshToken);
+          Configuration.Token = newToken;
+
+          OnTokenRefreshed(newToken);
+
+          response = await client.SendData(method, uri, Configuration.Token, data);
+          await response.EnsurePlatformSuccess();
+        }
+        else
+        {
+          await response.EnsurePlatformSuccess();
+        }
+
+        var result = await response.Deserialize<T>();
+        return result;
       }
-
-      if (!isTokenValid)
-      {
-        var newToken = await RefreshToken(Configuration.RefreshToken);
-        Configuration.Token = newToken;
-
-        OnTokenRefreshed(newToken);
-
-        response = await client.SendData(method, uri, Configuration.Token, data);
-        await response.EnsurePlatformSuccess();
+      catch(Exception e) {
+        throw new ApiException(client.BaseAddress, uri, $"Failed to {method.Method} data to the platform", e);
       }
-      else
-      {
-        await response.EnsurePlatformSuccess();
-      }
-
-      var result = await response.Deserialize<T>();
-      return result;
     }
 
     public virtual async Task<HttpResponseMessage> Load(string resource)
@@ -108,15 +114,7 @@ namespace AssemblyClient
         parsedArgs.Remove("ifModifiedSince");
       }
 
-      args = (ExpandoObject) parsedArgs;
-
-      var query = args.ToParams();
-      var resourceWithQuery = $"{resource}";
-
-      if (!string.IsNullOrEmpty(query))
-      {
-        resourceWithQuery = $"{resourceWithQuery}?{query}";
-      }
+      var resourceWithQuery = CreateResourceWithQuery(resource, (ExpandoObject) parsedArgs);
 
       if (Configuration.Debug)
       {
@@ -144,23 +142,6 @@ namespace AssemblyClient
       return response;
     }
 
-    private ExpandoObject FormatData(IDictionary<string, object> me)
-    {
-      var target = (IDictionary<string, object>)new ExpandoObject();
-
-      foreach (var v in me)
-      {
-        if (v.Key == "object")
-        {
-          continue;
-        }
-
-        target.Add(v.Key.ToProperty(), v.Value);
-      }
-
-      return (ExpandoObject)target;
-    }
-
     public virtual async Task<IList<T>> GetList<T>(string resource, ExpandoObject args)
     {
       var results = new List<T>();
@@ -168,65 +149,88 @@ namespace AssemblyClient
       dynamic queryArgs = args;
       object page;
 
-      if (((IDictionary<string, object>) queryArgs).TryGetValue("page", out page) && page != null)
+      try
       {
-        allPages = false;
-      }
-      else
-      {
-        queryArgs.page = 1;
-      }
-
-      do
-      {
-        try
+        if (((IDictionary<string, object>) queryArgs).TryGetValue("page", out page) && page != null)
         {
-          var response = await Load(resource, queryArgs);
-
-          var data = await response.Content.ReadAsStringAsync();
-
-          var list = JsonConvert.DeserializeObject<List<T>>(data);
-
-          results.AddRange(list);
-
-          var nextPage = response
-            .Headers
-            .GetValues("Next-Page")[0];
-
-          if (string.IsNullOrEmpty(nextPage) || !allPages)
-          {
-            queryArgs.page = null;
-          }
-          else
-          {
-            queryArgs.page = int.Parse(nextPage);
-          }
+          allPages = false;
         }
-        catch (RequestThrottledException ex)
+        else
         {
-          var waitingPeriod = ex.Period * 1000;
-          if (Configuration.Debug)
-          {
-            Console.WriteLine($"Assembly API rate limit hit at {DateTime.Now} due to reaching {ex.Count} requests in {ex.Period} seconds when limit is {ex.Limit} waiting {ex.Period} second before retrying");
-          }
-          await Task.Delay(waitingPeriod);
-          if (Configuration.Debug)
-          {
-            Console.WriteLine($"Assembly API rate limit hit waited period of {ex.Period} seconds finished at {DateTime.Now} now retrying");
-          }
+          queryArgs.page = 1;
         }
 
-      } while (queryArgs.page != null);
+        do
+        {
+          try
+          {
+            var response = await Load(resource, queryArgs);
+
+            var data = await response.Content.ReadAsStringAsync();
+
+            var list = JsonConvert.DeserializeObject<List<T>>(data);
+
+            results.AddRange(list);
+
+            var nextPage = response
+              .Headers
+              .GetValues("Next-Page")[0];
+
+            if (string.IsNullOrEmpty(nextPage) || !allPages)
+            {
+              queryArgs.page = null;
+            }
+            else
+            {
+              queryArgs.page = int.Parse(nextPage);
+            }
+          }
+          catch (RequestThrottledException ex)
+          {
+            var waitingPeriod = ex.Period * 1000;
+            if (Configuration.Debug)
+            {
+              Console.WriteLine($"Assembly API rate limit hit at {DateTime.Now} due to reaching {ex.Count} requests in {ex.Period} seconds when limit is {ex.Limit} waiting {ex.Period} second before retrying");
+            }
+            await Task.Delay(waitingPeriod);
+            if (Configuration.Debug)
+            {
+              Console.WriteLine($"Assembly API rate limit hit waited period of {ex.Period} seconds finished at {DateTime.Now} now retrying");
+            }
+          }
+        } while (queryArgs.page != null);
+      }
+      catch(Exception e) {
+        throw new ApiException(client.BaseAddress, CreateResourceWithQuery(resource, args), $"Error getting list of objects from {resource}", e);
+      }
 
       return results;
     }
 
     public virtual async Task<T> GetObject<T>(string resource, ExpandoObject args)
     {
-      var data = await Load(resource, args);
-      var rawData = await data.Content.ReadAsStringAsync();
-      var obj = JsonConvert.DeserializeObject<T>(rawData);
-      return obj;
+      try {
+        var data = await Load(resource, args);
+        var rawData = await data.Content.ReadAsStringAsync();
+        var obj = JsonConvert.DeserializeObject<T>(rawData);
+        return obj;
+      }
+      catch(Exception e) {
+        throw new ApiException(client.BaseAddress, CreateResourceWithQuery(resource, args), $"Error getting object from {resource}", e);
+      }
+    }
+
+    private string CreateResourceWithQuery(string resource, ExpandoObject args)
+    {
+      var query = args.ToParams();
+      var resourceWithQuery = $"{resource}";
+
+      if (!string.IsNullOrEmpty(query))
+      {
+        resourceWithQuery = $"{resourceWithQuery}?{query}";
+      }
+
+      return resourceWithQuery;
     }
   }
 }
