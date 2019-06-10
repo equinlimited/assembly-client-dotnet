@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.352
+ * SDK Version 2.2.363
  * API Version 1.1.0
  *
  * Support
@@ -56,7 +56,7 @@ namespace AssemblyClient
     /// <remarks>
     /// Returns a list of staff members who have left the school
     /// </remarks>
-    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="teachersOnly">Filter to staff who are teachers (optional)</param>
     /// <param name="demographics">Include demographics data (optional)</param>
     /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
@@ -83,7 +83,7 @@ namespace AssemblyClient
     /// <remarks>
     /// Returns a list of staff members for the school accociated with the provided &#x60;access_token&#x60;
     /// </remarks>
-    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="teachersOnly">Filter to staff who are teachers (optional)</param>
     /// <param name="demographics">Include demographics data (optional)</param>
     /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>

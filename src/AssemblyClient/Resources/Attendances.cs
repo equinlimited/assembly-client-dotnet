@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.352
+ * SDK Version 2.2.363
  * API Version 1.1.0
  *
  * Support
@@ -33,7 +33,7 @@ namespace AssemblyClient
     /// <remarks>
     /// Returns a list of attendances. By default, attendances are returned from the start to the end of the current week
     /// </remarks>
-    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="studentId">Filter to the specified student (optional)</param>
     /// <param name="registrationGroupId">ID of a registration group (optional)</param>
     /// <param name="startDate">The start date of the period to filter by (optional)</param>
@@ -69,7 +69,7 @@ namespace AssemblyClient
     /// <remarks>
     /// Returns a list of attendance summaries
     /// </remarks>
-    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="studentId">Filter to the specified student (optional)</param>
     /// <param name="registrationGroupId">ID of a registration group (optional)</param>
     /// <param name="academicYearId">Include all groups and group memberships from the specified academic year (optional)</param>

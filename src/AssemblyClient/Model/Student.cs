@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.352
+ * SDK Version 2.2.363
  * API Version 1.1.0
  *
  * Support
@@ -34,6 +34,9 @@ namespace AssemblyClient {
 
     [JsonProperty("former_upn")]
     public string FormerUpn { get; set; }
+
+    [JsonProperty("uln")]
+    public string Uln { get; set; }
 
     [JsonProperty("mis_id")]
     public string MisId { get; set; }

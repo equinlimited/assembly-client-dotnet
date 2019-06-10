@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.352
+ * SDK Version 2.2.363
  * API Version 1.1.0
  *
  * Support
@@ -66,7 +66,7 @@ namespace AssemblyClient
     /// Returns a list of results for the student ID(s) specified by the students parameter
     /// </remarks>
     /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded)</param>
-    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;Result&gt;</returns>

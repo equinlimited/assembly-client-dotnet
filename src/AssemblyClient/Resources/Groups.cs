@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.352
+ * SDK Version 2.2.363
  * API Version 1.1.0
  *
  * Support
@@ -50,7 +50,7 @@ namespace AssemblyClient
     /// <remarks>
     /// Returns a list of groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups &#x60;start_date&#x60; and &#x60;end_date&#x60;. Additionally when a date parameter is provided &#x60;student_ids&#x60; and &#x60;supervior_ids&#x60; are restricted to only those students who were enrolled in the group on the given date. 
     /// </remarks>
-    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="academicYearId">Include all groups and group memberships from the specified academic year (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>

@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.352
+ * SDK Version 2.2.363
  * API Version 1.1.0
  *
  * Support
@@ -74,7 +74,7 @@ namespace AssemblyClient
     /// <remarks>
     /// Returns a list of students who have left the school
     /// </remarks>
-    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <returns>List&lt;Student&gt;</returns>
     public async Task<List<Student>> Left(
       DateTime? ifModifiedSince = null
@@ -92,7 +92,7 @@ namespace AssemblyClient
     /// <remarks>
     /// Returns a list of students for the school associated with the provided &#x60;access_token&#x60;
     /// </remarks>
-    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Conditional-Requests)) (optional)</param>
+    /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded) (optional)</param>
     /// <param name="date">Filter by a specific date, used as the &#x60;start_date&#x60; and &#x60;end_date&#x60; where applicable (optional)</param>
     /// <param name="yearCode">Filter by school year (optional)</param>
