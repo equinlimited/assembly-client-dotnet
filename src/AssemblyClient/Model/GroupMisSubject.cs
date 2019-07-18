@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.363
+ * SDK Version 2.2.376
  * API Version 1.1.0
  *
  * Support
@@ -18,17 +18,27 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
-  public class CalendarEventMisType
+  public class GroupMisSubject
   {
+    [JsonProperty("object")]
+    public string Object { get; set; }
+
+    [JsonProperty("id")]
+    public int? Id { get; set; }
+
     [JsonProperty("name")]
     public string Name { get; set; }
 
-    [JsonProperty("description")]
-    public string Description { get; set; }
+    [JsonProperty("code")]
+    public string Code { get; set; }
+
+    [JsonProperty("subject")]
+    public GroupMisSubjectSubject Subject { get; set; }
 
 
-    public CalendarEventMisType()
+    public GroupMisSubject()
     {
+      Subject = new GroupMisSubjectSubject();
     }
   }
 }

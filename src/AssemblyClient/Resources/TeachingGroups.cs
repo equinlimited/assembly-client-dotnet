@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.363
+ * SDK Version 2.2.376
  * API Version 1.1.0
  *
  * Support
@@ -51,7 +51,7 @@ namespace AssemblyClient
     /// List Teaching Groups
     /// </summary>
     /// <remarks>
-    /// Returns a list of teaching groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups &#x60;start_date&#x60; and &#x60;end_date&#x60;. Additionally when a date parameter is provided &#x60;student_ids&#x60; and &#x60;supervior_ids&#x60; are restricted to only those students who were enrolled in the group on the given date. 
+    /// Returns a list of teaching groups that match the given set of filters.  If a date parameter is provided then the list of groups returned is filtered to only those where the provided date falls between the groups start_date and end_date. Additionally when a date parameter is provided student_ids and supervior_ids are restricted to only those students who were enrolled in the group on the given date. 
     /// </remarks>
     /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="subjectCode">Filter by subject (optional)</param>
@@ -97,6 +97,7 @@ namespace AssemblyClient
     /// <param name="demographics">Include demographics data (optional)</param>
     /// <param name="contacts">Include contacts data (optional)</param>
     /// <param name="senNeeds">Include SEN needs data (optional)</param>
+    /// <param name="emails">translation missing: en.api.params.query.emails (optional)</param>
     /// <param name="addresses">Include student address data (optional)</param>
     /// <param name="care">Include student care data (you must also supply the demographics parameter) (optional)</param>
     /// <param name="everInCare">Include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
@@ -112,6 +113,7 @@ namespace AssemblyClient
       bool? demographics = null, 
       bool? contacts = null, 
       bool? senNeeds = null, 
+      bool? emails = null, 
       bool? addresses = null, 
       bool? care = null, 
       bool? everInCare = null, 
@@ -127,6 +129,7 @@ namespace AssemblyClient
       args.demographics = demographics;
       args.contacts = contacts;
       args.senNeeds = senNeeds;
+      args.emails = emails;
       args.addresses = addresses;
       args.care = care;
       args.everInCare = everInCare;

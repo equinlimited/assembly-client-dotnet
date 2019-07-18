@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.363
+ * SDK Version 2.2.376
  * API Version 1.1.0
  *
  * Support
@@ -20,6 +20,9 @@ using Newtonsoft.Json.Serialization;
 namespace AssemblyClient {
   public class StudentPhoto
   {
+    [JsonProperty("object")]
+    public string Object { get; set; }
+
     [JsonProperty("url")]
     public string Url { get; set; }
 

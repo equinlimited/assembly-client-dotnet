@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.363
+ * SDK Version 2.2.376
  * API Version 1.1.0
  *
  * Support
@@ -26,6 +26,9 @@ namespace AssemblyClient {
     [JsonProperty("id")]
     public int? Id { get; set; }
 
+    [JsonProperty("type")]
+    public string Type { get; set; }
+
     [JsonProperty("name")]
     public string Name { get; set; }
 
@@ -38,19 +41,9 @@ namespace AssemblyClient {
     [JsonProperty("end_date")]
     public DateTime? EndDate { get; set; }
 
-    [JsonProperty("is_active")]
-    public bool? IsActive { get; set; }
-
-    [JsonProperty("is_recurrent")]
-    public bool? IsRecurrent { get; set; }
-
-    [JsonProperty("mis_type")]
-    public CalendarEventMisType MisType { get; set; }
-
 
     public CalendarEvent()
     {
-      MisType = new CalendarEventMisType();
     }
   }
 }

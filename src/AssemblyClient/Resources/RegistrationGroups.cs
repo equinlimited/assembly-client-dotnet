@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.363
+ * SDK Version 2.2.376
  * API Version 1.1.0
  *
  * Support
@@ -93,6 +93,7 @@ namespace AssemblyClient
     /// <param name="demographics">Include demographics data (optional)</param>
     /// <param name="contacts">Include contacts data (optional)</param>
     /// <param name="senNeeds">Include SEN needs data (optional)</param>
+    /// <param name="emails">translation missing: en.api.params.query.emails (optional)</param>
     /// <param name="addresses">Include student address data (optional)</param>
     /// <param name="care">Include student care data (you must also supply the demographics parameter) (optional)</param>
     /// <param name="everInCare">Include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
@@ -107,6 +108,7 @@ namespace AssemblyClient
       bool? demographics = null, 
       bool? contacts = null, 
       bool? senNeeds = null, 
+      bool? emails = null, 
       bool? addresses = null, 
       bool? care = null, 
       bool? everInCare = null, 
@@ -121,6 +123,7 @@ namespace AssemblyClient
       args.demographics = demographics;
       args.contacts = contacts;
       args.senNeeds = senNeeds;
+      args.emails = emails;
       args.addresses = addresses;
       args.care = care;
       args.everInCare = everInCare;

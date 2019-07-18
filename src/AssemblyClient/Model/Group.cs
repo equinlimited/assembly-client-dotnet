@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.363
+ * SDK Version 2.2.376
  * API Version 1.1.0
  *
  * Support
@@ -35,6 +35,9 @@ namespace AssemblyClient {
     [JsonProperty("type")]
     public string Type { get; set; }
 
+    [JsonProperty("mis_subject")]
+    public GroupMisSubject MisSubject { get; set; }
+
     [JsonProperty("start_date")]
     public DateTime? StartDate { get; set; }
 
@@ -50,6 +53,7 @@ namespace AssemblyClient {
 
     public Group()
     {
+      MisSubject = new GroupMisSubject();
       Supervisors = new List<Supervisor>();
       StudentIds = new List<int?>();
     }
