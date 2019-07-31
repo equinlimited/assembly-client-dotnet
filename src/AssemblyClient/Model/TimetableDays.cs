@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.376
+ * SDK Version 2.2.379
  * API Version 1.1.0
  *
  * Support
@@ -31,6 +31,9 @@ namespace AssemblyClient {
 
     [JsonProperty("long_name")]
     public string LongName { get; set; }
+
+    [JsonProperty("display_order")]
+    public int? DisplayOrder { get; set; }
 
     [JsonProperty("periods")]
     public List<TimetablePeriods> Periods { get; set; }

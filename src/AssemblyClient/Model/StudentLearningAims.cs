@@ -18,25 +18,34 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
-  public class StaffRole
+  public class StudentLearningAims
   {
     [JsonProperty("object")]
     public string Object { get; set; }
 
-    [JsonProperty("id")]
-    public int? Id { get; set; }
-
-    [JsonProperty("role_type")]
-    public string RoleType { get; set; }
+    [JsonProperty("learning_aim_source_id")]
+    public int? LearningAimSourceId { get; set; }
 
     [JsonProperty("start_date")]
     public DateTime? StartDate { get; set; }
 
-    [JsonProperty("end_date")]
-    public DateTime? EndDate { get; set; }
+    [JsonProperty("planned_end_date")]
+    public DateTime? PlannedEndDate { get; set; }
+
+    [JsonProperty("actual_end_date")]
+    public DateTime? ActualEndDate { get; set; }
+
+    [JsonProperty("completion_status")]
+    public string CompletionStatus { get; set; }
+
+    [JsonProperty("withdrawal_reason")]
+    public string WithdrawalReason { get; set; }
+
+    [JsonProperty("core_aim_indicator")]
+    public bool? CoreAimIndicator { get; set; }
 
 
-    public StaffRole()
+    public StudentLearningAims()
     {
     }
   }

@@ -18,25 +18,19 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
-  public class StaffRole
+  public class TimetableSupervisors
   {
     [JsonProperty("object")]
     public string Object { get; set; }
 
-    [JsonProperty("id")]
-    public int? Id { get; set; }
+    [JsonProperty("staff_member_id")]
+    public int? StaffMemberId { get; set; }
 
-    [JsonProperty("role_type")]
-    public string RoleType { get; set; }
-
-    [JsonProperty("start_date")]
-    public DateTime? StartDate { get; set; }
-
-    [JsonProperty("end_date")]
-    public DateTime? EndDate { get; set; }
+    [JsonProperty("role")]
+    public string Role { get; set; }
 
 
-    public StaffRole()
+    public TimetableSupervisors()
     {
     }
   }

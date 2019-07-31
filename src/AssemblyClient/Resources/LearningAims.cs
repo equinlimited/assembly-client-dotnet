@@ -20,23 +20,40 @@ using System.Threading.Tasks;
 
 namespace AssemblyClient
 {
-  public class SubjectsResource : Resource
+  public class LearningAimsResource : Resource
   {
-    public SubjectsResource(ApiClient client)
+    public LearningAimsResource(ApiClient client)
       : base(client)
     {
     }
 
     /// <summary>
-    /// List Subjects
+    /// View a Post-16 Learning Aim
     /// </summary>
     /// <remarks>
-    /// Returns a list of the Assembly Platform&#39;s subjects
+    /// Returns a Post-16 Learning Aim retrieved by ID
+    /// </remarks>
+    /// <param name="id">Internal identifier of the entity</param>
+    /// <returns>LearningAim</returns>
+    public async Task<LearningAim> Find(
+      int? id
+    )
+    {
+      dynamic args = new ExpandoObject();
+      var result = await Client.GetObject<LearningAim>($"/school/learning_aims/{id}", args);
+      return result;
+    }
+
+    /// <summary>
+    /// List Post-16 Learning Aims
+    /// </summary>
+    /// <remarks>
+    /// Returns a list of Post-16 Learning Aims defined within the school
     /// </remarks>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
-    /// <returns>List&lt;Subject&gt;</returns>
-    public async Task<List<Subject>> List(
+    /// <returns>List&lt;LearningAim&gt;</returns>
+    public async Task<List<LearningAim>> List(
       int? perPage = null, 
       int? page = null
     )
@@ -44,7 +61,7 @@ namespace AssemblyClient
       dynamic args = new ExpandoObject();
       args.perPage = perPage;
       args.page = page;
-      var results = await Client.GetList<Subject>($"/subjects", args);
+      var results = await Client.GetList<LearningAim>($"/school/learning_aims", args);
       return results;
     }
 
@@ -52,6 +69,6 @@ namespace AssemblyClient
 
   public partial class ApiClient
   {
-    public SubjectsResource Subjects => new SubjectsResource(this);
+    public LearningAimsResource LearningAims => new LearningAimsResource(this);
   }
 }

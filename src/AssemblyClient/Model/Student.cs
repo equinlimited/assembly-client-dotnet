@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.376
+ * SDK Version 2.2.379
  * API Version 1.1.0
  *
  * Support
@@ -92,6 +92,9 @@ namespace AssemblyClient {
     [JsonProperty("languages")]
     public StudentLanguages Languages { get; set; }
 
+    [JsonProperty("learning_aims")]
+    public StudentLearningAims LearningAims { get; set; }
+
     [JsonProperty("photo")]
     public StudentPhoto Photo { get; set; }
 
@@ -104,6 +107,7 @@ namespace AssemblyClient {
       Emails = new List<EmailInfo>();
       Address = new StudentAddress();
       Languages = new StudentLanguages();
+      LearningAims = new StudentLearningAims();
       Photo = new StudentPhoto();
     }
   }

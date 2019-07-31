@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.376
+ * SDK Version 2.2.379
  * API Version 1.1.0
  *
  * Support
@@ -38,8 +38,8 @@ namespace AssemblyClient
     /// <param name="date">Filter by a specific date, used as the &#x60;start_date&#x60; and &#x60;end_date&#x60; where applicable (optional)</param>
     /// <param name="startDate">The start date of the period to filter by (optional)</param>
     /// <param name="endDate">The end date of the period to filter by (optional)</param>
-    /// <returns>List&lt;Timetable&gt;</returns>
-    public async Task<List<Timetable>> Find(
+    /// <returns>Timetable</returns>
+    public async Task<Timetable> Find(
       int? id, 
       DateTime? ifModifiedSince = null, 
       string date = null, 
@@ -52,8 +52,8 @@ namespace AssemblyClient
       args.date = date;
       args.startDate = startDate;
       args.endDate = endDate;
-      var results = await Client.GetList<Timetable>($"/timetables/{id}", args);
-      return results;
+      var result = await Client.GetObject<Timetable>($"/timetables/{id}", args);
+      return result;
     }
 
     /// <summary>

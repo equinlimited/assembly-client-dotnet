@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.376
+ * SDK Version 2.2.379
  * API Version 1.1.0
  *
  * Support
@@ -36,12 +36,16 @@ namespace AssemblyClient {
     public string Type { get; set; }
 
     [JsonProperty("mis_subject")]
-    public GroupMisSubject MisSubject { get; set; }
+    public LessonGroupMisSubject MisSubject { get; set; }
+
+    [JsonProperty("subject")]
+    public GroupMisSubjectSubject Subject { get; set; }
 
 
     public LessonGroup()
     {
-      MisSubject = new GroupMisSubject();
+      MisSubject = new LessonGroupMisSubject();
+      Subject = new GroupMisSubjectSubject();
     }
   }
 }

@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.376
+ * SDK Version 2.2.379
  * API Version 1.1.0
  *
  * Support
@@ -38,6 +38,9 @@ namespace AssemblyClient {
     [JsonProperty("end_date")]
     public DateTime? EndDate { get; set; }
 
+    [JsonProperty("supervisors")]
+    public List<TimetableSupervisors> Supervisors { get; set; }
+
     [JsonProperty("rooms")]
     public List<LessonRooms> Rooms { get; set; }
 
@@ -45,6 +48,7 @@ namespace AssemblyClient {
     public TimetableLessons()
     {
       Group = new LessonGroup();
+      Supervisors = new List<TimetableSupervisors>();
       Rooms = new List<LessonRooms>();
     }
   }

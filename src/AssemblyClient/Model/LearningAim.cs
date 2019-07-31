@@ -18,25 +18,28 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
-  public class StaffRole
+  public class LearningAim
   {
     [JsonProperty("object")]
     public string Object { get; set; }
 
-    [JsonProperty("id")]
-    public int? Id { get; set; }
+    [JsonProperty("qualification_name")]
+    public string QualificationName { get; set; }
 
-    [JsonProperty("role_type")]
-    public string RoleType { get; set; }
+    [JsonProperty("qualification_number")]
+    public string QualificationNumber { get; set; }
 
-    [JsonProperty("start_date")]
-    public DateTime? StartDate { get; set; }
+    [JsonProperty("discount_code")]
+    public string DiscountCode { get; set; }
 
-    [JsonProperty("end_date")]
-    public DateTime? EndDate { get; set; }
+    [JsonProperty("qan_subject")]
+    public string QanSubject { get; set; }
+
+    [JsonProperty("expiry_date")]
+    public DateTime? ExpiryDate { get; set; }
 
 
-    public StaffRole()
+    public LearningAim()
     {
     }
   }
