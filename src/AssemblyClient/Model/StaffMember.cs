@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.379
+ * SDK Version 2.2.381
  * API Version 1.1.0
  *
  * Support
@@ -52,6 +52,9 @@ namespace AssemblyClient {
 
     [JsonProperty("title")]
     public string Title { get; set; }
+
+    [JsonProperty("salutation")]
+    public string Salutation { get; set; }
 
     [JsonProperty("dob")]
     public DateTime? Dob { get; set; }
