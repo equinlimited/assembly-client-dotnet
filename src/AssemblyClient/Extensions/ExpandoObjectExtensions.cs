@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.384
+ * SDK Version 2.2.404
  * API Version 1.1.0
  *
  * Support
@@ -12,6 +12,7 @@
  */
 
 
+using System;
 using System.Linq;
 using System.Dynamic;
 using System.Collections.Generic;
@@ -31,28 +32,34 @@ namespace AssemblyClient
 
     private static string AsQueryParam(KeyValuePair<string, object> kvp)
     {
-      var result = $"{kvp.Key}=";
       if (kvp.Value is bool?)
       {
         var boolValue = kvp.Value as bool?;
-        result += boolValue.HasValue && boolValue.Value ? "1" : "0";
+        return boolValue.HasValue && boolValue.Value ? $"{kvp.Key}=1" : $"{kvp.Key}=0";
       }
       else if (kvp.Value is List<int?>)
       {
         var ids = string.Join("+", ((List<int?>) kvp.Value).Where(x => x != null).Select(i => i.ToString()).ToArray());
-        result += $"{ids}";
+        return $"{kvp.Key}={ids}";
       }
       else if (kvp.Value is List<int>)
       {
         var ids = string.Join("+", ((List<int>) kvp.Value).Select(i => i.ToString()).ToArray());
-        result += $"{ids}";
+        return $"{kvp.Key}={ids}";
       }
-      else
+      else if (kvp.Value is DateTime)
       {
-        result += $"{kvp.Value}";
+        var dateValue = (DateTime)kvp.Value;
+        return $"{kvp.Key}={dateValue.ToString("yyyy-MM-dd")}";
+      }
+      else if (kvp.Value is DateTime?)
+      {
+        var dateValue = kvp.Value as DateTime?;
+        return dateValue.HasValue ? $"{kvp.Key}={dateValue.Value.ToString("yyyy-MM-dd")}" : string.Empty;
       }
 
-      return result;
+      var stringValue = kvp.Value.ToString().Trim();
+      return !string.IsNullOrEmpty(stringValue) ? $"{kvp.Key}={stringValue}" : string.Empty;
     }
 
     public static object V(this ExpandoObject me, string propertyName)
