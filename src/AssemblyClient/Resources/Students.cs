@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.381
+ * SDK Version 2.2.384
  * API Version 1.1.0
  *
  * Support
@@ -78,13 +78,19 @@ namespace AssemblyClient
     /// Returns a list of students who have left the school
     /// </remarks>
     /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
+    /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+    /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;Student&gt;</returns>
     public async Task<List<Student>> Left(
-      DateTime? ifModifiedSince = null
+      DateTime? ifModifiedSince = null, 
+      int? perPage = null, 
+      int? page = null
     )
     {
       dynamic args = new ExpandoObject();
       args.ifModifiedSince = ifModifiedSince;
+      args.perPage = perPage;
+      args.page = page;
       var results = await Client.GetList<Student>($"/students/left", args);
       return results;
     }

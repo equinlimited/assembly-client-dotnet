@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.381
+ * SDK Version 2.2.384
  * API Version 1.1.0
  *
  * Support
@@ -103,6 +103,8 @@ namespace AssemblyClient
     /// <param name="everInCare">Include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
     /// <param name="languages">Include student language data (optional)</param>
     /// <param name="photo">Include student photo data (optional)</param>
+    /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+    /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;Student&gt;</returns>
     public async Task<List<Student>> Students(
       int? id, 
@@ -118,7 +120,9 @@ namespace AssemblyClient
       bool? care = null, 
       bool? everInCare = null, 
       bool? languages = null, 
-      bool? photo = null
+      bool? photo = null, 
+      int? perPage = null, 
+      int? page = null
     )
     {
       dynamic args = new ExpandoObject();
@@ -135,6 +139,8 @@ namespace AssemblyClient
       args.everInCare = everInCare;
       args.languages = languages;
       args.photo = photo;
+      args.perPage = perPage;
+      args.page = page;
       var results = await Client.GetList<Student>($"/teaching_groups/{id}/students", args);
       return results;
     }

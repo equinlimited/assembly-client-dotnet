@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.381
+ * SDK Version 2.2.384
  * API Version 1.1.0
  *
  * Support
@@ -79,14 +79,20 @@ namespace AssemblyClient
     /// </remarks>
     /// <param name="assessmentPointRank">The rank of the assessment point as an Integer</param>
     /// <param name="students">ID(s) of the student(s) as an Integer. Multiple IDs can be separated with a space (so a + URL encoded)</param>
+    /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+    /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;Result&gt;</returns>
     public async Task<List<Result>> Results(
       int? assessmentPointRank, 
-      List<int?> students
+      List<int?> students, 
+      int? perPage = null, 
+      int? page = null
     )
     {
       dynamic args = new ExpandoObject();
       args.students = students;
+      args.perPage = perPage;
+      args.page = page;
       var results = await Client.GetList<Result>($"/assessment_points/{assessmentPointRank}/results", args);
       return results;
     }

@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.381
+ * SDK Version 2.2.384
  * API Version 1.1.0
  *
  * Support
@@ -120,13 +120,17 @@ namespace AssemblyClient
     /// <param name="date">Filter by a specific date, used as the &#x60;start_date&#x60; and &#x60;end_date&#x60; where applicable (optional)</param>
     /// <param name="startDate">The start date of the period to filter by (optional)</param>
     /// <param name="endDate">The end date of the period to filter by (optional)</param>
+    /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+    /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;Lesson&gt;</returns>
     public async Task<List<Lesson>> List_1(
       int? id, 
       DateTime? ifModifiedSince = null, 
       string date = null, 
       string startDate = null, 
-      string endDate = null
+      string endDate = null, 
+      int? perPage = null, 
+      int? page = null
     )
     {
       dynamic args = new ExpandoObject();
@@ -134,6 +138,8 @@ namespace AssemblyClient
       args.date = date;
       args.startDate = startDate;
       args.endDate = endDate;
+      args.perPage = perPage;
+      args.page = page;
       var results = await Client.GetList<Lesson>($"/rooms/{id}/lessons", args);
       return results;
     }

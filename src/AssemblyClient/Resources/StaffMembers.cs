@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.381
+ * SDK Version 2.2.384
  * API Version 1.1.0
  *
  * Support
@@ -60,12 +60,16 @@ namespace AssemblyClient
     /// <param name="teachersOnly">Filter to staff who are teachers (optional)</param>
     /// <param name="demographics">Include demographics data (optional)</param>
     /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
+    /// <param name="perPage">Number of results to return (optional, default to 100)</param>
+    /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;StaffMember&gt;</returns>
     public async Task<List<StaffMember>> Left(
       DateTime? ifModifiedSince = null, 
       bool? teachersOnly = null, 
       bool? demographics = null, 
-      bool? qualifications = null
+      bool? qualifications = null, 
+      int? perPage = null, 
+      int? page = null
     )
     {
       dynamic args = new ExpandoObject();
@@ -73,6 +77,8 @@ namespace AssemblyClient
       args.teachersOnly = teachersOnly;
       args.demographics = demographics;
       args.qualifications = qualifications;
+      args.perPage = perPage;
+      args.page = page;
       var results = await Client.GetList<StaffMember>($"/staff_members/left", args);
       return results;
     }
