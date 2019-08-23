@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.404
+ * SDK Version 2.2.407
  * API Version 1.1.0
  *
  * Support
@@ -25,6 +25,9 @@ namespace AssemblyClient {
 
     [JsonProperty("id")]
     public int? Id { get; set; }
+
+    [JsonProperty("mis_id")]
+    public string MisId { get; set; }
 
     [JsonProperty("first_name")]
     public string FirstName { get; set; }

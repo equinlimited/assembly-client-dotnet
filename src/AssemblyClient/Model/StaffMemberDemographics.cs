@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.404
+ * SDK Version 2.2.407
  * API Version 1.1.0
  *
  * Support
@@ -34,6 +34,9 @@ namespace AssemblyClient {
 
     [JsonProperty("disability")]
     public string Disability { get; set; }
+
+    [JsonProperty("disability_cdoe")]
+    public string DisabilityCdoe { get; set; }
 
 
     public StaffMemberDemographics()

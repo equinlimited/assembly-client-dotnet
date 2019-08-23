@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.404
+ * SDK Version 2.2.407
  * API Version 1.1.0
  *
  * Support
@@ -40,6 +40,9 @@ namespace AssemblyClient {
 
     [JsonProperty("absence_category")]
     public string AbsenceCategory { get; set; }
+
+    [JsonProperty("absence_category_code")]
+    public string AbsenceCategoryCode { get; set; }
 
     [JsonProperty("illness_category")]
     public string IllnessCategory { get; set; }

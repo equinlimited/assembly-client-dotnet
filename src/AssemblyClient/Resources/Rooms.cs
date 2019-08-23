@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.404
+ * SDK Version 2.2.407
  * API Version 1.1.0
  *
  * Support
@@ -42,9 +42,9 @@ namespace AssemblyClient
     public async Task<List<Closure>> Closures(
       int? id, 
       DateTime? ifModifiedSince = null, 
-      string date = null, 
-      string startDate = null, 
-      string endDate = null
+      DateTime? date = null, 
+      DateTime? startDate = null, 
+      DateTime? endDate = null
     )
     {
       dynamic args = new ExpandoObject();
@@ -102,9 +102,9 @@ namespace AssemblyClient
     public async Task<List<Lesson>> Lessons(
       int? id, 
       DateTime? ifModifiedSince = null, 
-      string date = null, 
-      string startDate = null, 
-      string endDate = null, 
+      DateTime? date = null, 
+      DateTime? startDate = null, 
+      DateTime? endDate = null, 
       int? perPage = null, 
       int? page = null
     )
