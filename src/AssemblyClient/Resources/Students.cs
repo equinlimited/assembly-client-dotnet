@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.407
+ * SDK Version 2.2.410
  * API Version 1.1.0
  *
  * Support
@@ -121,7 +121,7 @@ namespace AssemblyClient
       DateTime? ifModifiedSince = null, 
       List<int?> students = null, 
       DateTime? date = null, 
-      int? yearCode = null, 
+      string yearCode = null, 
       bool? demographics = null, 
       bool? contacts = null, 
       bool? senNeeds = null, 
