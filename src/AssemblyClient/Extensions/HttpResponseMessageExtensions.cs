@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.410
+ * SDK Version 2.2.416
  * API Version 1.1.0
  *
  * Support
@@ -22,23 +22,23 @@ namespace AssemblyClient
 {
   public static class HttpResponseMessageExtensions
   {
-    public static Task EnsurePlatformSuccess(this HttpResponseMessage me)
+    public static Task EnsurePlatformSuccess(this HttpResponseMessage response)
     {
-      if (me.StatusCode == (HttpStatusCode)429)
+      if (response.StatusCode == (HttpStatusCode)429)
       {
-        dynamic error = me.Deserialize();
+        dynamic error = response.Deserialize();
         var message = error.Result.error;
         var data = error.Result.data;
 
         throw new RequestThrottledException(message, (int)data.count, (int)data.period, (int)data.limit);
       }
 
-      return me.EnsureSuccessfulStatusCode();
+      return response.EnsureSuccessfulStatusCode();
     }
 
     public static async Task EnsureSuccessfulStatusCode(this HttpResponseMessage response)
     {
-      if (response.IsSuccessStatusCode)
+      if (response.IsSuccessStatusCode || response.StatusCode == (HttpStatusCode)304)
       {
         return;
       }
@@ -54,23 +54,23 @@ namespace AssemblyClient
       throw new HttpResponseDetailedException(response.StatusCode, content);
     }
 
-    public static async Task<dynamic> Deserialize(this HttpResponseMessage me)
+    public static async Task<dynamic> Deserialize(this HttpResponseMessage response)
     {
-      return await me.Deserialize<ExpandoObject>();
+      return await response.Deserialize<ExpandoObject>();
     }
 
-    public static async Task<T> Deserialize<T>(this HttpResponseMessage me)
+    public static async Task<T> Deserialize<T>(this HttpResponseMessage response)
     {
-      var result = await me.Content.ReadAsStringAsync();
+      var result = await response.Content.ReadAsStringAsync();
       var data = JsonConvert.DeserializeObject<T>(result);
       return data;
     }
 
-    public static async Task<bool> IsValidToken(this HttpResponseMessage me)
+    public static async Task<bool> IsValidToken(this HttpResponseMessage response)
     {
-      if (me.StatusCode == HttpStatusCode.Unauthorized)
+      if (response.StatusCode == HttpStatusCode.Unauthorized)
       {
-        var error = await me.Deserialize();
+        var error = await response.Deserialize();
 
         var tokenValid = error.error != "invalid_token";
 
