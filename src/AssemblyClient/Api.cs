@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.416
+ * SDK Version 2.2.419
  * API Version 1.1.0
  *
  * Support
@@ -167,6 +167,10 @@ namespace AssemblyClient
             var response = await Load(resource, queryArgs);
 
             var data = await response.Content.ReadAsStringAsync();
+
+            if (string.IsNullOrWhiteSpace(data)) {
+              data = "[]";
+            }
 
             var list = JsonConvert.DeserializeObject<List<T>>(data);
 
