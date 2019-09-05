@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.419
+ * SDK Version 2.2.424
  * API Version 1.1.0
  *
  * Support
@@ -14,8 +14,10 @@
 
 using System;
 using System.Dynamic;
+using System.Linq;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
@@ -176,9 +178,7 @@ namespace AssemblyClient
 
             results.AddRange(list);
 
-            var nextPage = response
-              .Headers
-              .GetValues("Next-Page")[0];
+            var nextPage = GetHeaderAsString(response.Headers, "Next-Page");
 
             if (string.IsNullOrEmpty(nextPage) || !allPages)
             {
@@ -235,6 +235,16 @@ namespace AssemblyClient
       }
 
       return resourceWithQuery;
+    }
+
+    private string GetHeaderAsString(HttpHeaders headers, string name)
+    {
+      IEnumerable<string> values;
+      if (headers.TryGetValues(name, out values))
+      {
+        return values.FirstOrDefault();
+      }
+      return null;
     }
   }
 }
