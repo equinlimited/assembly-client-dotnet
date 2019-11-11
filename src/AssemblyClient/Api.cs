@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.424
+ * SDK Version 2.2.432
  * API Version 1.1.0
  *
  * Support
@@ -112,7 +112,12 @@ namespace AssemblyClient
 
       if (parsedArgs.ContainsKey("ifModifiedSince") && parsedArgs["ifModifiedSince"] != null)
       {
-        client.DefaultRequestHeaders.Add("If-Modified-Since", ((DateTime)parsedArgs["ifModifiedSince"]).ToString("r"));
+        if (!client.DefaultRequestHeaders.Contains("If-Modified-Since"))
+        {
+          client.DefaultRequestHeaders.Add("If-Modified-Since", ((DateTime)parsedArgs["ifModifiedSince"]).ToString("r"));
+        } else {
+          client.DefaultRequestHeaders.IfModifiedSince = ((DateTime)parsedArgs["ifModifiedSince"]);
+        }
         parsedArgs.Remove("ifModifiedSince");
       }
 

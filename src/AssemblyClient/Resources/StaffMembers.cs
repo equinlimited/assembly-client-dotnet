@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.424
+ * SDK Version 2.2.432
  * API Version 1.1.0
  *
  * Support
@@ -34,16 +34,19 @@ namespace AssemblyClient
     /// Returns an individual staff member record for the given ID
     /// </remarks>
     /// <param name="id">Internal identifier of the entity</param>
+    /// <param name="addresses">Include address data (optional)</param>
     /// <param name="demographics">Include demographics data (optional)</param>
     /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
     /// <returns>StaffMember</returns>
     public async Task<StaffMember> Find(
       int? id, 
+      bool? addresses = null, 
       bool? demographics = null, 
       bool? qualifications = null
     )
     {
       dynamic args = new ExpandoObject();
+      args.addresses = addresses;
       args.demographics = demographics;
       args.qualifications = qualifications;
       var result = await Client.GetObject<StaffMember>($"/staff_members/{id}", args);
@@ -58,6 +61,7 @@ namespace AssemblyClient
     /// </remarks>
     /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="teachersOnly">Filter to staff who are teachers (optional)</param>
+    /// <param name="addresses">Include address data (optional)</param>
     /// <param name="demographics">Include demographics data (optional)</param>
     /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
@@ -66,6 +70,7 @@ namespace AssemblyClient
     public async Task<List<StaffMember>> Left(
       DateTime? ifModifiedSince = null, 
       bool? teachersOnly = null, 
+      bool? addresses = null, 
       bool? demographics = null, 
       bool? qualifications = null, 
       int? perPage = null, 
@@ -75,6 +80,7 @@ namespace AssemblyClient
       dynamic args = new ExpandoObject();
       args.ifModifiedSince = ifModifiedSince;
       args.teachersOnly = teachersOnly;
+      args.addresses = addresses;
       args.demographics = demographics;
       args.qualifications = qualifications;
       args.perPage = perPage;
@@ -91,6 +97,7 @@ namespace AssemblyClient
     /// </remarks>
     /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="teachersOnly">Filter to staff who are teachers (optional)</param>
+    /// <param name="addresses">Include address data (optional)</param>
     /// <param name="demographics">Include demographics data (optional)</param>
     /// <param name="qualifications">Include HLTA status, QT status, QT route and previous degree information (requires &#x60;staff_members.qualifications&#x60; scope) (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
@@ -99,6 +106,7 @@ namespace AssemblyClient
     public async Task<List<StaffMember>> List(
       DateTime? ifModifiedSince = null, 
       bool? teachersOnly = null, 
+      bool? addresses = null, 
       bool? demographics = null, 
       bool? qualifications = null, 
       int? perPage = null, 
@@ -108,6 +116,7 @@ namespace AssemblyClient
       dynamic args = new ExpandoObject();
       args.ifModifiedSince = ifModifiedSince;
       args.teachersOnly = teachersOnly;
+      args.addresses = addresses;
       args.demographics = demographics;
       args.qualifications = qualifications;
       args.perPage = perPage;

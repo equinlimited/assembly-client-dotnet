@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.424
+ * SDK Version 2.2.432
  * API Version 1.1.0
  *
  * Support
@@ -36,6 +36,7 @@ namespace AssemblyClient
     /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="studentId">Filter to the specified student (optional)</param>
     /// <param name="registrationGroupId">ID of a registration group (optional)</param>
+    /// <param name="groupId">Filter to the specified group (optional)</param>
     /// <param name="startDate">The start date of the period to filter by (optional)</param>
     /// <param name="endDate">The end date of the period to filter by (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
@@ -45,6 +46,7 @@ namespace AssemblyClient
       DateTime? ifModifiedSince = null, 
       int? studentId = null, 
       int? registrationGroupId = null, 
+      int? groupId = null, 
       DateTime? startDate = null, 
       DateTime? endDate = null, 
       int? perPage = null, 
@@ -55,6 +57,7 @@ namespace AssemblyClient
       args.ifModifiedSince = ifModifiedSince;
       args.studentId = studentId;
       args.registrationGroupId = registrationGroupId;
+      args.groupId = groupId;
       args.startDate = startDate;
       args.endDate = endDate;
       args.perPage = perPage;
@@ -72,6 +75,7 @@ namespace AssemblyClient
     /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
     /// <param name="studentId">Filter to the specified student (optional)</param>
     /// <param name="registrationGroupId">ID of a registration group (optional)</param>
+    /// <param name="groupId">Filter to the specified group (optional)</param>
     /// <param name="academicYearId">Include all groups and group memberships from the specified academic year (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
@@ -80,6 +84,7 @@ namespace AssemblyClient
       DateTime? ifModifiedSince = null, 
       int? studentId = null, 
       int? registrationGroupId = null, 
+      int? groupId = null, 
       int? academicYearId = null, 
       int? perPage = null, 
       int? page = null
@@ -89,6 +94,7 @@ namespace AssemblyClient
       args.ifModifiedSince = ifModifiedSince;
       args.studentId = studentId;
       args.registrationGroupId = registrationGroupId;
+      args.groupId = groupId;
       args.academicYearId = academicYearId;
       args.perPage = perPage;
       args.page = page;

@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.424
+ * SDK Version 2.2.432
  * API Version 1.1.0
  *
  * Support
@@ -51,7 +51,7 @@ namespace AssemblyClient
     /// Returns a list of assessment points. An &#x60;assessment_point&#x60; object represents a point in the school key stage, year, term or half-term that results can be attached to. When sending results back to the Platform, the &#x60;assessment_point_rank&#x60; should be used - this will remain constant across all environments
     /// </remarks>
     /// <param name="yearCode">Filter by school year (optional)</param>
-    /// <param name="type">Filter by assessment point type (optional)</param>
+    /// <param name="type">Filter by type (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;AssessmentPoint&gt;</returns>

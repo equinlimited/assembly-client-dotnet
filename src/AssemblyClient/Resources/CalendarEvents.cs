@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.424
+ * SDK Version 2.2.432
  * API Version 1.1.0
  *
  * Support
@@ -34,7 +34,7 @@ namespace AssemblyClient
     /// Returns a list of calendar events from the school calendar. This category includes items such as staff meetings and school assembly times as you can see from the sample response below
     /// </remarks>
     /// <param name="ifModifiedSince">Filter results since it was last fetched (see [Conditional Requests](/#section/Concepts/Conditional-Requests)) (optional)</param>
-    /// <param name="type">Filter by assessment point type (optional)</param>
+    /// <param name="type">Filter by type (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;CalendarEvent&gt;</returns>

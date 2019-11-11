@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.424
+ * SDK Version 2.2.432
  * API Version 1.1.0
  *
  * Support
@@ -47,6 +47,9 @@ namespace AssemblyClient {
     [JsonProperty("salutation")]
     public string Salutation { get; set; }
 
+    [JsonProperty("address")]
+    public ContactAddress Address { get; set; }
+
     [JsonProperty("emails")]
     public List<EmailInfo> Emails { get; set; }
 
@@ -59,6 +62,7 @@ namespace AssemblyClient {
 
     public Contact()
     {
+      Address = new ContactAddress();
       Emails = new List<EmailInfo>();
       TelephoneNumbers = new List<TelephoneNumberInfo>();
       Students = new List<ContactStudents>();

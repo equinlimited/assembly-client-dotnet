@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.424
+ * SDK Version 2.2.432
  * API Version 1.1.0
  *
  * Support
@@ -98,7 +98,7 @@ namespace AssemblyClient
     /// <param name="contacts">Include contacts data (optional)</param>
     /// <param name="senNeeds">Include SEN needs data (optional)</param>
     /// <param name="emails">Include email addresses (optional)</param>
-    /// <param name="addresses">Include student address data (optional)</param>
+    /// <param name="addresses">Include address data (optional)</param>
     /// <param name="care">Include student care data (you must also supply the demographics parameter) (optional)</param>
     /// <param name="everInCare">Include whether the student has ever been in care (you must also supply the demographics parameter) (optional)</param>
     /// <param name="languages">Include student language data (optional)</param>

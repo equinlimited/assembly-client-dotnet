@@ -18,7 +18,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
-  public class Assessment
+  public class FsmEntitlement
   {
     [JsonProperty("object")]
     public string Object { get; set; }
@@ -26,22 +26,15 @@ namespace AssemblyClient {
     [JsonProperty("id")]
     public int? Id { get; set; }
 
-    [JsonProperty("name")]
-    public string Name { get; set; }
+    [JsonProperty("start_date")]
+    public string StartDate { get; set; }
 
-    [JsonProperty("family_id")]
-    public int? FamilyId { get; set; }
-
-    [JsonProperty("family_name")]
-    public string FamilyName { get; set; }
-
-    [JsonProperty("mis_assessments")]
-    public List<string> MisAssessments { get; set; }
+    [JsonProperty("end_date")]
+    public string EndDate { get; set; }
 
 
-    public Assessment()
+    public FsmEntitlement()
     {
-      MisAssessments = new List<string>();
     }
   }
 }

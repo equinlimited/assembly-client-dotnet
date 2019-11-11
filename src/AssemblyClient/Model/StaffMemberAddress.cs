@@ -18,30 +18,32 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
-  public class Assessment
+  public class StaffMemberAddress
   {
     [JsonProperty("object")]
     public string Object { get; set; }
 
-    [JsonProperty("id")]
-    public int? Id { get; set; }
+    [JsonProperty("address_line_1")]
+    public string AddressLine1 { get; set; }
 
-    [JsonProperty("name")]
-    public string Name { get; set; }
+    [JsonProperty("address_line_2")]
+    public string AddressLine2 { get; set; }
 
-    [JsonProperty("family_id")]
-    public int? FamilyId { get; set; }
+    [JsonProperty("town_city")]
+    public string TownCity { get; set; }
 
-    [JsonProperty("family_name")]
-    public string FamilyName { get; set; }
+    [JsonProperty("county")]
+    public string County { get; set; }
 
-    [JsonProperty("mis_assessments")]
-    public List<string> MisAssessments { get; set; }
+    [JsonProperty("country")]
+    public string Country { get; set; }
+
+    [JsonProperty("postcode")]
+    public string Postcode { get; set; }
 
 
-    public Assessment()
+    public StaffMemberAddress()
     {
-      MisAssessments = new List<string>();
     }
   }
 }

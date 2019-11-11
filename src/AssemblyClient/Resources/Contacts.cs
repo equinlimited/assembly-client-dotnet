@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.424
+ * SDK Version 2.2.432
  * API Version 1.1.0
  *
  * Support
@@ -34,17 +34,20 @@ namespace AssemblyClient
     /// Returns a list of contacts that match the given set of filters
     /// </remarks>
     /// <param name="studentId">Filter to the specified student (optional)</param>
+    /// <param name="addresses">Include address data (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
     /// <returns>List&lt;Contact&gt;</returns>
     public async Task<List<Contact>> List(
       int? studentId = null, 
+      bool? addresses = null, 
       int? perPage = null, 
       int? page = null
     )
     {
       dynamic args = new ExpandoObject();
       args.studentId = studentId;
+      args.addresses = addresses;
       args.perPage = perPage;
       args.page = page;
       var results = await Client.GetList<Contact>($"/contacts", args);

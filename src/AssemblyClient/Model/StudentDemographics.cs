@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.424
+ * SDK Version 2.2.432
  * API Version 1.1.0
  *
  * Support
@@ -56,6 +56,9 @@ namespace AssemblyClient {
     [JsonProperty("is_fsm6")]
     public bool? IsFsm6 { get; set; }
 
+    [JsonProperty("fsm_history")]
+    public List<FsmEntitlement> FsmHistory { get; set; }
+
     [JsonProperty("in_care")]
     public bool? InCare { get; set; }
 
@@ -72,6 +75,7 @@ namespace AssemblyClient {
     public StudentDemographics()
     {
       Nationalities = new List<string>();
+      FsmHistory = new List<FsmEntitlement>();
       SenNeeds = new List<SenNeed>();
     }
   }
