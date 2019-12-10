@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.432
+ * SDK Version 2.2.436
  * API Version 1.1.0
  *
  * Support
@@ -37,6 +37,9 @@ namespace AssemblyClient {
 
     [JsonProperty("end_date")]
     public DateTime? EndDate { get; set; }
+
+    [JsonProperty("weeks")]
+    public int? Weeks { get; set; }
 
     [JsonProperty("days_per_week")]
     public int? DaysPerWeek { get; set; }

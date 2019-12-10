@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.432
+ * SDK Version 2.2.436
  * API Version 1.1.0
  *
  * Support
@@ -35,11 +35,17 @@ namespace AssemblyClient {
     [JsonProperty("is_pp")]
     public bool? IsPp { get; set; }
 
+    [JsonProperty("pp_history")]
+    public List<PpEntitlement> PpHistory { get; set; }
+
     [JsonProperty("is_eal")]
     public bool? IsEal { get; set; }
 
     [JsonProperty("sen_category")]
     public string SenCategory { get; set; }
+
+    [JsonProperty("sen_category_history")]
+    public List<SenCategory> SenCategoryHistory { get; set; }
 
     [JsonProperty("country_of_birth")]
     public string CountryOfBirth { get; set; }
@@ -74,6 +80,8 @@ namespace AssemblyClient {
 
     public StudentDemographics()
     {
+      PpHistory = new List<PpEntitlement>();
+      SenCategoryHistory = new List<SenCategory>();
       Nationalities = new List<string>();
       FsmHistory = new List<FsmEntitlement>();
       SenNeeds = new List<SenNeed>();

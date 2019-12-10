@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.432
+ * SDK Version 2.2.436
  * API Version 1.1.0
  *
  * Support
@@ -21,12 +21,12 @@ namespace AssemblyClient {
   public class BulkResultsBody
   {
     [JsonProperty("results")]
-    public List<ResultEntry> Results { get; set; }
+    public List<ResultUpdate> Results { get; set; }
 
 
     public BulkResultsBody()
     {
-      Results = new List<ResultEntry>();
+      Results = new List<ResultUpdate>();
     }
   }
 }

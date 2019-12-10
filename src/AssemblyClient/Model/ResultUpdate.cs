@@ -18,27 +18,23 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
-  public class Subject
+  public class ResultUpdate
   {
-    [JsonProperty("object")]
-    public string Object { get; set; }
+    [JsonProperty("student_id")]
+    public int? StudentId { get; set; }
 
-    [JsonProperty("id")]
-    public int? Id { get; set; }
+    [JsonProperty("result_id")]
+    public int? ResultId { get; set; }
 
-    [JsonProperty("code")]
-    public string Code { get; set; }
+    [JsonProperty("grade_id")]
+    public int? GradeId { get; set; }
 
-    [JsonProperty("name")]
-    public string Name { get; set; }
-
-    [JsonProperty("mis_subjects")]
-    public List<MisSubject> MisSubjects { get; set; }
+    [JsonProperty("result_date")]
+    public DateTime? ResultDate { get; set; }
 
 
-    public Subject()
+    public ResultUpdate()
     {
-      MisSubjects = new List<MisSubject>();
     }
   }
 }

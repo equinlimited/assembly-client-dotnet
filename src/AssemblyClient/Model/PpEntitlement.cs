@@ -18,7 +18,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
-  public class Timetable
+  public class PpEntitlement
   {
     [JsonProperty("object")]
     public string Object { get; set; }
@@ -26,34 +26,15 @@ namespace AssemblyClient {
     [JsonProperty("id")]
     public int? Id { get; set; }
 
-    [JsonProperty("name")]
-    public string Name { get; set; }
-
-    [JsonProperty("description")]
-    public string Description { get; set; }
-
     [JsonProperty("start_date")]
-    public DateTime? StartDate { get; set; }
+    public string StartDate { get; set; }
 
     [JsonProperty("end_date")]
-    public DateTime? EndDate { get; set; }
-
-    [JsonProperty("weeks")]
-    public int? Weeks { get; set; }
-
-    [JsonProperty("days_per_week")]
-    public int? DaysPerWeek { get; set; }
-
-    [JsonProperty("periods_per_day")]
-    public int? PeriodsPerDay { get; set; }
-
-    [JsonProperty("days")]
-    public List<TimetableDays> Days { get; set; }
+    public string EndDate { get; set; }
 
 
-    public Timetable()
+    public PpEntitlement()
     {
-      Days = new List<TimetableDays>();
     }
   }
 }

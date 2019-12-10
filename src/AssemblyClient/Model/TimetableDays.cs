@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.432
+ * SDK Version 2.2.436
  * API Version 1.1.0
  *
  * Support
@@ -35,12 +35,16 @@ namespace AssemblyClient {
     [JsonProperty("display_order")]
     public int? DisplayOrder { get; set; }
 
+    [JsonProperty("occurs_on")]
+    public List<DateTime?> OccursOn { get; set; }
+
     [JsonProperty("periods")]
     public List<TimetablePeriods> Periods { get; set; }
 
 
     public TimetableDays()
     {
+      OccursOn = new List<DateTime?>();
       Periods = new List<TimetablePeriods>();
     }
   }

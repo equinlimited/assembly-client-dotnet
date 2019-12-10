@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.432
+ * SDK Version 2.2.436
  * API Version 1.1.0
  *
  * Support
@@ -93,14 +93,14 @@ namespace AssemblyClient
     /// Once a result has been created, it can be updated on the Platform by passing the required field values in the request body. A list of the fields that were changed are returned in the response
     /// </remarks>
     /// <param name="id">Internal identifier of the entity</param>
-    /// <param name="resultEntry"> (optional)</param>
+    /// <param name="resultUpdate"> (optional)</param>
     /// <returns>Result</returns>
     public async Task<Result> Update(
       int? id, 
-      ResultEntry resultEntry = null
+      ResultUpdate resultUpdate = null
     )
     {
-      var result = await Client.SendData<Result>(new HttpMethod("PATCH"), $"/results/{id}", resultEntry);
+      var result = await Client.SendData<Result>(new HttpMethod("PATCH"), $"/results/{id}", resultUpdate);
       return result;
     }
 
