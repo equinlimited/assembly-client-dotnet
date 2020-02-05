@@ -20,37 +20,31 @@ using System.Threading.Tasks;
 
 namespace AssemblyClient
 {
-  public class ContactsResource : Resource
+  public class MisSubjectsResource : Resource
   {
-    public ContactsResource(ApiClient client)
+    public MisSubjectsResource(ApiClient client)
       : base(client)
     {
     }
 
     /// <summary>
-    /// List Contacts
+    /// List MIS Subjects
     /// </summary>
     /// <remarks>
-    /// Returns a list of contacts that match the given set of filters
+    /// Returns a list of the schools&#39;s mis subjects
     /// </remarks>
-    /// <param name="studentId">Filter to the specified student (optional)</param>
-    /// <param name="addresses">Include address data (optional)</param>
     /// <param name="perPage">Number of results to return (optional, default to 100)</param>
     /// <param name="page">Page number to return (optional, default to 1)</param>
-    /// <returns>List&lt;Contact&gt;</returns>
-    public async Task<List<Contact>> List(
-      int? studentId = null, 
-      bool? addresses = null, 
+    /// <returns>List&lt;MisSubject&gt;</returns>
+    public async Task<List<MisSubject>> List(
       int? perPage = null, 
       int? page = null
     )
     {
       dynamic args = new ExpandoObject();
-      args.studentId = studentId;
-      args.addresses = addresses;
       args.perPage = perPage;
       args.page = page;
-      var results = await Client.GetList<Contact>($"/contacts", args);
+      var results = await Client.GetList<MisSubject>($"/mis_subjects", args);
       return results;
     }
 
@@ -58,6 +52,6 @@ namespace AssemblyClient
 
   public partial class ApiClient
   {
-    public ContactsResource Contacts => new ContactsResource(this);
+    public MisSubjectsResource MisSubjects => new MisSubjectsResource(this);
   }
 }

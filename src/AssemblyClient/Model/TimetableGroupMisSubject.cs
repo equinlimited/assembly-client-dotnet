@@ -18,7 +18,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace AssemblyClient {
-  public class FsmEntitlement
+  public class TimetableGroupMisSubject
   {
     [JsonProperty("object")]
     public string Object { get; set; }
@@ -26,14 +26,20 @@ namespace AssemblyClient {
     [JsonProperty("id")]
     public int? Id { get; set; }
 
-    [JsonProperty("start_date")]
-    public string StartDate { get; set; }
+    [JsonProperty("name")]
+    public string Name { get; set; }
 
-    [JsonProperty("end_date")]
-    public string EndDate { get; set; }
+    [JsonProperty("code")]
+    public string Code { get; set; }
+
+    [JsonProperty("alt_name")]
+    public string AltName { get; set; }
+
+    [JsonProperty("alt_code")]
+    public string AltCode { get; set; }
 
 
-    public FsmEntitlement()
+    public TimetableGroupMisSubject()
     {
     }
   }
