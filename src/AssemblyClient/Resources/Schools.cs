@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.450
+ * SDK Version 2.2.463
  * API Version 1.1.0
  *
  * Support
@@ -25,6 +25,20 @@ namespace AssemblyClient
     public SchoolsResource(ApiClient client)
       : base(client)
     {
+    }
+
+    /// <summary>
+    /// Deauthorize School
+    /// </summary>
+    /// <remarks>
+    /// Disable your application for the school associated with the provided &#x60;access_token&#x60;
+    /// </remarks>
+    /// <returns></returns>
+    public async Task<HttpResponseMessage> Deauthorize(
+    )
+    {
+      var result = await Client.SendData(new HttpMethod("POST"), $"/school/deauthorize");
+      return result;
     }
 
     /// <summary>
@@ -54,6 +68,20 @@ namespace AssemblyClient
     {
       dynamic args = new ExpandoObject();
       var result = await Client.GetObject<SchoolStatus>($"/school/status", args);
+      return result;
+    }
+
+    /// <summary>
+    /// Request a School Sync
+    /// </summary>
+    /// <remarks>
+    /// Returns a sync request status for the school associated with the provided &#x60;access_token&#x60;
+    /// </remarks>
+    /// <returns></returns>
+    public async Task<HttpResponseMessage> Sync(
+    )
+    {
+      var result = await Client.SendData(new HttpMethod("POST"), $"/school/sync");
       return result;
     }
 

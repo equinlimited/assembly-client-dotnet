@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.450
+ * SDK Version 2.2.463
  * API Version 1.1.0
  *
  * Support
@@ -80,6 +80,12 @@ namespace AssemblyClient
     public virtual async Task<T> SendData<T>(HttpMethod method, string uri, object data)
     {
       var result = await api.SendData<T>(method, uri, data);
+      return result;
+    }
+
+    public virtual async Task<HttpResponseMessage> SendData(HttpMethod method, string uri)
+    {
+      var result = await api.SendData(method, uri);
       return result;
     }
 

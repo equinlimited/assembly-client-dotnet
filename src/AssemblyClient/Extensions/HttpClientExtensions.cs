@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.450
+ * SDK Version 2.2.463
  * API Version 1.1.0
  *
  * Support
@@ -34,6 +34,11 @@ namespace AssemblyClient
       return response;
     }
 
+    public static async Task<HttpResponseMessage> SendData(this HttpClient me, HttpMethod method, string uri, string token)
+    {
+      return await SendData(me, method, uri, token, null);
+    }
+
     public static async Task<HttpResponseMessage> SendData(this HttpClient me, HttpMethod method, string uri, string token, object data)
     {
       if (uri != "/oauth/token")
@@ -41,14 +46,21 @@ namespace AssemblyClient
         me.SetAuthorizationHeader(token);
       }
 
-      var serialized = JsonConvert.SerializeObject(data);
-      var content = new StringContent(serialized, Encoding.UTF8, "application/json");
-      var response = await me.SendAsync(new HttpRequestMessage(method, uri)
+      if (data == null)
       {
-        Content = content
-      });
-
-      return response;
+        var response = await me.SendAsync(new HttpRequestMessage(method, uri));
+        return response;
+      }
+      else
+      {
+        var serialized = JsonConvert.SerializeObject(data);
+        var content = new StringContent(serialized, Encoding.UTF8, "application/json");
+        var response = await me.SendAsync(new HttpRequestMessage(method, uri)
+        {
+          Content = content
+        });
+        return response;
+      }
     }
   }
 }

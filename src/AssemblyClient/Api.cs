@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.450
+ * SDK Version 2.2.463
  * API Version 1.1.0
  *
  * Support
@@ -46,6 +46,34 @@ namespace AssemblyClient
       this.client.DefaultRequestHeaders.Add("Accept", "application/vnd.assembly+json; version=1.1");
 
       TokenRefreshed += (sender, args) => { };
+    }
+
+    public virtual async Task<HttpResponseMessage> SendData(HttpMethod method, string uri)
+    {
+      try {
+        var response = await client.SendData(method, uri, Configuration.Token);
+        var isTokenValid = await response.IsValidToken();
+
+        if (Configuration.Debug)
+        {
+          Console.WriteLine($"Assembly API POST: {uri}");
+        }
+
+        if (!isTokenValid)
+        {
+          var newToken = await RefreshToken(Configuration.RefreshToken);
+          Configuration.Token = newToken;
+
+          OnTokenRefreshed(newToken);
+
+          response = await client.SendData(method, uri, Configuration.Token);
+        }
+
+        return response;
+      }
+      catch(Exception e) {
+        throw new ApiException(client.BaseAddress, uri, $"Failed to {method.Method} data to the platform", e);
+      }
     }
 
     public virtual async Task<T> SendData<T>(HttpMethod method, string uri, object data)
