@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.463
+ * SDK Version 2.2.470
  * API Version 1.1.0
  *
  * Support
@@ -11,6 +11,8 @@
  * License:          MIT, https://spdx.org/licenses/MIT.html
  */
 
+using System;
+using System.Linq;
 
 namespace AssemblyClient
 {
@@ -56,6 +58,18 @@ namespace AssemblyClient
       }
 
       return string.Join(" ", words);
+    }
+
+    public static string ToSnakeCase(this string str)
+    {
+        return str == null
+            ? null
+            : string.Join("_", string.Concat(string.Join("_", str.Split(new char[] {},
+                StringSplitOptions.RemoveEmptyEntries))
+                .Select(c => char.IsUpper(c)
+                    ? $"_{c}".ToLower()
+                    : $"{c}"))
+                .Split(new[] {'_'}, StringSplitOptions.RemoveEmptyEntries));
     }
   }
 }

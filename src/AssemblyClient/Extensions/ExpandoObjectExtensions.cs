@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.463
+ * SDK Version 2.2.470
  * API Version 1.1.0
  *
  * Support
@@ -35,7 +35,7 @@ namespace AssemblyClient
       if (kvp.Value is bool?)
       {
         var boolValue = kvp.Value as bool?;
-        return boolValue.HasValue && boolValue.Value ? $"{kvp.Key}=1" : $"{kvp.Key}=0";
+        return boolValue.HasValue && boolValue.Value ? $"{kvp.Key.ToSnakeCase()}=1" : $"{kvp.Key}=0";
       }
       else if (kvp.Value is List<int?>)
       {
@@ -55,11 +55,11 @@ namespace AssemblyClient
       else if (kvp.Value is DateTime?)
       {
         var dateValue = kvp.Value as DateTime?;
-        return dateValue.HasValue ? $"{kvp.Key}={dateValue.Value.ToString("yyyy-MM-dd")}" : string.Empty;
+        return dateValue.HasValue ? $"{kvp.Key.ToSnakeCase()}={dateValue.Value.ToString("yyyy-MM-dd")}" : string.Empty;
       }
 
       var stringValue = kvp.Value.ToString().Trim();
-      return !string.IsNullOrEmpty(stringValue) ? $"{kvp.Key}={stringValue}" : string.Empty;
+      return !string.IsNullOrEmpty(stringValue) ? $"{kvp.Key.ToSnakeCase()}={stringValue}" : string.Empty;
     }
 
     public static object V(this ExpandoObject me, string propertyName)

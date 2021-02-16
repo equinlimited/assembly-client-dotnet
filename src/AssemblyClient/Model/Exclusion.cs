@@ -1,6 +1,6 @@
 /**
  * Assembly Developer API .NET Client
- * SDK Version 2.2.463
+ * SDK Version 2.2.470
  * API Version 1.1.0
  *
  * Support
@@ -34,6 +34,12 @@ namespace AssemblyClient {
 
     [JsonProperty("exclusion_reason")]
     public string ExclusionReason { get; set; }
+
+    [JsonProperty("exclusion_reason_2")]
+    public string ExclusionReason2 { get; set; }
+
+    [JsonProperty("exclusion_reason_3")]
+    public string ExclusionReason3 { get; set; }
 
     [JsonProperty("start_date")]
     public DateTime? StartDate { get; set; }
